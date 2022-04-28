@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_date_8cpp" kind="file" language="C++">
+    <compoundname>Date.cpp</compoundname>
+    <includes refid="_date_8h" local="yes">Date.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp</label>
+        <link refid="_date_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>ostream</label>
+      </node>
+      <node id="2">
+        <label>Date.h</label>
+        <link refid="_date_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ctime</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_date_8cpp_1a88d8b969b366ee24736ae90187d1a62a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Date &amp;temp)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_date" kindref="compound">Date</ref> &amp;</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+<para>Affichage d&apos;une date. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>L&apos;affichage d&apos;une date Afficher une date a cette forme par exemple le 01/01/2021 .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream &amp;os :la bibliothèque ostream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref> &amp;temp :la date à afficher sous ce format jj-mm-aaaa . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>os : pour l&apos;affichage d&apos;une date . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" line="223" column="1" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="223" bodyend="227"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>BARRY Thierno Oumar &amp; DIALLO Iliassou </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_date_8h" kindref="compound">Date.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="class_date_1a4e59ed4ba66eec61c27460c5d09fa1bd" kindref="member">Date::Date</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>time_t<sp/>n=time(0);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><ref refid="class_date_1a2ebb3466d38e54ac334bef67a14289d7" kindref="member">date</ref>=localtime(&amp;n);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="class_date_1a9320ed0e8f5ae4e5bf3e96b653cc9dec" kindref="member">setJour</ref>(<ref refid="class_date_1a575966fef11b34dea9a2e5be6f3a4e58" kindref="member">getJourtm</ref>());</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="class_date_1a305ffc577325d91db7f6651623eb4333" kindref="member">setMois</ref>(<ref refid="class_date_1a6a769d53bbc30fb114be119f118b8742" kindref="member">getMoistm</ref>());</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="class_date_1a010d6ca12bbf8f2afb6260fd1af65c79" kindref="member">setAnnee</ref>(<ref refid="class_date_1a2866d736981c3981a479911bfae0e777" kindref="member">getAnneetm</ref>());</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="class_date_1a4e59ed4ba66eec61c27460c5d09fa1bd" kindref="member">Date::Date</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;a,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>m,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;j)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="class_date_1a8718dd1d16b0f43b7cda9a9c7822c7be" kindref="member">fromDate</ref>(j,m,a);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_date_1a575966fef11b34dea9a2e5be6f3a4e58" kindref="member">Date::getJourtm</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="42"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_date_1a2ebb3466d38e54ac334bef67a14289d7" kindref="member">date</ref>-&gt;tm_mday;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_date_1a6a769d53bbc30fb114be119f118b8742" kindref="member">Date::getMoistm</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="52"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_date_1a2ebb3466d38e54ac334bef67a14289d7" kindref="member">date</ref>-&gt;tm_mon+1;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_date_1a2866d736981c3981a479911bfae0e777" kindref="member">Date::getAnneetm</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="62"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_date_1a2ebb3466d38e54ac334bef67a14289d7" kindref="member">date</ref>-&gt;tm_year+1900;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_date_1a1b38f44aaa8c9035149b188be5650af4" kindref="member">Date::getJour</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="73"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_date_1aa46f17e2418a7a21573b1210f30b4e72" kindref="member">jour</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_date_1a72aade20bcf0954935efea32bee0b244" kindref="member">Date::getMois</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="83"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_date_1a9ce0f4d74252d7d1bf097ed047fbf880" kindref="member">mois</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_date_1a8ab72441def94864f14a6c7d37fc7880" kindref="member">Date::getAnnee</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="93"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_date_1a350753866b672814ff1c44c55b2d20ca" kindref="member">annee</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_date_1a9320ed0e8f5ae4e5bf3e96b653cc9dec" kindref="member">Date::setJour</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;j)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><ref refid="class_date_1a8718dd1d16b0f43b7cda9a9c7822c7be" kindref="member">fromDate</ref>(j,<ref refid="class_date_1a6a769d53bbc30fb114be119f118b8742" kindref="member">getMoistm</ref>(),<ref refid="class_date_1a2866d736981c3981a479911bfae0e777" kindref="member">getAnneetm</ref>());</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_date_1a305ffc577325d91db7f6651623eb4333" kindref="member">Date::setMois</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;m)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><ref refid="class_date_1a8718dd1d16b0f43b7cda9a9c7822c7be" kindref="member">fromDate</ref>(<ref refid="class_date_1a575966fef11b34dea9a2e5be6f3a4e58" kindref="member">getJourtm</ref>(),m,<ref refid="class_date_1a2866d736981c3981a479911bfae0e777" kindref="member">getAnneetm</ref>());</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_date_1a010d6ca12bbf8f2afb6260fd1af65c79" kindref="member">Date::setAnnee</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>a)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><ref refid="class_date_1a8718dd1d16b0f43b7cda9a9c7822c7be" kindref="member">fromDate</ref>(<ref refid="class_date_1a575966fef11b34dea9a2e5be6f3a4e58" kindref="member">getJourtm</ref>(),<ref refid="class_date_1a6a769d53bbc30fb114be119f118b8742" kindref="member">getMoistm</ref>(),a);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_date_1a8718dd1d16b0f43b7cda9a9c7822c7be" kindref="member">Date::fromDate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;J,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;M,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;A)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>time_t<sp/>tim=time(NULL);<sp/></highlight><highlight class="comment">//on<sp/>initialise<sp/>la<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/>*<sp/>tem=localtime(&amp;tim);</highlight><highlight class="comment">//on<sp/>met<sp/>dans<sp/>tem<sp/>la<sp/>date<sp/>courrante</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>tem-&gt;tm_mday=J;</highlight><highlight class="comment">//on<sp/>met<sp/>dans<sp/>tem<sp/>le<sp/>jour<sp/>passé<sp/>en<sp/>parametre</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>tem-&gt;tm_mon=M-1;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>tem-&gt;tm_year=A-1900;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>tim=mktime(tem);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><ref refid="class_date_1a2ebb3466d38e54ac334bef67a14289d7" kindref="member">date</ref>=localtime(&amp;tim);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="class_date_1a350753866b672814ff1c44c55b2d20ca" kindref="member">annee</ref><sp/>=<sp/><ref refid="class_date_1a2866d736981c3981a479911bfae0e777" kindref="member">getAnneetm</ref>();</highlight><highlight class="comment">//on<sp/>récupère<sp/>l&apos;année<sp/>.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="class_date_1a9ce0f4d74252d7d1bf097ed047fbf880" kindref="member">mois</ref><sp/>=<sp/><ref refid="class_date_1a6a769d53bbc30fb114be119f118b8742" kindref="member">getMoistm</ref>();</highlight><highlight class="comment">//on<sp/>récupère<sp/>le<sp/>mois<sp/>.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>this-&gt;<ref refid="class_date_1aa46f17e2418a7a21573b1210f30b4e72" kindref="member">jour</ref><sp/>=<sp/><ref refid="class_date_1a575966fef11b34dea9a2e5be6f3a4e58" kindref="member">getJourtm</ref>();</highlight><highlight class="comment">//on<sp/>récupère<sp/>le<sp/>jour<sp/>.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">std::string<sp/><sp/><ref refid="class_date_1aad30c999adf882cee6369f627c0353c0" kindref="member">Date::fromDateString</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="162"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>momois=std::to_string(<ref refid="class_date_1a72aade20bcf0954935efea32bee0b244" kindref="member">getMois</ref>());</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>mojour=std::to_string(<ref refid="class_date_1a1b38f44aaa8c9035149b188be5650af4" kindref="member">getJour</ref>());</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_date_1a72aade20bcf0954935efea32bee0b244" kindref="member">getMois</ref>()&lt;10)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>momois=</highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">+std::to_string(<ref refid="class_date_1a72aade20bcf0954935efea32bee0b244" kindref="member">getMois</ref>());</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_date_1a1b38f44aaa8c9035149b188be5650af4" kindref="member">getJour</ref>()&lt;10)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mojour=</highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">+std::to_string(<ref refid="class_date_1a1b38f44aaa8c9035149b188be5650af4" kindref="member">getJour</ref>());</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::to_string(<ref refid="class_date_1a8ab72441def94864f14a6c7d37fc7880" kindref="member">getAnnee</ref>())+</highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">+momois+</highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">+mojour;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><ref refid="class_date" kindref="compound">Date</ref><sp/><ref refid="class_date_1acdbf4b116c6d112d5974ea9ef5d0ad05" kindref="member">Date::toDateString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;dat<sp/><sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="186"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>std::string<sp/>dat1=dat.substr(0,4);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>std::string<sp/>dat2=dat.substr(5,2);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>std::string<sp/>dat3=dat.substr(8,2);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a=std::stoi(dat1);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m=std::stoi(dat2);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=std::stoi(dat3);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_date" kindref="compound">Date</ref><sp/>d(a,m,j);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>d;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_date_1a08c0538091d061550b90787d9313ca61" kindref="member">Date::operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_date" kindref="compound">Date</ref><sp/>&amp;da)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="206"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;<ref refid="class_date_1a8ab72441def94864f14a6c7d37fc7880" kindref="member">getAnnee</ref>()&lt;da.<ref refid="class_date_1a8ab72441def94864f14a6c7d37fc7880" kindref="member">getAnnee</ref>())</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;<ref refid="class_date_1a8ab72441def94864f14a6c7d37fc7880" kindref="member">getAnnee</ref>()==da.<ref refid="class_date_1a8ab72441def94864f14a6c7d37fc7880" kindref="member">getAnnee</ref>()&amp;&amp;this-&gt;getMois()&lt;da.<ref refid="class_date_1a72aade20bcf0954935efea32bee0b244" kindref="member">getMois</ref>())</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;<ref refid="class_date_1a8ab72441def94864f14a6c7d37fc7880" kindref="member">getAnnee</ref>()==da.<ref refid="class_date_1a8ab72441def94864f14a6c7d37fc7880" kindref="member">getAnnee</ref>()&amp;&amp;this-&gt;getMois()==da.<ref refid="class_date_1a72aade20bcf0954935efea32bee0b244" kindref="member">getMois</ref>()&amp;&amp;this-&gt;getJour()&lt;da.<ref refid="class_date_1a1b38f44aaa8c9035149b188be5650af4" kindref="member">getJour</ref>())</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal">std::ostream&amp;<sp/><ref refid="_date_8cpp_1a88d8b969b366ee24736ae90187d1a62a" kindref="member">operator &lt;&lt;</ref>(std::<sp/>ostream<sp/>&amp;os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_date" kindref="compound">Date</ref><sp/>&amp;temp)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/>os&lt;&lt;temp.<ref refid="class_date_1a8ab72441def94864f14a6c7d37fc7880" kindref="member">getAnnee</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">&lt;&lt;temp.<ref refid="class_date_1a72aade20bcf0954935efea32bee0b244" kindref="member">getMois</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">&lt;&lt;temp.<ref refid="class_date_1a1b38f44aaa8c9035149b188be5650af4" kindref="member">getJour</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>os;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp"/>
+  </compounddef>
+</doxygen>

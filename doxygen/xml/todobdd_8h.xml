@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="todobdd_8h" kind="file" language="C++">
+    <compoundname>todobdd.h</compoundname>
+    <includes refid="_todo_8h" local="yes">Todo.h</includes>
+    <includes local="no">QObject</includes>
+    <includes local="no">QDate</includes>
+    <includes local="no">QtSql/QSqlDatabase</includes>
+    <includes local="no">QDebug</includes>
+    <includes local="no">QtSql/QSqlQuery</includes>
+    <includes local="no">list</includes>
+    <includes local="no">QString</includes>
+    <includes local="no">string</includes>
+    <includes local="no">QVariant</includes>
+    <includedby refid="main_8cpp" local="no">/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp</includedby>
+    <includedby refid="todobdd_8cpp" local="yes">/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>list</label>
+      </node>
+      <node id="7">
+        <label>QObject</label>
+      </node>
+      <node id="9">
+        <label>QtSql/QSqlDatabase</label>
+      </node>
+      <node id="11">
+        <label>QtSql/QSqlQuery</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>ostream</label>
+      </node>
+      <node id="3">
+        <label>Date.h</label>
+        <link refid="_date_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ctime</label>
+      </node>
+      <node id="10">
+        <label>QDebug</label>
+      </node>
+      <node id="2">
+        <label>Todo.h</label>
+        <link refid="_todo_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>QDate</label>
+      </node>
+      <node id="13">
+        <label>QString</label>
+      </node>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h</label>
+        <link refid="todobdd_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>QVariant</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp</label>
+        <link refid="todobdd_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h</label>
+        <link refid="todobdd_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_todo_b_d_d" prot="public">TodoBDD</innerclass>
+    <briefdescription>
+<para>Application Qt. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>BARRY Thierno &amp; DIALLO Iliassou </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TODOBDD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TODOBDD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_todo_8h" kindref="compound">Todo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QObject&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDate&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtSql/QSqlDatabase&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDebug&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtSql/QSqlQuery&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QVariant&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_todo_b_d_d" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_todo_b_d_d" kindref="compound">TodoBDD</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_q_object" kindref="compound">QObject</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="class_todo_b_d_d_1aedd93b0da1df6323c7178087a7ef8e06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QSqlDatabase<sp/><ref refid="class_todo_b_d_d_1aedd93b0da1df6323c7178087a7ef8e06" kindref="member">db</ref>;</highlight></codeline>
+<codeline lineno="33" refid="class_todo_b_d_d_1a8678f39a1092a25cd44cf8a3116ee981" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1a8678f39a1092a25cd44cf8a3116ee981" kindref="member">dbOuvert</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1aa5b54c75a0c13276e5b466f553b5b584" kindref="member">closeDb</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1a60295f038babc2717319152a088a8316" kindref="member">connexion</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1ab438832daf9a3f50176e4193bc75561d" kindref="member">isDBopen</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1a75b61160ab3a4455b63ae3ff07455c26" kindref="member">AjoutTodo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,<ref refid="class_todo" kindref="compound">Todo</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1af6132fcfe369915147fa5759560ed7d5" kindref="member">ListeTodoContact</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,std::list&lt;Todo&gt;&amp;)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1a5045b4fd85577377a7e270ca55c8cb66" kindref="member">ListeALLContact</ref>(std::list&lt;Todo&gt;&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1a9eb8c5ded6c9cfc7fb5ec95beef276f9" kindref="member">RechercheALLTodoCont</ref>(QString<sp/>&amp;,QString<sp/>&amp;,std::list&lt;Todo&gt;<sp/>&amp;)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1aa1e3bd834cf8d1d1d1b980de8b6ea88d" kindref="member">RechercheTodoCont</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,QString<sp/>&amp;,QString<sp/>&amp;,std::list&lt;Todo&gt;<sp/>&amp;)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1a879c50e2ac21f39f0bdf78f30ddb5928" kindref="member">TodoBDD</ref>(<ref refid="class_q_object" kindref="compound">QObject</ref><sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_todo_b_d_d_1a6d97e1f4fef7bdf5507b6882d0ae8c03" kindref="member">~TodoBDD</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1a026cc43a7cf4fc28c4552c9ee617d694" kindref="member">bddAjoutTodo</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,<ref refid="class_todo" kindref="compound">Todo</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1a472d2d0d3b28d6f35762cec4897144ff" kindref="member">bddListeTodoContact</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,std::list&lt;Todo&gt;&amp;);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1ac134d6ee1e9f8a0f1b80a6aee32eac38" kindref="member">bddListeALLContact</ref>(std::list&lt;Todo&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1a62f7870b9b099a30e52dbad1ec67a0f2" kindref="member">bddRechercheTodoCont</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Todo&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1ac4c3963e67b0345e6f483a06152e7f03" kindref="member">bddRechercheALLTodoCont</ref>(<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Todo&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_todo_b_d_d_1ae5178376889823e76f9fe026fb236d6e" kindref="member">isOpen</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>TODOBDD_Hvoi</highlight></codeline>
+    </programlisting>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h"/>
+  </compounddef>
+</doxygen>

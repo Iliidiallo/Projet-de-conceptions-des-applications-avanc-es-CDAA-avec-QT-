@@ -1,0 +1,570 @@
+\doxysection{Référence de la classe Contact}
+\label{class_contact}\index{Contact@{Contact}}
+
+
+classe répresentant un contact  
+
+
+
+
+{\ttfamily \#include $<$contact.\+h$>$}
+
+
+
+Graphe de collaboration de Contact\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_contact__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Contact} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\textbf{ Contact} (const std\+::string \&, const std\+::string \&, const std\+::string \&, const std\+::string \&, const std\+::string \&, const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+int \textbf{ get\+Id\+\_\+contact} () const
+\begin{DoxyCompactList}\small\item\em Getteurs et setteurs \textbackslash{}\+Les fonctions getteurs et setteurs . \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Nom} () const
+\begin{DoxyCompactList}\small\item\em Recupère le nom d\textquotesingle{}un contact. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Prenom} () const
+\begin{DoxyCompactList}\small\item\em Recupère le prenom d\textquotesingle{}un contact. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Entreprise} () const
+\begin{DoxyCompactList}\small\item\em Recupère l\textquotesingle{}Entreprise d\textquotesingle{}un contact. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Telephone} () const
+\begin{DoxyCompactList}\small\item\em Recupère le telephone d\textquotesingle{}un contact. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+U\+R\+I\+Photo} () const
+\begin{DoxyCompactList}\small\item\em Recupère la photo d\textquotesingle{}un contact. \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Mail} () const
+\begin{DoxyCompactList}\small\item\em Recupère l\textquotesingle{}email d\textquotesingle{}un contact. \end{DoxyCompactList}\item 
+\textbf{ Date} \textbf{ get\+Date\+Decreation} () const
+\begin{DoxyCompactList}\small\item\em Recupère la date de création d\textquotesingle{}un contact. \end{DoxyCompactList}\item 
+void \textbf{ set\+Nom} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em modifier le nom d\textquotesingle{}un contact \end{DoxyCompactList}\item 
+void \textbf{ set\+Prenom} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em modifier le prenom d\textquotesingle{}un contact \end{DoxyCompactList}\item 
+void \textbf{ set\+Entreprise} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em modifier l\textquotesingle{}entreprise d\textquotesingle{}un contact \end{DoxyCompactList}\item 
+void \textbf{ set\+U\+R\+I\+Photo} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em modifier la photo d\textquotesingle{}un contact \end{DoxyCompactList}\item 
+void \textbf{ set\+Telephone} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em modifier le telephone d\textquotesingle{}un contact \end{DoxyCompactList}\item 
+void \textbf{ set\+Mail} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em modifier le mail d\textquotesingle{}un contact \end{DoxyCompactList}\item 
+void \textbf{ set\+Date\+Decreation} (const \textbf{ Date} \&)
+\begin{DoxyCompactList}\small\item\em modifier la date de création d\textquotesingle{}un contact \end{DoxyCompactList}\item 
+void \textbf{ set\+Id\+\_\+contact} (const int \&)
+\begin{DoxyCompactList}\small\item\em modifier l\textquotesingle{}identifiant d\textquotesingle{}un contact \end{DoxyCompactList}\item 
+bool \textbf{ operator==} (const \textbf{ Contact} \&) const
+\begin{DoxyCompactList}\small\item\em Operateur egal Permet de comparer deux contacts. \end{DoxyCompactList}\item 
+bool \textbf{ operator$<$} (const \textbf{ Contact} \&) const
+\begin{DoxyCompactList}\small\item\em operateur inferieur . Permet de comparer deux dates . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ id\+\_\+contact} =0
+\item 
+std\+::string \textbf{ nom}
+\item 
+std\+::string \textbf{ prenom}
+\item 
+std\+::string \textbf{ entreprise}
+\item 
+std\+::string \textbf{ mail}
+\item 
+std\+::string \textbf{ telephone}
+\item 
+std\+::string \textbf{ U\+R\+Iphoto}
+\item 
+\textbf{ Date} \textbf{ date\+Decreation}
+\end{DoxyCompactItemize}
+\doxysubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&, const \textbf{ Contact} \&)
+\begin{DoxyCompactList}\small\item\em pour l\textquotesingle{}affichage des propriete d\textquotesingle{}un contact \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+classe répresentant un contact 
+
+La classe permet de créer un contact ,de modifier un contact,de supprimer un contact . 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\label{class_contact_ae39444f378e6de7fd6c3e60981949af5}} 
+\index{Contact@{Contact}!Contact@{Contact}}
+\index{Contact@{Contact}!Contact@{Contact}}
+\doxysubsubsection{Contact()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Contact\+::\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+implémentation du constructeur par défaut .
+
+Contructeur de la classe \doxyref{Contact}{p.}{class_contact} \mbox{\label{class_contact_a793d8e392aacfcd6556b31341a1233d9}} 
+\index{Contact@{Contact}!Contact@{Contact}}
+\index{Contact@{Contact}!Contact@{Contact}}
+\doxysubsubsection{Contact()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Contact\+::\+Contact (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{n,  }\item[{const std\+::string \&}]{p,  }\item[{const std\+::string \&}]{e,  }\item[{const std\+::string \&}]{em,  }\item[{const std\+::string \&}]{t,  }\item[{const std\+::string \&}]{photo }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+implémentation du constructeur avec paramètre .
+
+Constructeur avec paramètre de la classe contact
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & std\+::string \&\+: initialise le nom d\textquotesingle{}un contact \\
+\hline
+{\em const} & std\+::string \&\+: initialise le Prenom d\textquotesingle{}un contact \\
+\hline
+{\em const} & std\+::string \&\+: initialise l\textquotesingle{}entreprise d\textquotesingle{}un contact \\
+\hline
+{\em const} & std\+::\+Email \&\+: initalise de l\textquotesingle{}email d\textquotesingle{}un contact \\
+\hline
+{\em const} & std\+::string \&\+: initialise le numero de telephone d\textquotesingle{}un contact \\
+\hline
+{\em const} & std\+::string \&\+: initialise la photo sous forme de chaine de caractere\\
+\hline
+{\em const} & std\+::string \&n \+: elle remplacera le nom courant . \\
+\hline
+{\em const} & std\+::string \&p \+: elle remplacera le prenom courant . \\
+\hline
+{\em const} & std\+::string \&e \+: elle remplacera l\textquotesingle{}entreprise courante . \\
+\hline
+{\em const} & std\+::string \&em \+: elle remplacera l\textquotesingle{}email courant . \\
+\hline
+{\em const} & std\+::string \&t \+: elle remplacera le telephone courant . \\
+\hline
+{\em const} & std\+::string \&photo \+: elle remplacera la photo courante . \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\label{class_contact_ac95a35bd3f45283d24521ff0b87687ef}} 
+\index{Contact@{Contact}!getDateDecreation@{getDateDecreation}}
+\index{getDateDecreation@{getDateDecreation}!Contact@{Contact}}
+\doxysubsubsection{getDateDecreation()}
+{\footnotesize\ttfamily \textbf{ Date} Contact\+::get\+Date\+Decreation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère la date de création d\textquotesingle{}un contact. 
+
+accesseur \char`\"{}\+Date\+Decreation\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+la \doxyref{Date}{p.}{class_date} de creation
+
+le std\+::string qui correspond a la Date\+Decreation d\textquotesingle{}un contact . 
+\end{DoxyReturn}
+\mbox{\label{class_contact_a0126ff51496fe7f69db34de82ce28398}} 
+\index{Contact@{Contact}!getEntreprise@{getEntreprise}}
+\index{getEntreprise@{getEntreprise}!Contact@{Contact}}
+\doxysubsubsection{getEntreprise()}
+{\footnotesize\ttfamily std\+::string Contact\+::get\+Entreprise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère l\textquotesingle{}Entreprise d\textquotesingle{}un contact. 
+
+accesseur \char`\"{}\+Entreprise\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}Entreprise d\textquotesingle{}un contact
+
+le std\+::string qui correspond à l\textquotesingle{}Entreprise d\textquotesingle{}un contact . 
+\end{DoxyReturn}
+\mbox{\label{class_contact_a0068f3b8c12c82a2f5f10968d36639c3}} 
+\index{Contact@{Contact}!getId\_contact@{getId\_contact}}
+\index{getId\_contact@{getId\_contact}!Contact@{Contact}}
+\doxysubsubsection{getId\_contact()}
+{\footnotesize\ttfamily int Contact\+::get\+Id\+\_\+contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getteurs et setteurs \textbackslash{}\+Les fonctions getteurs et setteurs . 
+
+accesseur \char`\"{}id\+\_\+contact\char`\"{} pas de paramètre, fonction const
+
+Recupère l\textquotesingle{}identifiant d\textquotesingle{}un contact \begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}identifiant d\textquotesingle{}un contact
+
+le std\+::string qui correspond à l\textquotesingle{}identifiant d\textquotesingle{}un contact . 
+\end{DoxyReturn}
+\mbox{\label{class_contact_ae2fb4df883959c1f36a9168d7e6f23d1}} 
+\index{Contact@{Contact}!getMail@{getMail}}
+\index{getMail@{getMail}!Contact@{Contact}}
+\doxysubsubsection{getMail()}
+{\footnotesize\ttfamily std\+::string Contact\+::get\+Mail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère l\textquotesingle{}email d\textquotesingle{}un contact. 
+
+accesseur \char`\"{}\+Mail\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+le Mail d\textquotesingle{}un contact
+
+le std\+::string qui correspond au Mail d\textquotesingle{}un contact . 
+\end{DoxyReturn}
+\mbox{\label{class_contact_ac4ca062bf61f7adbbddc7878c0957e82}} 
+\index{Contact@{Contact}!getNom@{getNom}}
+\index{getNom@{getNom}!Contact@{Contact}}
+\doxysubsubsection{getNom()}
+{\footnotesize\ttfamily std\+::string Contact\+::get\+Nom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère le nom d\textquotesingle{}un contact. 
+
+accesseur \char`\"{}\+Nom\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+le nom d\textquotesingle{}un contact
+
+le std\+::string qui correspond au nom d\textquotesingle{}un contact . 
+\end{DoxyReturn}
+\mbox{\label{class_contact_a1825fa5b28052b477fb16176bb4df21e}} 
+\index{Contact@{Contact}!getPrenom@{getPrenom}}
+\index{getPrenom@{getPrenom}!Contact@{Contact}}
+\doxysubsubsection{getPrenom()}
+{\footnotesize\ttfamily std\+::string Contact\+::get\+Prenom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère le prenom d\textquotesingle{}un contact. 
+
+accesseur \char`\"{}\+Prenom\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+le prenom d\textquotesingle{}un contact
+
+le std\+::string qui correspond au Prenom d\textquotesingle{}un contact . 
+\end{DoxyReturn}
+\mbox{\label{class_contact_a53ebe193a5284e27b468ababdf7577e3}} 
+\index{Contact@{Contact}!getTelephone@{getTelephone}}
+\index{getTelephone@{getTelephone}!Contact@{Contact}}
+\doxysubsubsection{getTelephone()}
+{\footnotesize\ttfamily std\+::string Contact\+::get\+Telephone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère le telephone d\textquotesingle{}un contact. 
+
+accesseur \char`\"{}\+Telephone\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+le Telephone d\textquotesingle{}un contact
+
+le std\+::string qui correspond au Telephone d\textquotesingle{}un contact . 
+\end{DoxyReturn}
+\mbox{\label{class_contact_af5a2baad0e523501c7270323140d329f}} 
+\index{Contact@{Contact}!getURIPhoto@{getURIPhoto}}
+\index{getURIPhoto@{getURIPhoto}!Contact@{Contact}}
+\doxysubsubsection{getURIPhoto()}
+{\footnotesize\ttfamily std\+::string Contact\+::get\+U\+R\+I\+Photo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère la photo d\textquotesingle{}un contact. 
+
+accesseur \char`\"{}\+U\+R\+I\+Photo\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+la photo d\textquotesingle{}un contact
+
+le std\+::string qui correspond à l\textquotesingle{}U\+R\+I\+Photo d\textquotesingle{}un contact . 
+\end{DoxyReturn}
+\mbox{\label{class_contact_abf1edc65bbfd0b8b9b81d81e878762bc}} 
+\index{Contact@{Contact}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Contact@{Contact}}
+\doxysubsubsection{operator$<$()}
+{\footnotesize\ttfamily bool Contact\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \textbf{ Contact} \&}]{da }\end{DoxyParamCaption}) const}
+
+
+
+operateur inferieur . Permet de comparer deux dates . 
+
+test de comparaison entre 2 dates
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & \doxyref{Contact}{p.}{class_contact} \& \+:la date du contact à comparer avec la date du contact courant .\\
+\hline
+{\em const} & \doxyref{Contact}{p.}{class_contact} \&da\+: le contact à comparer entre la date courante \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un booléen V\+R\+AI si égalité 
+
+un booléen F\+A\+UX si non égalité 
+\end{DoxyReturn}
+\mbox{\label{class_contact_a22bdaf53942f1ce96de5ada1d6d7a4c1}} 
+\index{Contact@{Contact}!operator==@{operator==}}
+\index{operator==@{operator==}!Contact@{Contact}}
+\doxysubsubsection{operator==()}
+{\footnotesize\ttfamily bool Contact\+::operator== (\begin{DoxyParamCaption}\item[{const \textbf{ Contact} \&}]{c1 }\end{DoxyParamCaption}) const}
+
+
+
+Operateur egal Permet de comparer deux contacts. 
+
+test d\textquotesingle{}égalité entre 2 contacts
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & \doxyref{Contact}{p.}{class_contact} \& \+:le contact à comparer\\
+\hline
+{\em const} & \doxyref{Contact}{p.}{class_contact} \&c1 \+: le contact à égaliser . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un booléen V\+R\+AI si égalité 
+
+un booléen F\+A\+UX si non égalité 
+\end{DoxyReturn}
+\mbox{\label{class_contact_a219a2644e2b4414b2d3c2570a9a1572f}} 
+\index{Contact@{Contact}!setDateDecreation@{setDateDecreation}}
+\index{setDateDecreation@{setDateDecreation}!Contact@{Contact}}
+\doxysubsubsection{setDateDecreation()}
+{\footnotesize\ttfamily void Contact\+::set\+Date\+Decreation (\begin{DoxyParamCaption}\item[{const \textbf{ Date} \&}]{de }\end{DoxyParamCaption})}
+
+
+
+modifier la date de création d\textquotesingle{}un contact 
+
+implémentation du mutateur \char`\"{}\+Date\+Decreation\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & \doxyref{Date}{p.}{class_date} \&\+: la date à modifier\\
+\hline
+{\em const} & \doxyref{Date}{p.}{class_date} \&de \+: il remplacera la Date\+Decreation courante . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_a1237b826b80e3ead402d0c26cc3c2ace}} 
+\index{Contact@{Contact}!setEntreprise@{setEntreprise}}
+\index{setEntreprise@{setEntreprise}!Contact@{Contact}}
+\doxysubsubsection{setEntreprise()}
+{\footnotesize\ttfamily void Contact\+::set\+Entreprise (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{e }\end{DoxyParamCaption})}
+
+
+
+modifier l\textquotesingle{}entreprise d\textquotesingle{}un contact 
+
+implémentation du mutateur \char`\"{}\+Entreprise\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & std\+::string \&\+: l\textquotesingle{}entreprise à modifier\\
+\hline
+{\em std\+::string} & \&e \+: il remplacera l\textquotesingle{}Entreprise courant . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_a535b5af3f963a1201c1611468bbd4693}} 
+\index{Contact@{Contact}!setId\_contact@{setId\_contact}}
+\index{setId\_contact@{setId\_contact}!Contact@{Contact}}
+\doxysubsubsection{setId\_contact()}
+{\footnotesize\ttfamily void Contact\+::set\+Id\+\_\+contact (\begin{DoxyParamCaption}\item[{const int \&}]{value }\end{DoxyParamCaption})}
+
+
+
+modifier l\textquotesingle{}identifiant d\textquotesingle{}un contact 
+
+implémentation du mutateur \char`\"{}id\+\_\+contact\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \&\+: l\textquotesingle{}identifiant à modifier\\
+\hline
+{\em l\textquotesingle{}entier} & const int \& value, il remplacera l\textquotesingle{}identifian courant . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_a513b0a2da8a697076f4616ce7b6c445f}} 
+\index{Contact@{Contact}!setMail@{setMail}}
+\index{setMail@{setMail}!Contact@{Contact}}
+\doxysubsubsection{setMail()}
+{\footnotesize\ttfamily void Contact\+::set\+Mail (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{m }\end{DoxyParamCaption})}
+
+
+
+modifier le mail d\textquotesingle{}un contact 
+
+implémentation du mutateur \char`\"{}\+Mail\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & std\+::string \&\+: le mail à modifier\\
+\hline
+{\em std\+::string} & \&m \+: il remplacera le Mail courant . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_a0837af372d75a5d85ab296c6104a3232}} 
+\index{Contact@{Contact}!setNom@{setNom}}
+\index{setNom@{setNom}!Contact@{Contact}}
+\doxysubsubsection{setNom()}
+{\footnotesize\ttfamily void Contact\+::set\+Nom (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{n }\end{DoxyParamCaption})}
+
+
+
+modifier le nom d\textquotesingle{}un contact 
+
+implémentation du mutateur \char`\"{}\+Nom\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & std\+::string \&\+: le nom à modifier\\
+\hline
+{\em std\+::string} & (const)\+: il remplacera le nom courant . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_ac31195d758df58ee327cc05b6276aace}} 
+\index{Contact@{Contact}!setPrenom@{setPrenom}}
+\index{setPrenom@{setPrenom}!Contact@{Contact}}
+\doxysubsubsection{setPrenom()}
+{\footnotesize\ttfamily void Contact\+::set\+Prenom (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+modifier le prenom d\textquotesingle{}un contact 
+
+implémentation du mutateur \char`\"{}prenom\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & std\+::string \&\+: le prenom à modifier\\
+\hline
+{\em std\+::string} & \&p \+: il remplacera le prenom courant . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_a54c863b3045a9255d75f1ad876ecb7de}} 
+\index{Contact@{Contact}!setTelephone@{setTelephone}}
+\index{setTelephone@{setTelephone}!Contact@{Contact}}
+\doxysubsubsection{setTelephone()}
+{\footnotesize\ttfamily void Contact\+::set\+Telephone (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{t }\end{DoxyParamCaption})}
+
+
+
+modifier le telephone d\textquotesingle{}un contact 
+
+implémentation du mutateur \char`\"{}\+Telephone\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & std\+::string \&\+: le telephone à modifier\\
+\hline
+{\em std\+::string} & \&t \+: il remplacera le telephone courant . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_ab1d6d7d9ce1e62b1d7c52a2a927a8692}} 
+\index{Contact@{Contact}!setURIPhoto@{setURIPhoto}}
+\index{setURIPhoto@{setURIPhoto}!Contact@{Contact}}
+\doxysubsubsection{setURIPhoto()}
+{\footnotesize\ttfamily void Contact\+::set\+U\+R\+I\+Photo (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{p }\end{DoxyParamCaption})}
+
+
+
+modifier la photo d\textquotesingle{}un contact 
+
+implémentation du mutateur \char`\"{}\+U\+R\+I\+Photo\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & std\+::string \&\+: la photo à modifier\\
+\hline
+{\em std\+::string} & \&p \+: il remplacera la photo courante . \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions amies et associées}
+\mbox{\label{class_contact_a24f9fcd32bd68e5d5af1a6f2a61a1948}} 
+\index{Contact@{Contact}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Contact@{Contact}}
+\doxysubsubsection{operator$<$$<$}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{const \textbf{ Contact} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+pour l\textquotesingle{}affichage des propriete d\textquotesingle{}un contact 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & \doxyref{Contact}{p.}{class_contact} \& \+:le contact à afficher param std\+:\+: ostream\& \+: permet de faire l\textquotesingle{}affichage\\
+\hline
+{\em std,\+:} & ostream \&o \+:la bibliothèque ostream \\
+\hline
+{\em const} & \doxyref{Contact}{p.}{class_contact} \&c \+:le contact à afficher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+o pour l\textquotesingle{}affichage d\textquotesingle{}un contact 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\label{class_contact_a040e29ce0ae67c16d810f0e49c669056}} 
+\index{Contact@{Contact}!dateDecreation@{dateDecreation}}
+\index{dateDecreation@{dateDecreation}!Contact@{Contact}}
+\doxysubsubsection{dateDecreation}
+{\footnotesize\ttfamily \textbf{ Date} Contact\+::date\+Decreation\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut pour la date de création d\textquotesingle{}un contact \mbox{\label{class_contact_a786cf3e7f36e558af773e64a3302fbf8}} 
+\index{Contact@{Contact}!entreprise@{entreprise}}
+\index{entreprise@{entreprise}!Contact@{Contact}}
+\doxysubsubsection{entreprise}
+{\footnotesize\ttfamily std\+::string Contact\+::entreprise\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut pour l\textquotesingle{}entreprise d\textquotesingle{}un contact \mbox{\label{class_contact_ae9b9fe5ccc55e19ca7087f94a30f38ce}} 
+\index{Contact@{Contact}!id\_contact@{id\_contact}}
+\index{id\_contact@{id\_contact}!Contact@{Contact}}
+\doxysubsubsection{id\_contact}
+{\footnotesize\ttfamily int Contact\+::id\+\_\+contact =0\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut pour l\textquotesingle{}identifiant d\textquotesingle{}un contact \mbox{\label{class_contact_a10aaa8c3a6c26e02497ffb19fb37c52a}} 
+\index{Contact@{Contact}!mail@{mail}}
+\index{mail@{mail}!Contact@{Contact}}
+\doxysubsubsection{mail}
+{\footnotesize\ttfamily std\+::string Contact\+::mail\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut pour le mail d\textquotesingle{}un contact \mbox{\label{class_contact_a837ec32c95f8815511ba1fb88d6e6870}} 
+\index{Contact@{Contact}!nom@{nom}}
+\index{nom@{nom}!Contact@{Contact}}
+\doxysubsubsection{nom}
+{\footnotesize\ttfamily std\+::string Contact\+::nom\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut pour le nom d\textquotesingle{}un contact \mbox{\label{class_contact_a6d85467851d61def44445912b58d52a4}} 
+\index{Contact@{Contact}!prenom@{prenom}}
+\index{prenom@{prenom}!Contact@{Contact}}
+\doxysubsubsection{prenom}
+{\footnotesize\ttfamily std\+::string Contact\+::prenom\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut pour le prenom d\textquotesingle{}un contact \mbox{\label{class_contact_a045666ea797063981360d3c926c4d58f}} 
+\index{Contact@{Contact}!telephone@{telephone}}
+\index{telephone@{telephone}!Contact@{Contact}}
+\doxysubsubsection{telephone}
+{\footnotesize\ttfamily std\+::string Contact\+::telephone\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut pour le telephone d\textquotesingle{}un contact \mbox{\label{class_contact_aff78eb5c73608f1bc7b300b9427a878e}} 
+\index{Contact@{Contact}!URIphoto@{URIphoto}}
+\index{URIphoto@{URIphoto}!Contact@{Contact}}
+\doxysubsubsection{URIphoto}
+{\footnotesize\ttfamily std\+::string Contact\+::\+U\+R\+Iphoto\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut pour la photo d\textquotesingle{}un contact 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ contact.\+h}\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ contact.\+cpp}\end{DoxyCompactItemize}

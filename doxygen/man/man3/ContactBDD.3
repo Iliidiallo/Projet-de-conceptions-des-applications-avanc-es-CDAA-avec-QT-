@@ -1,0 +1,404 @@
+.TH "ContactBDD" 3 "Jeudi 16 Décembre 2021" "DoxygenFinal" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ContactBDD \- Classe qui gère la base de donnée La classe herite d'un \fBQObject\fP, permet de créer des fonctions et des structures qui dialogue avec notre base d'où la création des fonctions CRUD(Create,Read,Update,Delete) et recherche \&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <contactbdd\&.h>\fP
+.SS "Connecteurs publics"
+
+.in +1c
+.ti -1c
+.RI "void \fBbddListeContact\fP (std::list< \fBContact\fP > &)"
+.br
+.RI "Slot liste \fBContact\fP \&. Slot qui reçoit une liste de contact afin d'envoyer ceci a la methode ListeContact(std::list<Contact> &) "
+.ti -1c
+.RI "void \fBbbdNouveauContact\fP (\fBContact\fP &)"
+.br
+.RI "Slot Nouveau contact \&. Slot qui reçoit une contact afin d'envoyer ceci a la methode NouveauContact(Contact& ) "
+.ti -1c
+.RI "void \fBbddModifContact\fP (int &, \fBContact\fP &)"
+.br
+.RI "Slot Modifier un contact \&. Slot qui reçoit le id d'un contact et un contact afin d'envoyer ceci a la methode ModifContact(const int & ,const Contact &) "
+.ti -1c
+.RI "void \fBbddSupprimeContact\fP (int &)"
+.br
+.RI "Slot Supprimer un contact \&. Slot qui reçoit le id d'un contact afin d'envoyer ceci a la methode SupprimeContact(const int &) "
+.ti -1c
+.RI "void \fBbddRechercherContact\fP (QString &, QString &, QString &, std::list< \fBContact\fP > &)"
+.br
+.RI "Slot pour la recherche d'un contact Slot pour rechercher un contact c'est ce slot qu'on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale ,on a fait appel à la fonction bddRechercherContact pour lui donner en parametre les variable suivante : nom,date1, date2,la liste des contacts \&. "
+.in -1c
+.SS "Signaux"
+
+.in +1c
+.ti -1c
+.RI "void \fBnombreTotalContact\fP (int &)"
+.br
+.RI "Signal envoyer le nombre total de contact \&. "
+.in -1c
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "void \fBListeContact\fP (std::list< \fBContact\fP > &) const"
+.br
+.RI "Liste des contacts\&. Methode qui permet de recuperer la liste de l'ensemble des contact present dans la base\&. "
+.ti -1c
+.RI "bool \fBNouveauContact\fP (const \fBContact\fP &) const"
+.br
+.RI "Ajout d'un contact Methode qui permet d'ajouter un contact dans la base\&. "
+.ti -1c
+.RI "bool \fBModifContact\fP (const int &, const \fBContact\fP &) const"
+.br
+.RI "Modification\&. "
+.ti -1c
+.RI "bool \fBSupprimeContact\fP (const int &) const"
+.br
+.RI "Suppression\&. "
+.ti -1c
+.RI "void \fBRechercherContact\fP (QString &, QString &, QString &, std::list< \fBContact\fP > &) const"
+.br
+.RI "Recherche contact Methode qui permet de rechercher un contact dans la base entre deux dates saisies\&. "
+.ti -1c
+.RI "int \fBNombreContact\fP () const"
+.br
+.RI "Le nombre de total de contact dans la base\&. "
+.ti -1c
+.RI "\fBContactBDD\fP (\fBQObject\fP *parent=nullptr)"
+.br
+.RI "Constructeur Constructeur de la classe \fBContactBDD\fP\&. "
+.ti -1c
+.RI "\fB~ContactBDD\fP ()"
+.br
+.RI "Destructeur Destructeur de la classe \fBContactBDD\fP\&. "
+.in -1c
+.SS "Fonctions membres privées"
+
+.in +1c
+.ti -1c
+.RI "void \fBcloseDb\fP ()"
+.br
+.RI "Fermeture de la base Methode qui ferme la base quand elle est ouverte\&. "
+.ti -1c
+.RI "bool \fBconnexionDB\fP ()"
+.br
+.RI "Creer la connexion en ajoutant une des fonction statiques addDatabase\&. "
+.ti -1c
+.RI "void \fBisDBopen\fP (bool &)"
+.br
+.RI "Etat de la base\&. "
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "QSqlDatabase \fBdb\fP"
+.br
+.ti -1c
+.RI "bool \fBdbOuvert\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Classe qui gère la base de donnée La classe herite d'un \fBQObject\fP, permet de créer des fonctions et des structures qui dialogue avec notre base d'où la création des fonctions CRUD(Create,Read,Update,Delete) et recherche \&. 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "ContactBDD::ContactBDD (\fBQObject\fP * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+Constructeur Constructeur de la classe \fBContactBDD\fP\&. implémentation du constructeur avec paramètre \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fI*parent\fP = nullptr: par defaut de type \fBQObject\fP \&.
+.br
+\fI\fBQObject\fP\fP *parent et hérite d'un QObjet initialisation du test de la base de donnée à false \&. Appel de la fonction connexionBdd pour connecter la base de donnée \&. 
+.RE
+.PP
+
+.SS "ContactBDD::~ContactBDD ()"
+
+.PP
+Destructeur Destructeur de la classe \fBContactBDD\fP\&. implémentation du destructeur \&. A la fermeture de la base on libère la memoire en faisant appel à la fonction closeDB()\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void ContactBDD::bbdNouveauContact (\fBContact\fP & co)\fC [slot]\fP"
+
+.PP
+Slot Nouveau contact \&. Slot qui reçoit une contact afin d'envoyer ceci a la methode NouveauContact(Contact& ) Création d'un contact Slot pour créer un contact c'est ce slot qu'on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIContact&\fP : le contact
+.br
+\fI\fBContact\fP\fP &co:le contact qu'on mettra dans le paramètre de la fonction NouveauContact lors de son appel \&. 
+.RE
+.PP
+
+.SS "void ContactBDD::bddListeContact (std::list< \fBContact\fP > & co)\fC [slot]\fP"
+
+.PP
+Slot liste \fBContact\fP \&. Slot qui reçoit une liste de contact afin d'envoyer ceci a la methode ListeContact(std::list<Contact> &) 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Contact>\fP & : liste des contact 
+.RE
+.PP
+
+.SS "void ContactBDD::bddModifContact (int & id_ancien, \fBContact\fP & co)\fC [slot]\fP"
+
+.PP
+Slot Modifier un contact \&. Slot qui reçoit le id d'un contact et un contact afin d'envoyer ceci a la methode ModifContact(const int & ,const Contact &) Modification d'un contact Slot pour modifier un contact c'est ce slot qu'on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP &: le id du contact 
+.br
+\fIContact&\fP : le contact
+.br
+\fIconst\fP int &:l'identifiant du contact qu'on mettra dans le paramètre de la fonction modifContact lors de son appel \&. 
+.br
+\fI\fBContact\fP\fP &co:le contact qu'on mettra dans le paramètre de la fonction ModifContact lors de son appel \&. 
+.RE
+.PP
+
+.SS "void ContactBDD::bddRechercherContact (QString & nom, QString & date1, QString & date2, std::list< \fBContact\fP > & lc)\fC [slot]\fP"
+
+.PP
+Slot pour la recherche d'un contact Slot pour rechercher un contact c'est ce slot qu'on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale ,on a fait appel à la fonction bddRechercherContact pour lui donner en parametre les variable suivante : nom,date1, date2,la liste des contacts \&. \\Slot Rechercher un contact \&. Slot qui recherche un contact par son nom entre 2 dates et ce slot rejoint la methode Recherchercontact(\&.\&.\&.) 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIQString&:la\fP premiere date 
+.br
+\fIQString&:la\fP deuxieme date 
+.br
+\fIstd::list<Contact>\fP &:Liste des contact stocke ente ces 2 dates
+.br
+\fIQString\fP & nom : le nom du contact à réchercher \&. 
+.br
+\fIQString\fP & date1 : la date qui represente le premier intervalle \&. 
+.br
+\fIQString\fP & date2 : la date qui represente le premier intervalle \&. 
+.br
+\fIstd::list<Contact>\fP & lc :liste de contacts 
+.RE
+.PP
+
+.SS "void ContactBDD::bddSupprimeContact (int & id_cont)\fC [slot]\fP"
+
+.PP
+Slot Supprimer un contact \&. Slot qui reçoit le id d'un contact afin d'envoyer ceci a la methode SupprimeContact(const int &) Slot pour la suppression d'un contact Slot pour supprimer un contact c'est ce slot qu'on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP &: le id du contact
+.br
+\fIconst\fP int &:l'identifiant du contact à supprimer qu'on mettra dans le paramètre de la fonction modifContact lors de l'appel appel de la fonction \fBSupprimeContact()\fP \&. 
+.RE
+.PP
+
+.SS "ContactBDD::closeDb ()\fC [private]\fP"
+
+.PP
+Fermeture de la base Methode qui ferme la base quand elle est ouverte\&. fermer la base On teste si le boolean est à true on ferme la base
+.PP
+< Tester si la base est ouverte ou non 
+.SS "bool ContactBDD::connexionDB ()\fC [private]\fP"
+
+.PP
+Creer la connexion en ajoutant une des fonction statiques addDatabase\&. Connexion à la base de donnée On met le chemin dans tmp On teste si la base est ouverte : si non on retourne false si Oui on crée une table si elle n'existe pas et on affiche si la table est bien crée 'création de la table réussi ' \&.
+.PP
+Methode qui permet d'etablir une connexion dans la base Elle crée par la même occasion une table INTERACTION dans la base si elle n'existe pas\&.
+.PP
+\fBRenvoie\fP
+.RS 4
+true si la connexion à reussie, 
+.PP
+false sinon
+.PP
+dbOuvert : le booleén à retourner 
+.RE
+.PP
+
+.SS "void ContactBDD::isDBopen (bool & b)\fC [private]\fP"
+
+.PP
+Etat de la base\&. Teste on affectera b à b\&.
+.PP
+Methode qui change l'etat de la base
+.PP
+\fBParamètres\fP
+.RS 4
+\fIbool&\fP : l'etat de la base à changer
+.br
+\fIbool\fP & b : le booléan en paramètre \&. 
+.RE
+.PP
+
+.SS "ContactBDD::ListeContact (std::list< \fBContact\fP > & lc) const"
+
+.PP
+Liste des contacts\&. Methode qui permet de recuperer la liste de l'ensemble des contact present dans la base\&. la liste des contacts Slot pour afficher la liste des contacts c'est ce slot qu'on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale \&.
+.PP
+Affichage d'un contact L'affichage d'un contact en utilisant la requete qui selectionne tous les contacts dans la base de donnée \&. si l'affichage est réussi on récupère tout ce qui caractérise le contact dans la base \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Contact>\fP &:Liste des contact
+.RE
+.PP
+Ensemble des contacts
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Contact>\fP &lc : la liste de contact en paramètre on ajoutera le contact dans la liste passé en paramètre \&.
+.br
+\fIstd::list<Contact>\fP &co : la liste de contact qu'on mettra dans le paramètre lors de l'appel de la fonction ListeContact 
+.RE
+.PP
+
+.SS "bool ContactBDD::ModifContact (const int & id_ancien, const \fBContact\fP & co) const"
+
+.PP
+Modification\&. Modification d'un contact La fonction qui nous permet de modifier un contact en tenant compte des contraintes concernant les clés étrangères ou primaires en mettant à jour la liste de contact ein utilisant UPDATE dans la requete \&.
+.PP
+Methode qui permet de modifier un contact donné dans la base
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP & : le id du contacNouveauContactt à modifier 
+.br
+\fIContact&\fP : le nouveau contact modifié 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+true s'il est modifie dans la base 
+.PP
+false sinon
+.RE
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int & id_ancien : represente l'identifiant du contact à modifier \&. 
+.br
+\fIconst\fP \fBContact\fP & co: represente le contact qu'on utilisera pour recuperer ses setteurs afin de faire la modification du contact dans la base \&. 
+.RE
+.PP
+
+.SS "int ContactBDD::NombreContact () const"
+
+.PP
+Le nombre de total de contact dans la base\&. Afficher le nombre total de contact \&. c'est cette fonction qui nous permet d'afficher en comptant le nombre total de contact dans la base de donnée contactBDD pour y arriver on a utilisé count(*) qui permet de compter en sqlite et sql,plus précisement sur notre application lors d'un clic sur sur le boutons afficher les contact on voit afficher le nombre total de conatact dans la base de donnée \&. On le liera dans le main avec sa fonction correspondante \&.
+.PP
+Methode qui permet de savoir le nombre total de contact dans la base on a utilisé un requete avec count(*) \&.
+.PP
+\fBRenvoie\fP
+.RS 4
+le nombre total de contact 
+.PP
+-1 sinon
+.PP
+total: on a retourné l'entier total \&. 
+.RE
+.PP
+
+.SS "void ContactBDD::nombreTotalContact (int &)\fC [signal]\fP"
+
+.PP
+Signal envoyer le nombre total de contact \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP &:un entier en parametre 
+.RE
+.PP
+
+.SS "bool ContactBDD::NouveauContact (const \fBContact\fP & co) const"
+
+.PP
+Ajout d'un contact Methode qui permet d'ajouter un contact dans la base\&. Création d'un contact La fonction qui nous permet d'insérer un contact en tenant compte des contraintes concernant les clés étrangères ou primaires\&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIContact&\fP : le contact a inserer 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+true s'il est inserer dans la base 
+.PP
+false sinon
+.RE
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP \fBContact\fP & co: le contact qu'on utilisera pour recuperer ses setteurs afin de les inserer dans la base \&. 
+.RE
+.PP
+
+.SS "void ContactBDD::RechercherContact (QString & noms, QString & date1, QString & date2, std::list< \fBContact\fP > & lc) const"
+
+.PP
+Recherche contact Methode qui permet de rechercher un contact dans la base entre deux dates saisies\&. Rechercher contact par le nom c'est cette fonction qui nous permet de rechercher un contact par son nom dans la liste des contacts entre deux dates \&. On rentrera l'intervalle à rechercher et le nom en Selectionnant la table où le nom entrer par l'utilisateur correspond à un nom dans la liste contact : on l'affiche sinon on affiche rien tout en triant par date de création \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIQString&:la\fP premiere date 
+.br
+\fIQString&:la\fP deuxieme date 
+.br
+\fIstd::list<Contact>\fP &:Liste des contact stocke entre ces 2 dates
+.br
+\fIQString\fP & noms: le nom du contact à réchercher \&. 
+.br
+\fIQString\fP & date1 : la date qui represente le premier intervalle \&. 
+.br
+\fIQString\fP & date2 : la date qui represente le premier intervalle \&. 
+.br
+\fIstd::list<Contact>\fP & lc :liste de contacts 
+.RE
+.PP
+
+.SS "bool ContactBDD::SupprimeContact (const int & id_cont) const"
+
+.PP
+Suppression\&. Supprimer un contact La fonction qui nous permet de supprimer un contact en tenant compte des contraintes concernant les clés étrangères ou primaires en supprimant toutes ces intéractions et taches en utilisant la requete 'DELETE' \&.
+.PP
+Methode qui permet de supprimer un contact donné dans la base
+.PP
+\fBParamètres\fP
+.RS 4
+\fIContact&\fP : le contact à supprimer 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+true s'il est supprimé dans la base 
+.PP
+false sinon
+.RE
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int & id_cont: l'identifiant du contact à supprimer \&. 
+.RE
+.PP
+
+.SH "Documentation des données membres"
+.PP 
+.SS "QSqlDatabase ContactBDD::db\fC [private]\fP"
+connexion a la base de donnee 
+.SS "bool ContactBDD::dbOuvert\fC [private]\fP"
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour DoxygenFinal à partir du code source\&.

@@ -1,0 +1,443 @@
+\doxysection{Référence de la classe Todo\+B\+DD}
+\label{class_todo_b_d_d}\index{TodoBDD@{TodoBDD}}
+
+
+Classe \doxyref{Todo\+B\+DD}{p.}{class_todo_b_d_d} de la base de donnée La classe herite d\textquotesingle{}un \doxyref{Q\+Object}{p.}{class_q_object}, permet d\textquotesingle{}ajouter des \doxyref{Todo\+B\+DD}{p.}{class_todo_b_d_d} pour un contact donné en la stockant dans la base de donnée .  
+
+
+
+
+{\ttfamily \#include $<$todobdd.\+h$>$}
+
+
+
+Graphe de collaboration de Todo\+B\+DD\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_todo_b_d_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Connecteurs publics}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ bdd\+Ajout\+Todo} (int \&, \textbf{ Todo} \&)
+\begin{DoxyCompactList}\small\item\em Slot Ajout \doxyref{Todo}{p.}{class_todo} . slot qui permet d\textquotesingle{}ajouter une tache. \end{DoxyCompactList}\item 
+void \textbf{ bdd\+Liste\+Todo\+Contact} (int \&, std\+::list$<$ \textbf{ Todo} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Slot liste Taches pour un contact . slot qui permet d\textquotesingle{}afficher la liste des taches pour un contact selectionné \end{DoxyCompactList}\item 
+void \textbf{ bdd\+Liste\+A\+L\+L\+Contact} (std\+::list$<$ \textbf{ Todo} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Slot liste Taches pour tous les contacts. slot qui permet d\textquotesingle{}afficher la liste des taches pour tous les contacts. \end{DoxyCompactList}\item 
+void \textbf{ bdd\+Recherche\+Todo\+Cont} (int \&, Q\+String \&, Q\+String \&, std\+::list$<$ \textbf{ Todo} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Slot Rechercher Taches pour un contact entre deux dates . slot qui permet d\textquotesingle{}afficher la liste des taches pour un contact entre deux dates. \end{DoxyCompactList}\item 
+void \textbf{ bdd\+Recherche\+A\+L\+L\+Todo\+Cont} (Q\+String \&, Q\+String \&, std\+::list$<$ \textbf{ Todo} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Slot Rechercher Taches pour tous les contacts entre deux dates. slot qui permet d\textquotesingle{}afficher la liste des taches pour tous les contacts entre deux dates entré par l\textquotesingle{}utilisateur. \end{DoxyCompactList}\item 
+void \textbf{ is\+Open} (bool \&)
+\begin{DoxyCompactList}\small\item\em Etat de la base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Todo\+B\+DD} (\textbf{ Q\+Object} $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructeur Constructeur de la classe \doxyref{Todo\+B\+DD}{p.}{class_todo_b_d_d}. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Todo\+B\+DD} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Le Destructeur de la classe \doxyref{Todo\+B\+DD}{p.}{class_todo_b_d_d} càd la fonction qui libère la memoire utilisé . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ close\+Db} ()
+\begin{DoxyCompactList}\small\item\em Fermeture de la base Methode qui ferme la base si elle est ouverte. \end{DoxyCompactList}\item 
+bool \textbf{ connexion} ()
+\begin{DoxyCompactList}\small\item\em Creer la connexion Methode qui permet d\textquotesingle{}etablir une connexion avec la base et elle crée une table \doxyref{Todo}{p.}{class_todo} dans la base si elle n\textquotesingle{}existe pas. \end{DoxyCompactList}\item 
+void \textbf{ is\+D\+Bopen} (bool \&)
+\begin{DoxyCompactList}\small\item\em Etat de la base Methode qui change l\textquotesingle{}etat de la base. \end{DoxyCompactList}\item 
+bool \textbf{ Ajout\+Todo} (const int \&, \textbf{ Todo} \&)
+\begin{DoxyCompactList}\small\item\em Ajout d\textquotesingle{}une Tache Methode qui permet d\textquotesingle{}ajouter une tache pour une intéraction. \end{DoxyCompactList}\item 
+void \textbf{ Liste\+Todo\+Contact} (const int \&, std\+::list$<$ \textbf{ Todo} $>$ \&) const
+\begin{DoxyCompactList}\small\item\em Liste des taches . Methode qui permet de recuperer la liste des taches d\textquotesingle{}un contact selectionné \end{DoxyCompactList}\item 
+void \textbf{ Liste\+A\+L\+L\+Contact} (std\+::list$<$ \textbf{ Todo} $>$ \&) const
+\begin{DoxyCompactList}\small\item\em Liste des Intéractions . Methode qui permet d\textquotesingle{}afficher la liste des Taches de tous les contacts. \end{DoxyCompactList}\item 
+void \textbf{ Recherche\+A\+L\+L\+Todo\+Cont} (Q\+String \&, Q\+String \&, std\+::list$<$ \textbf{ Todo} $>$ \&) const
+\begin{DoxyCompactList}\small\item\em Rechercher des Taches entre deux dates . La Méthode qui permet de rechercher entre deux dates les Taches de tous les contacts. \end{DoxyCompactList}\item 
+void \textbf{ Recherche\+Todo\+Cont} (const int \&, Q\+String \&, Q\+String \&, std\+::list$<$ \textbf{ Todo} $>$ \&) const
+\begin{DoxyCompactList}\small\item\em Rechercher des Taches entre deux dates pour un contact . La Méthode qui permet de rechercher entre deux dates les taches d\textquotesingle{}un contact. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Sql\+Database \textbf{ db}
+\item 
+bool \textbf{ db\+Ouvert}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe \doxyref{Todo\+B\+DD}{p.}{class_todo_b_d_d} de la base de donnée La classe herite d\textquotesingle{}un \doxyref{Q\+Object}{p.}{class_q_object}, permet d\textquotesingle{}ajouter des \doxyref{Todo\+B\+DD}{p.}{class_todo_b_d_d} pour un contact donné en la stockant dans la base de donnée . 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\label{class_todo_b_d_d_a879c50e2ac21f39f0bdf78f30ddb5928}} 
+\index{TodoBDD@{TodoBDD}!TodoBDD@{TodoBDD}}
+\index{TodoBDD@{TodoBDD}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{TodoBDD()}
+{\footnotesize\ttfamily Todo\+B\+D\+D\+::\+Todo\+B\+DD (\begin{DoxyParamCaption}\item[{\textbf{ Q\+Object} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructeur Constructeur de la classe \doxyref{Todo\+B\+DD}{p.}{class_todo_b_d_d}. 
+
+implémentation du constructeur avec paramètre .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$parent} & = nullptr\+: par defaut\\
+\hline
+{\em \doxyref{Q\+Object}{p.}{class_q_object}} & $\ast$parent et hérite d\textquotesingle{}un Q\+Objet initialisation du test de la base de donnée à false . Appel de la fonction \doxyref{connexion()}{p.}{class_todo_b_d_d_a60295f038babc2717319152a088a8316} pour connecter la base de donnée . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_a6d97e1f4fef7bdf5507b6882d0ae8c03}} 
+\index{TodoBDD@{TodoBDD}!````~TodoBDD@{$\sim$TodoBDD}}
+\index{````~TodoBDD@{$\sim$TodoBDD}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{$\sim$TodoBDD()}
+{\footnotesize\ttfamily Todo\+B\+D\+D\+::$\sim$\+Todo\+B\+DD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur Le Destructeur de la classe \doxyref{Todo\+B\+DD}{p.}{class_todo_b_d_d} càd la fonction qui libère la memoire utilisé . 
+
+implémentation du destructeur . A la fermeture de la base on libère la memoire en faisant appel à la fonction close\+D\+B().
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\label{class_todo_b_d_d_a75b61160ab3a4455b63ae3ff07455c26}} 
+\index{TodoBDD@{TodoBDD}!AjoutTodo@{AjoutTodo}}
+\index{AjoutTodo@{AjoutTodo}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{AjoutTodo()}
+{\footnotesize\ttfamily bool Todo\+B\+D\+D\+::\+Ajout\+Todo (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{\textbf{ Todo} \&}]{inter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ajout d\textquotesingle{}une Tache Methode qui permet d\textquotesingle{}ajouter une tache pour une intéraction. 
+
+Création d\textquotesingle{}une tache La fonction qui nous permet de créer ou inserer une tache en tenant compte des contraintes concernant les clés étrangères ou primaires.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \&\+:l\textquotesingle{}id du contact courant \\
+\hline
+{\em \doxyref{Todo}{p.}{class_todo}} & \&\+: la tache à ajouter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true s\textquotesingle{}i elle est insereré dans la base 
+
+false sinon
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em \doxyref{Todo}{p.}{class_todo}} & \& inter\+: representera l\textquotesingle{}intéraction qui sera ajouté . \\
+\hline
+{\em const} & int \& id \+: representera l\textquotesingle{}identifiant de l\textquotesingle{}intéraction pour lui ajouter la tache . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_a026cc43a7cf4fc28c4552c9ee617d694}} 
+\index{TodoBDD@{TodoBDD}!bddAjoutTodo@{bddAjoutTodo}}
+\index{bddAjoutTodo@{bddAjoutTodo}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{bddAjoutTodo}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::bdd\+Ajout\+Todo (\begin{DoxyParamCaption}\item[{int \&}]{i,  }\item[{\textbf{ Todo} \&}]{inter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Ajout \doxyref{Todo}{p.}{class_todo} . slot qui permet d\textquotesingle{}ajouter une tache. 
+
+Ajout d\textquotesingle{}une tache Slot pour ajouter une tache pour une intéraction , c\textquotesingle{}est ce slot qu\textquotesingle{}on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \& \+: l\textquotesingle{}identifiant du contact \\
+\hline
+{\em \doxyref{Todo}{p.}{class_todo}} & \& \+: la tache a ajouter\\
+\hline
+{\em \doxyref{Todo}{p.}{class_todo}} & \& inter\+: representera la tache qui sera ajouté . \\
+\hline
+{\em const} & int \& id \+: representera l\textquotesingle{}identifiant de l\textquotesingle{}intéraction . On appel la fonction Ajout\+Todo dans le slot pour lui donner les parametres du slot . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_ac134d6ee1e9f8a0f1b80a6aee32eac38}} 
+\index{TodoBDD@{TodoBDD}!bddListeALLContact@{bddListeALLContact}}
+\index{bddListeALLContact@{bddListeALLContact}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{bddListeALLContact}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::bdd\+Liste\+A\+L\+L\+Contact (\begin{DoxyParamCaption}\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{li }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot liste Taches pour tous les contacts. slot qui permet d\textquotesingle{}afficher la liste des taches pour tous les contacts. 
+
+Slot afficher toutes les taches Slot pour afficher toutes les taches de toutes les intéractions, c\textquotesingle{}est ce slot qu\textquotesingle{}on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Todo$>$\&} & \& \+: liste des taches\\
+\hline
+{\em std\+::list$<$\+Todo$>$} & \& li\+: c\textquotesingle{}est la liste qu\textquotesingle{}on met dans le paramètre de la fonction Liste\+A\+L\+L\+Contact pour nous afficher toutes ses taches \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_a472d2d0d3b28d6f35762cec4897144ff}} 
+\index{TodoBDD@{TodoBDD}!bddListeTodoContact@{bddListeTodoContact}}
+\index{bddListeTodoContact@{bddListeTodoContact}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{bddListeTodoContact}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::bdd\+Liste\+Todo\+Contact (\begin{DoxyParamCaption}\item[{int \&}]{id,  }\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{li }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot liste Taches pour un contact . slot qui permet d\textquotesingle{}afficher la liste des taches pour un contact selectionné 
+
+Afficher les taches d\textquotesingle{}une intéraction . Slot pour affiche les taches d\textquotesingle{}une intéraction , c\textquotesingle{}est ce slot qu\textquotesingle{}on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \&\+: l\textquotesingle{}identifiant d\textquotesingle{}un contact \\
+\hline
+{\em std\+::list$<$\+Todo$>$\&} & \& \+: liste des taches\\
+\hline
+{\em std\+::list$<$\+Todo$>$} & \& li\+:la liste des taches . \\
+\hline
+{\em int} & \& id \+: representera l\textquotesingle{}identifiant de l\textquotesingle{}intéraction . On appel la fonction List\+Todo\+Contact dans le slot pour lui donner les parametres du slot . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_ac4c3963e67b0345e6f483a06152e7f03}} 
+\index{TodoBDD@{TodoBDD}!bddRechercheALLTodoCont@{bddRechercheALLTodoCont}}
+\index{bddRechercheALLTodoCont@{bddRechercheALLTodoCont}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{bddRechercheALLTodoCont}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::bdd\+Recherche\+A\+L\+L\+Todo\+Cont (\begin{DoxyParamCaption}\item[{Q\+String \&}]{date1,  }\item[{Q\+String \&}]{date2,  }\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{li }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Rechercher Taches pour tous les contacts entre deux dates. slot qui permet d\textquotesingle{}afficher la liste des taches pour tous les contacts entre deux dates entré par l\textquotesingle{}utilisateur. 
+
+Slot pour rechercher les taches de tous les contacts . Slot pour rechercher les taches des contacts entre deux dates,c\textquotesingle{}est ce slot qu\textquotesingle{}on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Todo$>$\&} & \& \+: liste des taches \\
+\hline
+{\em Q\+String} & \& \+: la premiere date pour le debut de la recherche \\
+\hline
+{\em Q\+String} & \& \+: la deuxieme date pour la fin de la recherche\\
+\hline
+{\em Q\+String} & \& date1 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em Q\+String} & \& date2 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em std\+::list$<$\+Todo$>$} & \& li \+:la liste des taches . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_a62f7870b9b099a30e52dbad1ec67a0f2}} 
+\index{TodoBDD@{TodoBDD}!bddRechercheTodoCont@{bddRechercheTodoCont}}
+\index{bddRechercheTodoCont@{bddRechercheTodoCont}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{bddRechercheTodoCont}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::bdd\+Recherche\+Todo\+Cont (\begin{DoxyParamCaption}\item[{int \&}]{id,  }\item[{Q\+String \&}]{date1,  }\item[{Q\+String \&}]{date2,  }\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{li }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Rechercher Taches pour un contact entre deux dates . slot qui permet d\textquotesingle{}afficher la liste des taches pour un contact entre deux dates. 
+
+Slot pour rechercher les taches d\textquotesingle{}un contact . Slot pour afficher les taches d\textquotesingle{}un contact entre deux dates, c\textquotesingle{}est ce slot qu\textquotesingle{}on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Todo$>$\&} & \& \+: liste des taches \\
+\hline
+{\em Q\+String} & \& \+: la premiere date pour le debut de la recherche \\
+\hline
+{\em Q\+String} & \& \+: la deuxieme date pour la fin de la recherche \\
+\hline
+{\em int} & \& \+:l\textquotesingle{}identifiant de l\textquotesingle{}interaction\\
+\hline
+{\em int} & \& id\+: l\textquotesingle{}identifiant du contact pour le quel on fera la recherche qui se trouvera dans notre combo\+Box . \\
+\hline
+{\em Q\+String} & \& date1 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em Q\+String} & \& date2 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em std\+::list$<$\+Todo$>$} & \& li \+:la liste des taches . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_aa5b54c75a0c13276e5b466f553b5b584}} 
+\index{TodoBDD@{TodoBDD}!closeDb@{closeDb}}
+\index{closeDb@{closeDb}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{closeDb()}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::close\+Db (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fermeture de la base Methode qui ferme la base si elle est ouverte. 
+
+\mbox{\label{class_todo_b_d_d_a60295f038babc2717319152a088a8316}} 
+\index{TodoBDD@{TodoBDD}!connexion@{connexion}}
+\index{connexion@{connexion}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{connexion()}
+{\footnotesize\ttfamily bool Todo\+B\+D\+D\+::connexion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creer la connexion Methode qui permet d\textquotesingle{}etablir une connexion avec la base et elle crée une table \doxyref{Todo}{p.}{class_todo} dans la base si elle n\textquotesingle{}existe pas. 
+
+Connexion à la base de donnée On le nom de la base avec l\textquotesingle{}extension sqlite dans le tmp On teste si la base est ouverte \+: si non on retourne false si Oui on crée une table si elle n\textquotesingle{}existe pas en verifiant la contrainte pour la clé etrangère \char`\"{}\+O\+N D\+E\+L\+E\+T\+E C\+A\+S\+C\+A\+D\+E\char`\"{} ça signifie si l\textquotesingle{}enregistrement parent est supprimé tous les enregistrements enfants vont suivre ensuite on affiche \char`\"{}création de la table réussi \char`\"{} .
+
+\begin{DoxyReturn}{Renvoie}
+true si la connexion à reussie, 
+
+false sinon
+
+db\+Ouvert \+: le booleén à retourner 
+\end{DoxyReturn}
+\mbox{\label{class_todo_b_d_d_ab438832daf9a3f50176e4193bc75561d}} 
+\index{TodoBDD@{TodoBDD}!isDBopen@{isDBopen}}
+\index{isDBopen@{isDBopen}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{isDBopen()}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::is\+D\+Bopen (\begin{DoxyParamCaption}\item[{bool \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Etat de la base Methode qui change l\textquotesingle{}etat de la base. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em bool\&} & \+: l\textquotesingle{}etat de la base à changer \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_ae5178376889823e76f9fe026fb236d6e}} 
+\index{TodoBDD@{TodoBDD}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{isOpen}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::is\+Open (\begin{DoxyParamCaption}\item[{bool \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Etat de la base. 
+
+Methode qui change l\textquotesingle{}etat de la base
+
+
+\begin{DoxyParams}{Paramètres}
+{\em bool\&} & \+: l\textquotesingle{}etat de la base à changer \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_a5045b4fd85577377a7e270ca55c8cb66}} 
+\index{TodoBDD@{TodoBDD}!ListeALLContact@{ListeALLContact}}
+\index{ListeALLContact@{ListeALLContact}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{ListeALLContact()}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::\+Liste\+A\+L\+L\+Contact (\begin{DoxyParamCaption}\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{li }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Liste des Intéractions . Methode qui permet d\textquotesingle{}afficher la liste des Taches de tous les contacts. 
+
+Affichage toutes les taches de toutes les intéractions de tous les contacts . On affiche toutes les taches en selectionnant toute la table T\+O\+DO et on l\textquotesingle{}affiche .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Todo$>$\+:\+Liste} & des Taches\\
+\hline
+{\em std\+::list$<$\+Interaction$>$} & \& li \+: la liste des todos . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_af6132fcfe369915147fa5759560ed7d5}} 
+\index{TodoBDD@{TodoBDD}!ListeTodoContact@{ListeTodoContact}}
+\index{ListeTodoContact@{ListeTodoContact}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{ListeTodoContact()}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::\+Liste\+Todo\+Contact (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{li }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Liste des taches . Methode qui permet de recuperer la liste des taches d\textquotesingle{}un contact selectionné 
+
+Affichage des taches d\textquotesingle{}une intéraction L\textquotesingle{}affichage des taches d\textquotesingle{}une intéraction en utilisant la requete qui selectionne toutes les taches d\textquotesingle{}une Intéraction dans la base de donnée en triant la liste à la fin par l\textquotesingle{}appel de sort (c++) .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Todo$>$} & \&\+:Liste des taches \\
+\hline
+{\em const} & int \&\+: l\textquotesingle{}identifiant de l\textquotesingle{}intéraction\\
+\hline
+{\em std\+::list$<$\+Todo$>$} & \&li\+: la liste des taches . \\
+\hline
+{\em const} & int \& id \+: representera l\textquotesingle{}identifiant de l\textquotesingle{}intéraction pour lui afficher ses taches . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_a9eb8c5ded6c9cfc7fb5ec95beef276f9}} 
+\index{TodoBDD@{TodoBDD}!RechercheALLTodoCont@{RechercheALLTodoCont}}
+\index{RechercheALLTodoCont@{RechercheALLTodoCont}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{RechercheALLTodoCont()}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::\+Recherche\+A\+L\+L\+Todo\+Cont (\begin{DoxyParamCaption}\item[{Q\+String \&}]{date1,  }\item[{Q\+String \&}]{date2,  }\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{li }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rechercher des Taches entre deux dates . La Méthode qui permet de rechercher entre deux dates les Taches de tous les contacts. 
+
+Rechercher les taches de tous les contacts entre deux dates c\textquotesingle{}est cette fonction qui nous permet de rechercher des taches entre deux dates . On rentrera l\textquotesingle{}intervalle à rechercher en Selectionnant la table\+: on n\textquotesingle{}affiche rien si les taches n\textquotesingle{}existent pas entre ces dates si oui on affiche toutes les taches entre ces dates en triant les dates avec sort() par date de création .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Todo$>$} & \&\+:Liste des Taches \\
+\hline
+{\em Q\+String} & \&\+: la premiere date de type Qstring . \\
+\hline
+{\em Q\+String} & \&\+: la deuxieme date de type Qstring.\\
+\hline
+{\em Q\+String} & \& date1 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em Q\+String} & \& date2 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em sstd\+::list$<$\+Todo$>$} & \& li \+:liste des taches . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_b_d_d_aa1e3bd834cf8d1d1d1b980de8b6ea88d}} 
+\index{TodoBDD@{TodoBDD}!RechercheTodoCont@{RechercheTodoCont}}
+\index{RechercheTodoCont@{RechercheTodoCont}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{RechercheTodoCont()}
+{\footnotesize\ttfamily void Todo\+B\+D\+D\+::\+Recherche\+Todo\+Cont (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{Q\+String \&}]{date1,  }\item[{Q\+String \&}]{date2,  }\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{li }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rechercher des Taches entre deux dates pour un contact . La Méthode qui permet de rechercher entre deux dates les taches d\textquotesingle{}un contact. 
+
+Rechercher les taches entre deux dates pour un contact c\textquotesingle{}est cette fonction qui nous permet de rechercher des taches entre deux dates pour un contact selectionné . On rentrera l\textquotesingle{}intervalle à rechercher on selectionnera dans la combo\+Box le contact on appuyera sur le bouton rechercher . on n\textquotesingle{}affiche rien si les todos n\textquotesingle{}existent pas entre ces dates pour le contact si oui on affiche toutes les taches entre ces dates en triant les dates avec sort() par date de création .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \&\+: l\textquotesingle{}identifiant d\textquotesingle{}une interaction \\
+\hline
+{\em std\+::list$<$\+Todo$>$} & \&\+:Liste des Taches \\
+\hline
+{\em Q\+String} & \&\+: la premiere date de type Qstring . \\
+\hline
+{\em Q\+String} & \&\+: la deuxieme date de type Qstring.\\
+\hline
+{\em int} & \& id\+: l\textquotesingle{}identifiant du contact pour le quel on fera la recherche . \\
+\hline
+{\em Q\+String} & \& date1 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em Q\+String} & \& date2 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em std\+::list$<$\+Todo$>$} & \& li \+:la liste des taches . \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\label{class_todo_b_d_d_aedd93b0da1df6323c7178087a7ef8e06}} 
+\index{TodoBDD@{TodoBDD}!db@{db}}
+\index{db@{db}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{db}
+{\footnotesize\ttfamily Q\+Sql\+Database Todo\+B\+D\+D\+::db\hspace{0.3cm}{\ttfamily [private]}}
+
+connexion a la base de donnee \mbox{\label{class_todo_b_d_d_a8678f39a1092a25cd44cf8a3116ee981}} 
+\index{TodoBDD@{TodoBDD}!dbOuvert@{dbOuvert}}
+\index{dbOuvert@{dbOuvert}!TodoBDD@{TodoBDD}}
+\doxysubsubsection{dbOuvert}
+{\footnotesize\ttfamily bool Todo\+B\+D\+D\+::db\+Ouvert\hspace{0.3cm}{\ttfamily [private]}}
+
+Savoir si la base est ouverte ou non 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ todobdd.\+h}\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ todobdd.\+cpp}\end{DoxyCompactItemize}

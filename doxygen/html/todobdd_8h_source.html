@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DoxygenFinal:  Fichier source de /home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DoxygenFinal
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('todobdd_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">todobdd.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="todobdd_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TODOBDD_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TODOBDD_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_todo_8h.html">Todo.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QDate&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QtSql/QSqlDatabase&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QtSql/QSqlQuery&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QVariant&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_todo_b_d_d.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_todo_b_d_d.html">TodoBDD</a> : <span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_todo_b_d_d.html#aedd93b0da1df6323c7178087a7ef8e06">   32</a></span>&#160;    QSqlDatabase <a class="code" href="class_todo_b_d_d.html#aedd93b0da1df6323c7178087a7ef8e06">db</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_todo_b_d_d.html#a8678f39a1092a25cd44cf8a3116ee981">   33</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_todo_b_d_d.html#a8678f39a1092a25cd44cf8a3116ee981">dbOuvert</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#aa5b54c75a0c13276e5b466f553b5b584">closeDb</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_todo_b_d_d.html#a60295f038babc2717319152a088a8316">connexion</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#ab438832daf9a3f50176e4193bc75561d">isDBopen</a>(<span class="keywordtype">bool</span> &amp;);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_todo_b_d_d.html#a75b61160ab3a4455b63ae3ff07455c26">AjoutTodo</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;,<a class="code" href="class_todo.html">Todo</a> &amp;);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#af6132fcfe369915147fa5759560ed7d5">ListeTodoContact</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;,std::list&lt;Todo&gt;&amp;)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#a5045b4fd85577377a7e270ca55c8cb66">ListeALLContact</a>(std::list&lt;Todo&gt;&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#a9eb8c5ded6c9cfc7fb5ec95beef276f9">RechercheALLTodoCont</a>(QString &amp;,QString &amp;,std::list&lt;Todo&gt; &amp;)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#aa1e3bd834cf8d1d1d1b980de8b6ea88d">RechercheTodoCont</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;,QString &amp;,QString &amp;,std::list&lt;Todo&gt; &amp;)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_todo_b_d_d.html#a879c50e2ac21f39f0bdf78f30ddb5928">TodoBDD</a>(<a class="code" href="class_q_object.html">QObject</a> *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="class_todo_b_d_d.html#a6d97e1f4fef7bdf5507b6882d0ae8c03">~TodoBDD</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#a026cc43a7cf4fc28c4552c9ee617d694">bddAjoutTodo</a>(<span class="keywordtype">int</span> &amp;,<a class="code" href="class_todo.html">Todo</a> &amp;);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#a472d2d0d3b28d6f35762cec4897144ff">bddListeTodoContact</a>(<span class="keywordtype">int</span> &amp;,std::list&lt;Todo&gt;&amp;);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#ac134d6ee1e9f8a0f1b80a6aee32eac38">bddListeALLContact</a>(std::list&lt;Todo&gt; &amp;);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#a62f7870b9b099a30e52dbad1ec67a0f2">bddRechercheTodoCont</a>(<span class="keywordtype">int</span> &amp; , QString &amp; , QString &amp; , std::list&lt;Todo&gt; &amp;);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#ac4c3963e67b0345e6f483a06152e7f03">bddRechercheALLTodoCont</a>( QString &amp; , QString &amp; , std::list&lt;Todo&gt; &amp;);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_todo_b_d_d.html#ae5178376889823e76f9fe026fb236d6e">isOpen</a>(<span class="keywordtype">bool</span> &amp;);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;};</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#endif // TODOBDD_Hvoi</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_todo_b_d_d_html_a75b61160ab3a4455b63ae3ff07455c26"><div class="ttname"><a href="class_todo_b_d_d.html#a75b61160ab3a4455b63ae3ff07455c26">TodoBDD::AjoutTodo</a></div><div class="ttdeci">bool AjoutTodo(const int &amp;, Todo &amp;)</div><div class="ttdoc">Ajout d'une Tache Methode qui permet d'ajouter une tache pour une intéraction.</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:87</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_ac4c3963e67b0345e6f483a06152e7f03"><div class="ttname"><a href="class_todo_b_d_d.html#ac4c3963e67b0345e6f483a06152e7f03">TodoBDD::bddRechercheALLTodoCont</a></div><div class="ttdeci">void bddRechercheALLTodoCont(QString &amp;, QString &amp;, std::list&lt; Todo &gt; &amp;)</div><div class="ttdoc">Slot Rechercher Taches pour tous les contacts entre deux dates. slot qui permet d'afficher la liste d...</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:417</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_ab438832daf9a3f50176e4193bc75561d"><div class="ttname"><a href="class_todo_b_d_d.html#ab438832daf9a3f50176e4193bc75561d">TodoBDD::isDBopen</a></div><div class="ttdeci">void isDBopen(bool &amp;)</div><div class="ttdoc">Etat de la base Methode qui change l'etat de la base.</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:453</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_aa1e3bd834cf8d1d1d1b980de8b6ea88d"><div class="ttname"><a href="class_todo_b_d_d.html#aa1e3bd834cf8d1d1d1b980de8b6ea88d">TodoBDD::RechercheTodoCont</a></div><div class="ttdeci">void RechercheTodoCont(const int &amp;, QString &amp;, QString &amp;, std::list&lt; Todo &gt; &amp;) const</div><div class="ttdoc">Rechercher des Taches entre deux dates pour un contact . La Méthode qui permet de rechercher entre de...</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:271</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_ac134d6ee1e9f8a0f1b80a6aee32eac38"><div class="ttname"><a href="class_todo_b_d_d.html#ac134d6ee1e9f8a0f1b80a6aee32eac38">TodoBDD::bddListeALLContact</a></div><div class="ttdeci">void bddListeALLContact(std::list&lt; Todo &gt; &amp;)</div><div class="ttdoc">Slot liste Taches pour tous les contacts. slot qui permet d'afficher la liste des taches pour tous le...</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:252</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_a879c50e2ac21f39f0bdf78f30ddb5928"><div class="ttname"><a href="class_todo_b_d_d.html#a879c50e2ac21f39f0bdf78f30ddb5928">TodoBDD::TodoBDD</a></div><div class="ttdeci">TodoBDD(QObject *parent=nullptr)</div><div class="ttdoc">Constructeur Constructeur de la classe TodoBDD.</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:16</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_a026cc43a7cf4fc28c4552c9ee617d694"><div class="ttname"><a href="class_todo_b_d_d.html#a026cc43a7cf4fc28c4552c9ee617d694">TodoBDD::bddAjoutTodo</a></div><div class="ttdeci">void bddAjoutTodo(int &amp;, Todo &amp;)</div><div class="ttdoc">Slot Ajout Todo . slot qui permet d'ajouter une tache.</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:121</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_aa5b54c75a0c13276e5b466f553b5b584"><div class="ttname"><a href="class_todo_b_d_d.html#aa5b54c75a0c13276e5b466f553b5b584">TodoBDD::closeDb</a></div><div class="ttdeci">void closeDb()</div><div class="ttdoc">Fermeture de la base Methode qui ferme la base si elle est ouverte.</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:438</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_a472d2d0d3b28d6f35762cec4897144ff"><div class="ttname"><a href="class_todo_b_d_d.html#a472d2d0d3b28d6f35762cec4897144ff">TodoBDD::bddListeTodoContact</a></div><div class="ttdeci">void bddListeTodoContact(int &amp;, std::list&lt; Todo &gt; &amp;)</div><div class="ttdoc">Slot liste Taches pour un contact . slot qui permet d'afficher la liste des taches pour un contact se...</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:188</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_aedd93b0da1df6323c7178087a7ef8e06"><div class="ttname"><a href="class_todo_b_d_d.html#aedd93b0da1df6323c7178087a7ef8e06">TodoBDD::db</a></div><div class="ttdeci">QSqlDatabase db</div><div class="ttdef"><b>Definition:</b> todobdd.h:32</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_a62f7870b9b099a30e52dbad1ec67a0f2"><div class="ttname"><a href="class_todo_b_d_d.html#a62f7870b9b099a30e52dbad1ec67a0f2">TodoBDD::bddRechercheTodoCont</a></div><div class="ttdeci">void bddRechercheTodoCont(int &amp;, QString &amp;, QString &amp;, std::list&lt; Todo &gt; &amp;)</div><div class="ttdoc">Slot Rechercher Taches pour un contact entre deux dates . slot qui permet d'afficher la liste des tac...</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:338</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_a60295f038babc2717319152a088a8316"><div class="ttname"><a href="class_todo_b_d_d.html#a60295f038babc2717319152a088a8316">TodoBDD::connexion</a></div><div class="ttdeci">bool connexion()</div><div class="ttdoc">Creer la connexion Methode qui permet d'etablir une connexion avec la base et elle crée une table Tod...</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:43</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_a5045b4fd85577377a7e270ca55c8cb66"><div class="ttname"><a href="class_todo_b_d_d.html#a5045b4fd85577377a7e270ca55c8cb66">TodoBDD::ListeALLContact</a></div><div class="ttdeci">void ListeALLContact(std::list&lt; Todo &gt; &amp;) const</div><div class="ttdoc">Liste des Intéractions . Methode qui permet d'afficher la liste des Taches de tous les contacts.</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:201</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_a9eb8c5ded6c9cfc7fb5ec95beef276f9"><div class="ttname"><a href="class_todo_b_d_d.html#a9eb8c5ded6c9cfc7fb5ec95beef276f9">TodoBDD::RechercheALLTodoCont</a></div><div class="ttdeci">void RechercheALLTodoCont(QString &amp;, QString &amp;, std::list&lt; Todo &gt; &amp;) const</div><div class="ttdoc">Rechercher des Taches entre deux dates . La Méthode qui permet de rechercher entre deux dates les Tac...</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:354</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_ae5178376889823e76f9fe026fb236d6e"><div class="ttname"><a href="class_todo_b_d_d.html#ae5178376889823e76f9fe026fb236d6e">TodoBDD::isOpen</a></div><div class="ttdeci">void isOpen(bool &amp;)</div><div class="ttdoc">Etat de la base.</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:427</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_a6d97e1f4fef7bdf5507b6882d0ae8c03"><div class="ttname"><a href="class_todo_b_d_d.html#a6d97e1f4fef7bdf5507b6882d0ae8c03">TodoBDD::~TodoBDD</a></div><div class="ttdeci">~TodoBDD()</div><div class="ttdoc">Destructeur Le Destructeur de la classe TodoBDD càd la fonction qui libère la memoire utilisé .</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:27</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html"><div class="ttname"><a href="class_todo_b_d_d.html">TodoBDD</a></div><div class="ttdoc">Classe TodoBDD de la base de donnée La classe herite d'un QObject, permet d'ajouter des TodoBDD pour ...</div><div class="ttdef"><b>Definition:</b> todobdd.h:28</div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_a8678f39a1092a25cd44cf8a3116ee981"><div class="ttname"><a href="class_todo_b_d_d.html#a8678f39a1092a25cd44cf8a3116ee981">TodoBDD::dbOuvert</a></div><div class="ttdeci">bool dbOuvert</div><div class="ttdef"><b>Definition:</b> todobdd.h:33</div></div>
+<div class="ttc" id="a_todo_8h_html"><div class="ttname"><a href="_todo_8h.html">Todo.h</a></div></div>
+<div class="ttc" id="aclass_q_object_html"><div class="ttname"><a href="class_q_object.html">QObject</a></div></div>
+<div class="ttc" id="aclass_todo_b_d_d_html_af6132fcfe369915147fa5759560ed7d5"><div class="ttname"><a href="class_todo_b_d_d.html#af6132fcfe369915147fa5759560ed7d5">TodoBDD::ListeTodoContact</a></div><div class="ttdeci">void ListeTodoContact(const int &amp;, std::list&lt; Todo &gt; &amp;) const</div><div class="ttdoc">Liste des taches . Methode qui permet de recuperer la liste des taches d'un contact selectionné</div><div class="ttdef"><b>Definition:</b> todobdd.cpp:134</div></div>
+<div class="ttc" id="aclass_todo_html"><div class="ttname"><a href="class_todo.html">Todo</a></div><div class="ttdoc">cette classe permet de gerer une tache suivant son contenu et sa date de creation</div><div class="ttdef"><b>Definition:</b> Todo.h:18</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_eeaa8b6f755de179d8d47de1ad4216fb.html">ProjetFinalCDAA</a></li><li class="navelem"><a class="el" href="todobdd_8h.html">todobdd.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

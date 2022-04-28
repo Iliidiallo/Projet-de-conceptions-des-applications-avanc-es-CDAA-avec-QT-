@@ -1,0 +1,1440 @@
+.TH "FenetrePrincipale" 3 "Jeudi 16 Décembre 2021" "DoxygenFinal" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FenetrePrincipale \- Classe qui gère la fenetre principale \&. La classe herite d'une \fBQMainWindow\fP,elle est l'une des plus importante pour notre projet car elle permet de faire la déclaration des boites de dialogues ,des slots,des signaux pour bien gérer l'interconnections entre les classes et les bases de données \&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fenetreprincipale\&.h>\fP
+.SS "Connecteurs publics"
+
+.in +1c
+.ti -1c
+.RI "void \fBAffichage\fP ()"
+.br
+.RI "Les slot pour tout ce qui concerne le CONTACT Les slots qu'on liera aux boites de dialogues concernant un \fBContact\fP\&. "
+.ti -1c
+.RI "void \fBApropos\fP ()"
+.br
+.RI "Slot Apropos \&. slot lié à l'affichage de about\&. "
+.ti -1c
+.RI "void \fBdemarrerHeure\fP ()"
+.br
+.RI "Slot demarrerHeure \&. slot lié à l'affichage de l'heure\&. "
+.ti -1c
+.RI "void \fBCreationContact\fP ()"
+.br
+.RI "Slot pour la Creation d'un \fBContact\fP \&. Slot lié à la création d'un contact \&. "
+.ti -1c
+.RI "void \fBBoutonAnnulerContact\fP ()"
+.br
+.RI "Slot Bouton pour Annuler le \fBContact\fP \&. Slot lié à la fermeture de la boite de dialogue lors de la création d'un contact \&. "
+.ti -1c
+.RI "void \fBafficherPhoto\fP ()"
+.br
+.RI "Slot afficher une Photo \&. Slot lié à l'affichage de la photo lors dé la création d'un contact \&. "
+.ti -1c
+.RI "void \fBAfficheModContact\fP ()"
+.br
+.RI "Slot AfficheModContact \&. slot lié à l'affichage lié à la Modification d'un contact\&. "
+.ti -1c
+.RI "void \fBBoutonAnnulerModification\fP ()"
+.br
+.RI "Slot Bouton pour BoutonAnnulerModification\&. Slot lié à la fermeture de la boite de dialogue lors de la modification d'un contact \&. "
+.ti -1c
+.RI "void \fBafficherPhoto1\fP ()"
+.br
+.RI "Slot afficher une Photo \&. Slot lié à l'affichage de la photo lors dé la création d'un contact \&. "
+.ti -1c
+.RI "void \fBRechercheUnContact\fP ()"
+.br
+.RI "Slot RechercheUnContact \&. Slot lié à slot lié pour la recherche d'un contact\&. "
+.ti -1c
+.RI "void \fBBoutonAnnulerRechercher\fP ()"
+.br
+.RI "Slot Bouton pour BoutonAnnulerRechercher \&. Slot lié à la fermeture de la boite de dialogue lors de la recherche d'un contact \&. "
+.ti -1c
+.RI "void \fBsuppressionContact\fP ()"
+.br
+.RI "Slot suppressionContact \&. slot lié pour la suppression d'un contact \&. "
+.ti -1c
+.RI "void \fBBoutonAnnulerSupprimer\fP ()"
+.br
+.RI "Slot Bouton pour BoutonAnnulerSupprimer \&. Slot lié à la fermeture de la boite de dialogue lors de la suppression d'un contact \&. "
+.ti -1c
+.RI "void \fBTotalContact\fP (int &)"
+.br
+.RI "Slot TotalContact \&. le slot qu'on appellera pour retourner le nombre total des contacts \&. "
+.ti -1c
+.RI "void \fBAjoutUneInteraction\fP ()"
+.br
+.RI "Les slots pour tout ce qui concerne l'INTÉRACTION Les slots qu'on liera aux boites de dialogues concernant une intéraction\&. "
+.ti -1c
+.RI "void \fBAnnulerInteraction\fP ()"
+.br
+.RI "Slot Bouton pour AnnulerInteraction \&. Slot lié à la fermeture de la boite de dialogue lors de l'ajout d'une intéraction \&. "
+.ti -1c
+.RI "void \fBListeInteractionContact\fP ()"
+.br
+.RI "Slot ListeInteractionContact \&. Slot lié à l'affichage des interactions pour un contact choisi\&. "
+.ti -1c
+.RI "void \fBAnnulerListeInteraction\fP ()"
+.br
+.RI "Slot Bouton pour AnnulerListeInteraction \&. Slot lié au Bouton annuler pour fermer la boite de dialogue\&. "
+.ti -1c
+.RI "void \fBAfficheToutesLesInteractions\fP ()"
+.br
+.RI "Slot AfficheToutesLesInteractions \&. Slot lié pour afiicher les intéractions\&. "
+.ti -1c
+.RI "void \fBRechercherInteractionEntreDeuxDates\fP ()"
+.br
+.RI "Slot RechercherInteractionEntreDeuxDates \&. Slot lié pour réchercher une interaction entre deux dates\&. "
+.ti -1c
+.RI "void \fBAnnulerInteractionEntreDeuxDates\fP ()"
+.br
+.RI "Slot Bouton pour AnnulerInteractionEntreDeuxDates \&. Slot lié au Bouton annuler pour fermer la boite de dialogue\&. "
+.ti -1c
+.RI "void \fBFindContact\fP ()"
+.br
+.RI "Slot FindContact \&. slot lié pour Rechercher les interactions d'un contact entre deux dates\&. "
+.ti -1c
+.RI "void \fBCancelContact\fP ()"
+.br
+.RI "Slot Bouton pour CancelContact \&. Slot lié au Bouton annuler pour fermer la boite de dialogue\&. "
+.ti -1c
+.RI "void \fBListeTodos\fP ()"
+.br
+.RI "Les slots pour tout ce qui concerne les TODO Les slots qu'on liera aux boites de dialogues concernant les Taches\&. "
+.ti -1c
+.RI "void \fBRechercheTodoCont\fP ()"
+.br
+.RI "Slot RechercheTodoCont \&. Slot lié à la collecte des taches pour un contact \&. "
+.ti -1c
+.RI "void \fBBoutonAnnulerRechercherT\fP ()"
+.br
+.RI "Slot Bouton pour BoutonAnnulerRechercherT \&. Slot lié à la fermeture de la boite de dialogue lors de la recherche d'une Tache \&. "
+.ti -1c
+.RI "void \fBRechercheALLTodoCont\fP ()"
+.br
+.RI "Slot RechercheTodoCont \&. Slot lié à la recherche des taches pour tous les contact entre deux dates\&. "
+.ti -1c
+.RI "void \fBAnnulerALL\fP ()"
+.br
+.RI "Slot Bouton pour AnnulerALL \&. Slot lié à la fermeture de la boite de dialogue lors de la recherche des taches pour les contacts entre deux dates \&. "
+.ti -1c
+.RI "void \fBJsonContact\fP ()"
+.br
+.RI "Slot lié au Json pour un contact \&. c'est cette fonction qui nous permettra d'exporter les fichiers json d'un contact \&. "
+.ti -1c
+.RI "void \fBJsonInteraction\fP ()"
+.br
+.RI "Slot lié au Json pour une intéraction \&. c'est cette fonction qui nous permettra d'exporter les fichiers json d'une intéraction\&. "
+.in -1c
+.SS "Signaux"
+
+.in +1c
+.ti -1c
+.RI "void \fBsigGetContactList\fP (std::list< \fBContact\fP > &)"
+.br
+.RI "Les signaux pour tout ce qui concerne le contact Les signaux qu'on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée\&. "
+.ti -1c
+.RI "void \fBsigInsert\fP (\fBContact\fP &)"
+.br
+.RI "signal sigInsert \&. Le signal qui nous permet d'emetre un signal en inserant un contact \&. "
+.ti -1c
+.RI "void \fBsigSupprimer\fP (int &)"
+.br
+.RI "signal sigSupprimer \&. Le signal qui nous permet d'emetre un signal en faisant la suppression de l'id du contact \&. "
+.ti -1c
+.RI "void \fBsigModifier\fP (int &, \fBContact\fP &)"
+.br
+.RI "signal sigModifier \&. Le signal qui nous permet d'emetre un signal en faisant la modification d'un contact en selectionnant son idcontact \&. "
+.ti -1c
+.RI "void \fBsigRechercheUnContact\fP (QString &, QString &, QString &, std::list< \fBContact\fP > &)"
+.br
+.RI "signal sigRechercheUnContact \&. Le signal qui nous permet d'emetre un signal en faisant la recherche en rentrant le nom du contact entre deux dates \&. "
+.ti -1c
+.RI "void \fBsigAjoutInteraction\fP (int &, \fBInteraction\fP &)"
+.br
+.RI "Les signaux pour tout ce qui concerne l'intéraction Les signaux qu'on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée\&. "
+.ti -1c
+.RI "void \fBsigListeInteraction\fP (int &, std::list< \fBInteraction\fP > &)"
+.br
+.RI "signal sigListeInteraction \&. Ce signal nous permet d'afficher pour un contact sa liste d'intéraction \&. "
+.ti -1c
+.RI "void \fBsigListeInteractionALL\fP (std::list< \fBInteraction\fP > &)"
+.br
+.RI "signal sigListeInteractionALL \&. Ce signal nous permet d'afficher toutes les intéractions de tous les contacts \&. "
+.ti -1c
+.RI "void \fBsigRechercheInteraction\fP (QString &, QString &, std::list< \fBInteraction\fP > &)"
+.br
+.RI "signal sigRechercheInteraction \&. Ce signal nous permet de rechercher dans un intervalle de deux dates toutes les intéractions \&. "
+.ti -1c
+.RI "void \fBsigRechercheInteractionCont\fP (int &, QString &, QString &, std::list< \fBInteraction\fP > &)"
+.br
+.RI "signal sigRechercheInteractionCont \&. Ce signal nous permet de rechercher pour un contact sa liste d'intéraction \&. "
+.ti -1c
+.RI "void \fBsigAjoutTodo\fP (int &, \fBTodo\fP &)"
+.br
+.RI "Les signaux pour tout ce qui concerne le \fBTodo\fP Les signaux qu'on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée\&. "
+.ti -1c
+.RI "void \fBsigListeTodoContact\fP (int &, std::list< \fBTodo\fP > &)"
+.br
+.RI "signal sigListeTodoContact \&. Ce signal nous permet d'afficher la liste des taches pour un contact \&. "
+.ti -1c
+.RI "void \fBsigListeALLContact\fP (std::list< \fBTodo\fP > &)"
+.br
+.RI "signal sigListeALLContact \&. Ce signal nous permet d'afficher la liste des taches pour tous les contact \&. "
+.ti -1c
+.RI "void \fBsigRechercheTodoCont\fP (int &, QString &, QString &, std::list< \fBTodo\fP > &)"
+.br
+.RI "signal sigRechercheTodoCont \&. Ce signal nous permet de rechercher des taches pour un contact entre deux dates \&. "
+.ti -1c
+.RI "void \fBsigRechercheALLTodoCont\fP (QString &, QString &, std::list< \fBTodo\fP > &)"
+.br
+.RI "signal sigRechercheALLTodoCont \&. Ce signal nous permet de rechercher les taches de tous les contacts entre deux dates \&. "
+.in -1c
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBFenetrePrincipale\fP (QWidget *parent=nullptr)"
+.br
+.RI "Constructeur Constructeur de la classe \fBFenetrePrincipale\fP\&. "
+.ti -1c
+.RI "\fB~FenetrePrincipale\fP ()"
+.br
+.RI "Destructeur Le Destructeur de la classe \fBFenetrePrincipale\fP càd la fonction qui libère la memoire utilisé \&. "
+.in -1c
+.SS "Attributs publics"
+
+.in +1c
+.ti -1c
+.RI "\fBContactBDD\fP \fBbd\fP"
+.br
+.ti -1c
+.RI "\fBInteractionBDD\fP \fBinBDD\fP"
+.br
+.in -1c
+.SS "Connecteurs privés"
+
+.in +1c
+.ti -1c
+.RI "void \fBCreerUnContact\fP ()"
+.br
+.RI "Les fonctions slot pour créer les boites de dialogues \&. "
+.ti -1c
+.RI "void \fBSupprimerContact\fP ()"
+.br
+.RI "SupprimerContact \&. la fonction qu'on appellera pour la création de la boite dialogue pour supprimer un contact \&. "
+.ti -1c
+.RI "void \fBModifierContact\fP ()"
+.br
+.RI "ModifierContact \&. la fonction qu'on appellera pour la création de la boite dialogue pour modifier un contact \&. "
+.ti -1c
+.RI "void \fBchercherContact\fP ()"
+.br
+.RI "chercherContact \&. la fonction qu'on appellera pour la création de la boite dialogue pour rechercher un contact \&. "
+.ti -1c
+.RI "void \fBAjoutInteraction\fP ()"
+.br
+.RI "AjoutInteraction \&. la fonction qu'on appellera pour la création de la boite dialogue pour ajouter une intéraction \&. "
+.ti -1c
+.RI "void \fBListeInteraction\fP ()"
+.br
+.RI "AjoutTaches \&. la fonction qu'on appellera pour la création de la boite dialogue pour ajouter une taches(Todo) \&. "
+.ti -1c
+.RI "void \fBInteractionsEntre2Date\fP ()"
+.br
+.RI "InteractionsEntre2Date \&. la fonction qui nous permettra de créer de la boite dialogue afin de rechercher des interactions entre deux dates \&. "
+.ti -1c
+.RI "void \fBRechercheInteractionContact\fP ()"
+.br
+.RI "RechercheInteractionContact \&. la fonction qui nous permettra de créer de la boite dialogue pour afficher une intéraction pour un contact selectionné \&. "
+.ti -1c
+.RI "void \fBAfficheTachesIntervalle\fP ()"
+.br
+.RI "AfficheTachesIntervalle \&. la fonction qui nous permettra de créer de la boite dialogue pour afficher les taches entre deux dates \&. "
+.ti -1c
+.RI "void \fBAfficheTachesContact\fP ()"
+.br
+.RI "AfficheTachesContact \&. la fonction qui nous permettra de créer de la boite dialogue pour afficher les \fBTodo\fP de tous les contacts \&. "
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "Ui::FenetrePrincipale * \fBui\fP"
+.br
+.ti -1c
+.RI "QDialog * \fBdialog\fP"
+.br
+.RI "Déclaration des boites de Dialogues \&. "
+.ti -1c
+.RI "QDialog * \fBdialog1\fP"
+.br
+.ti -1c
+.RI "QDialog * \fBdialog2\fP"
+.br
+.ti -1c
+.RI "QDialog * \fBdialog3\fP"
+.br
+.ti -1c
+.RI "QDialog * \fBdialogInteraction\fP"
+.br
+.ti -1c
+.RI "QDialog * \fBdialogList\fP"
+.br
+.ti -1c
+.RI "QDialog * \fBdialogIdeuxDates\fP"
+.br
+.ti -1c
+.RI "QDialog * \fBdialogRC\fP"
+.br
+.ti -1c
+.RI "QDialog * \fBdialogTaches\fP"
+.br
+.ti -1c
+.RI "QDialog * \fBdialogRechercheT\fP"
+.br
+.ti -1c
+.RI "QDialog * \fBdialogALL\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBNom\fP"
+.br
+.RI "Déclaration des labels pour la boite de dialogue créer un contact \&. "
+.ti -1c
+.RI "QLabel * \fBPrenom\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBPhoto\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBEntreprise\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBEmail\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBTelephone\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBNomR\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBdebut\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBfin\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBNom1\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBPrenom1\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBPhoto1\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBEntreprise1\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBEmail1\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBTelephone1\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBNomcombo\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBImageInsere\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBImageInsere2\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBcommentaire\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBNomcomboList\fP"
+.br
+.ti -1c
+.RI "QLabel * \fBlheure\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBn\fP"
+.br
+.RI "Déclaration des champs et les dates \&. "
+.ti -1c
+.RI "QLineEdit * \fBp\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBen\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBem\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBtel\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBph\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBn1\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBp1\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBen1\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBem1\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBtel1\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBph1\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBnR\fP"
+.br
+.ti -1c
+.RI "QDateEdit * \fBdate1\fP"
+.br
+.ti -1c
+.RI "QDateEdit * \fBdate2\fP"
+.br
+.ti -1c
+.RI "QLineEdit * \fBcInteraction\fP"
+.br
+.ti -1c
+.RI "QDateEdit * \fBdateAjout\fP"
+.br
+.ti -1c
+.RI "QDateEdit * \fBdateDebutI\fP"
+.br
+.ti -1c
+.RI "QDateEdit * \fBdateFinI\fP"
+.br
+.ti -1c
+.RI "QDateEdit * \fBdate1RC\fP"
+.br
+.ti -1c
+.RI "QDateEdit * \fBdate2RC\fP"
+.br
+.ti -1c
+.RI "QTimer * \fBltime\fP"
+.br
+.ti -1c
+.RI "QDateEdit * \fBdateDebutTaches\fP"
+.br
+.ti -1c
+.RI "QDateEdit * \fBdateFinTaches\fP"
+.br
+.ti -1c
+.RI "QDateEdit * \fBdateDebutALL\fP"
+.br
+.ti -1c
+.RI "QDateEdit * \fBdateFinALL\fP"
+.br
+.ti -1c
+.RI "QTextEdit * \fBeditTaches\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBcomboBox\fP"
+.br
+.RI "Déclaration de la ComboBox ou la liste déroulante \&. "
+.ti -1c
+.RI "QComboBox * \fBcomboInteraction\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBcomboList\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBcombo\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBcomboRecherche\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBcomboTache\fP"
+.br
+.ti -1c
+.RI "QComboBox * \fBcomboTachesRecherche\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne1\fP"
+.br
+.RI "Declaration des dimensions \&. "
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne2\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne3\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBaligneH\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne11\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne22\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne33\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBaligneHH\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligneR\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligneR2\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAlignH\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne1I\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne2I\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne3I\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAligneI\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligneList1\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligneList2\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAligneList\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne1Id\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne2Id\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAligneId\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligneRRC\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligneR2RC\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAlignHRC\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligneTaches\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAligne1Taches\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAligne2Taches\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAligne3Taches\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne1TachesR\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne2TachesR\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAligneTachesR\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne1ALL\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligne2ALL\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAligneALL\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAligne1I\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAligne2I\fP"
+.br
+.ti -1c
+.RI "QHBoxLayout * \fBhAligne4I\fP"
+.br
+.ti -1c
+.RI "QVBoxLayout * \fBvAligneI\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBvalider\fP"
+.br
+.RI "Déclaration des boutons \&. "
+.ti -1c
+.RI "QPushButton * \fBBannuler\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBvalider1\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBannuler1\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBRechercher\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBannulerR\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBsupprimer\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBPhotoContact\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBPhotoModifContact\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBajoutInteraction\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBannulerInteraction\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBvaliderListI\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBannulerListI\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBrechercheIdate\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBannulerIdate\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBRechercherRC\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBannulerRC\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBajoutTaches\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBannulerTaches\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBrechercherTaches\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBannulerTachesR\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBrechercherALL\fP"
+.br
+.ti -1c
+.RI "QPushButton * \fBBannulerALL\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Classe qui gère la fenetre principale \&. La classe herite d'une \fBQMainWindow\fP,elle est l'une des plus importante pour notre projet car elle permet de faire la déclaration des boites de dialogues ,des slots,des signaux pour bien gérer l'interconnections entre les classes et les bases de données \&. 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "FenetrePrincipale::FenetrePrincipale (QWidget * parent = \fCnullptr\fP)"
+
+.PP
+Constructeur Constructeur de la classe \fBFenetrePrincipale\fP\&. implémentation du constructeur avec paramètre \&. Ce constructeur hérite d'une QMainWindox et un interface user ui \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fI*parent\fP = nullptr: par defaut 
+.RE
+.PP
+< ComboBox pour la liste déroulante pour la création d'un contact
+.PP
+< comboBox qu'on utillise pour la modification d'un contact
+.PP
+< comboBox qu'on utillise pour la liste des interactions
+.PP
+< comboBox qu'on utillise pour la liste des interactions
+.PP
+< comboBox qu'on utillise pour la recherche des interactions
+.PP
+< comboBox qu'on utillise pour la recherche des interactions
+.PP
+< la comboBox pour la recherches des taches d'un contact \&.
+.PP
+Connection liée à la création de la boite de dialogue pour pouvoir Inserer ou créer un contact \&. on a connecté l'action du sous menu du UI(interface user) appelé 'actionCreerContact' avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à la création d'un contact \&.
+.PP
+Connection liée à la création de la boite de dialogue pour pouvoir supprimer un contact \&. on a connecté l'action du sous menu du UI(interface user) appelé 'actionSupprimer_un_contact' avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à la suppression d'un contact \&.
+.PP
+Connection liée à la création de la boite de dialogue pour pouvoir Modifier un contact \&. on a connecté l'action du sous menu du UI(interface user) appelé 'actionModifier_un_contact' avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à la modification d'un contact \&.
+.PP
+Connection liée à la création de la boite de dialogue pour pouvoir chercher un Contactn\&. on a connecté l'action du sous menu du UI(interface user) appelé 'actionchercher_un_contact' avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à la recherche d'un contact \&.
+.PP
+Connection liée à la création de la boite de dialogue pour pouvoir Ajouter une interaction\&. on a connecté l'action du sous menu du UI(interface user) appelé 'actionAjouter_une_int_raction' avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à l'ajout d'une intéraction \&.
+.PP
+Connection liée à la création de la boite de dialogue pour pouvoir afficher une interaction\&. on a connecté l'action du sous menu du UI(interface user) appelé 'actionListes_d_int_raction' avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à l'affichage d'une intéraction \&.
+.PP
+Connection liée à la création de la boite de dialogue pour pouvoir ajouter une tache\&. on a connecté l'action du sous menu du UI(interface user) appelé 'actionAjouter_des_taches' avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond ajouter une tache \&.
+.PP
+Connection liée à la création de la boite de dialogue pour pouvoir recherche une interaction entre deux dates\&. on a connecté l'action du sous menu du UI(interface user) appelé 'actionInteraction_entre_deux_dates' avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond rechercher l'intéraction entre deux dates \&.
+.PP
+Connection liée à la création de la boite de dialogue pour pouvoir afficher les taches entre deux dates pour un contact on a connecté l'action du sous menu du UI(interface user) appelé 'actionCollecteDesTaches' avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à l'affichage des taches entre les deux dates entrée\&.
+.PP
+Connection liée à la création de la boite de dialogue pour pouvoir rechercher des intéractions entre deux dates pour un contact on a connecté l'action du sous menu du UI(interface user) appelé 'actionInteraction_d_un_contact_entre_deux_dates' avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à l'affichage des intéractions trouvés entre les deux dates entrée pour un contact \&.
+.PP
+Connection liée à la création de la boite de dialogue pour pouvoir afficher la liste de toutes les taches de tous les contacts entre deux dates on a connecté l'action du sous menu du UI(interface user) appelé 'actionCollecteDesTaches' avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à l'affichage des taches de tous les contacts entre les deux dates entrée\&.
+.PP
+Affichage d'un contact Lors du clic sur le bouton affichageListeContact sur la fenetre principale ce bouton nous affiche tous les contacts présent dans la base de donnée \&. on a pris le bouton ui->BAfficher on lui a mis un signal clicked() et on lui à lié à la fonction \fBAffichage()\fP qui nous permet d'afficher tous les contacts présent dans la base sur la partie dedié à l'affichage des contacts \&.
+.PP
+Affichage d'une intéractiodn Lors du clic sur le bouton affichageListeIntéraction sur la fenetre principale ce bouton nous affiche toutes les intéractions présentes dans la base de donnée \&. on a pris le bouton ui->BAffichetousInteraction on lui a mis un signal clicked() et on lui à lié à la fonction \fBAfficheToutesLesInteractions()\fP qui nous permettra d'afficher toutes les intéractions présentes dans la base sur la partie dedié à l'affichage des intéractions \&.
+.PP
+Affichage d'une Tache 'Todo' Lors du clic sur le bouton affichageListeTodo sur la fenetre principale ce bouton nous affiche toutes les taches présentes dans la base de donnée \&. on a pris le bouton ui->boutontodo on lui a mis un signal clicked() et on lui à lié à la fonction \fBListeTodos()\fP qui nous permettra d'afficher toutes les intéractions présentes dans la base sur la partie dedié à l'affichage des taches \&.
+.PP
+Affichage du sous menu à propos Dans cette partie on a essayé de dire de façon breve ce qu'on a fait et réussi
+.PP
+Affichage de l'heure dès l'éxecution du programme Dans cette partie on a essayé d'afficher l'heur courante en bas à gauche pour donner un peu la vivacité à notre application \&.
+.PP
+convertir json pour un contact \&. connection lié à la conversion json d'un contact
+.PP
+convertir json pour une intéraction \&. connection lié à la conversion json d'un contact
+.SS "FenetrePrincipale::~FenetrePrincipale ()"
+
+.PP
+Destructeur Le Destructeur de la classe \fBFenetrePrincipale\fP càd la fonction qui libère la memoire utilisé \&. implémentation du destructeur \&. A la fin de l'éxecution on à libéré la mémoire\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void FenetrePrincipale::Affichage ()\fC [slot]\fP"
+
+.PP
+Les slot pour tout ce qui concerne le CONTACT Les slots qu'on liera aux boites de dialogues concernant un \fBContact\fP\&. Affichage \fBContact\fP Lors du clic sur le bouton afficher listes contact c'est grace à ce slot qu'on voit l'affichage des contact en se réactualisant à chaque ajout,suppression ou modification sur tout ce qui concerne le contact \&.
+.PP
+Slot Affichage \&. Slot lié à l'affichage des contacts 
+.SS "void FenetrePrincipale::AfficheModContact ()\fC [slot]\fP"
+
+.PP
+Slot AfficheModContact \&. slot lié à l'affichage lié à la Modification d'un contact\&. Slot pour la modification d'un contact on créer un contact c2 on test si tous les champs sont pas remplis sinon on affiche le message d'erreur Si Oui on selectionne le contact à modifier et ensuite on récupère les textes saisies sur les champs avec la photo récupéré on l'envoie par le signal pour qu'enfin qu'il soit connecté avec la base de donnée \&. On aura au final un contact modifié dans la base de donnée\&. 
+.SS "void FenetrePrincipale::afficherPhoto ()\fC [slot]\fP"
+
+.PP
+Slot afficher une Photo \&. Slot lié à l'affichage de la photo lors dé la création d'un contact \&. 
+.SS "void FenetrePrincipale::afficherPhoto1 ()\fC [slot]\fP"
+
+.PP
+Slot afficher une Photo \&. Slot lié à l'affichage de la photo lors dé la création d'un contact \&. 
+.SS "void FenetrePrincipale::AfficheTachesContact ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+AfficheTachesContact \&. la fonction qui nous permettra de créer de la boite dialogue pour afficher les \fBTodo\fP de tous les contacts \&. Création d'une Boite de dialogue c'est dans cette fonction on a créé la boite de dialogue qui nous sert à afficher toutes les taches de toutes les intéractions entre deux dates \&. La boite de dialogue est constituée de la déclaration d'une boite de dialogue, les dates debut et fin d'intervalle ,du bouton BrechercherTaches et annuler\&. < connection du bouton BrechercherALL de l'application au slot RechercheALLTodoCont
+.PP
+< la connection pour le bouton annuler pour fermet la fenetre
+.SS "void FenetrePrincipale::AfficheTachesIntervalle ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+AfficheTachesIntervalle \&. la fonction qui nous permettra de créer de la boite dialogue pour afficher les taches entre deux dates \&. Création d'une Boite de dialogue c'est dans cette fonction on a créé la boite de dialogue qui nous sert à afficher les taches des intéractions entre deux dates \&. La boite de dialogue est constituée de la déclaration d'une boite de dialogue,d'une comboBox pour voir toute la liste des intéractions ,et les dates debut et fin d'intervalle ,du bouton BrechercherTaches et annuler\&. < connection du bouton BrechercherTaches de l'application au slot RechercheTodoCont
+.PP
+< la connection pour le bouton annuler pour fermet la fenetre
+.SS "void FenetrePrincipale::AfficheToutesLesInteractions ()\fC [slot]\fP"
+
+.PP
+Slot AfficheToutesLesInteractions \&. Slot lié pour afiicher les intéractions\&. Affichage des interactions Lors du clic sur le bouton afficher listes interactions c'est grace à ce slot qu'on voit l'affichage des intéraction en se réactualisant à chaque ajout,suppression ou modification sur tout ce qui concerne les intéractions \&. 
+.SS "void FenetrePrincipale::AjoutInteraction ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+AjoutInteraction \&. la fonction qu'on appellera pour la création de la boite dialogue pour ajouter une intéraction \&. Création d'une Boite de dialogue c'est dans cette fonction on a crée la boite de dialogue qui nous à servit à ajouter une intéraction : Elle est constituée de la declaration d'une boite de dialogue ,tout ce qui concerne une interaction (\fBDate\fP et contenu),le champs de texte pour le contenu,les boutons necessaires et les dispositions qu'on a utilisés afin de bien positionner les labels,le champ,les boutons \&. < connection du bouton BajoutInteraction de l'application au slot AjoutUneInteraction
+.PP
+< la connection pour le bouton annuler pour fermet la fenetre
+.SS "void FenetrePrincipale::AjoutUneInteraction ()\fC [slot]\fP"
+
+.PP
+Les slots pour tout ce qui concerne l'INTÉRACTION Les slots qu'on liera aux boites de dialogues concernant une intéraction\&. Slot pour l'ajout d'une intéraction on test si la comboBox est null on envoir un message d'erreur \&. si elle contient la liste des contacts : on entre la date et le contenu pour l'intéraction du contact qu'on a choisi et on récupère la date et le contenu saisis on l'envoie par le signal 'emit' pour qu'enfin qu'il soit connecté avec la base de donnée \&. On aura au final une intéraction ajouté avec sa date et contenu\&.
+.PP
+Slot AjoutUneInteraction \&. Slot lié à l'ajout d'une interaction pour un contact 
+.SS "void FenetrePrincipale::AnnulerALL ()\fC [slot]\fP"
+
+.PP
+Slot Bouton pour AnnulerALL \&. Slot lié à la fermeture de la boite de dialogue lors de la recherche des taches pour les contacts entre deux dates \&. Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert \&. 
+.SS "void FenetrePrincipale::AnnulerInteraction ()\fC [slot]\fP"
+
+.PP
+Slot Bouton pour AnnulerInteraction \&. Slot lié à la fermeture de la boite de dialogue lors de l'ajout d'une intéraction \&. 
+.SS "void FenetrePrincipale::AnnulerInteractionEntreDeuxDates ()\fC [slot]\fP"
+
+.PP
+Slot Bouton pour AnnulerInteractionEntreDeuxDates \&. Slot lié au Bouton annuler pour fermer la boite de dialogue\&. Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert \&. 
+.SS "void FenetrePrincipale::AnnulerListeInteraction ()\fC [slot]\fP"
+
+.PP
+Slot Bouton pour AnnulerListeInteraction \&. Slot lié au Bouton annuler pour fermer la boite de dialogue\&. 
+.SS "void FenetrePrincipale::Apropos ()\fC [slot]\fP"
+
+.PP
+Slot Apropos \&. slot lié à l'affichage de about\&. About C'est dans ce slots on a dit de manière brève ce que notre application fait et qui l'a fait et c'est qui le professeur \&. 
+.SS "void FenetrePrincipale::BoutonAnnulerContact ()\fC [slot]\fP"
+
+.PP
+Slot Bouton pour Annuler le \fBContact\fP \&. Slot lié à la fermeture de la boite de dialogue lors de la création d'un contact \&. Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert \&. 
+.SS "void FenetrePrincipale::BoutonAnnulerModification ()\fC [slot]\fP"
+
+.PP
+Slot Bouton pour BoutonAnnulerModification\&. Slot lié à la fermeture de la boite de dialogue lors de la modification d'un contact \&. Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert \&. 
+.SS "void FenetrePrincipale::BoutonAnnulerRechercher ()\fC [slot]\fP"
+
+.PP
+Slot Bouton pour BoutonAnnulerRechercher \&. Slot lié à la fermeture de la boite de dialogue lors de la recherche d'un contact \&. Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert \&. 
+.SS "void FenetrePrincipale::BoutonAnnulerRechercherT ()\fC [slot]\fP"
+
+.PP
+Slot Bouton pour BoutonAnnulerRechercherT \&. Slot lié à la fermeture de la boite de dialogue lors de la recherche d'une Tache \&. Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert \&. 
+.SS "void FenetrePrincipale::BoutonAnnulerSupprimer ()\fC [slot]\fP"
+
+.PP
+Slot Bouton pour BoutonAnnulerSupprimer \&. Slot lié à la fermeture de la boite de dialogue lors de la suppression d'un contact \&. Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert \&. 
+.SS "void FenetrePrincipale::CancelContact ()\fC [slot]\fP"
+
+.PP
+Slot Bouton pour CancelContact \&. Slot lié au Bouton annuler pour fermer la boite de dialogue\&. Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert \&. 
+.SS "void FenetrePrincipale::chercherContact ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+chercherContact \&. la fonction qu'on appellera pour la création de la boite dialogue pour rechercher un contact \&. Création d'une Boite de dialogue c'est dans cette fonction on a crée la boite de dialogue qui nous à servit à chercher un contact par son nom : Elle est constituée de la declaration d'une boite de dialogue ,tout ce qui concerne un contact (nom,prenom,tel etc\&.\&.),les champs de textes ,les boutons necessaires et les dispositions qu'on a utilisés afin de bien positionner les labels,champs,boutons \&. < connection du bouton BRechercher de l'application au slot RechercheUnContact
+.PP
+< la connection pour le bouton annuler pour fermet la fenetre
+.SS "void FenetrePrincipale::CreationContact ()\fC [slot]\fP"
+
+.PP
+Slot pour la Creation d'un \fBContact\fP \&. Slot lié à la création d'un contact \&. Slot pour la Creation d'un contact on créer un contact c on test si tous les champs sont pas remplis sinon on affiche le messange d'erreur Si Oui on récupère les textes saisies sur les champs avec la photo récupéré on l'envoie par le signal pour qu'enfin qu'il soit connecté avec la base de donnée \&. On aura au final un contact inséré dans la base de donnée\&. < signal qu'on envoie vers le main qu'on recupera afin de faire les connections avec la BD
+.PP
+< signal qu'on envoie vers le main qu'on recupera afin de faire les connections avec la BD
+.SS "void FenetrePrincipale::CreerUnContact ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+Les fonctions slot pour créer les boites de dialogues \&. Création d'une Boite de dialogue c'est dans cette fonction on a crée la boite de dialogue qui nous à servit à créer un contact c'est à dire : Elle est constituée de la declaration d'une boite de dialogue ,tout ce qui concerne un contact (nom,prenom,tel etc\&.\&.),les champs de textes ,les boutons necessaires et les dispositions qu'on a utilisés afin de bien positionner les labels,champs,boutons \&.
+.PP
+CreerUnContact \&. la fonction qu'on appellera pour la création de la boite dialogue pour créer un contact < connection du bouton valider de l'application au slot CreationContact
+.PP
+< connection du bouton BPhotoContact de l'application pour parcourir la photo à ajouter
+.PP
+< la connection pour le bouton annuler pour fermet la fenetre
+.SS "void FenetrePrincipale::demarrerHeure ()\fC [slot]\fP"
+
+.PP
+Slot demarrerHeure \&. slot lié à l'affichage de l'heure\&. Affichage de l'heure lors de l'éxécution de notre programme Slot pour afficher l'heure courrante dès qu'on lance notre application\&. 
+.SS "void FenetrePrincipale::FindContact ()\fC [slot]\fP"
+
+.PP
+Slot FindContact \&. slot lié pour Rechercher les interactions d'un contact entre deux dates\&. Création d'une Boite de dialogue c'est dans cette fonction on a créé la boite de dialogue qui nous sert à Rechercher des intéractions entre deux dates pour un contact \&. La boite de dialogue est constituée de la déclaration d'une boite de dialogue,d'une comboBox pour voir toute la liste des contacts,et les dates debut et fin d'intervalle ,du bouton rechercher et annuler\&. 
+.SS "void FenetrePrincipale::InteractionsEntre2Date ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+InteractionsEntre2Date \&. la fonction qui nous permettra de créer de la boite dialogue afin de rechercher des interactions entre deux dates \&. Création d'une Boite de dialogue c'est dans cette fonction on a créé la boite de dialogue qui nous sert à Rechercher des intéractions entre deux dates\&. La boite de dialogue est constituée de la déclaration d'une boite de dialogue,d'une comboBox pour voir toute la liste des contacts,et les dates debut et fin d'intervalle ,du bouton rechercher et annuler\&. < connection du bouton BrechercheIdate de l'application au slot RechercherInteractionEntreDeuxDates
+.PP
+< la connection pour le bouton annuler pour fermet la fenetre
+.SS "FenetrePrincipale::JsonContact ()\fC [slot]\fP"
+
+.PP
+Slot lié au Json pour un contact \&. c'est cette fonction qui nous permettra d'exporter les fichiers json d'un contact \&. Json export la fonction qui nous permet d'exporter tous les contacts sur un fichier JSon\&. 
+.SS "void FenetrePrincipale::JsonInteraction ()\fC [slot]\fP"
+
+.PP
+Slot lié au Json pour une intéraction \&. c'est cette fonction qui nous permettra d'exporter les fichiers json d'une intéraction\&. 
+.SS "void FenetrePrincipale::ListeInteraction ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+AjoutTaches \&. la fonction qu'on appellera pour la création de la boite dialogue pour ajouter une taches(Todo) \&. Création d'une Boite de dialogue c'est dans cette fonction on a crée la boite de dialogue qui nous à servi à lister les intéractions d'un contact Elle est constituée de la declaration d'une boite de dialogue ,un combobox pour la liste des contacts à lister , le bouton annuler et valider \&.
+.PP
+ListeInteraction \&. la fonction qu'on appellera pour la création de la boite dialogue pour lister les intéractions \&. < connection du bouton BvaliderListI de l'application au slot ListeInteractionContact
+.PP
+< la connection pour le bouton annuler pour fermet la fenetre
+.SS "void FenetrePrincipale::ListeInteractionContact ()\fC [slot]\fP"
+
+.PP
+Slot ListeInteractionContact \&. Slot lié à l'affichage des interactions pour un contact choisi\&. Slot pour l'affichage des intéractions d'un contact Dans cette partie on testera si la combobox est null on affiche un message d'erreur sinon on choisi le contact et on affiche toutes ses intéractions\&. < insertion de l'affichage sur le textEdit dedié \&.
+.SS "void FenetrePrincipale::ListeTodos ()\fC [slot]\fP"
+
+.PP
+Les slots pour tout ce qui concerne les TODO Les slots qu'on liera aux boites de dialogues concernant les Taches\&. Affichage des taches Lors du clic sur le bouton afficher listes todo c'est grace à ce slot qu'on voit l'affichage des taches en se réactualisant à chaque ajout,suppression ou modification sur tout ce qui concerne le TODO \&.
+.PP
+Slot AjoutTodoContact \&. Slot lié à l'ajout d'une tache pour une intéraction d'un contact
+.PP
+Slot Bouton pour AnnulerTodoContact \&. Slot lié à la fermeture de la boite de dialogue lors de l'ajout d'une Tache \&.
+.PP
+Slot AjoutTodoContact \&. Slot lié à l'affichage de toutes les taches des contacts lors du clic sur le bouton afficher toutes les taches \&. < verifier si la tache est urgente ou pas avec la fonction find
+.PP
+< pour pouvoir faire le tag avec 
+.PP
+\fBA faire\fP
+.RS 4
+
+.RE
+.PP
+.PP
+< Inversion de la date de jj/mm/aaaa vers aaaa-mm-jj afin de pouvoir l'insérer dans la base
+.PP
+< pour pouvoir faire le tag avec 
+.PP
+\fBDate\fP
+.RS 4
+
+.RE
+.PP
+< insertion de l'affichage sur le textEdit dedié \&.
+.SS "void FenetrePrincipale::ModifierContact ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+ModifierContact \&. la fonction qu'on appellera pour la création de la boite dialogue pour modifier un contact \&. Création d'une Boite de dialogue c'est dans cette fonction on a crée la boite de dialogue qui nous à servit à Modifier un contact c'est à dire : Elle est constituée de la declaration d'une boite de dialogue ,tout ce qui concerne un contact (nom,prenom,tel etc\&.\&.),une comboBox pour choisier le contact à modifier les champs de textes ,les boutons necessaires et les dispositions qu'on a utilisé afin de bien positionner les labels,champs,boutons normalement\&. < connection du bouton valider1 de l'application au slot AfficheModContact
+.PP
+< connection du bouton BPhotoModifContact de l'application pour parcourir la photo à Modifier
+.PP
+< la connection pour le bouton annuler pour fermet la fenetre
+.SS "void FenetrePrincipale::RechercheALLTodoCont ()\fC [slot]\fP"
+
+.PP
+Slot RechercheTodoCont \&. Slot lié à la recherche des taches pour tous les contact entre deux dates\&. Slot pour la Rechercher des taches de tous les contacts entre deux dates \&. On converti et on decoupe les deux dates dans ce slot pour l'adapter à la BD tout en recuperant les dates saisies par l'utilisateur, On aura au final des taches de la BD pour tous les contacts se trouvant dans cet intervalle des deux dates saisies \&. < insertion de l'affichage sur le textEdit dedié \&.
+.PP
+< insertion de l'affichage sur le textEdit dedié \&.
+.SS "void FenetrePrincipale::RechercheInteractionContact ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+RechercheInteractionContact \&. la fonction qui nous permettra de créer de la boite dialogue pour afficher une intéraction pour un contact selectionné \&. Création d'une Boite de dialogue c'est dans cette fonction on a créé la boite de dialogue qui nous sert à Rechercher des intéractions entre deux dates pour un contact \&. La boite de dialogue est constituée de la déclaration d'une boite de dialogue,d'une comboBox pour voir toute la liste des contacts,et les dates debut et fin d'intervalle ,du bouton rechercher et annuler\&. < connection du bouton BRechercherRC de l'application au slot FindContact
+.PP
+< la connection pour le bouton annuler pour fermet la fenetre
+.SS "void FenetrePrincipale::RechercherInteractionEntreDeuxDates ()\fC [slot]\fP"
+
+.PP
+Slot RechercherInteractionEntreDeuxDates \&. Slot lié pour réchercher une interaction entre deux dates\&. Slot pour la Rechercher des intéraction entre deux dates \&. On converti et on decoupe les deux dates dans ce slot pour l'adapter à la BD tout en recuperant les dates saisies par l'utilisateur, On aura au final des intéractions de la table qui se trouve dans cet intervalle des deux dates saisies \&. < insertion de l'affichage sur le textEdit dedié \&.
+.SS "void FenetrePrincipale::RechercheTodoCont ()\fC [slot]\fP"
+
+.PP
+Slot RechercheTodoCont \&. Slot lié à la collecte des taches pour un contact \&. Slot pour la Rechercher des taches d'un contact entre deux dates \&. on test si la combobox est nulle on affiche un message d'erreur Sinon: On converti et on decoupe les deux dates dans ce slot pour l'adapter à la BD tout en recuperant les dates saisies par l'utilisateur, On aura au final des taches de la BD pour les contacts se trouvant dans cet intervalle des deux dates saisies \&. < insertion de l'affichage sur le textEdit dedié \&.
+.SS "void FenetrePrincipale::RechercheUnContact ()\fC [slot]\fP"
+
+.PP
+Slot RechercheUnContact \&. Slot lié à slot lié pour la recherche d'un contact\&. Slot pour la Recherche d'un contact on déclare une liste de contact,on test si le nom saisie existes entre les deux dates entrés par l'utilisateur: Sinon on affiche un message d'erreur Si Oui on récupère les texte saisie et les deux dates on envoie avec le signal vers la base de donnée pour rechercher pour qu'enfin qu'il soit connecté avec la base de donnée \&. On aura au final recherché un nom entre deux dates s'il existe dans la base de donnée \&. 
+.SS "void FenetrePrincipale::sigAjoutInteraction (int &, \fBInteraction\fP &)\fC [signal]\fP"
+
+.PP
+Les signaux pour tout ce qui concerne l'intéraction Les signaux qu'on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée\&. signal sigAjoutInteraction \&. Ce signal nous permet d'ajouter une intéraction pour un contact \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fI\fBInteraction\fP\fP & :l'intéraction ajouté 
+.br
+\fIint\fP & :l'identifiant du contact qui doit recevoir l'intéraction ajouté \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigAjoutTodo (int &, \fBTodo\fP &)\fC [signal]\fP"
+
+.PP
+Les signaux pour tout ce qui concerne le \fBTodo\fP Les signaux qu'on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée\&. signal sigAjoutInteraction \&. Ce signal nous permet d'ajouter une tache pour une intéraction \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fI\fBTodo\fP\fP & :la tache ajouté 
+.br
+\fIint\fP & :l'identifiant de l'intéraction qui doit recevoir la tache ajoutée \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigGetContactList (std::list< \fBContact\fP > &)\fC [signal]\fP"
+
+.PP
+Les signaux pour tout ce qui concerne le contact Les signaux qu'on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée\&. signal sigGetContactList \&. Le signal nous permet d'emetre un signal en envoyant une liste de contact\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Contact>&\fP :liste de contact \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigInsert (\fBContact\fP &)\fC [signal]\fP"
+
+.PP
+signal sigInsert \&. Le signal qui nous permet d'emetre un signal en inserant un contact \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fI\fBContact\fP\fP & :le contact à envoyer par le signal \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigListeALLContact (std::list< \fBTodo\fP > &)\fC [signal]\fP"
+
+.PP
+signal sigListeALLContact \&. Ce signal nous permet d'afficher la liste des taches pour tous les contact \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Todo>&:listes\fP de tache \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigListeInteraction (int &, std::list< \fBInteraction\fP > &)\fC [signal]\fP"
+
+.PP
+signal sigListeInteraction \&. Ce signal nous permet d'afficher pour un contact sa liste d'intéraction \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Interaction>\fP & :listes d'intéractions 
+.br
+\fIint\fP & :l'identifiant du contact pour afficher ses intéractions \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigListeInteractionALL (std::list< \fBInteraction\fP > &)\fC [signal]\fP"
+
+.PP
+signal sigListeInteractionALL \&. Ce signal nous permet d'afficher toutes les intéractions de tous les contacts \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Interaction>\fP & :listes d'intéractions \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigListeTodoContact (int &, std::list< \fBTodo\fP > &)\fC [signal]\fP"
+
+.PP
+signal sigListeTodoContact \&. Ce signal nous permet d'afficher la liste des taches pour un contact \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP & :l'identifiant du contact \&. 
+.br
+\fIstd::list<Todo>&:listes\fP de tache \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigModifier (int &, \fBContact\fP &)\fC [signal]\fP"
+
+.PP
+signal sigModifier \&. Le signal qui nous permet d'emetre un signal en faisant la modification d'un contact en selectionnant son idcontact \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP & :l'identifiant à envoyer par le signal \&. 
+.br
+\fI\fBContact\fP\fP & : le contact à envoyer par le signal \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigRechercheALLTodoCont (QString &, QString &, std::list< \fBTodo\fP > &)\fC [signal]\fP"
+
+.PP
+signal sigRechercheALLTodoCont \&. Ce signal nous permet de rechercher les taches de tous les contacts entre deux dates \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Todo>\fP & :listes des taches \&. 
+.br
+\fIQString\fP &:la premiere date ou debut de l'intervalle à rechercher \&. 
+.br
+\fIQString\fP &:la deuxieme date ou fin de l'intervalle à rechercher \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigRechercheInteraction (QString &, QString &, std::list< \fBInteraction\fP > &)\fC [signal]\fP"
+
+.PP
+signal sigRechercheInteraction \&. Ce signal nous permet de rechercher dans un intervalle de deux dates toutes les intéractions \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Interaction>\fP & :listes d'intéractions 
+.br
+\fIQString\fP &:la premiere date ou debut de l'intervalle à rechercher \&. 
+.br
+\fIQString\fP &:la deuxieme date ou fin de l'intervalle à rechercher \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigRechercheInteractionCont (int &, QString &, QString &, std::list< \fBInteraction\fP > &)\fC [signal]\fP"
+
+.PP
+signal sigRechercheInteractionCont \&. Ce signal nous permet de rechercher pour un contact sa liste d'intéraction \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP & :l'identifiant du contact à rechercher \&. 
+.br
+\fIstd::list<Interaction>\fP & :listes d'intéractions \&. 
+.br
+\fIQString\fP &:la premiere date ou debut de l'intervalle à rechercher \&. 
+.br
+\fIQString\fP &:la deuxieme date ou fin de l'intervalle à rechercher \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigRechercheTodoCont (int &, QString &, QString &, std::list< \fBTodo\fP > &)\fC [signal]\fP"
+
+.PP
+signal sigRechercheTodoCont \&. Ce signal nous permet de rechercher des taches pour un contact entre deux dates \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP & :l'identifiant du contact à rechercher \&. 
+.br
+\fIstd::list<Todo>\fP & :listes des taches \&. 
+.br
+\fIQString\fP &:la premiere date ou debut de l'intervalle à rechercher \&. 
+.br
+\fIQString\fP &:la deuxieme date ou fin de l'intervalle à rechercher \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigRechercheUnContact (QString &, QString &, QString &, std::list< \fBContact\fP > &)\fC [signal]\fP"
+
+.PP
+signal sigRechercheUnContact \&. Le signal qui nous permet d'emetre un signal en faisant la recherche en rentrant le nom du contact entre deux dates \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIQString\fP & :le nom a saisir pour la recherche \&. 
+.br
+\fIQString\fP & :le premiere date à saisir pour la recherche\&. 
+.br
+\fIQString\fP & :la deuxieme date à saisir pour la recherche\&. 
+.br
+\fIstd::list<Contact>\fP &: la liste de contact pour la recherche\&. Tous ces paramètres seront envoyés par le signal \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::sigSupprimer (int &)\fC [signal]\fP"
+
+.PP
+signal sigSupprimer \&. Le signal qui nous permet d'emetre un signal en faisant la suppression de l'id du contact \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP & :l'identifiant à envoyer par le signal \&. 
+.RE
+.PP
+
+.SS "void FenetrePrincipale::suppressionContact ()\fC [slot]\fP"
+
+.PP
+Slot suppressionContact \&. slot lié pour la suppression d'un contact \&. < appel de la fonction pour actualiser l'affichage de toutes les intéractions aprés suppression \&.
+.PP
+< appel de la fonction pour actualiser l'affichage des listes de taches à faire aprés suppression
+.SS "void FenetrePrincipale::SupprimerContact ()\fC [private]\fP, \fC [slot]\fP"
+
+.PP
+SupprimerContact \&. la fonction qu'on appellera pour la création de la boite dialogue pour supprimer un contact \&. Création d'une Boite de dialogue elle comportera juste une comboBox pour avoir la liste des contacts pour enfin choisir le quel on veut supprimer et le bouton supprimer et annuler \&. 
+.SS "void FenetrePrincipale::TotalContact (int & tot)\fC [slot]\fP"
+
+.PP
+Slot TotalContact \&. le slot qu'on appellera pour retourner le nombre total des contacts \&. Nombre de contacts Ce slot qui nous permet de nous afficher sur la fenetre principale le nombre total de contact dans la base sur un label \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP &: retourne le nombre total des contacts 
+.RE
+.PP
+
+.SH "Documentation des données membres"
+.PP 
+.SS "QHBoxLayout* FenetrePrincipale::aligneH\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::aligneHH\fC [private]\fP"
+
+.SS "QPushButton* FenetrePrincipale::BajoutInteraction\fC [private]\fP"
+bouton ajouter pour une interaction 
+.SS "QPushButton* FenetrePrincipale::BajoutTaches\fC [private]\fP"
+Bouton pour ajouter une taches \&. 
+.SS "QPushButton* FenetrePrincipale::Bannuler\fC [private]\fP"
+Bouton annuler qui permet de fermer la boite de dialogue 
+.SS "QPushButton* FenetrePrincipale::Bannuler1\fC [private]\fP"
+Bouton annuler qui permet de fermer la boite de dialogue 
+.SS "QPushButton* FenetrePrincipale::BannulerALL\fC [private]\fP"
+Bouton annuler qui permet de fermer la boite de dialogue \&. 
+.SS "QPushButton* FenetrePrincipale::BannulerIdate\fC [private]\fP"
+Bouton annuler qui permet de fermer la boite de dialogue 
+.SS "QPushButton* FenetrePrincipale::BannulerInteraction\fC [private]\fP"
+Bouton annuler qui permet de fermer la boite de dialogue 
+.SS "QPushButton* FenetrePrincipale::BannulerListI\fC [private]\fP"
+Bouton annuler qui permet de fermer la boite de dialogue 
+.SS "QPushButton* FenetrePrincipale::BannulerR\fC [private]\fP"
+Bouton annuler qui permet de fermer la boite de dialogue 
+.SS "QPushButton* FenetrePrincipale::BannulerRC\fC [private]\fP"
+Bouton annuler qui permet de fermer la boite de dialogue \&. 
+.SS "QPushButton* FenetrePrincipale::BannulerTaches\fC [private]\fP"
+Bouton annuler qui permet de fermer la boite de dialogue \&. 
+.SS "QPushButton* FenetrePrincipale::BannulerTachesR\fC [private]\fP"
+Bouton annuler qui permet de fermer la boite de dialogue \&. 
+.SS "\fBContactBDD\fP FenetrePrincipale::bd"
+
+.SS "QPushButton* FenetrePrincipale::BPhotoContact\fC [private]\fP"
+bouton pour ajouter la photo lors de la création d'un contact 
+.SS "QPushButton* FenetrePrincipale::BPhotoModifContact\fC [private]\fP"
+bouton pour ajouter la photo lors de la modification d'un contact 
+.SS "QPushButton* FenetrePrincipale::BrechercheIdate\fC [private]\fP"
+Bouton pour rechercher des interactions entre deux dates 
+.SS "QPushButton* FenetrePrincipale::BRechercher\fC [private]\fP"
+Bouton Rechercher 
+.SS "QPushButton* FenetrePrincipale::BrechercherALL\fC [private]\fP"
+Bouton rechercher des taches pour tous les contacts entre deux dates \&. 
+.SS "QPushButton* FenetrePrincipale::BRechercherRC\fC [private]\fP"
+Bouton pour rechercher des interactions entre deux dates pour un contact 
+.SS "QPushButton* FenetrePrincipale::BrechercherTaches\fC [private]\fP"
+Bouton rechercher les taches d'un contact \&. 
+.SS "QPushButton* FenetrePrincipale::Bsupprimer\fC [private]\fP"
+Bouton Supprimer \&. 
+.SS "QPushButton* FenetrePrincipale::Bvalider\fC [private]\fP"
+
+.PP
+Déclaration des boutons \&. Bouton valider 
+.SS "QPushButton* FenetrePrincipale::Bvalider1\fC [private]\fP"
+Bouton valider pour la liste d'intéraction 
+.SS "QPushButton* FenetrePrincipale::BvaliderListI\fC [private]\fP"
+Bouton valider pour la liste d'intéraction 
+.SS "QLineEdit* FenetrePrincipale::cInteraction\fC [private]\fP"
+déclaration d'un pointeur cInteraction de type QlineEdit pour l'insertion d'un contenu 
+.SS "QComboBox* FenetrePrincipale::combo\fC [private]\fP"
+déclaration de la combo pour gérer la liste déroulante 
+.SS "QComboBox* FenetrePrincipale::comboBox\fC [private]\fP"
+
+.PP
+Déclaration de la ComboBox ou la liste déroulante \&. déclaration de la comboBox pour gérer la liste déroulante 
+.SS "QComboBox* FenetrePrincipale::comboInteraction\fC [private]\fP"
+déclaration de la comboInteraction pour gérer la liste déroulante 
+.SS "QComboBox* FenetrePrincipale::comboList\fC [private]\fP"
+déclaration de la comboList pour gérer la liste déroulante 
+.SS "QComboBox* FenetrePrincipale::comboRecherche\fC [private]\fP"
+déclaration de la comboRecherche pour gérer la liste déroulante 
+.SS "QComboBox* FenetrePrincipale::comboTache\fC [private]\fP"
+déclaration de la comboTache pour gérer la liste déroulante 
+.SS "QComboBox* FenetrePrincipale::comboTachesRecherche\fC [private]\fP"
+déclaration de la comboTachesRecherche pour gérer la liste déroulante 
+.SS "QLabel* FenetrePrincipale::commentaire\fC [private]\fP"
+déclaration d'un pointeur commentaire de type Qlabel lors l'ajout d'une intéraction 
+.SS "QDateEdit* FenetrePrincipale::date1\fC [private]\fP"
+déclaration d'un pointeur date1 de type QDateEdit pour l'insertion de la date 1 
+.SS "QDateEdit* FenetrePrincipale::date1RC\fC [private]\fP"
+déclaration d'un pointeur date1RC de type QDateEdit pour l'insertion d'une date 
+.SS "QDateEdit* FenetrePrincipale::date2\fC [private]\fP"
+déclaration d'un pointeur date2 de type QDateEdit pour l'insertion de la date 2 
+.SS "QDateEdit* FenetrePrincipale::date2RC\fC [private]\fP"
+déclaration d'un pointeur date2RC de type QDateEdit pour l'insertion d'une date 
+.SS "QDateEdit* FenetrePrincipale::dateAjout\fC [private]\fP"
+déclaration d'un pointeur dateAjout de type QDateEdit pour l'insertion d'une date 
+.SS "QDateEdit* FenetrePrincipale::dateDebutALL\fC [private]\fP"
+déclaration d'un pointeur dateDebutALL de type QDateEdit pour l'insertion d'une date 
+.SS "QDateEdit* FenetrePrincipale::dateDebutI\fC [private]\fP"
+déclaration d'un pointeur dateDebutI de type QDateEdit pour l'insertion d'une date 
+.SS "QDateEdit* FenetrePrincipale::dateDebutTaches\fC [private]\fP"
+déclaration d'un pointeur dateDebutTaches de type QDateEdit pour l'insertion d'une date 
+.SS "QDateEdit* FenetrePrincipale::dateFinALL\fC [private]\fP"
+déclaration d'un pointeur dateFinALL de type QDateEdit pour l'insertion d'une date 
+.SS "QDateEdit* FenetrePrincipale::dateFinI\fC [private]\fP"
+déclaration d'un pointeur dateFinI de type QDateEdit pour l'insertion d'une date 
+.SS "QDateEdit* FenetrePrincipale::dateFinTaches\fC [private]\fP"
+déclaration d'un pointeur dateFinTaches de type QDateEdit pour l'insertion d'une date 
+.SS "QLabel* FenetrePrincipale::debut\fC [private]\fP"
+déclaration d'un QLabel déclaration d'un QLabel 
+.SS "QDialog* FenetrePrincipale::dialog\fC [private]\fP"
+
+.PP
+Déclaration des boites de Dialogues \&. déclaration de la boite de dialogue pour la partie créer un contact 
+.SS "QDialog* FenetrePrincipale::dialog1\fC [private]\fP"
+déclaration de la boite de dialogue pour la partie Modification d'un contact 
+.SS "QDialog* FenetrePrincipale::dialog2\fC [private]\fP"
+déclaration de la boite de dialogue pour la partie supprimer un contact 
+.br
+ 
+.SS "QDialog* FenetrePrincipale::dialog3\fC [private]\fP"
+déclaration de la boite de dialogue pour la partie rechercher un contact 
+.SS "QDialog* FenetrePrincipale::dialogALL\fC [private]\fP"
+déclaration de la boite de dialogue pour faire la recherche des taches de tous les contacts entre deux dates 
+.SS "QDialog* FenetrePrincipale::dialogIdeuxDates\fC [private]\fP"
+déclaration de la boite de dialogue pour afficher des intéractions entre 2 dates \&. 
+.SS "QDialog* FenetrePrincipale::dialogInteraction\fC [private]\fP"
+déclaration de la boite de dialogue pour la partie ajouter une interaction 
+.SS "QDialog* FenetrePrincipale::dialogList\fC [private]\fP"
+déclaration de la boite de dialogue pour la partie afficher la liste des interactions d'un contact 
+.SS "QDialog* FenetrePrincipale::dialogRC\fC [private]\fP"
+déclaration de la boite de dialogue pour afficher les intéractions d'un contact entre 2 dates \&. 
+.SS "QDialog* FenetrePrincipale::dialogRechercheT\fC [private]\fP"
+déclaration de la boite de dialogue pour faire la recherche des taches d'un contact \&. 
+.SS "QDialog* FenetrePrincipale::dialogTaches\fC [private]\fP"
+déclaration de la boite de dialogue pour afficher l'ajaout d'une taches\&. 
+.SS "QTextEdit* FenetrePrincipale::editTaches\fC [private]\fP"
+déclaration d'un pointeur editTaches de type QTextEdit pour une insertion 
+.SS "QLineEdit* FenetrePrincipale::em\fC [private]\fP"
+déclaration d'un pointeur em de type QlineEdit pour la saisie de texte pour l'email 
+.SS "QLineEdit* FenetrePrincipale::em1\fC [private]\fP"
+déclaration d'un pointeur em1 de type QlineEdit pour la saisie de texte pour l'email 
+.SS "QLabel* FenetrePrincipale::Email\fC [private]\fP"
+déclaration d'un pointeur Email de type Qlabel pour la création d'un contact 
+.SS "QLabel* FenetrePrincipale::Email1\fC [private]\fP"
+déclaration d'un pointeur Email de type Qlabel pour la Modification d'un contact 
+.SS "QLineEdit* FenetrePrincipale::en\fC [private]\fP"
+déclaration d'un pointeur en de type QlineEdit pour la saisie de texte pour l'entreprise 
+.SS "QLineEdit* FenetrePrincipale::en1\fC [private]\fP"
+déclaration d'un pointeur en1 de type QlineEdit pour la saisie de texte pour l'Entreprise 
+.SS "QLabel* FenetrePrincipale::Entreprise\fC [private]\fP"
+déclaration d'un pointeur Entreprise de type Qlabel pour la création d'un contact 
+.SS "QLabel* FenetrePrincipale::Entreprise1\fC [private]\fP"
+déclaration d'un pointeur Entreprise de type Qlabel pour la Modification d'un contact 
+.SS "QLabel* FenetrePrincipale::fin\fC [private]\fP"
+déclaration d'un QLabel 
+.SS "QHBoxLayout* FenetrePrincipale::hAligne1I\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAligne1Taches\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAligne2I\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAligne2Taches\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAligne3Taches\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAligne4I\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAligneALL\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAligneI\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAligneId\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAligneList\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAligneTachesR\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAlignH\fC [private]\fP"
+
+.SS "QHBoxLayout* FenetrePrincipale::hAlignHRC\fC [private]\fP"
+
+.SS "QLabel* FenetrePrincipale::ImageInsere\fC [private]\fP"
+déclaration d'un pointeur nom de l'image de type Qlabel lors la création d'un contact 
+.SS "QLabel* FenetrePrincipale::ImageInsere2\fC [private]\fP"
+déclaration d'un pointeur nom de l'image de type Qlabel lors la modification d'un contact 
+.SS "\fBInteractionBDD\fP FenetrePrincipale::inBDD"
+
+.SS "QLabel* FenetrePrincipale::lheure\fC [private]\fP"
+décalration du QLabel pour la comboBox 
+.SS "QTimer* FenetrePrincipale::ltime\fC [private]\fP"
+déclaration d'un pointeur ltime de type QTimer qui va gerer une heure /mois/date 
+.br
+ 
+.SS "QLineEdit* FenetrePrincipale::n\fC [private]\fP"
+
+.PP
+Déclaration des champs et les dates \&. déclaration d'un pointeur n de type QlineEdit pour la saisie de texte pour le nom 
+.SS "QLineEdit* FenetrePrincipale::n1\fC [private]\fP"
+déclaration d'un pointeur n1 de type QlineEdit pour la saisie de texte pour le nom 
+.SS "QLabel* FenetrePrincipale::Nom\fC [private]\fP"
+
+.PP
+Déclaration des labels pour la boite de dialogue créer un contact \&. déclaration d'un pointeur Nom de type Qlabel pour la création d'un contact 
+.SS "QLabel* FenetrePrincipale::Nom1\fC [private]\fP"
+déclaration d'un pointeur Nom de type Qlabel pour la Modification d'un contact 
+.SS "QLabel* FenetrePrincipale::Nomcombo\fC [private]\fP"
+déclaration d'un pointeur nom de la comboBox de type Qlabel pour la Modification d'un contact 
+.SS "QLabel* FenetrePrincipale::NomcomboList\fC [private]\fP"
+décalration du QLabel pour la comboBox 
+.SS "QLabel* FenetrePrincipale::NomR\fC [private]\fP"
+
+.SS "QLineEdit* FenetrePrincipale::nR\fC [private]\fP"
+déclaration d'un pointeur nR de type QlineEdit pour l'insertion du texte 
+.SS "QLineEdit* FenetrePrincipale::p\fC [private]\fP"
+déclaration d'un pointeur p de type QlineEdit pour la saisie de texte pour le prenom 
+.SS "QLineEdit* FenetrePrincipale::p1\fC [private]\fP"
+déclaration d'un pointeur p1 de type QlineEdit pour la saisie de texte pour le prenom 
+.SS "QLineEdit* FenetrePrincipale::ph\fC [private]\fP"
+déclaration d'un pointeur ph de type QlineEdit pour l'insertion du chemin pour la photo 
+.SS "QLineEdit* FenetrePrincipale::ph1\fC [private]\fP"
+déclaration d'un pointeur ph1 de type QlineEdit pour l'insertion du chemin pour la photo 
+.SS "QLabel* FenetrePrincipale::Photo\fC [private]\fP"
+déclaration d'un pointeur Photo de type Qlabel pour la création d'un contact 
+.SS "QLabel* FenetrePrincipale::Photo1\fC [private]\fP"
+déclaration d'un pointeur photo de type Qlabel pour la Modification d'un contact 
+.SS "QLabel* FenetrePrincipale::Prenom\fC [private]\fP"
+déclaration d'un pointeur Prenom de type Qlabel pour la création d'un contact 
+.SS "QLabel* FenetrePrincipale::Prenom1\fC [private]\fP"
+déclaration d'un pointeur Prenom de type Qlabel pour la Modification d'un contact 
+.SS "QLineEdit* FenetrePrincipale::tel\fC [private]\fP"
+déclaration d'un pointeur tel de type QlineEdit pour la saisie de texte pour telephone 
+.SS "QLineEdit* FenetrePrincipale::tel1\fC [private]\fP"
+déclaration d'un pointeur tel1 de type QlineEdit pour la saisie de texte pour telephone 
+.SS "QLabel* FenetrePrincipale::Telephone\fC [private]\fP"
+déclaration d'un pointeur Telephone de type Qlabel pour la création d'un contact 
+.SS "QLabel* FenetrePrincipale::Telephone1\fC [private]\fP"
+déclaration d'un pointeur Telephone de type Qlabel pour la Modification d'un contact 
+.SS "Ui::FenetrePrincipale* FenetrePrincipale::ui\fC [private]\fP"
+déclaration de l'interface utilisateur 
+.SS "QVBoxLayout* FenetrePrincipale::vAligne1\fC [private]\fP"
+
+.PP
+Declaration des dimensions \&. La déclaration des dimension Horizontale et Verticale pour les Qdialoque afin de bien aligner nos widgets \&. 
+.SS "QVBoxLayout* FenetrePrincipale::vAligne11\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne1ALL\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne1I\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne1Id\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne1TachesR\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne2\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne22\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne2ALL\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne2I\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne2Id\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne2TachesR\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne3\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne33\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligne3I\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligneI\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligneList1\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligneList2\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligneR\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligneR2\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligneR2RC\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligneRRC\fC [private]\fP"
+
+.SS "QVBoxLayout* FenetrePrincipale::vAligneTaches\fC [private]\fP"
+
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour DoxygenFinal à partir du code source\&.

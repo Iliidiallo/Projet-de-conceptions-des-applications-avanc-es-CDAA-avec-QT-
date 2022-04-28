@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="fenetreprincipale_8h" local="yes">fenetreprincipale.h</includes>
+    <includes refid="contactbdd_8h" local="no">contactbdd.h</includes>
+    <includes refid="todobdd_8h" local="no">todobdd.h</includes>
+    <includes refid="interactionbdd_8h" local="no">interactionbdd.h</includes>
+    <includes local="no">QApplication</includes>
+    <incdepgraph>
+      <node id="15">
+        <label>list</label>
+      </node>
+      <node id="4">
+        <label>contact.h</label>
+        <link refid="contact_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp</label>
+        <link refid="main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>QTextEdit</label>
+      </node>
+      <node id="34">
+        <label>QMessageBox</label>
+      </node>
+      <node id="19">
+        <label>interactionbdd.h</label>
+        <link refid="interactionbdd_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>QObject</label>
+      </node>
+      <node id="12">
+        <label>QtSql/QSqlDatabase</label>
+      </node>
+      <node id="14">
+        <label>QtSql/QSqlQuery</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>QMainWindow</label>
+      </node>
+      <node id="20">
+        <label>Interaction.h</label>
+        <link refid="_interaction_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>QFormLayout</label>
+      </node>
+      <node id="7">
+        <label>ostream</label>
+      </node>
+      <node id="30">
+        <label>QDateEdit</label>
+      </node>
+      <node id="43">
+        <label>QJsonArray</label>
+      </node>
+      <node id="42">
+        <label>QJsonObject</label>
+      </node>
+      <node id="5">
+        <label>Date.h</label>
+        <link refid="_date_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>QHBoxLayout</label>
+      </node>
+      <node id="45">
+        <label>QApplication</label>
+      </node>
+      <node id="40">
+        <label>QIODevice</label>
+      </node>
+      <node id="28">
+        <label>QTimeEdit</label>
+      </node>
+      <node id="6">
+        <label>ctime</label>
+      </node>
+      <node id="2">
+        <label>fenetreprincipale.h</label>
+        <link refid="fenetreprincipale_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>QDialog</label>
+      </node>
+      <node id="13">
+        <label>QDebug</label>
+      </node>
+      <node id="25">
+        <label>QVBoxLayout</label>
+      </node>
+      <node id="29">
+        <label>QTimer</label>
+      </node>
+      <node id="21">
+        <label>Todo.h</label>
+        <link refid="_todo_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>QLineEdit</label>
+      </node>
+      <node id="36">
+        <label>QRegularExpression</label>
+      </node>
+      <node id="11">
+        <label>QDate</label>
+      </node>
+      <node id="16">
+        <label>QString</label>
+      </node>
+      <node id="44">
+        <label>todobdd.h</label>
+        <link refid="todobdd_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>QFile</label>
+      </node>
+      <node id="23">
+        <label>QPushButton</label>
+      </node>
+      <node id="22">
+        <label>QLabel</label>
+      </node>
+      <node id="39">
+        <label>QJsonDocument</label>
+      </node>
+      <node id="33">
+        <label>QComboBox</label>
+      </node>
+      <node id="18">
+        <label>QSql</label>
+      </node>
+      <node id="9">
+        <label>contactbdd.h</label>
+        <link refid="contactbdd_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>QTextBlock</label>
+      </node>
+      <node id="35">
+        <label>QTextDocument</label>
+      </node>
+      <node id="17">
+        <label>QVariant</label>
+      </node>
+      <node id="37">
+        <label>QStringList</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Initialisation de a avec les parametres argc et argv</para>
+<para>&lt; déclaration de w de type fenetre principale qui est une classe</para>
+<para>&lt; déclaration de c de type <ref refid="class_contact_b_d_d" kindref="compound">ContactBDD</ref> qui est une classe qui represente la base de donnée d&apos;un contact</para>
+<para>&lt; déclaration de interact de type <ref refid="class_interaction_b_d_d" kindref="compound">InteractionBDD</ref> qui est une classe qui represente la base de donnée d&apos;une intéraction <linebreak/>
+</para>
+<para>&lt; déclaration de taches de type <ref refid="class_todo_b_d_d" kindref="compound">TodoBDD</ref> qui est une classe qui represente la base de donnée d&apos;un <ref refid="class_todo" kindref="compound">Todo</ref></para>
+<para>Les connections pour tout ce qui concerne le <ref refid="class_contact" kindref="compound">Contact</ref> Les connections (signaux) qu&apos;on liera à la fonction correspondante dans labas de données concernant un contact .</para>
+<para>connection lié à l&apos;affichage d&apos;un contact La connection du signal de l&apos;application principale à la base de donnée correspondante à l&apos;affichage d&apos;un contact dans la base .</para>
+<para>connection lié à creer un contact La connection du signal de l&apos;application principale à la base de donnée correspondante à la création d&apos;un d&apos;un contact dans la base.</para>
+<para>connection lié à la modification d&apos;un contact La connection du signal de l&apos;application principale à la base de donnée correspondante à la modification d&apos;un contact dans la base .</para>
+<para>connection lié à la suppression d&apos;un contact La connection du signal de l&apos;application principale à la base de donnée correspondante à la suppression d&apos;un contact dans la base .</para>
+<para>connection lié à la Recherche un contact La connection du signal de l&apos;application principale à la base de donnée correspondante à la recherche d&apos;un contact dans la base .</para>
+<para>connection lié au Nombre de contact La connection du signal de l&apos;application principale à la base de donnée correspondante au Nombre total de contact dans la base .</para>
+<para>Les connections pour tout ce qui concernant une Intéraction Les connections (signaux) qu&apos;on liera à la fonction correspondante dans labas de données concernant une intéraction .</para>
+<para>connection lié à l&apos;Ajout d&apos;une intéraction La connection du signal de l&apos;application principale à la base de donnée correspondante à l&apos;ajout d&apos;une intéraction dans la base .</para>
+<para>connection lié à l&apos;Affichage d&apos;une intéraction La connection du signal de l&apos;application principale à la base de donnée correspondante à l&apos;affichage d&apos;une intéraction d&apos;un contact dans la base .</para>
+<para>connection lié à l&apos;Affichage toutes les intérations des contacts La connection du signal de l&apos;application principale à la base de donnée correspondante à l&apos;affichage de toutes les intérations des contacts dans la base .</para>
+<para>connection lié à l&apos;affichage des interactions entre deux dates La connection du signal de l&apos;application principale à la base de donnée correspondante à l&apos;affichage des interactions de tous les contacts entre deux dates dans la base .</para>
+<para>connection lié à la recherche d&apos;une intéraction d&apos;un contact La connection du signal de l&apos;application principale à la base de donnée correspondante à la recherche des interactions pour un contact entre deux dates dans la base .</para>
+<para>Les connections pour tout ce qui concernant un <ref refid="class_todo" kindref="compound">Todo</ref> Les connections (signaux) qu&apos;on liera à la fonction correspondante dans labas de données concernant les taches .</para>
+<para>connection lié ajouter une tache &quot;todo&quot; La connection du signal de l&apos;application principale à la base de donnée correspondante à l&apos;ajout d&apos;une tache dans la base .</para>
+<para>connection lié à l&apos;affichage des taches pour tous les contacts . La connection du signal de l&apos;application principale à la base de donnée correspondante à l&apos;affichage des taches pour tous les contacts dans la base .</para>
+<para>connection lié à la recherche d&apos;une tache entre deux dates pour un contact. La connection du signal de l&apos;application principale à la base de donnée correspondante à la recherche d&apos;une tache entre deux dates pour un contact entre deux dates dans la base .</para>
+<para>connection lié à la recherche des taches entre deux dates . La connection du signal de l&apos;application principale à la base de donnée correspondante à la recherche des taches entre deux dates pour tous les contacts dans la base .</para>
+<para>&lt; w etant de type <ref refid="class_fenetre_principale" kindref="compound">FenetrePrincipale</ref> et on l&apos;affiche en faisant appel à la fonction show() .</para>
+<para>Execution de l&apos;application . <simplesect kind="return"><para>a.exec() : on exécute l&apos;application .</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp" line="24" column="5" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp" bodystart="24" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Application Qt. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>BARRY Thierno Oumar &amp; DIALLO Iliassou </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="fenetreprincipale_8h" kindref="compound">fenetreprincipale.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="contactbdd_8h" kindref="compound">contactbdd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="todobdd_8h" kindref="compound">todobdd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="interactionbdd_8h" kindref="compound">interactionbdd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QApplication&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QApplication<sp/>a(argc,<sp/>argv);<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fenetre_principale" kindref="compound">FenetrePrincipale</ref><sp/>w;<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_contact_b_d_d" kindref="compound">ContactBDD</ref><sp/>c;<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_interaction_b_d_d" kindref="compound">InteractionBDD</ref><sp/>interact;<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_todo_b_d_d" kindref="compound">TodoBDD</ref><sp/>taches;<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(sigGetContactList(std::list&lt;Contact&gt;&amp;)),&amp;c,SLOT(<sp/>bddListeContact(std::list&lt;Contact&gt;<sp/>&amp;)));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(sigInsert(<sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;)),&amp;c,SLOT(<sp/>bbdNouveauContact(<ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;)));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(sigModifier(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,<sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;)),&amp;c,SLOT(<sp/>bddModifContact(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,<sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;)));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(sigSupprimer(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;)),&amp;c,SLOT(<sp/>bddSupprimeContact(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>&amp;<sp/>)));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(sigRechercheUnContact(QString<sp/>&amp;<sp/><sp/>,QString<sp/>&amp;<sp/>,QString<sp/>&amp;<sp/>,std::list&lt;Contact&gt;<sp/>&amp;<sp/>)),</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;c,SLOT(bddRechercherContact(QString<sp/>&amp;,QString<sp/>&amp;<sp/>,QString<sp/>&amp;<sp/>,std::list&lt;Contact&gt;&amp;)));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;c,SIGNAL(nombreTotalContact(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/><sp/>)),&amp;w,SLOT(TotalContact(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;)));</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(sigAjoutInteraction(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,<ref refid="class_interaction" kindref="compound">Interaction</ref><sp/>&amp;)),</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;interact,SLOT(bddAjoutInteraction(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,<ref refid="class_interaction" kindref="compound">Interaction</ref><sp/>&amp;)));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(sigListeInteraction(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,std::list&lt;Interaction&gt;<sp/>&amp;)),</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;interact,SLOT(<sp/>bddListeInteraction(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,std::list&lt;Interaction&gt;<sp/>&amp;)));</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(sigListeInteractionALL(std::list&lt;Interaction&gt;<sp/>&amp;)),</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;interact,SLOT(<sp/>bddListeInteractionALL(std::list&lt;Interaction&gt;<sp/>&amp;)));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(<sp/>sigRechercheInteraction(QString<sp/>&amp;,QString<sp/>&amp;,std::list&lt;Interaction&gt;<sp/>&amp;)),</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;interact,SLOT(<sp/>bddRechercheInteraction(QString<sp/>&amp;,QString<sp/>&amp;,std::list&lt;Interaction&gt;<sp/>&amp;)));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(<sp/>sigRechercheInteractionCont(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Interaction&gt;<sp/>&amp;)),</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;interact,SLOT(<sp/>bddRechercheInteractionCont(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Interaction&gt;<sp/>&amp;)));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(sigAjoutTodo(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,<ref refid="class_todo" kindref="compound">Todo</ref><sp/>&amp;)),&amp;taches,SLOT(bddAjoutTodo(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,<ref refid="class_todo" kindref="compound">Todo</ref><sp/>&amp;)));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(sigListeALLContact(std::list&lt;Todo&gt;<sp/>&amp;)),&amp;taches,SLOT(bddListeALLContact(std::list&lt;Todo&gt;<sp/>&amp;)));</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(<sp/>sigRechercheTodoCont(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Todo&gt;<sp/>&amp;)),</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;taches,SLOT(<sp/>bddRechercheTodoCont(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Todo&gt;<sp/>&amp;)));</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(&amp;w,SIGNAL(<sp/>sigRechercheALLTodoCont(<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Todo&gt;<sp/>&amp;)),</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;taches,SLOT(<sp/>bddRechercheALLTodoCont(<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Todo&gt;<sp/>&amp;)));</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w.show();<sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a.exec();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp"/>
+  </compounddef>
+</doxygen>

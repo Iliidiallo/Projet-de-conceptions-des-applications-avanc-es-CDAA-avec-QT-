@@ -1,0 +1,808 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_contact_b_d_d" kind="class" language="C++" prot="public">
+    <compoundname>ContactBDD</compoundname>
+    <basecompoundref refid="class_q_object" prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="contactbdd_8h" local="no">contactbdd.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_contact_b_d_d_1af4198cc56143e7ee244374b05809d301" prot="private" static="no" mutable="no">
+        <type>QSqlDatabase</type>
+        <definition>QSqlDatabase ContactBDD::db</definition>
+        <argsstring></argsstring>
+        <name>db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>connexion a la base de donnee </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="37" column="18" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_contact_b_d_d_1a0b8b10a1e971d7e2120a291527e3ae74" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ContactBDD::dbOuvert</definition>
+        <argsstring></argsstring>
+        <name>dbOuvert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="38" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_contact_b_d_d_1a151335438386a4b19d9c26102717e377" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>ContactBDD::closeDb</definition>
+        <argsstring>()</argsstring>
+        <name>closeDb</name>
+        <briefdescription>
+<para>Fermeture de la base Methode qui ferme la base quand elle est ouverte. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>fermer la base On teste si le boolean est à true on ferme la base</para>
+<para>&lt; Tester si la base est ouverte ou non </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="43" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="87" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_b_d_d_1a5e5e3c2ae8d4ec5d0092af497c703d8b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ContactBDD::connexionDB</definition>
+        <argsstring>()</argsstring>
+        <name>connexionDB</name>
+        <briefdescription>
+<para>Creer la connexion en ajoutant une des fonction statiques addDatabase. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Connexion à la base de donnée On met le chemin dans tmp On teste si la base est ouverte : si non on retourne false si Oui on crée une table si elle n&apos;existe pas et on affiche si la table est bien crée &quot;création de la table réussi &quot; .</para>
+<para>Methode qui permet d&apos;etablir une connexion dans la base Elle crée par la même occasion une table INTERACTION dans la base si elle n&apos;existe pas.</para>
+<para><simplesect kind="return"><para>true si la connexion à reussie, </para>
+</simplesect>
+<simplesect kind="return"><para>false sinon</para>
+</simplesect>
+<simplesect kind="return"><para>dbOuvert : le booleén à retourner </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="53" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="43" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_b_d_d_1aa82eb548f99ae20a9aa2d9d581242fbf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ContactBDD::isDBopen</definition>
+        <argsstring>(bool &amp;)</argsstring>
+        <name>isDBopen</name>
+        <param>
+          <type>bool &amp;</type>
+          <defname>b</defname>
+        </param>
+        <briefdescription>
+<para>Etat de la base. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Teste on affectera b à b.</para>
+<para>Methode qui change l&apos;etat de la base</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: l&apos;etat de la base à changer</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; b : le booléan en paramètre . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="62" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_contact_b_d_d_1aa81b5ba902e1db7f9933fe4d8f32882e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>ContactBDD::ListeContact</definition>
+        <argsstring>(std::list&lt; Contact &gt; &amp;) const</argsstring>
+        <name>ListeContact</name>
+        <param>
+          <type>std::list&lt; <ref refid="class_contact" kindref="compound">Contact</ref> &gt; &amp;</type>
+          <defname>lc</defname>
+        </param>
+        <briefdescription>
+<para>Liste des contacts. Methode qui permet de recuperer la liste de l&apos;ensemble des contact present dans la base. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>la liste des contacts Slot pour afficher la liste des contacts c&apos;est ce slot qu&apos;on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .</para>
+<para>Affichage d&apos;un contact L&apos;affichage d&apos;un contact en utilisant la requete qui selectionne tous les contacts dans la base de donnée . si l&apos;affichage est réussi on récupère tout ce qui caractérise le contact dans la base .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:Liste des contact</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Ensemble des contacts</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;lc : la liste de contact en paramètre on ajoutera le contact dans la liste passé en paramètre .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;co : la liste de contact qu&apos;on mettra dans le paramètre lors de l&apos;appel de la fonction ListeContact </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="73" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="113" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_b_d_d_1a951bc86a61e65b2ad1fe54b45ab00278" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ContactBDD::NouveauContact</definition>
+        <argsstring>(const Contact &amp;) const</argsstring>
+        <name>NouveauContact</name>
+        <param>
+          <type>const <ref refid="class_contact" kindref="compound">Contact</ref> &amp;</type>
+          <defname>co</defname>
+        </param>
+        <briefdescription>
+<para>Ajout d&apos;un contact Methode qui permet d&apos;ajouter un contact dans la base. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Création d&apos;un contact La fonction qui nous permet d&apos;insérer un contact en tenant compte des contraintes concernant les clés étrangères ou primaires.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Contact&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: le contact a inserer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true s&apos;il est inserer dans la base </para>
+</simplesect>
+<simplesect kind="return"><para>false sinon</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_contact" kindref="compound">Contact</ref> &amp; co: le contact qu&apos;on utilisera pour recuperer ses setteurs afin de les inserer dans la base . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="81" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="182" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_b_d_d_1a5dee51527412d5b8119d00c0f49cfbef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ContactBDD::ModifContact</definition>
+        <argsstring>(const int &amp;, const Contact &amp;) const</argsstring>
+        <name>ModifContact</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>id_ancien</defname>
+        </param>
+        <param>
+          <type>const <ref refid="class_contact" kindref="compound">Contact</ref> &amp;</type>
+          <defname>co</defname>
+        </param>
+        <briefdescription>
+<para>Modification. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Modification d&apos;un contact La fonction qui nous permet de modifier un contact en tenant compte des contraintes concernant les clés étrangères ou primaires en mettant à jour la liste de contact ein utilisant UPDATE dans la requete .</para>
+<para>Methode qui permet de modifier un contact donné dans la base</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : le id du contacNouveauContactt à modifier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Contact&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: le nouveau contact modifié </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true s&apos;il est modifie dans la base </para>
+</simplesect>
+<simplesect kind="return"><para>false sinon</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; id_ancien : represente l&apos;identifiant du contact à modifier . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_contact" kindref="compound">Contact</ref> &amp; co: represente le contact qu&apos;on utilisera pour recuperer ses setteurs afin de faire la modification du contact dans la base . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="92" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="231" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_b_d_d_1a7ccb1e9fa160d6026a3854a027bfd601" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ContactBDD::SupprimeContact</definition>
+        <argsstring>(const int &amp;) const</argsstring>
+        <name>SupprimeContact</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>id_cont</defname>
+        </param>
+        <briefdescription>
+<para>Suppression. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Supprimer un contact La fonction qui nous permet de supprimer un contact en tenant compte des contraintes concernant les clés étrangères ou primaires en supprimant toutes ces intéractions et taches en utilisant la requete &quot;DELETE&quot; .</para>
+<para>Methode qui permet de supprimer un contact donné dans la base</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Contact&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: le contact à supprimer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true s&apos;il est supprimé dans la base </para>
+</simplesect>
+<simplesect kind="return"><para>false sinon</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; id_cont: l&apos;identifiant du contact à supprimer . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="102" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="278" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_b_d_d_1ada052c3f0a553eabedf254bb054f5387" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ContactBDD::RechercherContact</definition>
+        <argsstring>(QString &amp;, QString &amp;, QString &amp;, std::list&lt; Contact &gt; &amp;) const</argsstring>
+        <name>RechercherContact</name>
+        <param>
+          <type>QString &amp;</type>
+          <defname>noms</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date1</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date2</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_contact" kindref="compound">Contact</ref> &gt; &amp;</type>
+          <defname>lc</defname>
+        </param>
+        <briefdescription>
+<para>Recherche contact Methode qui permet de rechercher un contact dans la base entre deux dates saisies. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rechercher contact par le nom c&apos;est cette fonction qui nous permet de rechercher un contact par son nom dans la liste des contacts entre deux dates . On rentrera l&apos;intervalle à rechercher et le nom en Selectionnant la table où le nom entrer par l&apos;utilisateur correspond à un nom dans la liste contact : on l&apos;affiche sinon on affiche rien tout en triant par date de création .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>QString&amp;:la</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>premiere date </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString&amp;:la</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>deuxieme date </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:Liste des contact stocke entre ces 2 dates</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; noms: le nom du contact à réchercher . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date1 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date2 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; lc :liste de contacts </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="112" column="11" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="324" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_b_d_d_1a6764c4ed28c6c001c407dc65902c27c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ContactBDD::NombreContact</definition>
+        <argsstring>() const</argsstring>
+        <name>NombreContact</name>
+        <briefdescription>
+<para>Le nombre de total de contact dans la base. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Afficher le nombre total de contact . c&apos;est cette fonction qui nous permet d&apos;afficher en comptant le nombre total de contact dans la base de donnée contactBDD pour y arriver on a utilisé count(*) qui permet de compter en sqlite et sql,plus précisement sur notre application lors d&apos;un clic sur sur le boutons afficher les contact on voit afficher le nombre total de conatact dans la base de donnée . On le liera dans le main avec sa fonction correspondante .</para>
+<para>Methode qui permet de savoir le nombre total de contact dans la base on a utilisé un requete avec count(*) .</para>
+<para><simplesect kind="return"><para>le nombre total de contact </para>
+</simplesect>
+<simplesect kind="return"><para>-1 sinon</para>
+</simplesect>
+<simplesect kind="return"><para>total: on a retourné l&apos;entier total . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="122" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="408" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_b_d_d_1a28dc8793dd96f35c85fdceb269800579" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ContactBDD::ContactBDD</definition>
+        <argsstring>(QObject *parent=nullptr)</argsstring>
+        <name>ContactBDD</name>
+        <param>
+          <type><ref refid="class_q_object" kindref="compound">QObject</ref> *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Constructeur Constructeur de la classe <ref refid="class_contact_b_d_d" kindref="compound">ContactBDD</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du constructeur avec paramètre .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>= nullptr: par defaut de type <ref refid="class_q_object" kindref="compound">QObject</ref> .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_q_object" kindref="compound">QObject</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*parent et hérite d&apos;un QObjet initialisation du test de la base de donnée à false . Appel de la fonction connexionBdd pour connecter la base de donnée . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="131" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="16" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_b_d_d_1a1cd8be9e04f80c4061457ddde1f04f9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ContactBDD::~ContactBDD</definition>
+        <argsstring>()</argsstring>
+        <name>~ContactBDD</name>
+        <briefdescription>
+<para>Destructeur Destructeur de la classe <ref refid="class_contact_b_d_d" kindref="compound">ContactBDD</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du destructeur . A la fermeture de la base on libère la memoire en faisant appel à la fonction closeDB().</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="136" column="5" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_contact_b_d_d_1ae9e97816b1d250fc5bdbf44ccdb3e474" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ContactBDD::bddListeContact</definition>
+        <argsstring>(std::list&lt; Contact &gt; &amp;)</argsstring>
+        <name>bddListeContact</name>
+        <param>
+          <type>std::list&lt; <ref refid="class_contact" kindref="compound">Contact</ref> &gt; &amp;</type>
+          <defname>co</defname>
+        </param>
+        <briefdescription>
+<para>Slot liste <ref refid="class_contact" kindref="compound">Contact</ref> . Slot qui reçoit une liste de contact afin d&apos;envoyer ceci a la methode ListeContact(std::list&lt;Contact&gt; &amp;) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : liste des contact </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="145" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="169" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_contact_b_d_d_1adef37fb1183502a46db3e07fd97a3a63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ContactBDD::bbdNouveauContact</definition>
+        <argsstring>(Contact &amp;)</argsstring>
+        <name>bbdNouveauContact</name>
+        <param>
+          <type><ref refid="class_contact" kindref="compound">Contact</ref> &amp;</type>
+          <defname>co</defname>
+        </param>
+        <briefdescription>
+<para>Slot Nouveau contact . Slot qui reçoit une contact afin d&apos;envoyer ceci a la methode NouveauContact(Contact&amp; ) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Création d&apos;un contact Slot pour créer un contact c&apos;est ce slot qu&apos;on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Contact&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: le contact</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_contact" kindref="compound">Contact</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;co:le contact qu&apos;on mettra dans le paramètre de la fonction NouveauContact lors de son appel . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="152" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_contact_b_d_d_1acc532eeaa500698961bd1cd3de973854" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ContactBDD::bddModifContact</definition>
+        <argsstring>(int &amp;, Contact &amp;)</argsstring>
+        <name>bddModifContact</name>
+        <param>
+          <type>int &amp;</type>
+          <defname>id_ancien</defname>
+        </param>
+        <param>
+          <type><ref refid="class_contact" kindref="compound">Contact</ref> &amp;</type>
+          <defname>co</defname>
+        </param>
+        <briefdescription>
+<para>Slot Modifier un contact . Slot qui reçoit le id d&apos;un contact et un contact afin d&apos;envoyer ceci a la methode ModifContact(const int &amp; ,const Contact &amp;) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Modification d&apos;un contact Slot pour modifier un contact c&apos;est ce slot qu&apos;on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: le id du contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Contact&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: le contact</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;:l&apos;identifiant du contact qu&apos;on mettra dans le paramètre de la fonction modifContact lors de son appel . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_contact" kindref="compound">Contact</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;co:le contact qu&apos;on mettra dans le paramètre de la fonction ModifContact lors de son appel . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="160" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="266" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_contact_b_d_d_1ad28602fec70582f934af0654188a7fca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ContactBDD::bddSupprimeContact</definition>
+        <argsstring>(int &amp;)</argsstring>
+        <name>bddSupprimeContact</name>
+        <param>
+          <type>int &amp;</type>
+          <defname>id_cont</defname>
+        </param>
+        <briefdescription>
+<para>Slot Supprimer un contact . Slot qui reçoit le id d&apos;un contact afin d&apos;envoyer ceci a la methode SupprimeContact(const int &amp;) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Slot pour la suppression d&apos;un contact Slot pour supprimer un contact c&apos;est ce slot qu&apos;on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: le id du contact</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;:l&apos;identifiant du contact à supprimer qu&apos;on mettra dans le paramètre de la fonction modifContact lors de l&apos;appel appel de la fonction <ref refid="class_contact_b_d_d_1a7ccb1e9fa160d6026a3854a027bfd601" kindref="member">SupprimeContact()</ref> . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="167" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="307" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_contact_b_d_d_1ae1a0d3ecda82c9191d267cc5bcc1a2a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ContactBDD::bddRechercherContact</definition>
+        <argsstring>(QString &amp;, QString &amp;, QString &amp;, std::list&lt; Contact &gt; &amp;)</argsstring>
+        <name>bddRechercherContact</name>
+        <param>
+          <type>QString &amp;</type>
+          <defname>nom</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date1</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date2</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_contact" kindref="compound">Contact</ref> &gt; &amp;</type>
+          <defname>lc</defname>
+        </param>
+        <briefdescription>
+<para>Slot pour la recherche d&apos;un contact Slot pour rechercher un contact c&apos;est ce slot qu&apos;on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale ,on a fait appel à la fonction bddRechercherContact pour lui donner en parametre les variable suivante : nom,date1, date2,la liste des contacts . </para>
+        </briefdescription>
+        <detaileddescription>
+<para>\Slot Rechercher un contact . Slot qui recherche un contact par son nom entre 2 dates et ce slot rejoint la methode Recherchercontact(...) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>QString&amp;:la</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>premiere date </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString&amp;:la</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>deuxieme date </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:Liste des contact stocke ente ces 2 dates</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; nom : le nom du contact à réchercher . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date1 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date2 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; lc :liste de contacts </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="177" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp" bodystart="394" bodyend="397"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="class_contact_b_d_d_1a30a73c86def34e413988dfcd4591f713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ContactBDD::nombreTotalContact</definition>
+        <argsstring>(int &amp;)</argsstring>
+        <name>nombreTotalContact</name>
+        <param>
+          <type>int &amp;</type>
+        </param>
+        <briefdescription>
+<para>Signal envoyer le nombre total de contact . </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:un entier en parametre </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="187" column="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe qui gère la base de donnée La classe herite d&apos;un <ref refid="class_q_object" kindref="compound">QObject</ref>, permet de créer des fonctions et des structures qui dialogue avec notre base d&apos;où la création des fonctions CRUD(Create,Read,Update,Delete) et recherche . </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QObject</label>
+        <link refid="class_q_object"/>
+      </node>
+      <node id="1">
+        <label>ContactBDD</label>
+        <link refid="class_contact_b_d_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QObject</label>
+        <link refid="class_q_object"/>
+      </node>
+      <node id="1">
+        <label>ContactBDD</label>
+        <link refid="class_contact_b_d_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" line="33" column="1" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h" bodystart="32" bodyend="191"/>
+    <listofallmembers>
+      <member refid="class_contact_b_d_d_1adef37fb1183502a46db3e07fd97a3a63" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>bbdNouveauContact</name></member>
+      <member refid="class_contact_b_d_d_1ae9e97816b1d250fc5bdbf44ccdb3e474" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>bddListeContact</name></member>
+      <member refid="class_contact_b_d_d_1acc532eeaa500698961bd1cd3de973854" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>bddModifContact</name></member>
+      <member refid="class_contact_b_d_d_1ae1a0d3ecda82c9191d267cc5bcc1a2a3" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>bddRechercherContact</name></member>
+      <member refid="class_contact_b_d_d_1ad28602fec70582f934af0654188a7fca" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>bddSupprimeContact</name></member>
+      <member refid="class_contact_b_d_d_1a151335438386a4b19d9c26102717e377" prot="private" virt="non-virtual"><scope>ContactBDD</scope><name>closeDb</name></member>
+      <member refid="class_contact_b_d_d_1a5e5e3c2ae8d4ec5d0092af497c703d8b" prot="private" virt="non-virtual"><scope>ContactBDD</scope><name>connexionDB</name></member>
+      <member refid="class_contact_b_d_d_1a28dc8793dd96f35c85fdceb269800579" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>ContactBDD</name></member>
+      <member refid="class_contact_b_d_d_1af4198cc56143e7ee244374b05809d301" prot="private" virt="non-virtual"><scope>ContactBDD</scope><name>db</name></member>
+      <member refid="class_contact_b_d_d_1a0b8b10a1e971d7e2120a291527e3ae74" prot="private" virt="non-virtual"><scope>ContactBDD</scope><name>dbOuvert</name></member>
+      <member refid="class_contact_b_d_d_1aa82eb548f99ae20a9aa2d9d581242fbf" prot="private" virt="non-virtual"><scope>ContactBDD</scope><name>isDBopen</name></member>
+      <member refid="class_contact_b_d_d_1aa81b5ba902e1db7f9933fe4d8f32882e" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>ListeContact</name></member>
+      <member refid="class_contact_b_d_d_1a5dee51527412d5b8119d00c0f49cfbef" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>ModifContact</name></member>
+      <member refid="class_contact_b_d_d_1a6764c4ed28c6c001c407dc65902c27c6" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>NombreContact</name></member>
+      <member refid="class_contact_b_d_d_1a30a73c86def34e413988dfcd4591f713" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>nombreTotalContact</name></member>
+      <member refid="class_contact_b_d_d_1a951bc86a61e65b2ad1fe54b45ab00278" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>NouveauContact</name></member>
+      <member refid="class_contact_b_d_d_1ada052c3f0a553eabedf254bb054f5387" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>RechercherContact</name></member>
+      <member refid="class_contact_b_d_d_1a7ccb1e9fa160d6026a3854a027bfd601" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>SupprimeContact</name></member>
+      <member refid="class_contact_b_d_d_1a1cd8be9e04f80c4061457ddde1f04f9f" prot="public" virt="non-virtual"><scope>ContactBDD</scope><name>~ContactBDD</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

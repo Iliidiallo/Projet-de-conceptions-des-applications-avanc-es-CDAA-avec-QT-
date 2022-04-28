@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_interaction_8cpp" kind="file" language="C++">
+    <compoundname>Interaction.cpp</compoundname>
+    <includes refid="_interaction_8h" local="yes">Interaction.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>Interaction.h</label>
+        <link refid="_interaction_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ostream</label>
+      </node>
+      <node id="5">
+        <label>Date.h</label>
+        <link refid="_date_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ctime</label>
+      </node>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp</label>
+        <link refid="_interaction_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_interaction_8cpp_1a3d71a1455637dcb8af624889b000099c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std:: ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Interaction &amp;action)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_interaction" kindref="compound">Interaction</ref> &amp;</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>Affichage de l&apos;intéraction . </para>
+        </briefdescription>
+        <detaileddescription>
+<para>L&apos;affichage d&apos;une Intéraction.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream &amp;o :la bibliothèque ostream qui permet l&apos;affichage </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_interaction" kindref="compound">Interaction</ref>&amp; action:l&apos;intéraction à afficher. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>o : pour l&apos;affichage de l&apos;intéraction càd sa date et son contenu . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" line="127" column="2" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="127" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>BARRY Thierno Oumar &amp; DIALLO Iliassou </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_interaction_8h" kindref="compound">Interaction.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="class_interaction_1aadfd0e254296043c26508d47090ace76" kindref="member">Interaction::Interaction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_date" kindref="compound">Date</ref><sp/>&amp;date,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><sp/>&amp;visite):rdv(date),contenu(visite)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="class_interaction_1aadfd0e254296043c26508d47090ace76" kindref="member">Interaction::Interaction</ref>():rdv(),contenu(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_interaction_1a2d01370ad0625cbd9504512d1bbd736e" kindref="member">Interaction::getIdContact</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="33"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_interaction_1adf882b1ba0043e71359a4c8b85fb9e37" kindref="member">idContact</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_1a9a79e0efe37c8e7a44899c2b37dc098a" kindref="member">Interaction::setIdContact</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>value)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_interaction_1adf882b1ba0043e71359a4c8b85fb9e37" kindref="member">idContact</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_interaction_1a23f4a6dabd1cfc2c8978bf4935fae585" kindref="member">Interaction::getIdInteraction</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="54"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_interaction_1a12b2980386244fbfd7dec0968e7fc40d" kindref="member">idInteraction</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_1a0b377cdae09b2277c876715e349b49da" kindref="member">Interaction::setIdInteraction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>value)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_interaction_1a12b2980386244fbfd7dec0968e7fc40d" kindref="member">idInteraction</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">std::string<sp/><ref refid="class_interaction_1a0e194616267d53075169f189f6d71c60" kindref="member">Interaction::getContenu</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="73"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_interaction_1a7e16a252239dbdf2a67a6cfedfe642a1" kindref="member">contenu</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_1a5ca60953b855d3e31f27a05e118f81d3" kindref="member">Interaction::setContenu</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><sp/>&amp;<sp/>cont)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="class_interaction_1a7e16a252239dbdf2a67a6cfedfe642a1" kindref="member">contenu</ref>=cont;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><ref refid="class_date" kindref="compound">Date</ref><sp/><ref refid="class_interaction_1a4669085928094b75b56632710eceeb6d" kindref="member">Interaction::getRDV</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="92"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_interaction_1acc786ad835023533ce98c4d81ac18a31" kindref="member">rdv</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_1a9fa2d2e51b3361672bd08c62437d573f" kindref="member">Interaction::setRDV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_date" kindref="compound">Date</ref><sp/>&amp;<sp/>date)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_interaction_1acc786ad835023533ce98c4d81ac18a31" kindref="member">rdv</ref>=date;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_interaction_1a8f8edf4a657bf3e3a9f41ea791ea24f8" kindref="member">Interaction::operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_interaction" kindref="compound">Interaction</ref><sp/>&amp;i1)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="112"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;<ref refid="class_interaction_1a4669085928094b75b56632710eceeb6d" kindref="member">getRDV</ref>()&lt;i1.<ref refid="class_interaction_1a4669085928094b75b56632710eceeb6d" kindref="member">getRDV</ref>())</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/>std::<sp/>ostream&amp;<sp/><ref refid="_interaction_8cpp_1a3d71a1455637dcb8af624889b000099c" kindref="member">operator &lt;&lt;</ref>(std::<sp/>ostream<sp/>&amp;<sp/>o,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_interaction" kindref="compound">Interaction</ref>&amp;<sp/>action)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>o&lt;&lt;</highlight><highlight class="stringliteral">&quot;rdv<sp/>le<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;action.<ref refid="class_interaction_1a4669085928094b75b56632710eceeb6d" kindref="member">getRDV</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;<sp/>Aperçu:<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;action.<ref refid="class_interaction_1a0e194616267d53075169f189f6d71c60" kindref="member">getContenu</ref>();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>o;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp"/>
+  </compounddef>
+</doxygen>

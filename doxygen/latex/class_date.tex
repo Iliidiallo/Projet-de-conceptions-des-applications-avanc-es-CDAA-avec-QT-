@@ -1,0 +1,425 @@
+\doxysection{Référence de la classe Date}
+\label{class_date}\index{Date@{Date}}
+
+
+la classe reprensentant la \doxyref{Date}{p.}{class_date} La classe date nous permet de definir la date courante et les differentes utilisations que nous auront a faire.  
+
+
+
+
+{\ttfamily \#include $<$Date.\+h$>$}
+
+
+
+Graphe de collaboration de Date\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_date__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Date} ()
+\begin{DoxyCompactList}\small\item\em Constructeur Constructeur de la classe \doxyref{Date}{p.}{class_date}. \end{DoxyCompactList}\item 
+\textbf{ Date} (const int \&, const int \&, const int \&)
+\begin{DoxyCompactList}\small\item\em constructeur \end{DoxyCompactList}\item 
+int \textbf{ get\+Jourtm} () const
+\begin{DoxyCompactList}\small\item\em Accesseurs. \end{DoxyCompactList}\item 
+int \textbf{ get\+Moistm} () const
+\begin{DoxyCompactList}\small\item\em Recupère le mois dans la structure tm. \end{DoxyCompactList}\item 
+int \textbf{ get\+Anneetm} () const
+\begin{DoxyCompactList}\small\item\em Recupère l\textquotesingle{}année dans la structure tm. \end{DoxyCompactList}\item 
+int \textbf{ get\+Jour} () const
+\begin{DoxyCompactList}\small\item\em Recupère le jour pour la date;. \end{DoxyCompactList}\item 
+int \textbf{ get\+Mois} () const
+\begin{DoxyCompactList}\small\item\em Recupère le mois pour la date ;. \end{DoxyCompactList}\item 
+int \textbf{ get\+Annee} () const
+\begin{DoxyCompactList}\small\item\em Recupère l\textquotesingle{}année pour la date ;. \end{DoxyCompactList}\item 
+void \textbf{ set\+Jour} (const int \&)
+\begin{DoxyCompactList}\small\item\em modifier le jour de la date \end{DoxyCompactList}\item 
+void \textbf{ set\+Mois} (const int \&)
+\begin{DoxyCompactList}\small\item\em modifier le mois de la date \end{DoxyCompactList}\item 
+void \textbf{ set\+Annee} (const int \&)
+\begin{DoxyCompactList}\small\item\em modifier l\textquotesingle{}année de la date \end{DoxyCompactList}\item 
+void \textbf{ from\+Date} (const int \&, const int \&, const int \&)
+\begin{DoxyCompactList}\small\item\em methode pour remplir la date La méthode from\+Date qui recoit en parametre le jour ,mois,annee afin definir une date en se referant de la date du jour avec la stucture date et enfin on affectera aux attributs respectivement \doxyref{get\+Jourtm()}{p.}{class_date_a575966fef11b34dea9a2e5be6f3a4e58},\doxyref{get\+Moistm()}{p.}{class_date_a6a769d53bbc30fb114be119f118b8742},get\+Anneetm. \end{DoxyCompactList}\item 
+std\+::string \textbf{ from\+Date\+String} () const
+\begin{DoxyCompactList}\small\item\em Conversion La méthode convertie la date en string . \end{DoxyCompactList}\item 
+\textbf{ Date} \textbf{ to\+Date\+String} (const std\+::string \&) const
+\begin{DoxyCompactList}\small\item\em Conversion La méthode convertie le string en type date . \end{DoxyCompactList}\item 
+bool \textbf{ operator$<$} (const \textbf{ Date} \&) const
+\begin{DoxyCompactList}\small\item\em comparaison de date La Methode pour comparer une date courante et une date entré en parametre \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+struct tm $\ast$ \textbf{ date}
+\item 
+int \textbf{ jour}
+\item 
+int \textbf{ mois}
+\item 
+int \textbf{ annee}
+\end{DoxyCompactItemize}
+\doxysubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&, const \textbf{ Date} \&)
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}affichage d\textquotesingle{}une date Afficher une date a cette forme par exemple le 01/01/2021 . \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+la classe reprensentant la \doxyref{Date}{p.}{class_date} La classe date nous permet de definir la date courante et les differentes utilisations que nous auront a faire. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\label{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\doxysubsubsection{Date()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur Constructeur de la classe \doxyref{Date}{p.}{class_date}. 
+
+implémentation du constructeur par défaut . \mbox{\label{class_date_a7968f963b76fed8b861dcd24000e6e79}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\doxysubsubsection{Date()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{const int \&}]{a,  }\item[{const int \&}]{m,  }\item[{const int \&}]{j }\end{DoxyParamCaption})}
+
+
+
+constructeur 
+
+implémentation du constructeur avec paramètre en faisant appel à la methode \doxyref{from\+Date()}{p.}{class_date_a8718dd1d16b0f43b7cda9a9c7822c7be}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \& \+: initialise le jour d\textquotesingle{}une date . \\
+\hline
+{\em const} & int \& \+: initialise le mois d\textquotesingle{}une date . \\
+\hline
+{\em const} & int \& \+: initialis l\textquotesingle{}année d\textquotesingle{}une date .\\
+\hline
+{\em const} & int \&a\+: elle remplacera l\textquotesingle{}année courante . \\
+\hline
+{\em const} & int \&m \+: elle remplacera le mois courant . \\
+\hline
+{\em const} & int \&j \+: elle remplacera le jour courant . \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\label{class_date_a8718dd1d16b0f43b7cda9a9c7822c7be}} 
+\index{Date@{Date}!fromDate@{fromDate}}
+\index{fromDate@{fromDate}!Date@{Date}}
+\doxysubsubsection{fromDate()}
+{\footnotesize\ttfamily void Date\+::from\+Date (\begin{DoxyParamCaption}\item[{const int \&}]{J,  }\item[{const int \&}]{M,  }\item[{const int \&}]{A }\end{DoxyParamCaption})}
+
+
+
+methode pour remplir la date La méthode from\+Date qui recoit en parametre le jour ,mois,annee afin definir une date en se referant de la date du jour avec la stucture date et enfin on affectera aux attributs respectivement \doxyref{get\+Jourtm()}{p.}{class_date_a575966fef11b34dea9a2e5be6f3a4e58},\doxyref{get\+Moistm()}{p.}{class_date_a6a769d53bbc30fb114be119f118b8742},get\+Anneetm. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \&\+: pour gérer le jour . \\
+\hline
+{\em const} & int\&\+: pour gérer le mois . \\
+\hline
+{\em const} & int\&\+: pour gérer l\textquotesingle{}année.\\
+\hline
+{\em const} & int \&J\+: pour gérer le jour . \\
+\hline
+{\em const} & int \&M\+: pour gérer le mois . \\
+\hline
+{\em const} & int \&A\+: pour gérer l\textquotesingle{}année. \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_date_aad30c999adf882cee6369f627c0353c0}} 
+\index{Date@{Date}!fromDateString@{fromDateString}}
+\index{fromDateString@{fromDateString}!Date@{Date}}
+\doxysubsubsection{fromDateString()}
+{\footnotesize\ttfamily std\+::string Date\+::from\+Date\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Conversion La méthode convertie la date en string . 
+
+Conversion La méthode qui convertie la date en string . pas de paramètre, fonction const.
+
+\begin{DoxyReturn}{Renvoie}
+std\+::to\+\_\+string(get\+Annee())+\char`\"{}-\/\char`\"{}+momois+\char`\"{}-\/\char`\"{}+mojour \+: après avoir converti en string la date on l\textquotesingle{}a retourne sous ce format ( jj-\/mm-\/aaaa ) ; 
+\end{DoxyReturn}
+\mbox{\label{class_date_a8ab72441def94864f14a6c7d37fc7880}} 
+\index{Date@{Date}!getAnnee@{getAnnee}}
+\index{getAnnee@{getAnnee}!Date@{Date}}
+\doxysubsubsection{getAnnee()}
+{\footnotesize\ttfamily int Date\+::get\+Annee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère l\textquotesingle{}année pour la date ;. 
+
+accesseur \char`\"{}\+Année\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}année de la date
+
+l\textquotesingle{}année . 
+\end{DoxyReturn}
+\mbox{\label{class_date_a2866d736981c3981a479911bfae0e777}} 
+\index{Date@{Date}!getAnneetm@{getAnneetm}}
+\index{getAnneetm@{getAnneetm}!Date@{Date}}
+\doxysubsubsection{getAnneetm()}
+{\footnotesize\ttfamily int Date\+::get\+Anneetm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère l\textquotesingle{}année dans la structure tm. 
+
+accesseur de la structure \char`\"{}\+Année\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}année de la structure tm ;
+
+l\textquotesingle{}année en utilisant la structure . 
+\end{DoxyReturn}
+\mbox{\label{class_date_a1b38f44aaa8c9035149b188be5650af4}} 
+\index{Date@{Date}!getJour@{getJour}}
+\index{getJour@{getJour}!Date@{Date}}
+\doxysubsubsection{getJour()}
+{\footnotesize\ttfamily int Date\+::get\+Jour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère le jour pour la date;. 
+
+accesseur \char`\"{}\+Jour\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+le jour de la date
+
+le jour . 
+\end{DoxyReturn}
+\mbox{\label{class_date_a575966fef11b34dea9a2e5be6f3a4e58}} 
+\index{Date@{Date}!getJourtm@{getJourtm}}
+\index{getJourtm@{getJourtm}!Date@{Date}}
+\doxysubsubsection{getJourtm()}
+{\footnotesize\ttfamily int Date\+::get\+Jourtm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseurs. 
+
+accesseur de la structure \char`\"{}\+Jour\char`\"{} pas de paramètre, fonction const
+
+methode pour recuperer le jour de la structure tm ;
+
+Recupère le jour dans la structure tm \begin{DoxyReturn}{Renvoie}
+le jour de la structure tm ;
+
+le jour en utilisant la structure . 
+\end{DoxyReturn}
+\mbox{\label{class_date_a72aade20bcf0954935efea32bee0b244}} 
+\index{Date@{Date}!getMois@{getMois}}
+\index{getMois@{getMois}!Date@{Date}}
+\doxysubsubsection{getMois()}
+{\footnotesize\ttfamily int Date\+::get\+Mois (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère le mois pour la date ;. 
+
+accesseur \char`\"{}\+Mois\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+le mois de la date
+
+le Mois . 
+\end{DoxyReturn}
+\mbox{\label{class_date_a6a769d53bbc30fb114be119f118b8742}} 
+\index{Date@{Date}!getMoistm@{getMoistm}}
+\index{getMoistm@{getMoistm}!Date@{Date}}
+\doxysubsubsection{getMoistm()}
+{\footnotesize\ttfamily int Date\+::get\+Moistm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère le mois dans la structure tm. 
+
+accesseur de la structure \char`\"{}\+Mois\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+le mois de la structure tm ;
+
+le mois en utilisant la structure . 
+\end{DoxyReturn}
+\mbox{\label{class_date_a08c0538091d061550b90787d9313ca61}} 
+\index{Date@{Date}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Date@{Date}}
+\doxysubsubsection{operator$<$()}
+{\footnotesize\ttfamily bool Date\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \textbf{ Date} \&}]{da }\end{DoxyParamCaption}) const}
+
+
+
+comparaison de date La Methode pour comparer une date courante et une date entré en parametre 
+
+test de comparaison entre 2 dates
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & \doxyref{Date}{p.}{class_date}\& une date en parametre pour qu\textquotesingle{}on puisse la comparer à la date courante\\
+\hline
+{\em const} & \doxyref{Date}{p.}{class_date} \&da\+: la date à comparer avec la date courante \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un booléen V\+R\+AI si égalité 
+
+un booléen F\+A\+UX si non égalité 
+\end{DoxyReturn}
+\mbox{\label{class_date_a010d6ca12bbf8f2afb6260fd1af65c79}} 
+\index{Date@{Date}!setAnnee@{setAnnee}}
+\index{setAnnee@{setAnnee}!Date@{Date}}
+\doxysubsubsection{setAnnee()}
+{\footnotesize\ttfamily void Date\+::set\+Annee (\begin{DoxyParamCaption}\item[{const int \&}]{a }\end{DoxyParamCaption})}
+
+
+
+modifier l\textquotesingle{}année de la date 
+
+implémentation du mutateur \char`\"{}\+Année\char`\"{} en faisant appel à \doxyref{from\+Date()}{p.}{class_date_a8718dd1d16b0f43b7cda9a9c7822c7be} .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \& \+:l\textquotesingle{}année à modifier\\
+\hline
+{\em const} & int \&a \+: il remplacera l\textquotesingle{}année courante . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_date_a9320ed0e8f5ae4e5bf3e96b653cc9dec}} 
+\index{Date@{Date}!setJour@{setJour}}
+\index{setJour@{setJour}!Date@{Date}}
+\doxysubsubsection{setJour()}
+{\footnotesize\ttfamily void Date\+::set\+Jour (\begin{DoxyParamCaption}\item[{const int \&}]{j }\end{DoxyParamCaption})}
+
+
+
+modifier le jour de la date 
+
+implémentation du mutateur \char`\"{}\+Jour\char`\"{} en faisant appel à \doxyref{from\+Date()}{p.}{class_date_a8718dd1d16b0f43b7cda9a9c7822c7be} .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \& \+:le jour à modifier\\
+\hline
+{\em const} & int \&j \+: il remplacera le jour courant . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_date_a305ffc577325d91db7f6651623eb4333}} 
+\index{Date@{Date}!setMois@{setMois}}
+\index{setMois@{setMois}!Date@{Date}}
+\doxysubsubsection{setMois()}
+{\footnotesize\ttfamily void Date\+::set\+Mois (\begin{DoxyParamCaption}\item[{const int \&}]{m }\end{DoxyParamCaption})}
+
+
+
+modifier le mois de la date 
+
+implémentation du mutateur \char`\"{}\+Mois\char`\"{} en faisant appel à \doxyref{from\+Date()}{p.}{class_date_a8718dd1d16b0f43b7cda9a9c7822c7be} .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \& \+:la date à modifier\\
+\hline
+{\em const} & int \&m \+: il remplacera le Mois courant . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_date_acdbf4b116c6d112d5974ea9ef5d0ad05}} 
+\index{Date@{Date}!toDateString@{toDateString}}
+\index{toDateString@{toDateString}!Date@{Date}}
+\doxysubsubsection{toDateString()}
+{\footnotesize\ttfamily \textbf{ Date} Date\+::to\+Date\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dat }\end{DoxyParamCaption}) const}
+
+
+
+Conversion La méthode convertie le string en type date . 
+
+Conversion La méthode qui convertie le String en type date en utilisant la fonction substr pour découper les chaines et aussion a utilisé stoi pour convertir la date en int.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & std\+::string \& \+: pour gérer la chaine de caractère .\\
+\hline
+{\em const} & std\+::string \&dat \+: la date à convertir . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+d \+: on retourne la date convertie pour pouvoir l\textquotesingle{}insérer dans la base normalement . 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des fonctions amies et associées}
+\mbox{\label{class_date_a191ee8989894d19ac4c9a71e359210a1}} 
+\index{Date@{Date}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Date@{Date}}
+\doxysubsubsection{operator$<$$<$}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \textbf{ Date} \&}]{temp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+L\textquotesingle{}affichage d\textquotesingle{}une date Afficher une date a cette forme par exemple le 01/01/2021 . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::ostream} & \&\+: il nous permetra de faire un affichage . \\
+\hline
+{\em const} & \doxyref{Date}{p.}{class_date} \&\+: il nous permet d\textquotesingle{}afficher une date càd jour mois année .\\
+\hline
+{\em std,\+:} & ostream \&os \+:la bibliothèque ostream \\
+\hline
+{\em const} & \doxyref{Date}{p.}{class_date} \&temp \+:la date à afficher sous ce format jj-\/mm-\/aaaa . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+os \+: pour l\textquotesingle{}affichage d\textquotesingle{}une date . 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\label{class_date_a350753866b672814ff1c44c55b2d20ca}} 
+\index{Date@{Date}!annee@{annee}}
+\index{annee@{annee}!Date@{Date}}
+\doxysubsubsection{annee}
+{\footnotesize\ttfamily int Date\+::annee\hspace{0.3cm}{\ttfamily [private]}}
+
+un attribut de type int qui permet de gerer l\textquotesingle{}annee . \mbox{\label{class_date_a2ebb3466d38e54ac334bef67a14289d7}} 
+\index{Date@{Date}!date@{date}}
+\index{date@{date}!Date@{Date}}
+\doxysubsubsection{date}
+{\footnotesize\ttfamily struct tm$\ast$ Date\+::date\hspace{0.3cm}{\ttfamily [private]}}
+
+une structure tm qui nous permet de gerer la date ~\newline
+ \mbox{\label{class_date_aa46f17e2418a7a21573b1210f30b4e72}} 
+\index{Date@{Date}!jour@{jour}}
+\index{jour@{jour}!Date@{Date}}
+\doxysubsubsection{jour}
+{\footnotesize\ttfamily int Date\+::jour\hspace{0.3cm}{\ttfamily [private]}}
+
+un attribut de type int qui nous permet de gerer le jour ~\newline
+ \mbox{\label{class_date_a9ce0f4d74252d7d1bf097ed047fbf880}} 
+\index{Date@{Date}!mois@{mois}}
+\index{mois@{mois}!Date@{Date}}
+\doxysubsubsection{mois}
+{\footnotesize\ttfamily int Date\+::mois\hspace{0.3cm}{\ttfamily [private]}}
+
+un attribut de type int qui permet de gerer le mois . 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ Date.\+h}\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ Date.\+cpp}\end{DoxyCompactItemize}

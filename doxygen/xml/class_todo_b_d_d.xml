@@ -1,0 +1,895 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_todo_b_d_d" kind="class" language="C++" prot="public">
+    <compoundname>TodoBDD</compoundname>
+    <basecompoundref refid="class_q_object" prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="todobdd_8h" local="no">todobdd.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_todo_b_d_d_1aedd93b0da1df6323c7178087a7ef8e06" prot="private" static="no" mutable="no">
+        <type>QSqlDatabase</type>
+        <definition>QSqlDatabase TodoBDD::db</definition>
+        <argsstring></argsstring>
+        <name>db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>connexion a la base de donnee </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="32" column="18" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_todo_b_d_d_1a8678f39a1092a25cd44cf8a3116ee981" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TodoBDD::dbOuvert</definition>
+        <argsstring></argsstring>
+        <name>dbOuvert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Savoir si la base est ouverte ou non </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="33" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_todo_b_d_d_1aa5b54c75a0c13276e5b466f553b5b584" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::closeDb</definition>
+        <argsstring>()</argsstring>
+        <name>closeDb</name>
+        <briefdescription>
+<para>Fermeture de la base Methode qui ferme la base si elle est ouverte. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="38" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="438" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_b_d_d_1a60295f038babc2717319152a088a8316" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TodoBDD::connexion</definition>
+        <argsstring>()</argsstring>
+        <name>connexion</name>
+        <briefdescription>
+<para>Creer la connexion Methode qui permet d&apos;etablir une connexion avec la base et elle crée une table <ref refid="class_todo" kindref="compound">Todo</ref> dans la base si elle n&apos;existe pas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Connexion à la base de donnée On le nom de la base avec l&apos;extension sqlite dans le tmp On teste si la base est ouverte : si non on retourne false si Oui on crée une table si elle n&apos;existe pas en verifiant la contrainte pour la clé etrangère &quot;ON DELETE CASCADE&quot; ça signifie si l&apos;enregistrement parent est supprimé tous les enregistrements enfants vont suivre ensuite on affiche &quot;création de la table réussi &quot; .</para>
+<para><simplesect kind="return"><para>true si la connexion à reussie, </para>
+</simplesect>
+<simplesect kind="return"><para>false sinon</para>
+</simplesect>
+<simplesect kind="return"><para>dbOuvert : le booleén à retourner </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="46" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="43" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_b_d_d_1ab438832daf9a3f50176e4193bc75561d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::isDBopen</definition>
+        <argsstring>(bool &amp;)</argsstring>
+        <name>isDBopen</name>
+        <param>
+          <type>bool &amp;</type>
+          <defname>b</defname>
+        </param>
+        <briefdescription>
+<para>Etat de la base Methode qui change l&apos;etat de la base. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: l&apos;etat de la base à changer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="52" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="453" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_b_d_d_1a75b61160ab3a4455b63ae3ff07455c26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TodoBDD::AjoutTodo</definition>
+        <argsstring>(const int &amp;, Todo &amp;)</argsstring>
+        <name>AjoutTodo</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type><ref refid="class_todo" kindref="compound">Todo</ref> &amp;</type>
+          <defname>inter</defname>
+        </param>
+        <briefdescription>
+<para>Ajout d&apos;une Tache Methode qui permet d&apos;ajouter une tache pour une intéraction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Création d&apos;une tache La fonction qui nous permet de créer ou inserer une tache en tenant compte des contraintes concernant les clés étrangères ou primaires.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;:l&apos;id du contact courant </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_todo" kindref="compound">Todo</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: la tache à ajouter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true s&apos;i elle est insereré dans la base </para>
+</simplesect>
+<simplesect kind="return"><para>false sinon</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_todo" kindref="compound">Todo</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; inter: representera l&apos;intéraction qui sera ajouté . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; id : representera l&apos;identifiant de l&apos;intéraction pour lui ajouter la tache . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="61" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="87" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_b_d_d_1af6132fcfe369915147fa5759560ed7d5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::ListeTodoContact</definition>
+        <argsstring>(const int &amp;, std::list&lt; Todo &gt; &amp;) const</argsstring>
+        <name>ListeTodoContact</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_todo" kindref="compound">Todo</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Liste des taches . Methode qui permet de recuperer la liste des taches d&apos;un contact selectionné </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Affichage des taches d&apos;une intéraction L&apos;affichage des taches d&apos;une intéraction en utilisant la requete qui selectionne toutes les taches d&apos;une Intéraction dans la base de donnée en triant la liste à la fin par l&apos;appel de sort (c++) .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:Liste des taches </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;: l&apos;identifiant de l&apos;intéraction</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;li: la liste des taches . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; id : representera l&apos;identifiant de l&apos;intéraction pour lui afficher ses taches . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="68" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="134" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_b_d_d_1a5045b4fd85577377a7e270ca55c8cb66" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::ListeALLContact</definition>
+        <argsstring>(std::list&lt; Todo &gt; &amp;) const</argsstring>
+        <name>ListeALLContact</name>
+        <param>
+          <type>std::list&lt; <ref refid="class_todo" kindref="compound">Todo</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Liste des Intéractions . Methode qui permet d&apos;afficher la liste des Taches de tous les contacts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Affichage toutes les taches de toutes les intéractions de tous les contacts . On affiche toutes les taches en selectionnant toute la table TODO et on l&apos;affiche .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;:Liste</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>des Taches</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li : la liste des todos . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="74" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="201" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_b_d_d_1a9eb8c5ded6c9cfc7fb5ec95beef276f9" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::RechercheALLTodoCont</definition>
+        <argsstring>(QString &amp;, QString &amp;, std::list&lt; Todo &gt; &amp;) const</argsstring>
+        <name>RechercheALLTodoCont</name>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date1</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date2</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_todo" kindref="compound">Todo</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Rechercher des Taches entre deux dates . La Méthode qui permet de rechercher entre deux dates les Taches de tous les contacts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rechercher les taches de tous les contacts entre deux dates c&apos;est cette fonction qui nous permet de rechercher des taches entre deux dates . On rentrera l&apos;intervalle à rechercher en Selectionnant la table: on n&apos;affiche rien si les taches n&apos;existent pas entre ces dates si oui on affiche toutes les taches entre ces dates en triant les dates avec sort() par date de création .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:Liste des Taches </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: la premiere date de type Qstring . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: la deuxieme date de type Qstring.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date1 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date2 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sstd::list&lt;Todo&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li :liste des taches . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="82" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="354" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_b_d_d_1aa1e3bd834cf8d1d1d1b980de8b6ea88d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::RechercheTodoCont</definition>
+        <argsstring>(const int &amp;, QString &amp;, QString &amp;, std::list&lt; Todo &gt; &amp;) const</argsstring>
+        <name>RechercheTodoCont</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date1</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date2</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_todo" kindref="compound">Todo</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Rechercher des Taches entre deux dates pour un contact . La Méthode qui permet de rechercher entre deux dates les taches d&apos;un contact. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rechercher les taches entre deux dates pour un contact c&apos;est cette fonction qui nous permet de rechercher des taches entre deux dates pour un contact selectionné . On rentrera l&apos;intervalle à rechercher on selectionnera dans la comboBox le contact on appuyera sur le bouton rechercher . on n&apos;affiche rien si les todos n&apos;existent pas entre ces dates pour le contact si oui on affiche toutes les taches entre ces dates en triant les dates avec sort() par date de création .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: l&apos;identifiant d&apos;une interaction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:Liste des Taches </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: la premiere date de type Qstring . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: la deuxieme date de type Qstring.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; id: l&apos;identifiant du contact pour le quel on fera la recherche . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date1 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date2 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li :la liste des taches . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="91" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="271" bodyend="327"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_todo_b_d_d_1a879c50e2ac21f39f0bdf78f30ddb5928" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TodoBDD::TodoBDD</definition>
+        <argsstring>(QObject *parent=nullptr)</argsstring>
+        <name>TodoBDD</name>
+        <param>
+          <type><ref refid="class_q_object" kindref="compound">QObject</ref> *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Constructeur Constructeur de la classe <ref refid="class_todo_b_d_d" kindref="compound">TodoBDD</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du constructeur avec paramètre .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>= nullptr: par defaut</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_q_object" kindref="compound">QObject</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*parent et hérite d&apos;un QObjet initialisation du test de la base de donnée à false . Appel de la fonction <ref refid="class_todo_b_d_d_1a60295f038babc2717319152a088a8316" kindref="member">connexion()</ref> pour connecter la base de donnée . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="98" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_b_d_d_1a6d97e1f4fef7bdf5507b6882d0ae8c03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TodoBDD::~TodoBDD</definition>
+        <argsstring>()</argsstring>
+        <name>~TodoBDD</name>
+        <briefdescription>
+<para>Destructeur Le Destructeur de la classe <ref refid="class_todo_b_d_d" kindref="compound">TodoBDD</ref> càd la fonction qui libère la memoire utilisé . </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du destructeur . A la fermeture de la base on libère la memoire en faisant appel à la fonction closeDB().</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="103" column="5" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_todo_b_d_d_1a026cc43a7cf4fc28c4552c9ee617d694" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::bddAjoutTodo</definition>
+        <argsstring>(int &amp;, Todo &amp;)</argsstring>
+        <name>bddAjoutTodo</name>
+        <param>
+          <type>int &amp;</type>
+          <defname>i</defname>
+        </param>
+        <param>
+          <type><ref refid="class_todo" kindref="compound">Todo</ref> &amp;</type>
+          <defname>inter</defname>
+        </param>
+        <briefdescription>
+<para>Slot Ajout <ref refid="class_todo" kindref="compound">Todo</ref> . slot qui permet d&apos;ajouter une tache. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Ajout d&apos;une tache Slot pour ajouter une tache pour une intéraction , c&apos;est ce slot qu&apos;on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : l&apos;identifiant du contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_todo" kindref="compound">Todo</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : la tache a ajouter</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_todo" kindref="compound">Todo</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; inter: representera la tache qui sera ajouté . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; id : representera l&apos;identifiant de l&apos;intéraction . On appel la fonction AjoutTodo dans le slot pour lui donner les parametres du slot . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="112" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_todo_b_d_d_1a472d2d0d3b28d6f35762cec4897144ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::bddListeTodoContact</definition>
+        <argsstring>(int &amp;, std::list&lt; Todo &gt; &amp;)</argsstring>
+        <name>bddListeTodoContact</name>
+        <param>
+          <type>int &amp;</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_todo" kindref="compound">Todo</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Slot liste Taches pour un contact . slot qui permet d&apos;afficher la liste des taches pour un contact selectionné </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Afficher les taches d&apos;une intéraction . Slot pour affiche les taches d&apos;une intéraction , c&apos;est ce slot qu&apos;on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: l&apos;identifiant d&apos;un contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : liste des taches</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li:la liste des taches . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; id : representera l&apos;identifiant de l&apos;intéraction . On appel la fonction ListTodoContact dans le slot pour lui donner les parametres du slot . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="119" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_todo_b_d_d_1ac134d6ee1e9f8a0f1b80a6aee32eac38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::bddListeALLContact</definition>
+        <argsstring>(std::list&lt; Todo &gt; &amp;)</argsstring>
+        <name>bddListeALLContact</name>
+        <param>
+          <type>std::list&lt; <ref refid="class_todo" kindref="compound">Todo</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Slot liste Taches pour tous les contacts. slot qui permet d&apos;afficher la liste des taches pour tous les contacts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Slot afficher toutes les taches Slot pour afficher toutes les taches de toutes les intéractions, c&apos;est ce slot qu&apos;on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : liste des taches</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li: c&apos;est la liste qu&apos;on met dans le paramètre de la fonction ListeALLContact pour nous afficher toutes ses taches </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="125" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="252" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_todo_b_d_d_1a62f7870b9b099a30e52dbad1ec67a0f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::bddRechercheTodoCont</definition>
+        <argsstring>(int &amp;, QString &amp;, QString &amp;, std::list&lt; Todo &gt; &amp;)</argsstring>
+        <name>bddRechercheTodoCont</name>
+        <param>
+          <type>int &amp;</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date1</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date2</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_todo" kindref="compound">Todo</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Slot Rechercher Taches pour un contact entre deux dates . slot qui permet d&apos;afficher la liste des taches pour un contact entre deux dates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Slot pour rechercher les taches d&apos;un contact . Slot pour afficher les taches d&apos;un contact entre deux dates, c&apos;est ce slot qu&apos;on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : liste des taches </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : la premiere date pour le debut de la recherche </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : la deuxieme date pour la fin de la recherche </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; :l&apos;identifiant de l&apos;interaction</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; id: l&apos;identifiant du contact pour le quel on fera la recherche qui se trouvera dans notre comboBox . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date1 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date2 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li :la liste des taches . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="134" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="338" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_todo_b_d_d_1ac4c3963e67b0345e6f483a06152e7f03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::bddRechercheALLTodoCont</definition>
+        <argsstring>(QString &amp;, QString &amp;, std::list&lt; Todo &gt; &amp;)</argsstring>
+        <name>bddRechercheALLTodoCont</name>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date1</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date2</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_todo" kindref="compound">Todo</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Slot Rechercher Taches pour tous les contacts entre deux dates. slot qui permet d&apos;afficher la liste des taches pour tous les contacts entre deux dates entré par l&apos;utilisateur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Slot pour rechercher les taches de tous les contacts . Slot pour rechercher les taches des contacts entre deux dates,c&apos;est ce slot qu&apos;on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : liste des taches </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : la premiere date pour le debut de la recherche </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : la deuxieme date pour la fin de la recherche</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date1 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date2 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Todo&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li :la liste des taches . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="143" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="417" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_todo_b_d_d_1ae5178376889823e76f9fe026fb236d6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TodoBDD::isOpen</definition>
+        <argsstring>(bool &amp;)</argsstring>
+        <name>isOpen</name>
+        <param>
+          <type>bool &amp;</type>
+          <defname>b</defname>
+        </param>
+        <briefdescription>
+<para>Etat de la base. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Methode qui change l&apos;etat de la base</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: l&apos;etat de la base à changer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="152" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.cpp" bodystart="427" bodyend="430"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe <ref refid="class_todo_b_d_d" kindref="compound">TodoBDD</ref> de la base de donnée La classe herite d&apos;un <ref refid="class_q_object" kindref="compound">QObject</ref>, permet d&apos;ajouter des <ref refid="class_todo_b_d_d" kindref="compound">TodoBDD</ref> pour un contact donné en la stockant dans la base de donnée . </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>QObject</label>
+        <link refid="class_q_object"/>
+      </node>
+      <node id="1">
+        <label>TodoBDD</label>
+        <link refid="class_todo_b_d_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>QObject</label>
+        <link refid="class_q_object"/>
+      </node>
+      <node id="1">
+        <label>TodoBDD</label>
+        <link refid="class_todo_b_d_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="29" column="1" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" bodystart="28" bodyend="156"/>
+    <listofallmembers>
+      <member refid="class_todo_b_d_d_1a75b61160ab3a4455b63ae3ff07455c26" prot="private" virt="non-virtual"><scope>TodoBDD</scope><name>AjoutTodo</name></member>
+      <member refid="class_todo_b_d_d_1a026cc43a7cf4fc28c4552c9ee617d694" prot="public" virt="non-virtual"><scope>TodoBDD</scope><name>bddAjoutTodo</name></member>
+      <member refid="class_todo_b_d_d_1ac134d6ee1e9f8a0f1b80a6aee32eac38" prot="public" virt="non-virtual"><scope>TodoBDD</scope><name>bddListeALLContact</name></member>
+      <member refid="class_todo_b_d_d_1a472d2d0d3b28d6f35762cec4897144ff" prot="public" virt="non-virtual"><scope>TodoBDD</scope><name>bddListeTodoContact</name></member>
+      <member refid="class_todo_b_d_d_1ac4c3963e67b0345e6f483a06152e7f03" prot="public" virt="non-virtual"><scope>TodoBDD</scope><name>bddRechercheALLTodoCont</name></member>
+      <member refid="class_todo_b_d_d_1a62f7870b9b099a30e52dbad1ec67a0f2" prot="public" virt="non-virtual"><scope>TodoBDD</scope><name>bddRechercheTodoCont</name></member>
+      <member refid="class_todo_b_d_d_1aa5b54c75a0c13276e5b466f553b5b584" prot="private" virt="non-virtual"><scope>TodoBDD</scope><name>closeDb</name></member>
+      <member refid="class_todo_b_d_d_1a60295f038babc2717319152a088a8316" prot="private" virt="non-virtual"><scope>TodoBDD</scope><name>connexion</name></member>
+      <member refid="class_todo_b_d_d_1aedd93b0da1df6323c7178087a7ef8e06" prot="private" virt="non-virtual"><scope>TodoBDD</scope><name>db</name></member>
+      <member refid="class_todo_b_d_d_1a8678f39a1092a25cd44cf8a3116ee981" prot="private" virt="non-virtual"><scope>TodoBDD</scope><name>dbOuvert</name></member>
+      <member refid="class_todo_b_d_d_1ab438832daf9a3f50176e4193bc75561d" prot="private" virt="non-virtual"><scope>TodoBDD</scope><name>isDBopen</name></member>
+      <member refid="class_todo_b_d_d_1ae5178376889823e76f9fe026fb236d6e" prot="public" virt="non-virtual"><scope>TodoBDD</scope><name>isOpen</name></member>
+      <member refid="class_todo_b_d_d_1a5045b4fd85577377a7e270ca55c8cb66" prot="private" virt="non-virtual"><scope>TodoBDD</scope><name>ListeALLContact</name></member>
+      <member refid="class_todo_b_d_d_1af6132fcfe369915147fa5759560ed7d5" prot="private" virt="non-virtual"><scope>TodoBDD</scope><name>ListeTodoContact</name></member>
+      <member refid="class_todo_b_d_d_1a9eb8c5ded6c9cfc7fb5ec95beef276f9" prot="private" virt="non-virtual"><scope>TodoBDD</scope><name>RechercheALLTodoCont</name></member>
+      <member refid="class_todo_b_d_d_1aa1e3bd834cf8d1d1d1b980de8b6ea88d" prot="private" virt="non-virtual"><scope>TodoBDD</scope><name>RechercheTodoCont</name></member>
+      <member refid="class_todo_b_d_d_1a879c50e2ac21f39f0bdf78f30ddb5928" prot="public" virt="non-virtual"><scope>TodoBDD</scope><name>TodoBDD</name></member>
+      <member refid="class_todo_b_d_d_1a6d97e1f4fef7bdf5507b6882d0ae8c03" prot="public" virt="non-virtual"><scope>TodoBDD</scope><name>~TodoBDD</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

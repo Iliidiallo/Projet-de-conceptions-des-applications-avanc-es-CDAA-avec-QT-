@@ -1,0 +1,475 @@
+.TH "Contact" 3 "Jeudi 16 Décembre 2021" "DoxygenFinal" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Contact \- classe répresentant un contact  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <contact\&.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBContact\fP ()"
+.br
+.RI "Constructeur\&. "
+.ti -1c
+.RI "\fBContact\fP (const std::string &, const std::string &, const std::string &, const std::string &, const std::string &, const std::string &)"
+.br
+.RI "Constructeur\&. "
+.ti -1c
+.RI "int \fBgetId_contact\fP () const"
+.br
+.RI "Getteurs et setteurs \\Les fonctions getteurs et setteurs \&. "
+.ti -1c
+.RI "std::string \fBgetNom\fP () const"
+.br
+.RI "Recupère le nom d'un contact\&. "
+.ti -1c
+.RI "std::string \fBgetPrenom\fP () const"
+.br
+.RI "Recupère le prenom d'un contact\&. "
+.ti -1c
+.RI "std::string \fBgetEntreprise\fP () const"
+.br
+.RI "Recupère l'Entreprise d'un contact\&. "
+.ti -1c
+.RI "std::string \fBgetTelephone\fP () const"
+.br
+.RI "Recupère le telephone d'un contact\&. "
+.ti -1c
+.RI "std::string \fBgetURIPhoto\fP () const"
+.br
+.RI "Recupère la photo d'un contact\&. "
+.ti -1c
+.RI "std::string \fBgetMail\fP () const"
+.br
+.RI "Recupère l'email d'un contact\&. "
+.ti -1c
+.RI "\fBDate\fP \fBgetDateDecreation\fP () const"
+.br
+.RI "Recupère la date de création d'un contact\&. "
+.ti -1c
+.RI "void \fBsetNom\fP (const std::string &)"
+.br
+.RI "modifier le nom d'un contact "
+.ti -1c
+.RI "void \fBsetPrenom\fP (const std::string &)"
+.br
+.RI "modifier le prenom d'un contact "
+.ti -1c
+.RI "void \fBsetEntreprise\fP (const std::string &)"
+.br
+.RI "modifier l'entreprise d'un contact "
+.ti -1c
+.RI "void \fBsetURIPhoto\fP (const std::string &)"
+.br
+.RI "modifier la photo d'un contact "
+.ti -1c
+.RI "void \fBsetTelephone\fP (const std::string &)"
+.br
+.RI "modifier le telephone d'un contact "
+.ti -1c
+.RI "void \fBsetMail\fP (const std::string &)"
+.br
+.RI "modifier le mail d'un contact "
+.ti -1c
+.RI "void \fBsetDateDecreation\fP (const \fBDate\fP &)"
+.br
+.RI "modifier la date de création d'un contact "
+.ti -1c
+.RI "void \fBsetId_contact\fP (const int &)"
+.br
+.RI "modifier l'identifiant d'un contact "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBContact\fP &) const"
+.br
+.RI "Operateur egal Permet de comparer deux contacts\&. "
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBContact\fP &) const"
+.br
+.RI "operateur inferieur \&. Permet de comparer deux dates \&. "
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "int \fBid_contact\fP =0"
+.br
+.ti -1c
+.RI "std::string \fBnom\fP"
+.br
+.ti -1c
+.RI "std::string \fBprenom\fP"
+.br
+.ti -1c
+.RI "std::string \fBentreprise\fP"
+.br
+.ti -1c
+.RI "std::string \fBmail\fP"
+.br
+.ti -1c
+.RI "std::string \fBtelephone\fP"
+.br
+.ti -1c
+.RI "std::string \fBURIphoto\fP"
+.br
+.ti -1c
+.RI "\fBDate\fP \fBdateDecreation\fP"
+.br
+.in -1c
+.SS "Amis"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &, const \fBContact\fP &)"
+.br
+.RI "pour l'affichage des propriete d'un contact "
+.in -1c
+.SH "Description détaillée"
+.PP 
+classe répresentant un contact 
+
+La classe permet de créer un contact ,de modifier un contact,de supprimer un contact \&. 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Contact::Contact ()"
+
+.PP
+Constructeur\&. implémentation du constructeur par défaut \&.
+.PP
+Contructeur de la classe \fBContact\fP 
+.SS "Contact::Contact (const std::string & n, const std::string & p, const std::string & e, const std::string & em, const std::string & t, const std::string & photo)"
+
+.PP
+Constructeur\&. implémentation du constructeur avec paramètre \&.
+.PP
+Constructeur avec paramètre de la classe contact
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP std::string &: initialise le nom d'un contact 
+.br
+\fIconst\fP std::string &: initialise le Prenom d'un contact 
+.br
+\fIconst\fP std::string &: initialise l'entreprise d'un contact 
+.br
+\fIconst\fP std::Email &: initalise de l'email d'un contact 
+.br
+\fIconst\fP std::string &: initialise le numero de telephone d'un contact 
+.br
+\fIconst\fP std::string &: initialise la photo sous forme de chaine de caractere
+.br
+\fIconst\fP std::string &n : elle remplacera le nom courant \&. 
+.br
+\fIconst\fP std::string &p : elle remplacera le prenom courant \&. 
+.br
+\fIconst\fP std::string &e : elle remplacera l'entreprise courante \&. 
+.br
+\fIconst\fP std::string &em : elle remplacera l'email courant \&. 
+.br
+\fIconst\fP std::string &t : elle remplacera le telephone courant \&. 
+.br
+\fIconst\fP std::string &photo : elle remplacera la photo courante \&. 
+.RE
+.PP
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "\fBDate\fP Contact::getDateDecreation () const"
+
+.PP
+Recupère la date de création d'un contact\&. accesseur 'DateDecreation' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+la \fBDate\fP de creation
+.PP
+le std::string qui correspond a la DateDecreation d'un contact \&. 
+.RE
+.PP
+
+.SS "std::string Contact::getEntreprise () const"
+
+.PP
+Recupère l'Entreprise d'un contact\&. accesseur 'Entreprise' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+l'Entreprise d'un contact
+.PP
+le std::string qui correspond à l'Entreprise d'un contact \&. 
+.RE
+.PP
+
+.SS "int Contact::getId_contact () const"
+
+.PP
+Getteurs et setteurs \\Les fonctions getteurs et setteurs \&. accesseur 'id_contact' pas de paramètre, fonction const
+.PP
+Recupère l'identifiant d'un contact 
+.PP
+\fBRenvoie\fP
+.RS 4
+l'identifiant d'un contact
+.PP
+le std::string qui correspond à l'identifiant d'un contact \&. 
+.RE
+.PP
+
+.SS "std::string Contact::getMail () const"
+
+.PP
+Recupère l'email d'un contact\&. accesseur 'Mail' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+le Mail d'un contact
+.PP
+le std::string qui correspond au Mail d'un contact \&. 
+.RE
+.PP
+
+.SS "std::string Contact::getNom () const"
+
+.PP
+Recupère le nom d'un contact\&. accesseur 'Nom' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+le nom d'un contact
+.PP
+le std::string qui correspond au nom d'un contact \&. 
+.RE
+.PP
+
+.SS "std::string Contact::getPrenom () const"
+
+.PP
+Recupère le prenom d'un contact\&. accesseur 'Prenom' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+le prenom d'un contact
+.PP
+le std::string qui correspond au Prenom d'un contact \&. 
+.RE
+.PP
+
+.SS "std::string Contact::getTelephone () const"
+
+.PP
+Recupère le telephone d'un contact\&. accesseur 'Telephone' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+le Telephone d'un contact
+.PP
+le std::string qui correspond au Telephone d'un contact \&. 
+.RE
+.PP
+
+.SS "std::string Contact::getURIPhoto () const"
+
+.PP
+Recupère la photo d'un contact\&. accesseur 'URIPhoto' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+la photo d'un contact
+.PP
+le std::string qui correspond à l'URIPhoto d'un contact \&. 
+.RE
+.PP
+
+.SS "bool Contact::operator< (const \fBContact\fP & da) const"
+
+.PP
+operateur inferieur \&. Permet de comparer deux dates \&. test de comparaison entre 2 dates
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP \fBContact\fP & :la date du contact à comparer avec la date du contact courant \&.
+.br
+\fIconst\fP \fBContact\fP &da: le contact à comparer entre la date courante 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+un booléen VRAI si égalité 
+.PP
+un booléen FAUX si non égalité 
+.RE
+.PP
+
+.SS "bool Contact::operator== (const \fBContact\fP & c1) const"
+
+.PP
+Operateur egal Permet de comparer deux contacts\&. test d'égalité entre 2 contacts
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP \fBContact\fP & :le contact à comparer
+.br
+\fIconst\fP \fBContact\fP &c1 : le contact à égaliser \&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+un booléen VRAI si égalité 
+.PP
+un booléen FAUX si non égalité 
+.RE
+.PP
+
+.SS "void Contact::setDateDecreation (const \fBDate\fP & de)"
+
+.PP
+modifier la date de création d'un contact implémentation du mutateur 'DateDecreation'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP \fBDate\fP &: la date à modifier
+.br
+\fIconst\fP \fBDate\fP &de : il remplacera la DateDecreation courante \&. 
+.RE
+.PP
+
+.SS "void Contact::setEntreprise (const std::string & e)"
+
+.PP
+modifier l'entreprise d'un contact implémentation du mutateur 'Entreprise'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP std::string &: l'entreprise à modifier
+.br
+\fIstd::string\fP &e : il remplacera l'Entreprise courant \&. 
+.RE
+.PP
+
+.SS "void Contact::setId_contact (const int & value)"
+
+.PP
+modifier l'identifiant d'un contact implémentation du mutateur 'id_contact'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int &: l'identifiant à modifier
+.br
+\fIl'entier\fP const int & value, il remplacera l'identifian courant \&. 
+.RE
+.PP
+
+.SS "void Contact::setMail (const std::string & m)"
+
+.PP
+modifier le mail d'un contact implémentation du mutateur 'Mail'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP std::string &: le mail à modifier
+.br
+\fIstd::string\fP &m : il remplacera le Mail courant \&. 
+.RE
+.PP
+
+.SS "void Contact::setNom (const std::string & n)"
+
+.PP
+modifier le nom d'un contact implémentation du mutateur 'Nom'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP std::string &: le nom à modifier
+.br
+\fIstd::string\fP (const): il remplacera le nom courant \&. 
+.RE
+.PP
+
+.SS "void Contact::setPrenom (const std::string & p)"
+
+.PP
+modifier le prenom d'un contact implémentation du mutateur 'prenom'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP std::string &: le prenom à modifier
+.br
+\fIstd::string\fP &p : il remplacera le prenom courant \&. 
+.RE
+.PP
+
+.SS "void Contact::setTelephone (const std::string & t)"
+
+.PP
+modifier le telephone d'un contact implémentation du mutateur 'Telephone'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP std::string &: le telephone à modifier
+.br
+\fIstd::string\fP &t : il remplacera le telephone courant \&. 
+.RE
+.PP
+
+.SS "void Contact::setURIPhoto (const std::string & p)"
+
+.PP
+modifier la photo d'un contact implémentation du mutateur 'URIPhoto'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP std::string &: la photo à modifier
+.br
+\fIstd::string\fP &p : il remplacera la photo courante \&. 
+.RE
+.PP
+
+.SH "Documentation des fonctions amies et associées"
+.PP 
+.SS "std::ostream& operator<< (std::ostream & o, const \fBContact\fP & c)\fC [friend]\fP"
+
+.PP
+pour l'affichage des propriete d'un contact 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP \fBContact\fP & :le contact à afficher param std:: ostream& : permet de faire l'affichage
+.br
+\fIstd,:\fP ostream &o :la bibliothèque ostream 
+.br
+\fIconst\fP \fBContact\fP &c :le contact à afficher 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+o pour l'affichage d'un contact 
+.RE
+.PP
+
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBDate\fP Contact::dateDecreation\fC [private]\fP"
+attribut pour la date de création d'un contact 
+.SS "std::string Contact::entreprise\fC [private]\fP"
+attribut pour l'entreprise d'un contact 
+.SS "int Contact::id_contact =0\fC [private]\fP"
+attribut pour l'identifiant d'un contact 
+.SS "std::string Contact::mail\fC [private]\fP"
+attribut pour le mail d'un contact 
+.SS "std::string Contact::nom\fC [private]\fP"
+attribut pour le nom d'un contact 
+.SS "std::string Contact::prenom\fC [private]\fP"
+attribut pour le prenom d'un contact 
+.SS "std::string Contact::telephone\fC [private]\fP"
+attribut pour le telephone d'un contact 
+.SS "std::string Contact::URIphoto\fC [private]\fP"
+attribut pour la photo d'un contact 
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour DoxygenFinal à partir du code source\&.

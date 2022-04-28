@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DoxygenFinal:  Fichier source de /home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DoxygenFinal
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_date_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Date.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_date_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef DATE_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define DATE_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_date.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_date.html">Date</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_date.html#a2ebb3466d38e54ac334bef67a14289d7">   23</a></span>&#160; <span class="keyword">struct </span>tm  * <a class="code" href="class_date.html#a2ebb3466d38e54ac334bef67a14289d7">date</a>; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_date.html#aa46f17e2418a7a21573b1210f30b4e72">   24</a></span>&#160; <span class="keywordtype">int</span> <a class="code" href="class_date.html#aa46f17e2418a7a21573b1210f30b4e72">jour</a>; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_date.html#a9ce0f4d74252d7d1bf097ed047fbf880">   25</a></span>&#160; <span class="keywordtype">int</span> <a class="code" href="class_date.html#a9ce0f4d74252d7d1bf097ed047fbf880">mois</a>;  </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_date.html#a350753866b672814ff1c44c55b2d20ca">   26</a></span>&#160; <span class="keywordtype">int</span> <a class="code" href="class_date.html#a350753866b672814ff1c44c55b2d20ca">annee</a>;  </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;public :</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <a class="code" href="class_date.html#a4e59ed4ba66eec61c27460c5d09fa1bd">Date</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_date.html#a4e59ed4ba66eec61c27460c5d09fa1bd">Date</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;,<span class="keyword">const</span> <span class="keywordtype">int</span> &amp; ,<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_date.html#a575966fef11b34dea9a2e5be6f3a4e58">getJourtm</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_date.html#a6a769d53bbc30fb114be119f118b8742">getMoistm</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_date.html#a2866d736981c3981a479911bfae0e777">getAnneetm</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_date.html#a1b38f44aaa8c9035149b188be5650af4">getJour</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;     <span class="keywordtype">int</span> <a class="code" href="class_date.html#a72aade20bcf0954935efea32bee0b244">getMois</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_date.html#a8ab72441def94864f14a6c7d37fc7880">getAnnee</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_date.html#a9320ed0e8f5ae4e5bf3e96b653cc9dec">setJour</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_date.html#a305ffc577325d91db7f6651623eb4333">setMois</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_date.html#a010d6ca12bbf8f2afb6260fd1af65c79">setAnnee</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_date.html#a8718dd1d16b0f43b7cda9a9c7822c7be">fromDate</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;,<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;,<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;std::string  <a class="code" href="class_date.html#aad30c999adf882cee6369f627c0353c0">fromDateString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<a class="code" href="class_date.html">Date</a> <a class="code" href="class_date.html#acdbf4b116c6d112d5974ea9ef5d0ad05">toDateString</a>(<span class="keyword">const</span> std::string &amp;  ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_date.html#a08c0538091d061550b90787d9313ca61">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a> &amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">friend</span> std::ostream&amp; <a class="code" href="class_date.html#a191ee8989894d19ac4c9a71e359210a1">operator &lt;&lt;</a>(std:: ostream&amp;, <span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp;);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;};</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif // DATE_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_date_html_a2ebb3466d38e54ac334bef67a14289d7"><div class="ttname"><a href="class_date.html#a2ebb3466d38e54ac334bef67a14289d7">Date::date</a></div><div class="ttdeci">struct tm * date</div><div class="ttdef"><b>Definition:</b> Date.h:23</div></div>
+<div class="ttc" id="aclass_date_html_a08c0538091d061550b90787d9313ca61"><div class="ttname"><a href="class_date.html#a08c0538091d061550b90787d9313ca61">Date::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Date &amp;) const</div><div class="ttdoc">comparaison de date La Methode pour comparer une date courante et une date entré en parametre</div><div class="ttdef"><b>Definition:</b> Date.cpp:205</div></div>
+<div class="ttc" id="aclass_date_html_a575966fef11b34dea9a2e5be6f3a4e58"><div class="ttname"><a href="class_date.html#a575966fef11b34dea9a2e5be6f3a4e58">Date::getJourtm</a></div><div class="ttdeci">int getJourtm() const</div><div class="ttdoc">Accesseurs.</div><div class="ttdef"><b>Definition:</b> Date.cpp:41</div></div>
+<div class="ttc" id="aclass_date_html_a9320ed0e8f5ae4e5bf3e96b653cc9dec"><div class="ttname"><a href="class_date.html#a9320ed0e8f5ae4e5bf3e96b653cc9dec">Date::setJour</a></div><div class="ttdeci">void setJour(const int &amp;)</div><div class="ttdoc">modifier le jour de la date</div><div class="ttdef"><b>Definition:</b> Date.cpp:101</div></div>
+<div class="ttc" id="aclass_date_html_a305ffc577325d91db7f6651623eb4333"><div class="ttname"><a href="class_date.html#a305ffc577325d91db7f6651623eb4333">Date::setMois</a></div><div class="ttdeci">void setMois(const int &amp;)</div><div class="ttdoc">modifier le mois de la date</div><div class="ttdef"><b>Definition:</b> Date.cpp:112</div></div>
+<div class="ttc" id="aclass_date_html_a6a769d53bbc30fb114be119f118b8742"><div class="ttname"><a href="class_date.html#a6a769d53bbc30fb114be119f118b8742">Date::getMoistm</a></div><div class="ttdeci">int getMoistm() const</div><div class="ttdoc">Recupère le mois dans la structure tm.</div><div class="ttdef"><b>Definition:</b> Date.cpp:51</div></div>
+<div class="ttc" id="aclass_date_html_a2866d736981c3981a479911bfae0e777"><div class="ttname"><a href="class_date.html#a2866d736981c3981a479911bfae0e777">Date::getAnneetm</a></div><div class="ttdeci">int getAnneetm() const</div><div class="ttdoc">Recupère l'année dans la structure tm.</div><div class="ttdef"><b>Definition:</b> Date.cpp:61</div></div>
+<div class="ttc" id="aclass_date_html_a72aade20bcf0954935efea32bee0b244"><div class="ttname"><a href="class_date.html#a72aade20bcf0954935efea32bee0b244">Date::getMois</a></div><div class="ttdeci">int getMois() const</div><div class="ttdoc">Recupère le mois pour la date ;.</div><div class="ttdef"><b>Definition:</b> Date.cpp:82</div></div>
+<div class="ttc" id="aclass_date_html_a8ab72441def94864f14a6c7d37fc7880"><div class="ttname"><a href="class_date.html#a8ab72441def94864f14a6c7d37fc7880">Date::getAnnee</a></div><div class="ttdeci">int getAnnee() const</div><div class="ttdoc">Recupère l'année pour la date ;.</div><div class="ttdef"><b>Definition:</b> Date.cpp:92</div></div>
+<div class="ttc" id="aclass_date_html_a4e59ed4ba66eec61c27460c5d09fa1bd"><div class="ttname"><a href="class_date.html#a4e59ed4ba66eec61c27460c5d09fa1bd">Date::Date</a></div><div class="ttdeci">Date()</div><div class="ttdoc">Constructeur Constructeur de la classe Date.</div><div class="ttdef"><b>Definition:</b> Date.cpp:11</div></div>
+<div class="ttc" id="aclass_date_html_a8718dd1d16b0f43b7cda9a9c7822c7be"><div class="ttname"><a href="class_date.html#a8718dd1d16b0f43b7cda9a9c7822c7be">Date::fromDate</a></div><div class="ttdeci">void fromDate(const int &amp;, const int &amp;, const int &amp;)</div><div class="ttdoc">methode pour remplir la date La méthode fromDate qui recoit en parametre le jour ,...</div><div class="ttdef"><b>Definition:</b> Date.cpp:137</div></div>
+<div class="ttc" id="aclass_date_html_acdbf4b116c6d112d5974ea9ef5d0ad05"><div class="ttname"><a href="class_date.html#acdbf4b116c6d112d5974ea9ef5d0ad05">Date::toDateString</a></div><div class="ttdeci">Date toDateString(const std::string &amp;) const</div><div class="ttdoc">Conversion La méthode convertie le string en type date .</div><div class="ttdef"><b>Definition:</b> Date.cpp:185</div></div>
+<div class="ttc" id="aclass_date_html_a9ce0f4d74252d7d1bf097ed047fbf880"><div class="ttname"><a href="class_date.html#a9ce0f4d74252d7d1bf097ed047fbf880">Date::mois</a></div><div class="ttdeci">int mois</div><div class="ttdef"><b>Definition:</b> Date.h:25</div></div>
+<div class="ttc" id="aclass_date_html_aa46f17e2418a7a21573b1210f30b4e72"><div class="ttname"><a href="class_date.html#aa46f17e2418a7a21573b1210f30b4e72">Date::jour</a></div><div class="ttdeci">int jour</div><div class="ttdef"><b>Definition:</b> Date.h:24</div></div>
+<div class="ttc" id="aclass_date_html_a010d6ca12bbf8f2afb6260fd1af65c79"><div class="ttname"><a href="class_date.html#a010d6ca12bbf8f2afb6260fd1af65c79">Date::setAnnee</a></div><div class="ttdeci">void setAnnee(const int &amp;)</div><div class="ttdoc">modifier l'année de la date</div><div class="ttdef"><b>Definition:</b> Date.cpp:121</div></div>
+<div class="ttc" id="aclass_date_html_a191ee8989894d19ac4c9a71e359210a1"><div class="ttname"><a href="class_date.html#a191ee8989894d19ac4c9a71e359210a1">Date::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;, const Date &amp;)</div><div class="ttdoc">L'affichage d'une date Afficher une date a cette forme par exemple le 01/01/2021 .</div><div class="ttdef"><b>Definition:</b> Date.cpp:223</div></div>
+<div class="ttc" id="aclass_date_html_a350753866b672814ff1c44c55b2d20ca"><div class="ttname"><a href="class_date.html#a350753866b672814ff1c44c55b2d20ca">Date::annee</a></div><div class="ttdeci">int annee</div><div class="ttdef"><b>Definition:</b> Date.h:26</div></div>
+<div class="ttc" id="aclass_date_html_a1b38f44aaa8c9035149b188be5650af4"><div class="ttname"><a href="class_date.html#a1b38f44aaa8c9035149b188be5650af4">Date::getJour</a></div><div class="ttdeci">int getJour() const</div><div class="ttdoc">Recupère le jour pour la date;.</div><div class="ttdef"><b>Definition:</b> Date.cpp:72</div></div>
+<div class="ttc" id="aclass_date_html_aad30c999adf882cee6369f627c0353c0"><div class="ttname"><a href="class_date.html#aad30c999adf882cee6369f627c0353c0">Date::fromDateString</a></div><div class="ttdeci">std::string fromDateString() const</div><div class="ttdoc">Conversion La méthode convertie la date en string .</div><div class="ttdef"><b>Definition:</b> Date.cpp:161</div></div>
+<div class="ttc" id="aclass_date_html"><div class="ttname"><a href="class_date.html">Date</a></div><div class="ttdoc">la classe reprensentant la Date La classe date nous permet de definir la date courante et les differe...</div><div class="ttdef"><b>Definition:</b> Date.h:19</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_eeaa8b6f755de179d8d47de1ad4216fb.html">ProjetFinalCDAA</a></li><li class="navelem"><a class="el" href="_date_8h.html">Date.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

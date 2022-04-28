@@ -1,0 +1,4 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$class_q_main_window.html" title=" " alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$class_fenetre_principale.html" title="Classe qui gère la fenetre principale . La classe herite d&#39;une QMainWindow,elle est l&#39;une des plus im..." alt="" coords="160,5,283,32"/>
+</map>

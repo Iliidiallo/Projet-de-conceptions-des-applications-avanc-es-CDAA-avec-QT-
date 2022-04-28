@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_todo" kind="class" language="C++" prot="public">
+    <compoundname>Todo</compoundname>
+    <includes refid="_todo_8h" local="no">Todo.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_todo_1a534c097e18381df80b86dd1a04689618" prot="private" static="no" mutable="no">
+        <type><ref refid="class_date" kindref="compound">Date</ref></type>
+        <definition>Date Todo::date</definition>
+        <argsstring></argsstring>
+        <name>date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut de type <ref refid="class_date" kindref="compound">Date</ref> pour gérer la date </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="22" column="9" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_todo_1a36639711c854237b60d0b0ba8c4f172f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Todo::contenuTodo</definition>
+        <argsstring></argsstring>
+        <name>contenuTodo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut de type string pour gérer le contenu de la tache </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="23" column="15" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_todo_1a3b148ac45c1ad1837093cbfa31b937c6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Todo::id_interaction</definition>
+        <argsstring></argsstring>
+        <name>id_interaction</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut pour gérer l&apos;id de l&apos;intéraction </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="24" column="7" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_todo_1a89723d81a77d3aa3d169a61ca69c039b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Todo::idtodo</definition>
+        <argsstring></argsstring>
+        <name>idtodo</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut pour gérer l&apos;id de tache </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="25" column="7" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_todo_1a5fbb1de89a8e2e99941f6a175cc6da91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Todo::Todo</definition>
+        <argsstring>()</argsstring>
+        <name>Todo</name>
+        <briefdescription>
+<para>Constructeur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du constructeur par défaut .</para>
+<para>Contructeur de la classe <ref refid="class_todo" kindref="compound">Todo</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="33" column="3" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_1a1cc5d083fa330e1db2478d0d27510ec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Todo::Todo</definition>
+        <argsstring>(const Date &amp;, const std::string &amp;)</argsstring>
+        <name>Todo</name>
+        <param>
+          <type>const <ref refid="class_date" kindref="compound">Date</ref> &amp;</type>
+          <defname>dater</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>contenu</defname>
+        </param>
+        <briefdescription>
+<para>constructeur 2 parametre </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du constructeur avec paramètre .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref>&amp; : definition d&apos;une date de tache a faire </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string&amp;:commentaire d&apos;un contenu de la tache</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref> &amp;date : elle remplacera la date courante du todo. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;contenu: elle remplacera la tache courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="39" column="3" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_1a1d5b3c2482af0ca22e5ccd5c3ec53fab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_date" kindref="compound">Date</ref></type>
+        <definition>Date Todo::getDateTodo</definition>
+        <argsstring>() const</argsstring>
+        <name>getDateTodo</name>
+        <briefdescription>
+<para>Getteurs et setteurs \Les fonctions getteurs et setteurs . </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot; date &quot; pas de paramètre, fonction const</para>
+<para>Recupère la date du <ref refid="class_todo" kindref="compound">Todo</ref> <simplesect kind="return"><para>la date de la tache</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond à la date d&apos;une tache . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="52" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="75" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_1a364f8010a094c47ebc16455456b01a92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Todo::getContenuTodo</definition>
+        <argsstring>() const</argsstring>
+        <name>getContenuTodo</name>
+        <briefdescription>
+<para>recupère le contenu de la tache </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;ContenuTodo&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>le contenu du todo</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond au contenuTodo d&apos;une Tache . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="58" column="15" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_1ab85bbaecb66f8d1ec645d25c2557d1bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Todo::getId_interaction</definition>
+        <argsstring>() const</argsstring>
+        <name>getId_interaction</name>
+        <briefdescription>
+<para>Recupère l&apos;identifiant d&apos;une <ref refid="class_interaction" kindref="compound">Interaction</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;id_interaction&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>l&apos;identifiant d&apos;une intéraction .</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond à l&apos;identifiant d&apos;une intéraction . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="65" column="7" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_1ab27230a8a41e956ad6bca85d97e7b3d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Todo::getIdtodo</definition>
+        <argsstring>() const</argsstring>
+        <name>getIdtodo</name>
+        <briefdescription>
+<para>recupère le contenu de la tache </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;idTodo&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>le contenu du todo</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond à l&apos;identifiant d&apos;une tache . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="70" column="7" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_1ab42418c729d182d0b940be248db87ec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Todo::setDateTodo</definition>
+        <argsstring>(const Date &amp;)</argsstring>
+        <name>setDateTodo</name>
+        <param>
+          <type>const <ref refid="class_date" kindref="compound">Date</ref> &amp;</type>
+          <defname>dater</defname>
+        </param>
+        <briefdescription>
+<para>modifier la date de tache </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;date&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref>&amp;: la date à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref> &amp; date: elle remplacera la date de la tache courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="76" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_1a2a7a14ca37f3981d5c8e55f9f0456ed3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Todo::setIdtodo</definition>
+        <argsstring>(const int &amp;)</argsstring>
+        <name>setIdtodo</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+<para>modifier l&apos;id du todo </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;idTodo&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; : l&apos;entier qu&apos;on utilisera pour faire la modification de l&apos;id du todo .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>l&apos;entier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>const int &amp; value, il remplacera l&apos;identifiant de la tache courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="81" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_1ae274b76be8d635cbb866c0711e46f025" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Todo::setId_interaction</definition>
+        <argsstring>(const int &amp;)</argsstring>
+        <name>setId_interaction</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+<para>modifier l&apos;id d&apos;une interaction </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;id_interaction&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; : l&apos;entier qu&apos;on utilisera pour faire la modification de l&apos;id de l&apos;interaction .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>l&apos;entier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>const int &amp; value, il remplacera l&apos;identifiant de l&apos;intéraction courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="86" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_1aafadc230b2b8a1bfaf561573d7c949c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Todo::setContenuTodo</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>setContenuTodo</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>contient</defname>
+        </param>
+        <briefdescription>
+<para>modifier le contenu de tache </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;ContenuTodo&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string&amp;: le contenu à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>l&apos;entier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>const int &amp; value, il remplacera le Contenu de la tache courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="91" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="101" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_todo_1a8d9110e9a5449fae3574b99965e50283" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Todo::operator&lt;</definition>
+        <argsstring>(const Todo &amp;) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="class_todo" kindref="compound">Todo</ref> &amp;</type>
+          <defname>to</defname>
+        </param>
+        <briefdescription>
+<para>comparaison de la tache courante suivant </para>
+        </briefdescription>
+        <detaileddescription>
+<para>test de comparaison entre 2 dates</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_todo" kindref="compound">Todo</ref> &amp;: le parametre à affiher les Todos</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_todo" kindref="compound">Todo</ref> &amp;to : la date à comparer avec la date courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>un booléen VRAI si égalité </para>
+</simplesect>
+<simplesect kind="return"><para>un booléen FAUX si non égalité </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="97" column="3" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="115" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_todo_1adbad530f8aaeb15de3c96ab898a08efb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const Todo &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>os</defname>
+        </param>
+        <param>
+          <type>const <ref refid="class_todo" kindref="compound">Todo</ref> &amp;</type>
+          <defname>todo</defname>
+        </param>
+        <briefdescription>
+<para>L&apos;affichage d&apos;un <ref refid="class_todo" kindref="compound">Todo</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::ostream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: il nous permetra de faire l&apos;affichage . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_todo" kindref="compound">Todo</ref>&amp;: il nous permet d&apos;afficher une tache.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream &amp;os :la bibliothèque ostream qui permet l&apos;affichage . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_todo" kindref="compound">Todo</ref> &amp;todo:la tache à afficher. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>os : pour l&apos;affichage de la tache càd sa date et son contenu . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="103" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.cpp" bodystart="130" bodyend="134"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>cette classe permet de gerer une tache suivant son contenu et sa date de creation </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Date</label>
+        <link refid="class_date"/>
+      </node>
+      <node id="1">
+        <label>Todo</label>
+        <link refid="class_todo"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-date</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" line="19" column="1" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Todo.h" bodystart="18" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_todo_1a36639711c854237b60d0b0ba8c4f172f" prot="private" virt="non-virtual"><scope>Todo</scope><name>contenuTodo</name></member>
+      <member refid="class_todo_1a534c097e18381df80b86dd1a04689618" prot="private" virt="non-virtual"><scope>Todo</scope><name>date</name></member>
+      <member refid="class_todo_1a364f8010a094c47ebc16455456b01a92" prot="public" virt="non-virtual"><scope>Todo</scope><name>getContenuTodo</name></member>
+      <member refid="class_todo_1a1d5b3c2482af0ca22e5ccd5c3ec53fab" prot="public" virt="non-virtual"><scope>Todo</scope><name>getDateTodo</name></member>
+      <member refid="class_todo_1ab85bbaecb66f8d1ec645d25c2557d1bd" prot="public" virt="non-virtual"><scope>Todo</scope><name>getId_interaction</name></member>
+      <member refid="class_todo_1ab27230a8a41e956ad6bca85d97e7b3d7" prot="public" virt="non-virtual"><scope>Todo</scope><name>getIdtodo</name></member>
+      <member refid="class_todo_1a3b148ac45c1ad1837093cbfa31b937c6" prot="private" virt="non-virtual"><scope>Todo</scope><name>id_interaction</name></member>
+      <member refid="class_todo_1a89723d81a77d3aa3d169a61ca69c039b" prot="private" virt="non-virtual"><scope>Todo</scope><name>idtodo</name></member>
+      <member refid="class_todo_1a8d9110e9a5449fae3574b99965e50283" prot="public" virt="non-virtual"><scope>Todo</scope><name>operator&lt;</name></member>
+      <member refid="class_todo_1adbad530f8aaeb15de3c96ab898a08efb" prot="public" virt="non-virtual"><scope>Todo</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_todo_1aafadc230b2b8a1bfaf561573d7c949c3" prot="public" virt="non-virtual"><scope>Todo</scope><name>setContenuTodo</name></member>
+      <member refid="class_todo_1ab42418c729d182d0b940be248db87ec5" prot="public" virt="non-virtual"><scope>Todo</scope><name>setDateTodo</name></member>
+      <member refid="class_todo_1ae274b76be8d635cbb866c0711e46f025" prot="public" virt="non-virtual"><scope>Todo</scope><name>setId_interaction</name></member>
+      <member refid="class_todo_1a2a7a14ca37f3981d5c8e55f9f0456ed3" prot="public" virt="non-virtual"><scope>Todo</scope><name>setIdtodo</name></member>
+      <member refid="class_todo_1a5fbb1de89a8e2e99941f6a175cc6da91" prot="public" virt="non-virtual"><scope>Todo</scope><name>Todo</name></member>
+      <member refid="class_todo_1a1cc5d083fa330e1db2478d0d27510ec4" prot="public" virt="non-virtual"><scope>Todo</scope><name>Todo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

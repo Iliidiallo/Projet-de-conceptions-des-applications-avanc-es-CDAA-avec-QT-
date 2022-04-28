@@ -1,0 +1,368 @@
+.TH "TodoBDD" 3 "Jeudi 16 Décembre 2021" "DoxygenFinal" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TodoBDD \- Classe \fBTodoBDD\fP de la base de donnée La classe herite d'un \fBQObject\fP, permet d'ajouter des \fBTodoBDD\fP pour un contact donné en la stockant dans la base de donnée \&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <todobdd\&.h>\fP
+.SS "Connecteurs publics"
+
+.in +1c
+.ti -1c
+.RI "void \fBbddAjoutTodo\fP (int &, \fBTodo\fP &)"
+.br
+.RI "Slot Ajout \fBTodo\fP \&. slot qui permet d'ajouter une tache\&. "
+.ti -1c
+.RI "void \fBbddListeTodoContact\fP (int &, std::list< \fBTodo\fP > &)"
+.br
+.RI "Slot liste Taches pour un contact \&. slot qui permet d'afficher la liste des taches pour un contact selectionné "
+.ti -1c
+.RI "void \fBbddListeALLContact\fP (std::list< \fBTodo\fP > &)"
+.br
+.RI "Slot liste Taches pour tous les contacts\&. slot qui permet d'afficher la liste des taches pour tous les contacts\&. "
+.ti -1c
+.RI "void \fBbddRechercheTodoCont\fP (int &, QString &, QString &, std::list< \fBTodo\fP > &)"
+.br
+.RI "Slot Rechercher Taches pour un contact entre deux dates \&. slot qui permet d'afficher la liste des taches pour un contact entre deux dates\&. "
+.ti -1c
+.RI "void \fBbddRechercheALLTodoCont\fP (QString &, QString &, std::list< \fBTodo\fP > &)"
+.br
+.RI "Slot Rechercher Taches pour tous les contacts entre deux dates\&. slot qui permet d'afficher la liste des taches pour tous les contacts entre deux dates entré par l'utilisateur\&. "
+.ti -1c
+.RI "void \fBisOpen\fP (bool &)"
+.br
+.RI "Etat de la base\&. "
+.in -1c
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBTodoBDD\fP (\fBQObject\fP *parent=nullptr)"
+.br
+.RI "Constructeur Constructeur de la classe \fBTodoBDD\fP\&. "
+.ti -1c
+.RI "\fB~TodoBDD\fP ()"
+.br
+.RI "Destructeur Le Destructeur de la classe \fBTodoBDD\fP càd la fonction qui libère la memoire utilisé \&. "
+.in -1c
+.SS "Fonctions membres privées"
+
+.in +1c
+.ti -1c
+.RI "void \fBcloseDb\fP ()"
+.br
+.RI "Fermeture de la base Methode qui ferme la base si elle est ouverte\&. "
+.ti -1c
+.RI "bool \fBconnexion\fP ()"
+.br
+.RI "Creer la connexion Methode qui permet d'etablir une connexion avec la base et elle crée une table \fBTodo\fP dans la base si elle n'existe pas\&. "
+.ti -1c
+.RI "void \fBisDBopen\fP (bool &)"
+.br
+.RI "Etat de la base Methode qui change l'etat de la base\&. "
+.ti -1c
+.RI "bool \fBAjoutTodo\fP (const int &, \fBTodo\fP &)"
+.br
+.RI "Ajout d'une Tache Methode qui permet d'ajouter une tache pour une intéraction\&. "
+.ti -1c
+.RI "void \fBListeTodoContact\fP (const int &, std::list< \fBTodo\fP > &) const"
+.br
+.RI "Liste des taches \&. Methode qui permet de recuperer la liste des taches d'un contact selectionné "
+.ti -1c
+.RI "void \fBListeALLContact\fP (std::list< \fBTodo\fP > &) const"
+.br
+.RI "Liste des Intéractions \&. Methode qui permet d'afficher la liste des Taches de tous les contacts\&. "
+.ti -1c
+.RI "void \fBRechercheALLTodoCont\fP (QString &, QString &, std::list< \fBTodo\fP > &) const"
+.br
+.RI "Rechercher des Taches entre deux dates \&. La Méthode qui permet de rechercher entre deux dates les Taches de tous les contacts\&. "
+.ti -1c
+.RI "void \fBRechercheTodoCont\fP (const int &, QString &, QString &, std::list< \fBTodo\fP > &) const"
+.br
+.RI "Rechercher des Taches entre deux dates pour un contact \&. La Méthode qui permet de rechercher entre deux dates les taches d'un contact\&. "
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "QSqlDatabase \fBdb\fP"
+.br
+.ti -1c
+.RI "bool \fBdbOuvert\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Classe \fBTodoBDD\fP de la base de donnée La classe herite d'un \fBQObject\fP, permet d'ajouter des \fBTodoBDD\fP pour un contact donné en la stockant dans la base de donnée \&. 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "TodoBDD::TodoBDD (\fBQObject\fP * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+Constructeur Constructeur de la classe \fBTodoBDD\fP\&. implémentation du constructeur avec paramètre \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fI*parent\fP = nullptr: par defaut
+.br
+\fI\fBQObject\fP\fP *parent et hérite d'un QObjet initialisation du test de la base de donnée à false \&. Appel de la fonction \fBconnexion()\fP pour connecter la base de donnée \&. 
+.RE
+.PP
+
+.SS "TodoBDD::~TodoBDD ()"
+
+.PP
+Destructeur Le Destructeur de la classe \fBTodoBDD\fP càd la fonction qui libère la memoire utilisé \&. implémentation du destructeur \&. A la fermeture de la base on libère la memoire en faisant appel à la fonction closeDB()\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "bool TodoBDD::AjoutTodo (const int & id, \fBTodo\fP & inter)\fC [private]\fP"
+
+.PP
+Ajout d'une Tache Methode qui permet d'ajouter une tache pour une intéraction\&. Création d'une tache La fonction qui nous permet de créer ou inserer une tache en tenant compte des contraintes concernant les clés étrangères ou primaires\&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int &:l'id du contact courant 
+.br
+\fI\fBTodo\fP\fP &: la tache à ajouter 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+true s'i elle est insereré dans la base 
+.PP
+false sinon
+.RE
+.PP
+\fBParamètres\fP
+.RS 4
+\fI\fBTodo\fP\fP & inter: representera l'intéraction qui sera ajouté \&. 
+.br
+\fIconst\fP int & id : representera l'identifiant de l'intéraction pour lui ajouter la tache \&. 
+.RE
+.PP
+
+.SS "void TodoBDD::bddAjoutTodo (int & i, \fBTodo\fP & inter)\fC [slot]\fP"
+
+.PP
+Slot Ajout \fBTodo\fP \&. slot qui permet d'ajouter une tache\&. Ajout d'une tache Slot pour ajouter une tache pour une intéraction , c'est ce slot qu'on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP & : l'identifiant du contact 
+.br
+\fI\fBTodo\fP\fP & : la tache a ajouter
+.br
+\fI\fBTodo\fP\fP & inter: representera la tache qui sera ajouté \&. 
+.br
+\fIconst\fP int & id : representera l'identifiant de l'intéraction \&. On appel la fonction AjoutTodo dans le slot pour lui donner les parametres du slot \&. 
+.RE
+.PP
+
+.SS "void TodoBDD::bddListeALLContact (std::list< \fBTodo\fP > & li)\fC [slot]\fP"
+
+.PP
+Slot liste Taches pour tous les contacts\&. slot qui permet d'afficher la liste des taches pour tous les contacts\&. Slot afficher toutes les taches Slot pour afficher toutes les taches de toutes les intéractions, c'est ce slot qu'on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Todo>&\fP & : liste des taches
+.br
+\fIstd::list<Todo>\fP & li: c'est la liste qu'on met dans le paramètre de la fonction ListeALLContact pour nous afficher toutes ses taches 
+.RE
+.PP
+
+.SS "void TodoBDD::bddListeTodoContact (int & id, std::list< \fBTodo\fP > & li)\fC [slot]\fP"
+
+.PP
+Slot liste Taches pour un contact \&. slot qui permet d'afficher la liste des taches pour un contact selectionné Afficher les taches d'une intéraction \&. Slot pour affiche les taches d'une intéraction , c'est ce slot qu'on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP &: l'identifiant d'un contact 
+.br
+\fIstd::list<Todo>&\fP & : liste des taches
+.br
+\fIstd::list<Todo>\fP & li:la liste des taches \&. 
+.br
+\fIint\fP & id : representera l'identifiant de l'intéraction \&. On appel la fonction ListTodoContact dans le slot pour lui donner les parametres du slot \&. 
+.RE
+.PP
+
+.SS "void TodoBDD::bddRechercheALLTodoCont (QString & date1, QString & date2, std::list< \fBTodo\fP > & li)\fC [slot]\fP"
+
+.PP
+Slot Rechercher Taches pour tous les contacts entre deux dates\&. slot qui permet d'afficher la liste des taches pour tous les contacts entre deux dates entré par l'utilisateur\&. Slot pour rechercher les taches de tous les contacts \&. Slot pour rechercher les taches des contacts entre deux dates,c'est ce slot qu'on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Todo>&\fP & : liste des taches 
+.br
+\fIQString\fP & : la premiere date pour le debut de la recherche 
+.br
+\fIQString\fP & : la deuxieme date pour la fin de la recherche
+.br
+\fIQString\fP & date1 : la date qui represente le premier intervalle \&. 
+.br
+\fIQString\fP & date2 : la date qui represente le premier intervalle \&. 
+.br
+\fIstd::list<Todo>\fP & li :la liste des taches \&. 
+.RE
+.PP
+
+.SS "void TodoBDD::bddRechercheTodoCont (int & id, QString & date1, QString & date2, std::list< \fBTodo\fP > & li)\fC [slot]\fP"
+
+.PP
+Slot Rechercher Taches pour un contact entre deux dates \&. slot qui permet d'afficher la liste des taches pour un contact entre deux dates\&. Slot pour rechercher les taches d'un contact \&. Slot pour afficher les taches d'un contact entre deux dates, c'est ce slot qu'on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Todo>&\fP & : liste des taches 
+.br
+\fIQString\fP & : la premiere date pour le debut de la recherche 
+.br
+\fIQString\fP & : la deuxieme date pour la fin de la recherche 
+.br
+\fIint\fP & :l'identifiant de l'interaction
+.br
+\fIint\fP & id: l'identifiant du contact pour le quel on fera la recherche qui se trouvera dans notre comboBox \&. 
+.br
+\fIQString\fP & date1 : la date qui represente le premier intervalle \&. 
+.br
+\fIQString\fP & date2 : la date qui represente le premier intervalle \&. 
+.br
+\fIstd::list<Todo>\fP & li :la liste des taches \&. 
+.RE
+.PP
+
+.SS "void TodoBDD::closeDb ()\fC [private]\fP"
+
+.PP
+Fermeture de la base Methode qui ferme la base si elle est ouverte\&. 
+.SS "bool TodoBDD::connexion ()\fC [private]\fP"
+
+.PP
+Creer la connexion Methode qui permet d'etablir une connexion avec la base et elle crée une table \fBTodo\fP dans la base si elle n'existe pas\&. Connexion à la base de donnée On le nom de la base avec l'extension sqlite dans le tmp On teste si la base est ouverte : si non on retourne false si Oui on crée une table si elle n'existe pas en verifiant la contrainte pour la clé etrangère 'ON DELETE CASCADE' ça signifie si l'enregistrement parent est supprimé tous les enregistrements enfants vont suivre ensuite on affiche 'création de la table réussi ' \&.
+.PP
+\fBRenvoie\fP
+.RS 4
+true si la connexion à reussie, 
+.PP
+false sinon
+.PP
+dbOuvert : le booleén à retourner 
+.RE
+.PP
+
+.SS "void TodoBDD::isDBopen (bool & b)\fC [private]\fP"
+
+.PP
+Etat de la base Methode qui change l'etat de la base\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIbool&\fP : l'etat de la base à changer 
+.RE
+.PP
+
+.SS "void TodoBDD::isOpen (bool & b)\fC [slot]\fP"
+
+.PP
+Etat de la base\&. Methode qui change l'etat de la base
+.PP
+\fBParamètres\fP
+.RS 4
+\fIbool&\fP : l'etat de la base à changer 
+.RE
+.PP
+
+.SS "void TodoBDD::ListeALLContact (std::list< \fBTodo\fP > & li) const\fC [private]\fP"
+
+.PP
+Liste des Intéractions \&. Methode qui permet d'afficher la liste des Taches de tous les contacts\&. Affichage toutes les taches de toutes les intéractions de tous les contacts \&. On affiche toutes les taches en selectionnant toute la table TODO et on l'affiche \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Todo>:Liste\fP des Taches
+.br
+\fIstd::list<Interaction>\fP & li : la liste des todos \&. 
+.RE
+.PP
+
+.SS "void TodoBDD::ListeTodoContact (const int & id, std::list< \fBTodo\fP > & li) const\fC [private]\fP"
+
+.PP
+Liste des taches \&. Methode qui permet de recuperer la liste des taches d'un contact selectionné Affichage des taches d'une intéraction L'affichage des taches d'une intéraction en utilisant la requete qui selectionne toutes les taches d'une Intéraction dans la base de donnée en triant la liste à la fin par l'appel de sort (c++) \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Todo>\fP &:Liste des taches 
+.br
+\fIconst\fP int &: l'identifiant de l'intéraction
+.br
+\fIstd::list<Todo>\fP &li: la liste des taches \&. 
+.br
+\fIconst\fP int & id : representera l'identifiant de l'intéraction pour lui afficher ses taches \&. 
+.RE
+.PP
+
+.SS "void TodoBDD::RechercheALLTodoCont (QString & date1, QString & date2, std::list< \fBTodo\fP > & li) const\fC [private]\fP"
+
+.PP
+Rechercher des Taches entre deux dates \&. La Méthode qui permet de rechercher entre deux dates les Taches de tous les contacts\&. Rechercher les taches de tous les contacts entre deux dates c'est cette fonction qui nous permet de rechercher des taches entre deux dates \&. On rentrera l'intervalle à rechercher en Selectionnant la table: on n'affiche rien si les taches n'existent pas entre ces dates si oui on affiche toutes les taches entre ces dates en triant les dates avec sort() par date de création \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Todo>\fP &:Liste des Taches 
+.br
+\fIQString\fP &: la premiere date de type Qstring \&. 
+.br
+\fIQString\fP &: la deuxieme date de type Qstring\&.
+.br
+\fIQString\fP & date1 : la date qui represente le premier intervalle \&. 
+.br
+\fIQString\fP & date2 : la date qui represente le premier intervalle \&. 
+.br
+\fIsstd::list<Todo>\fP & li :liste des taches \&. 
+.RE
+.PP
+
+.SS "void TodoBDD::RechercheTodoCont (const int & id, QString & date1, QString & date2, std::list< \fBTodo\fP > & li) const\fC [private]\fP"
+
+.PP
+Rechercher des Taches entre deux dates pour un contact \&. La Méthode qui permet de rechercher entre deux dates les taches d'un contact\&. Rechercher les taches entre deux dates pour un contact c'est cette fonction qui nous permet de rechercher des taches entre deux dates pour un contact selectionné \&. On rentrera l'intervalle à rechercher on selectionnera dans la comboBox le contact on appuyera sur le bouton rechercher \&. on n'affiche rien si les todos n'existent pas entre ces dates pour le contact si oui on affiche toutes les taches entre ces dates en triant les dates avec sort() par date de création \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP &: l'identifiant d'une interaction 
+.br
+\fIstd::list<Todo>\fP &:Liste des Taches 
+.br
+\fIQString\fP &: la premiere date de type Qstring \&. 
+.br
+\fIQString\fP &: la deuxieme date de type Qstring\&.
+.br
+\fIint\fP & id: l'identifiant du contact pour le quel on fera la recherche \&. 
+.br
+\fIQString\fP & date1 : la date qui represente le premier intervalle \&. 
+.br
+\fIQString\fP & date2 : la date qui represente le premier intervalle \&. 
+.br
+\fIstd::list<Todo>\fP & li :la liste des taches \&. 
+.RE
+.PP
+
+.SH "Documentation des données membres"
+.PP 
+.SS "QSqlDatabase TodoBDD::db\fC [private]\fP"
+connexion a la base de donnee 
+.SS "bool TodoBDD::dbOuvert\fC [private]\fP"
+Savoir si la base est ouverte ou non 
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour DoxygenFinal à partir du code source\&.

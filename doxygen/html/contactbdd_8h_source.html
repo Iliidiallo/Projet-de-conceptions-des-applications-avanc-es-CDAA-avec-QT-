@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DoxygenFinal:  Fichier source de /home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">DoxygenFinal
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('contactbdd_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">contactbdd.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="contactbdd_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CONTACTBDD_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CONTACTBDD_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="contact_8h.html">contact.h</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QDate&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QtSql/QSqlDatabase&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QtSql/QSqlQuery&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QVariant&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QSql&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_contact_b_d_d.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_contact_b_d_d.html">ContactBDD</a> :<span class="keyword">public</span> <a class="code" href="class_q_object.html">QObject</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_contact_b_d_d.html#af4198cc56143e7ee244374b05809d301">   37</a></span>&#160;    QSqlDatabase <a class="code" href="class_contact_b_d_d.html#af4198cc56143e7ee244374b05809d301">db</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_contact_b_d_d.html#a0b8b10a1e971d7e2120a291527e3ae74">   38</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_contact_b_d_d.html#a0b8b10a1e971d7e2120a291527e3ae74">dbOuvert</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_contact_b_d_d.html#a151335438386a4b19d9c26102717e377">closeDb</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_contact_b_d_d.html#a5e5e3c2ae8d4ec5d0092af497c703d8b">connexionDB</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_contact_b_d_d.html#aa82eb548f99ae20a9aa2d9d581242fbf">isDBopen</a>(<span class="keywordtype">bool</span> &amp;);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_contact_b_d_d.html#aa81b5ba902e1db7f9933fe4d8f32882e">ListeContact</a>(std::list&lt;Contact&gt; &amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_contact_b_d_d.html#a951bc86a61e65b2ad1fe54b45ab00278">NouveauContact</a>(<span class="keyword">const</span> <a class="code" href="class_contact.html">Contact</a> &amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_contact_b_d_d.html#a5dee51527412d5b8119d00c0f49cfbef">ModifContact</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp; ,<span class="keyword">const</span> <a class="code" href="class_contact.html">Contact</a> &amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_contact_b_d_d.html#a7ccb1e9fa160d6026a3854a027bfd601">SupprimeContact</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span>  <a class="code" href="class_contact_b_d_d.html#ada052c3f0a553eabedf254bb054f5387">RechercherContact</a>(QString&amp; ,QString &amp; ,QString &amp; ,std::list&lt;Contact&gt; &amp; ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">int</span>  <a class="code" href="class_contact_b_d_d.html#a6764c4ed28c6c001c407dc65902c27c6">NombreContact</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_contact_b_d_d.html#a28dc8793dd96f35c85fdceb269800579">ContactBDD</a>(<a class="code" href="class_q_object.html">QObject</a> *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="class_contact_b_d_d.html#a1cd8be9e04f80c4061457ddde1f04f9f">~ContactBDD</a>();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_contact_b_d_d.html#ae9e97816b1d250fc5bdbf44ccdb3e474">bddListeContact</a>(std::list&lt;Contact&gt; &amp;);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_contact_b_d_d.html#adef37fb1183502a46db3e07fd97a3a63">bbdNouveauContact</a>(<a class="code" href="class_contact.html">Contact</a> &amp;);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_contact_b_d_d.html#acc532eeaa500698961bd1cd3de973854">bddModifContact</a>( <span class="keywordtype">int</span> &amp;, <a class="code" href="class_contact.html">Contact</a> &amp;);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_contact_b_d_d.html#ad28602fec70582f934af0654188a7fca">bddSupprimeContact</a>( <span class="keywordtype">int</span> &amp;);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_contact_b_d_d.html#ae1a0d3ecda82c9191d267cc5bcc1a2a3">bddRechercherContact</a>(  QString &amp;,QString &amp;  ,  QString &amp;  ,std::list&lt;Contact&gt; &amp;  );</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;   <span class="comment">// void convertToJson();</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;signals:</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="class_contact_b_d_d.html#a30a73c86def34e413988dfcd4591f713">nombreTotalContact</a>(<span class="keywordtype">int</span> &amp;);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="comment">//json</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      <span class="comment">//void fichierConverti(QJsonDocument &amp;);</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;};</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#endif // CONTACTBDD_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_contact_b_d_d_html_adef37fb1183502a46db3e07fd97a3a63"><div class="ttname"><a href="class_contact_b_d_d.html#adef37fb1183502a46db3e07fd97a3a63">ContactBDD::bbdNouveauContact</a></div><div class="ttdeci">void bbdNouveauContact(Contact &amp;)</div><div class="ttdoc">Slot Nouveau contact . Slot qui reçoit une contact afin d'envoyer ceci a la methode NouveauContact(Co...</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:218</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_a951bc86a61e65b2ad1fe54b45ab00278"><div class="ttname"><a href="class_contact_b_d_d.html#a951bc86a61e65b2ad1fe54b45ab00278">ContactBDD::NouveauContact</a></div><div class="ttdeci">bool NouveauContact(const Contact &amp;) const</div><div class="ttdoc">Ajout d'un contact Methode qui permet d'ajouter un contact dans la base.</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:182</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_a151335438386a4b19d9c26102717e377"><div class="ttname"><a href="class_contact_b_d_d.html#a151335438386a4b19d9c26102717e377">ContactBDD::closeDb</a></div><div class="ttdeci">void closeDb()</div><div class="ttdoc">Fermeture de la base Methode qui ferme la base quand elle est ouverte.</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:87</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_a0b8b10a1e971d7e2120a291527e3ae74"><div class="ttname"><a href="class_contact_b_d_d.html#a0b8b10a1e971d7e2120a291527e3ae74">ContactBDD::dbOuvert</a></div><div class="ttdeci">bool dbOuvert</div><div class="ttdef"><b>Definition:</b> contactbdd.h:38</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_ae9e97816b1d250fc5bdbf44ccdb3e474"><div class="ttname"><a href="class_contact_b_d_d.html#ae9e97816b1d250fc5bdbf44ccdb3e474">ContactBDD::bddListeContact</a></div><div class="ttdeci">void bddListeContact(std::list&lt; Contact &gt; &amp;)</div><div class="ttdoc">Slot liste Contact . Slot qui reçoit une liste de contact afin d'envoyer ceci a la methode ListeConta...</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:169</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_ad28602fec70582f934af0654188a7fca"><div class="ttname"><a href="class_contact_b_d_d.html#ad28602fec70582f934af0654188a7fca">ContactBDD::bddSupprimeContact</a></div><div class="ttdeci">void bddSupprimeContact(int &amp;)</div><div class="ttdoc">Slot Supprimer un contact . Slot qui reçoit le id d'un contact afin d'envoyer ceci a la methode Suppr...</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:307</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_a1cd8be9e04f80c4061457ddde1f04f9f"><div class="ttname"><a href="class_contact_b_d_d.html#a1cd8be9e04f80c4061457ddde1f04f9f">ContactBDD::~ContactBDD</a></div><div class="ttdeci">~ContactBDD()</div><div class="ttdoc">Destructeur Destructeur de la classe ContactBDD.</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:29</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_aa82eb548f99ae20a9aa2d9d581242fbf"><div class="ttname"><a href="class_contact_b_d_d.html#aa82eb548f99ae20a9aa2d9d581242fbf">ContactBDD::isDBopen</a></div><div class="ttdeci">void isDBopen(bool &amp;)</div><div class="ttdoc">Etat de la base.</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:100</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_aa81b5ba902e1db7f9933fe4d8f32882e"><div class="ttname"><a href="class_contact_b_d_d.html#aa81b5ba902e1db7f9933fe4d8f32882e">ContactBDD::ListeContact</a></div><div class="ttdeci">void ListeContact(std::list&lt; Contact &gt; &amp;) const</div><div class="ttdoc">Liste des contacts. Methode qui permet de recuperer la liste de l'ensemble des contact present dans l...</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:113</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_a7ccb1e9fa160d6026a3854a027bfd601"><div class="ttname"><a href="class_contact_b_d_d.html#a7ccb1e9fa160d6026a3854a027bfd601">ContactBDD::SupprimeContact</a></div><div class="ttdeci">bool SupprimeContact(const int &amp;) const</div><div class="ttdoc">Suppression.</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:278</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_af4198cc56143e7ee244374b05809d301"><div class="ttname"><a href="class_contact_b_d_d.html#af4198cc56143e7ee244374b05809d301">ContactBDD::db</a></div><div class="ttdeci">QSqlDatabase db</div><div class="ttdef"><b>Definition:</b> contactbdd.h:37</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_acc532eeaa500698961bd1cd3de973854"><div class="ttname"><a href="class_contact_b_d_d.html#acc532eeaa500698961bd1cd3de973854">ContactBDD::bddModifContact</a></div><div class="ttdeci">void bddModifContact(int &amp;, Contact &amp;)</div><div class="ttdoc">Slot Modifier un contact . Slot qui reçoit le id d'un contact et un contact afin d'envoyer ceci a la ...</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:266</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_ae1a0d3ecda82c9191d267cc5bcc1a2a3"><div class="ttname"><a href="class_contact_b_d_d.html#ae1a0d3ecda82c9191d267cc5bcc1a2a3">ContactBDD::bddRechercherContact</a></div><div class="ttdeci">void bddRechercherContact(QString &amp;, QString &amp;, QString &amp;, std::list&lt; Contact &gt; &amp;)</div><div class="ttdoc">Slot pour la recherche d'un contact Slot pour rechercher un contact c'est ce slot qu'on appelera dans...</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:394</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_a6764c4ed28c6c001c407dc65902c27c6"><div class="ttname"><a href="class_contact_b_d_d.html#a6764c4ed28c6c001c407dc65902c27c6">ContactBDD::NombreContact</a></div><div class="ttdeci">int NombreContact() const</div><div class="ttdoc">Le nombre de total de contact dans la base.</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:408</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_a5e5e3c2ae8d4ec5d0092af497c703d8b"><div class="ttname"><a href="class_contact_b_d_d.html#a5e5e3c2ae8d4ec5d0092af497c703d8b">ContactBDD::connexionDB</a></div><div class="ttdeci">bool connexionDB()</div><div class="ttdoc">Creer la connexion en ajoutant une des fonction statiques addDatabase.</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:43</div></div>
+<div class="ttc" id="aclass_contact_html"><div class="ttname"><a href="class_contact.html">Contact</a></div><div class="ttdoc">classe répresentant un contact</div><div class="ttdef"><b>Definition:</b> contact.h:20</div></div>
+<div class="ttc" id="acontact_8h_html"><div class="ttname"><a href="contact_8h.html">contact.h</a></div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_a5dee51527412d5b8119d00c0f49cfbef"><div class="ttname"><a href="class_contact_b_d_d.html#a5dee51527412d5b8119d00c0f49cfbef">ContactBDD::ModifContact</a></div><div class="ttdeci">bool ModifContact(const int &amp;, const Contact &amp;) const</div><div class="ttdoc">Modification.</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:231</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_a28dc8793dd96f35c85fdceb269800579"><div class="ttname"><a href="class_contact_b_d_d.html#a28dc8793dd96f35c85fdceb269800579">ContactBDD::ContactBDD</a></div><div class="ttdeci">ContactBDD(QObject *parent=nullptr)</div><div class="ttdoc">Constructeur Constructeur de la classe ContactBDD.</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:16</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_ada052c3f0a553eabedf254bb054f5387"><div class="ttname"><a href="class_contact_b_d_d.html#ada052c3f0a553eabedf254bb054f5387">ContactBDD::RechercherContact</a></div><div class="ttdeci">void RechercherContact(QString &amp;, QString &amp;, QString &amp;, std::list&lt; Contact &gt; &amp;) const</div><div class="ttdoc">Recherche contact Methode qui permet de rechercher un contact dans la base entre deux dates saisies.</div><div class="ttdef"><b>Definition:</b> contactbdd.cpp:324</div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html"><div class="ttname"><a href="class_contact_b_d_d.html">ContactBDD</a></div><div class="ttdoc">Classe qui gère la base de donnée La classe herite d'un QObject, permet de créer des fonctions et des...</div><div class="ttdef"><b>Definition:</b> contactbdd.h:32</div></div>
+<div class="ttc" id="aclass_q_object_html"><div class="ttname"><a href="class_q_object.html">QObject</a></div></div>
+<div class="ttc" id="aclass_contact_b_d_d_html_a30a73c86def34e413988dfcd4591f713"><div class="ttname"><a href="class_contact_b_d_d.html#a30a73c86def34e413988dfcd4591f713">ContactBDD::nombreTotalContact</a></div><div class="ttdeci">void nombreTotalContact(int &amp;)</div><div class="ttdoc">Signal envoyer le nombre total de contact .</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_eeaa8b6f755de179d8d47de1ad4216fb.html">ProjetFinalCDAA</a></li><li class="navelem"><a class="el" href="contactbdd_8h.html">contactbdd.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,474 @@
+\doxysection{Référence de la classe Contact\+B\+DD}
+\label{class_contact_b_d_d}\index{ContactBDD@{ContactBDD}}
+
+
+Classe qui gère la base de donnée La classe herite d\textquotesingle{}un \doxyref{Q\+Object}{p.}{class_q_object}, permet de créer des fonctions et des structures qui dialogue avec notre base d\textquotesingle{}où la création des fonctions C\+R\+U\+D(\+Create,\+Read,\+Update,\+Delete) et recherche .  
+
+
+
+
+{\ttfamily \#include $<$contactbdd.\+h$>$}
+
+
+
+Graphe de collaboration de Contact\+B\+DD\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_contact_b_d_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Connecteurs publics}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ bdd\+Liste\+Contact} (std\+::list$<$ \textbf{ Contact} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Slot liste \doxyref{Contact}{p.}{class_contact} . Slot qui reçoit une liste de contact afin d\textquotesingle{}envoyer ceci a la methode Liste\+Contact(std\+::list$<$\+Contact$>$ \&) \end{DoxyCompactList}\item 
+void \textbf{ bbd\+Nouveau\+Contact} (\textbf{ Contact} \&)
+\begin{DoxyCompactList}\small\item\em Slot Nouveau contact . Slot qui reçoit une contact afin d\textquotesingle{}envoyer ceci a la methode Nouveau\+Contact(\+Contact\& ) \end{DoxyCompactList}\item 
+void \textbf{ bdd\+Modif\+Contact} (int \&, \textbf{ Contact} \&)
+\begin{DoxyCompactList}\small\item\em Slot Modifier un contact . Slot qui reçoit le id d\textquotesingle{}un contact et un contact afin d\textquotesingle{}envoyer ceci a la methode Modif\+Contact(const int \& ,const Contact \&) \end{DoxyCompactList}\item 
+void \textbf{ bdd\+Supprime\+Contact} (int \&)
+\begin{DoxyCompactList}\small\item\em Slot Supprimer un contact . Slot qui reçoit le id d\textquotesingle{}un contact afin d\textquotesingle{}envoyer ceci a la methode Supprime\+Contact(const int \&) \end{DoxyCompactList}\item 
+void \textbf{ bdd\+Rechercher\+Contact} (Q\+String \&, Q\+String \&, Q\+String \&, std\+::list$<$ \textbf{ Contact} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Slot pour la recherche d\textquotesingle{}un contact Slot pour rechercher un contact c\textquotesingle{}est ce slot qu\textquotesingle{}on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale ,on a fait appel à la fonction bdd\+Rechercher\+Contact pour lui donner en parametre les variable suivante \+: nom,date1, date2,la liste des contacts . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signaux}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ nombre\+Total\+Contact} (int \&)
+\begin{DoxyCompactList}\small\item\em Signal envoyer le nombre total de contact . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Liste\+Contact} (std\+::list$<$ \textbf{ Contact} $>$ \&) const
+\begin{DoxyCompactList}\small\item\em Liste des contacts. Methode qui permet de recuperer la liste de l\textquotesingle{}ensemble des contact present dans la base. \end{DoxyCompactList}\item 
+bool \textbf{ Nouveau\+Contact} (const \textbf{ Contact} \&) const
+\begin{DoxyCompactList}\small\item\em Ajout d\textquotesingle{}un contact Methode qui permet d\textquotesingle{}ajouter un contact dans la base. \end{DoxyCompactList}\item 
+bool \textbf{ Modif\+Contact} (const int \&, const \textbf{ Contact} \&) const
+\begin{DoxyCompactList}\small\item\em Modification. \end{DoxyCompactList}\item 
+bool \textbf{ Supprime\+Contact} (const int \&) const
+\begin{DoxyCompactList}\small\item\em Suppression. \end{DoxyCompactList}\item 
+void \textbf{ Rechercher\+Contact} (Q\+String \&, Q\+String \&, Q\+String \&, std\+::list$<$ \textbf{ Contact} $>$ \&) const
+\begin{DoxyCompactList}\small\item\em Recherche contact Methode qui permet de rechercher un contact dans la base entre deux dates saisies. \end{DoxyCompactList}\item 
+int \textbf{ Nombre\+Contact} () const
+\begin{DoxyCompactList}\small\item\em Le nombre de total de contact dans la base. \end{DoxyCompactList}\item 
+\textbf{ Contact\+B\+DD} (\textbf{ Q\+Object} $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructeur Constructeur de la classe \doxyref{Contact\+B\+DD}{p.}{class_contact_b_d_d}. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Contact\+B\+DD} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la classe \doxyref{Contact\+B\+DD}{p.}{class_contact_b_d_d}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ close\+Db} ()
+\begin{DoxyCompactList}\small\item\em Fermeture de la base Methode qui ferme la base quand elle est ouverte. \end{DoxyCompactList}\item 
+bool \textbf{ connexion\+DB} ()
+\begin{DoxyCompactList}\small\item\em Creer la connexion en ajoutant une des fonction statiques add\+Database. \end{DoxyCompactList}\item 
+void \textbf{ is\+D\+Bopen} (bool \&)
+\begin{DoxyCompactList}\small\item\em Etat de la base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Sql\+Database \textbf{ db}
+\item 
+bool \textbf{ db\+Ouvert}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe qui gère la base de donnée La classe herite d\textquotesingle{}un \doxyref{Q\+Object}{p.}{class_q_object}, permet de créer des fonctions et des structures qui dialogue avec notre base d\textquotesingle{}où la création des fonctions C\+R\+U\+D(\+Create,\+Read,\+Update,\+Delete) et recherche . 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\label{class_contact_b_d_d_a28dc8793dd96f35c85fdceb269800579}} 
+\index{ContactBDD@{ContactBDD}!ContactBDD@{ContactBDD}}
+\index{ContactBDD@{ContactBDD}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{ContactBDD()}
+{\footnotesize\ttfamily Contact\+B\+D\+D\+::\+Contact\+B\+DD (\begin{DoxyParamCaption}\item[{\textbf{ Q\+Object} $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructeur Constructeur de la classe \doxyref{Contact\+B\+DD}{p.}{class_contact_b_d_d}. 
+
+implémentation du constructeur avec paramètre .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$parent} & = nullptr\+: par defaut de type \doxyref{Q\+Object}{p.}{class_q_object} .\\
+\hline
+{\em \doxyref{Q\+Object}{p.}{class_q_object}} & $\ast$parent et hérite d\textquotesingle{}un Q\+Objet initialisation du test de la base de donnée à false . Appel de la fonction connexion\+Bdd pour connecter la base de donnée . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_a1cd8be9e04f80c4061457ddde1f04f9f}} 
+\index{ContactBDD@{ContactBDD}!````~ContactBDD@{$\sim$ContactBDD}}
+\index{````~ContactBDD@{$\sim$ContactBDD}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{$\sim$ContactBDD()}
+{\footnotesize\ttfamily Contact\+B\+D\+D\+::$\sim$\+Contact\+B\+DD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur Destructeur de la classe \doxyref{Contact\+B\+DD}{p.}{class_contact_b_d_d}. 
+
+implémentation du destructeur . A la fermeture de la base on libère la memoire en faisant appel à la fonction close\+D\+B().
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\label{class_contact_b_d_d_adef37fb1183502a46db3e07fd97a3a63}} 
+\index{ContactBDD@{ContactBDD}!bbdNouveauContact@{bbdNouveauContact}}
+\index{bbdNouveauContact@{bbdNouveauContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{bbdNouveauContact}
+{\footnotesize\ttfamily void Contact\+B\+D\+D\+::bbd\+Nouveau\+Contact (\begin{DoxyParamCaption}\item[{\textbf{ Contact} \&}]{co }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Nouveau contact . Slot qui reçoit une contact afin d\textquotesingle{}envoyer ceci a la methode Nouveau\+Contact(\+Contact\& ) 
+
+Création d\textquotesingle{}un contact Slot pour créer un contact c\textquotesingle{}est ce slot qu\textquotesingle{}on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Contact\&} & \+: le contact\\
+\hline
+{\em \doxyref{Contact}{p.}{class_contact}} & \&co\+:le contact qu\textquotesingle{}on mettra dans le paramètre de la fonction Nouveau\+Contact lors de son appel . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_ae9e97816b1d250fc5bdbf44ccdb3e474}} 
+\index{ContactBDD@{ContactBDD}!bddListeContact@{bddListeContact}}
+\index{bddListeContact@{bddListeContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{bddListeContact}
+{\footnotesize\ttfamily void Contact\+B\+D\+D\+::bdd\+Liste\+Contact (\begin{DoxyParamCaption}\item[{std\+::list$<$ \textbf{ Contact} $>$ \&}]{co }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot liste \doxyref{Contact}{p.}{class_contact} . Slot qui reçoit une liste de contact afin d\textquotesingle{}envoyer ceci a la methode Liste\+Contact(std\+::list$<$\+Contact$>$ \&) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Contact$>$} & \& \+: liste des contact \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_acc532eeaa500698961bd1cd3de973854}} 
+\index{ContactBDD@{ContactBDD}!bddModifContact@{bddModifContact}}
+\index{bddModifContact@{bddModifContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{bddModifContact}
+{\footnotesize\ttfamily void Contact\+B\+D\+D\+::bdd\+Modif\+Contact (\begin{DoxyParamCaption}\item[{int \&}]{id\+\_\+ancien,  }\item[{\textbf{ Contact} \&}]{co }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Modifier un contact . Slot qui reçoit le id d\textquotesingle{}un contact et un contact afin d\textquotesingle{}envoyer ceci a la methode Modif\+Contact(const int \& ,const Contact \&) 
+
+Modification d\textquotesingle{}un contact Slot pour modifier un contact c\textquotesingle{}est ce slot qu\textquotesingle{}on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \&\+: le id du contact \\
+\hline
+{\em Contact\&} & \+: le contact\\
+\hline
+{\em const} & int \&\+:l\textquotesingle{}identifiant du contact qu\textquotesingle{}on mettra dans le paramètre de la fonction modif\+Contact lors de son appel . \\
+\hline
+{\em \doxyref{Contact}{p.}{class_contact}} & \&co\+:le contact qu\textquotesingle{}on mettra dans le paramètre de la fonction Modif\+Contact lors de son appel . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_ae1a0d3ecda82c9191d267cc5bcc1a2a3}} 
+\index{ContactBDD@{ContactBDD}!bddRechercherContact@{bddRechercherContact}}
+\index{bddRechercherContact@{bddRechercherContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{bddRechercherContact}
+{\footnotesize\ttfamily void Contact\+B\+D\+D\+::bdd\+Rechercher\+Contact (\begin{DoxyParamCaption}\item[{Q\+String \&}]{nom,  }\item[{Q\+String \&}]{date1,  }\item[{Q\+String \&}]{date2,  }\item[{std\+::list$<$ \textbf{ Contact} $>$ \&}]{lc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot pour la recherche d\textquotesingle{}un contact Slot pour rechercher un contact c\textquotesingle{}est ce slot qu\textquotesingle{}on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale ,on a fait appel à la fonction bdd\+Rechercher\+Contact pour lui donner en parametre les variable suivante \+: nom,date1, date2,la liste des contacts . 
+
+\textbackslash{}\+Slot Rechercher un contact . Slot qui recherche un contact par son nom entre 2 dates et ce slot rejoint la methode Recherchercontact(...) 
+\begin{DoxyParams}{Paramètres}
+{\em Q\+String\&\+:la} & premiere date \\
+\hline
+{\em Q\+String\&\+:la} & deuxieme date \\
+\hline
+{\em std\+::list$<$\+Contact$>$} & \&\+:Liste des contact stocke ente ces 2 dates\\
+\hline
+{\em Q\+String} & \& nom \+: le nom du contact à réchercher . \\
+\hline
+{\em Q\+String} & \& date1 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em Q\+String} & \& date2 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em std\+::list$<$\+Contact$>$} & \& lc \+:liste de contacts \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_ad28602fec70582f934af0654188a7fca}} 
+\index{ContactBDD@{ContactBDD}!bddSupprimeContact@{bddSupprimeContact}}
+\index{bddSupprimeContact@{bddSupprimeContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{bddSupprimeContact}
+{\footnotesize\ttfamily void Contact\+B\+D\+D\+::bdd\+Supprime\+Contact (\begin{DoxyParamCaption}\item[{int \&}]{id\+\_\+cont }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Supprimer un contact . Slot qui reçoit le id d\textquotesingle{}un contact afin d\textquotesingle{}envoyer ceci a la methode Supprime\+Contact(const int \&) 
+
+Slot pour la suppression d\textquotesingle{}un contact Slot pour supprimer un contact c\textquotesingle{}est ce slot qu\textquotesingle{}on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \&\+: le id du contact\\
+\hline
+{\em const} & int \&\+:l\textquotesingle{}identifiant du contact à supprimer qu\textquotesingle{}on mettra dans le paramètre de la fonction modif\+Contact lors de l\textquotesingle{}appel appel de la fonction \doxyref{Supprime\+Contact()}{p.}{class_contact_b_d_d_a7ccb1e9fa160d6026a3854a027bfd601} . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_a151335438386a4b19d9c26102717e377}} 
+\index{ContactBDD@{ContactBDD}!closeDb@{closeDb}}
+\index{closeDb@{closeDb}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{closeDb()}
+{\footnotesize\ttfamily Contact\+B\+D\+D\+::close\+Db (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fermeture de la base Methode qui ferme la base quand elle est ouverte. 
+
+fermer la base On teste si le boolean est à true on ferme la base
+
+$<$ Tester si la base est ouverte ou non \mbox{\label{class_contact_b_d_d_a5e5e3c2ae8d4ec5d0092af497c703d8b}} 
+\index{ContactBDD@{ContactBDD}!connexionDB@{connexionDB}}
+\index{connexionDB@{connexionDB}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{connexionDB()}
+{\footnotesize\ttfamily bool Contact\+B\+D\+D\+::connexion\+DB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creer la connexion en ajoutant une des fonction statiques add\+Database. 
+
+Connexion à la base de donnée On met le chemin dans tmp On teste si la base est ouverte \+: si non on retourne false si Oui on crée une table si elle n\textquotesingle{}existe pas et on affiche si la table est bien crée \char`\"{}création de la table réussi \char`\"{} .
+
+Methode qui permet d\textquotesingle{}etablir une connexion dans la base Elle crée par la même occasion une table I\+N\+T\+E\+R\+A\+C\+T\+I\+ON dans la base si elle n\textquotesingle{}existe pas.
+
+\begin{DoxyReturn}{Renvoie}
+true si la connexion à reussie, 
+
+false sinon
+
+db\+Ouvert \+: le booleén à retourner 
+\end{DoxyReturn}
+\mbox{\label{class_contact_b_d_d_aa82eb548f99ae20a9aa2d9d581242fbf}} 
+\index{ContactBDD@{ContactBDD}!isDBopen@{isDBopen}}
+\index{isDBopen@{isDBopen}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{isDBopen()}
+{\footnotesize\ttfamily void Contact\+B\+D\+D\+::is\+D\+Bopen (\begin{DoxyParamCaption}\item[{bool \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Etat de la base. 
+
+Teste on affectera b à b.
+
+Methode qui change l\textquotesingle{}etat de la base
+
+
+\begin{DoxyParams}{Paramètres}
+{\em bool\&} & \+: l\textquotesingle{}etat de la base à changer\\
+\hline
+{\em bool} & \& b \+: le booléan en paramètre . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_aa81b5ba902e1db7f9933fe4d8f32882e}} 
+\index{ContactBDD@{ContactBDD}!ListeContact@{ListeContact}}
+\index{ListeContact@{ListeContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{ListeContact()}
+{\footnotesize\ttfamily Contact\+B\+D\+D\+::\+Liste\+Contact (\begin{DoxyParamCaption}\item[{std\+::list$<$ \textbf{ Contact} $>$ \&}]{lc }\end{DoxyParamCaption}) const}
+
+
+
+Liste des contacts. Methode qui permet de recuperer la liste de l\textquotesingle{}ensemble des contact present dans la base. 
+
+la liste des contacts Slot pour afficher la liste des contacts c\textquotesingle{}est ce slot qu\textquotesingle{}on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .
+
+Affichage d\textquotesingle{}un contact L\textquotesingle{}affichage d\textquotesingle{}un contact en utilisant la requete qui selectionne tous les contacts dans la base de donnée . si l\textquotesingle{}affichage est réussi on récupère tout ce qui caractérise le contact dans la base .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Contact$>$} & \&\+:Liste des contact\\
+\hline
+\end{DoxyParams}
+Ensemble des contacts
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Contact$>$} & \&lc \+: la liste de contact en paramètre on ajoutera le contact dans la liste passé en paramètre .\\
+\hline
+{\em std\+::list$<$\+Contact$>$} & \&co \+: la liste de contact qu\textquotesingle{}on mettra dans le paramètre lors de l\textquotesingle{}appel de la fonction Liste\+Contact \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_a5dee51527412d5b8119d00c0f49cfbef}} 
+\index{ContactBDD@{ContactBDD}!ModifContact@{ModifContact}}
+\index{ModifContact@{ModifContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{ModifContact()}
+{\footnotesize\ttfamily bool Contact\+B\+D\+D\+::\+Modif\+Contact (\begin{DoxyParamCaption}\item[{const int \&}]{id\+\_\+ancien,  }\item[{const \textbf{ Contact} \&}]{co }\end{DoxyParamCaption}) const}
+
+
+
+Modification. 
+
+Modification d\textquotesingle{}un contact La fonction qui nous permet de modifier un contact en tenant compte des contraintes concernant les clés étrangères ou primaires en mettant à jour la liste de contact ein utilisant U\+P\+D\+A\+TE dans la requete .
+
+Methode qui permet de modifier un contact donné dans la base
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \& \+: le id du contac\+Nouveau\+Contactt à modifier \\
+\hline
+{\em Contact\&} & \+: le nouveau contact modifié \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true s\textquotesingle{}il est modifie dans la base 
+
+false sinon
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \& id\+\_\+ancien \+: represente l\textquotesingle{}identifiant du contact à modifier . \\
+\hline
+{\em const} & \doxyref{Contact}{p.}{class_contact} \& co\+: represente le contact qu\textquotesingle{}on utilisera pour recuperer ses setteurs afin de faire la modification du contact dans la base . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_a6764c4ed28c6c001c407dc65902c27c6}} 
+\index{ContactBDD@{ContactBDD}!NombreContact@{NombreContact}}
+\index{NombreContact@{NombreContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{NombreContact()}
+{\footnotesize\ttfamily int Contact\+B\+D\+D\+::\+Nombre\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Le nombre de total de contact dans la base. 
+
+Afficher le nombre total de contact . c\textquotesingle{}est cette fonction qui nous permet d\textquotesingle{}afficher en comptant le nombre total de contact dans la base de donnée contact\+B\+DD pour y arriver on a utilisé count($\ast$) qui permet de compter en sqlite et sql,plus précisement sur notre application lors d\textquotesingle{}un clic sur sur le boutons afficher les contact on voit afficher le nombre total de conatact dans la base de donnée . On le liera dans le main avec sa fonction correspondante .
+
+Methode qui permet de savoir le nombre total de contact dans la base on a utilisé un requete avec count($\ast$) .
+
+\begin{DoxyReturn}{Renvoie}
+le nombre total de contact 
+
+-\/1 sinon
+
+total\+: on a retourné l\textquotesingle{}entier total . 
+\end{DoxyReturn}
+\mbox{\label{class_contact_b_d_d_a30a73c86def34e413988dfcd4591f713}} 
+\index{ContactBDD@{ContactBDD}!nombreTotalContact@{nombreTotalContact}}
+\index{nombreTotalContact@{nombreTotalContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{nombreTotalContact}
+{\footnotesize\ttfamily void Contact\+B\+D\+D\+::nombre\+Total\+Contact (\begin{DoxyParamCaption}\item[{int \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal envoyer le nombre total de contact . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \&\+:un entier en parametre \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_a951bc86a61e65b2ad1fe54b45ab00278}} 
+\index{ContactBDD@{ContactBDD}!NouveauContact@{NouveauContact}}
+\index{NouveauContact@{NouveauContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{NouveauContact()}
+{\footnotesize\ttfamily bool Contact\+B\+D\+D\+::\+Nouveau\+Contact (\begin{DoxyParamCaption}\item[{const \textbf{ Contact} \&}]{co }\end{DoxyParamCaption}) const}
+
+
+
+Ajout d\textquotesingle{}un contact Methode qui permet d\textquotesingle{}ajouter un contact dans la base. 
+
+Création d\textquotesingle{}un contact La fonction qui nous permet d\textquotesingle{}insérer un contact en tenant compte des contraintes concernant les clés étrangères ou primaires.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Contact\&} & \+: le contact a inserer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true s\textquotesingle{}il est inserer dans la base 
+
+false sinon
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & \doxyref{Contact}{p.}{class_contact} \& co\+: le contact qu\textquotesingle{}on utilisera pour recuperer ses setteurs afin de les inserer dans la base . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_ada052c3f0a553eabedf254bb054f5387}} 
+\index{ContactBDD@{ContactBDD}!RechercherContact@{RechercherContact}}
+\index{RechercherContact@{RechercherContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{RechercherContact()}
+{\footnotesize\ttfamily void Contact\+B\+D\+D\+::\+Rechercher\+Contact (\begin{DoxyParamCaption}\item[{Q\+String \&}]{noms,  }\item[{Q\+String \&}]{date1,  }\item[{Q\+String \&}]{date2,  }\item[{std\+::list$<$ \textbf{ Contact} $>$ \&}]{lc }\end{DoxyParamCaption}) const}
+
+
+
+Recherche contact Methode qui permet de rechercher un contact dans la base entre deux dates saisies. 
+
+Rechercher contact par le nom c\textquotesingle{}est cette fonction qui nous permet de rechercher un contact par son nom dans la liste des contacts entre deux dates . On rentrera l\textquotesingle{}intervalle à rechercher et le nom en Selectionnant la table où le nom entrer par l\textquotesingle{}utilisateur correspond à un nom dans la liste contact \+: on l\textquotesingle{}affiche sinon on affiche rien tout en triant par date de création .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Q\+String\&\+:la} & premiere date \\
+\hline
+{\em Q\+String\&\+:la} & deuxieme date \\
+\hline
+{\em std\+::list$<$\+Contact$>$} & \&\+:Liste des contact stocke entre ces 2 dates\\
+\hline
+{\em Q\+String} & \& noms\+: le nom du contact à réchercher . \\
+\hline
+{\em Q\+String} & \& date1 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em Q\+String} & \& date2 \+: la date qui represente le premier intervalle . \\
+\hline
+{\em std\+::list$<$\+Contact$>$} & \& lc \+:liste de contacts \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_contact_b_d_d_a7ccb1e9fa160d6026a3854a027bfd601}} 
+\index{ContactBDD@{ContactBDD}!SupprimeContact@{SupprimeContact}}
+\index{SupprimeContact@{SupprimeContact}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{SupprimeContact()}
+{\footnotesize\ttfamily bool Contact\+B\+D\+D\+::\+Supprime\+Contact (\begin{DoxyParamCaption}\item[{const int \&}]{id\+\_\+cont }\end{DoxyParamCaption}) const}
+
+
+
+Suppression. 
+
+Supprimer un contact La fonction qui nous permet de supprimer un contact en tenant compte des contraintes concernant les clés étrangères ou primaires en supprimant toutes ces intéractions et taches en utilisant la requete \char`\"{}\+D\+E\+L\+E\+T\+E\char`\"{} .
+
+Methode qui permet de supprimer un contact donné dans la base
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Contact\&} & \+: le contact à supprimer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true s\textquotesingle{}il est supprimé dans la base 
+
+false sinon
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \& id\+\_\+cont\+: l\textquotesingle{}identifiant du contact à supprimer . \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\label{class_contact_b_d_d_af4198cc56143e7ee244374b05809d301}} 
+\index{ContactBDD@{ContactBDD}!db@{db}}
+\index{db@{db}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{db}
+{\footnotesize\ttfamily Q\+Sql\+Database Contact\+B\+D\+D\+::db\hspace{0.3cm}{\ttfamily [private]}}
+
+connexion a la base de donnee \mbox{\label{class_contact_b_d_d_a0b8b10a1e971d7e2120a291527e3ae74}} 
+\index{ContactBDD@{ContactBDD}!dbOuvert@{dbOuvert}}
+\index{dbOuvert@{dbOuvert}!ContactBDD@{ContactBDD}}
+\doxysubsubsection{dbOuvert}
+{\footnotesize\ttfamily bool Contact\+B\+D\+D\+::db\+Ouvert\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ contactbdd.\+h}\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ contactbdd.\+cpp}\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ interactionbdd.\+cpp}\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ todobdd.\+cpp}\end{DoxyCompactItemize}

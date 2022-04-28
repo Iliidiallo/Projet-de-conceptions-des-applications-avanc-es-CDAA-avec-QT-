@@ -1,0 +1,896 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_interaction_b_d_d" kind="class" language="C++" prot="public">
+    <compoundname>InteractionBDD</compoundname>
+    <basecompoundref refid="class_q_object" prot="public" virt="non-virtual">QObject</basecompoundref>
+    <includes refid="interactionbdd_8h" local="no">interactionbdd.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_interaction_b_d_d_1a402677a5969ea7957b96a303408f662c" prot="private" static="no" mutable="no">
+        <type>QSqlDatabase</type>
+        <definition>QSqlDatabase InteractionBDD::db</definition>
+        <argsstring></argsstring>
+        <name>db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>connexion a la base de donnee </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="33" column="22" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_interaction_b_d_d_1a69843a5b51a75c92efc34fea62af6afe" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool InteractionBDD::dbOuvert</definition>
+        <argsstring></argsstring>
+        <name>dbOuvert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Savoir si la base est ouverte ou non </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="34" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_interaction_b_d_d_1a64b203fa6787ee7bfd2414156fdcc7f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InteractionBDD::closeDb</definition>
+        <argsstring>()</argsstring>
+        <name>closeDb</name>
+        <briefdescription>
+<para>Fermeture de la base Methode qui ferme la base si elle est ouverte. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="39" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="446" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_b_d_d_1ad13b14e7eaae94a2886a42fccb1ef943" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool InteractionBDD::connexion</definition>
+        <argsstring>()</argsstring>
+        <name>connexion</name>
+        <briefdescription>
+<para>Creer la connexion Methode qui permet d&apos;etablir une connexion avec la base et elle crée une table INTERACTION dans la base si elle n&apos;existe pas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Connexion à la base de donnée On le nom de la base avec l&apos;extension sqlite dans le tmp On teste si la base est ouverte : si non on retourne false si Oui on crée une table si elle n&apos;existe pas et on affiche si la table est bien crée &quot;création de la table réussi &quot; .</para>
+<para><simplesect kind="return"><para>true si la connexion à reussie, </para>
+</simplesect>
+<simplesect kind="return"><para>false sinon</para>
+</simplesect>
+<simplesect kind="return"><para>dbOuvert : le booleén à retourner </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="47" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="44" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_b_d_d_1aa062c90c41501eaef72fa351b6ee1bb7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>InteractionBDD::isDBopen</definition>
+        <argsstring>(bool &amp;)</argsstring>
+        <name>isDBopen</name>
+        <param>
+          <type>bool &amp;</type>
+          <defname>b</defname>
+        </param>
+        <briefdescription>
+<para>Etat de la base Methode qui change l&apos;etat de la base. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Teste on affectera b à b.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: l&apos;etat de la base à changer</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; b : le booléan en paramètre . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="53" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="460" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_b_d_d_1a76e7837e9f68dee0307dce730fae1715" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool InteractionBDD::AjoutInteraction</definition>
+        <argsstring>(const int &amp;, Interaction &amp;)</argsstring>
+        <name>AjoutInteraction</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type><ref refid="class_interaction" kindref="compound">Interaction</ref> &amp;</type>
+          <defname>inter</defname>
+        </param>
+        <briefdescription>
+<para>Ajout d&apos;une <ref refid="class_interaction" kindref="compound">Interaction</ref> Methode qui permet d&apos;ajouter une interaction pour un contact. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Création d&apos;une intéraction La fonction qui nous permet de créer ou inserer une intéraction en tenant compte des contraintes concernant les clés étrangères ou primaires.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_interaction" kindref="compound">Interaction</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:l&apos;interaction à inserer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;: l&apos;id du contact courant </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true s&apos;il est inserer dans la base </para>
+</simplesect>
+<simplesect kind="return"><para>false sinon</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_interaction" kindref="compound">Interaction</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; inter: representera l&apos;intéraction qui sera ajouté . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; id : representera l&apos;identifiant du contact pour lui ajouter l&apos;intéraction . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="62" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="87" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_b_d_d_1a57ead9ad7c558da79427fc7b9facb216" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InteractionBDD::ListeInteraction</definition>
+        <argsstring>(const int &amp;, std::list&lt; Interaction &gt; &amp;) const</argsstring>
+        <name>ListeInteraction</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_interaction" kindref="compound">Interaction</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Liste des Intéractions . Methode qui permet de recuperer la liste des interactions d&apos;un contact selectionné </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:Liste des Interactions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;: l&apos;identifiant du contact </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="69" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="134" bodyend="172"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_interaction_b_d_d_1a224f06c30653cfa17c94136c8579c6f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InteractionBDD::ListeInteractionALL</definition>
+        <argsstring>(std::list&lt; Interaction &gt; &amp;) const</argsstring>
+        <name>ListeInteractionALL</name>
+        <param>
+          <type>std::list&lt; <ref refid="class_interaction" kindref="compound">Interaction</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Liste des Intéractions . Methode qui permet de recuperer la liste des interactions de tous les contacts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Affichage toutes les interactions de tous les contacts . On affiche toutes les intéractions en selectionnant toute la table INTERACTION et on l&apos;affiche .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:Liste des Interactions</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li : la liste des intéractions en paramètre. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="76" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="196" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_b_d_d_1ae0dc4f28eff6f2e47b3cc43bffecefc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InteractionBDD::RechercheInteraction</definition>
+        <argsstring>(QString &amp;, QString &amp;, std::list&lt; Interaction &gt; &amp;)</argsstring>
+        <name>RechercheInteraction</name>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date1</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date2</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_interaction" kindref="compound">Interaction</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Rechercher des Intéractions entre deux dates . La Méthode qui permet de rechercher entre deux dates les interactions de tous les contacts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rechercher les intéractions entre deux dates c&apos;est cette fonction qui nous permet de rechercher des intéractions entre deux dates . On rentrera l&apos;intervalle à rechercher en Selectionnant la table: on n&apos;affiche rien si les intérations n&apos;existent pas entre ces dates si oui on affiche toutes les intéractions entre ces dates en triant les dates avec sort() par date de création .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:Liste des Interactions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: la premiere date de type Qstring . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: la deuxieme date de type Qstring.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date1 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date2 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li :liste de contacts </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="84" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="266" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_b_d_d_1ab22d580cf329ca70d6a148bf07fd89ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InteractionBDD::RechercheInteractionCont</definition>
+        <argsstring>(int &amp;, QString &amp;, QString &amp;, std::list&lt; Interaction &gt; &amp;)</argsstring>
+        <name>RechercheInteractionCont</name>
+        <param>
+          <type>int &amp;</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date1</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date2</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_interaction" kindref="compound">Interaction</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Rechercher des Intéractions entre deux dates pour un contact . La Méthode qui permet de rechercher entre deux dates les interactions d&apos;un contact. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rechercher les intéractions entre deux dates pour un contact c&apos;est cette fonction qui nous permet de rechercher des intéractions entre deux dates pour un contact selectionné . On rentrera l&apos;intervalle à rechercher on selectionnera dans la comboBox le contact on appuyera sur le bouton rechercher . Cette requete nous permet de selectionner pour une interaction son identifiant et l&apos;identifiant de son concat en faisant le test quand l&apos;identifiant du contact de l&apos;intéraction est égale à l&apos;identifiant du contact . on n&apos;affiche rien si les intérations n&apos;existent pas entre ces dates pour le contatc si oui on affiche toutes les intéractions entre ces dates en triant les dates avec sort() par date de création .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: l&apos;identifiant d&apos;un contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;:Liste des Interactions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: la premiere date de type Qstring . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: la deuxieme date de type Qstring.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; id: l&apos;identifiant du contact pour le quel on fera la recherche . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date1 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date2 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li :liste de contacts </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="93" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="353" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_b_d_d_1aa8857fc22387bd10c0c56c834469833e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InteractionBDD::InteractionBDD</definition>
+        <argsstring>(QObject *parent=nullptr)</argsstring>
+        <name>InteractionBDD</name>
+        <param>
+          <type><ref refid="class_q_object" kindref="compound">QObject</ref> *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Constructeur Constructeur de la classe <ref refid="class_interaction_b_d_d" kindref="compound">InteractionBDD</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du constructeur avec paramètre .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>= nullptr: par defaut</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_q_object" kindref="compound">QObject</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*parent et hérite d&apos;un QObjet initialisation du test de la base de donnée à false . Appel de la fonction <ref refid="class_interaction_b_d_d_1ad13b14e7eaae94a2886a42fccb1ef943" kindref="member">connexion()</ref> pour connecter la base de donnée . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="100" column="19" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_b_d_d_1aa1e7b5ec142aa21d7692479c0d9795ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InteractionBDD::~InteractionBDD</definition>
+        <argsstring>()</argsstring>
+        <name>~InteractionBDD</name>
+        <briefdescription>
+<para>Destructeur Le Destructeur de la classe <ref refid="class_interaction_b_d_d" kindref="compound">InteractionBDD</ref> càd la fonction qui libère la memoire utilisé . </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du destructeur . A la fermeture de la base on libère la memoire en faisant appel à la fonction closeDB().</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="105" column="11" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_interaction_b_d_d_1acec24a8b0b2ae6c4054b600a09f5c4b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InteractionBDD::bddAjoutInteraction</definition>
+        <argsstring>(int &amp;, Interaction &amp;)</argsstring>
+        <name>bddAjoutInteraction</name>
+        <param>
+          <type>int &amp;</type>
+          <defname>i</defname>
+        </param>
+        <param>
+          <type><ref refid="class_interaction" kindref="compound">Interaction</ref> &amp;</type>
+          <defname>inter</defname>
+        </param>
+        <briefdescription>
+<para>Slot Ajout interaction . slot qui permet d&apos;ajouter une intéraction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Ajout de l&apos;intéraction Slot pour ajouter une intéraction pour un contact , c&apos;est ce slot qu&apos;on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : l&apos;identifiant du contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_interaction" kindref="compound">Interaction</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : l&apos;interaction</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_interaction" kindref="compound">Interaction</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; inter: representera l&apos;intéraction qui sera ajouté . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; id : representera l&apos;identifiant du contact pour lui ajouter l&apos;intéraction . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="116" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_interaction_b_d_d_1a751ad1176044e26c0aa9a52570b77324" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InteractionBDD::bddListeInteraction</definition>
+        <argsstring>(int &amp;, std::list&lt; Interaction &gt; &amp;)</argsstring>
+        <name>bddListeInteraction</name>
+        <param>
+          <type>int &amp;</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_interaction" kindref="compound">Interaction</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Slot liste <ref refid="class_interaction" kindref="compound">Interaction</ref> . slot qui permet d&apos;afficher la liste d&apos;intéraction pour un contact selectionné </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Slot afficher la liste des intéractions Slot pour afficher les intéractions pour un contact , c&apos;est ce slot qu&apos;on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: l&apos;identifiant d&apos;un contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : liste des Intéractions</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li: represente une liste d&apos;intéraction </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; id : represente l&apos;identifiant du contact pour lui afficher ses intéractions . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="123" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="183" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_interaction_b_d_d_1ac854ce90d6b76ac533773da677312db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InteractionBDD::bddListeInteractionALL</definition>
+        <argsstring>(std::list&lt; Interaction &gt; &amp;)</argsstring>
+        <name>bddListeInteractionALL</name>
+        <param>
+          <type>std::list&lt; <ref refid="class_interaction" kindref="compound">Interaction</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Slot liste de toutes les Interactions . slot qui permet d&apos;afficher toutes les intéractions de tous les contacts . </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Slot afficher toutes les intéractions Slot pour afficher toutes les intéractions de tous les contacts , c&apos;est ce slot qu&apos;on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : liste des Intéractions</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li: c&apos;est la liste qu&apos;on met dans le paramètre de la fonction ListeInteractionALL pour nous afficher toutes ses d&apos;intéractions </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="129" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_interaction_b_d_d_1a684ae19751f57b0f38ae1f5c76ba4e36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InteractionBDD::bddRechercheInteraction</definition>
+        <argsstring>(QString &amp;, QString &amp;, std::list&lt; Interaction &gt; &amp;)</argsstring>
+        <name>bddRechercheInteraction</name>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date1</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date2</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_interaction" kindref="compound">Interaction</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Slot Recherche <ref refid="class_interaction" kindref="compound">Interaction</ref> . Slot qui permet de rechercher les intéractions pour tous les contacts entre deux dates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Slot afficher les intéractions entre deux dates . Slot qui nous permet d&apos;afficher entre deux dates les intéractions ,c&apos;est ce slot qu&apos;on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la première date </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la deuxième date </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : liste des Intéractions</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date1 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date2 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li :liste de contacts ces paramètre qu&apos;on utilisera dans la fonction recherche intéraction lors de son appel dans le slot . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="137" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="332" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_interaction_b_d_d_1af4c781d9f5a7432787ed684f6172df36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InteractionBDD::bddRechercheInteractionCont</definition>
+        <argsstring>(int &amp;, QString &amp;, QString &amp;, std::list&lt; Interaction &gt; &amp;)</argsstring>
+        <name>bddRechercheInteractionCont</name>
+        <param>
+          <type>int &amp;</type>
+          <defname>id</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date1</defname>
+        </param>
+        <param>
+          <type>QString &amp;</type>
+          <defname>date2</defname>
+        </param>
+        <param>
+          <type>std::list&lt; <ref refid="class_interaction" kindref="compound">Interaction</ref> &gt; &amp;</type>
+          <defname>li</defname>
+        </param>
+        <briefdescription>
+<para>Slot Recherche <ref refid="class_interaction" kindref="compound">Interaction</ref> d&apos;un contact . Slot qui permet de rechercher les intéractions d&apos;un contact entre deux dates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Slot afficher les intéractions entre deux dates pour un contact . Slot qui nous permet d&apos;afficher entre deux dates les intéractions pour un contact ,c&apos;est ce slot qu&apos;on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; :identifiant du contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la première date </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la deuxième date </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Interaction&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; : liste des Intéractions</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; id: l&apos;identifiant du contact pour le quel on fera la recherche . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date1 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>QString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; date2 : la date qui represente le premier intervalle . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::list&lt;Contact&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; li :liste de contacts ces paramètres qu&apos;on utilisera dans la fonction recherche intéraction lors de son appel dans le slot . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="146" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="425" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_interaction_b_d_d_1af1ff5f013d461ddb1095191e672c821d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>InteractionBDD::isOpen</definition>
+        <argsstring>(bool &amp;)</argsstring>
+        <name>isOpen</name>
+        <param>
+          <type>bool &amp;</type>
+          <defname>b</defname>
+        </param>
+        <briefdescription>
+<para>Etat de la base. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Teste on affectera b à b.</para>
+<para>Methode qui change l&apos;etat de la base</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: l&apos;etat de la base à changer</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp; b : le booléan en paramètre . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="155" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp" bodystart="435" bodyend="438"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe interaction de la base de donnée La classe herite d&apos;un <ref refid="class_q_object" kindref="compound">QObject</ref>, permet d&apos;ajouter des interactions pour un contact donné en la stockant dans la base de donnée . </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>InteractionBDD</label>
+        <link refid="class_interaction_b_d_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+        <link refid="class_q_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>InteractionBDD</label>
+        <link refid="class_interaction_b_d_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+        <link refid="class_q_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" line="29" column="1" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h" bodystart="28" bodyend="156"/>
+    <listofallmembers>
+      <member refid="class_interaction_b_d_d_1a76e7837e9f68dee0307dce730fae1715" prot="private" virt="non-virtual"><scope>InteractionBDD</scope><name>AjoutInteraction</name></member>
+      <member refid="class_interaction_b_d_d_1acec24a8b0b2ae6c4054b600a09f5c4b1" prot="public" virt="non-virtual"><scope>InteractionBDD</scope><name>bddAjoutInteraction</name></member>
+      <member refid="class_interaction_b_d_d_1a751ad1176044e26c0aa9a52570b77324" prot="public" virt="non-virtual"><scope>InteractionBDD</scope><name>bddListeInteraction</name></member>
+      <member refid="class_interaction_b_d_d_1ac854ce90d6b76ac533773da677312db0" prot="public" virt="non-virtual"><scope>InteractionBDD</scope><name>bddListeInteractionALL</name></member>
+      <member refid="class_interaction_b_d_d_1a684ae19751f57b0f38ae1f5c76ba4e36" prot="public" virt="non-virtual"><scope>InteractionBDD</scope><name>bddRechercheInteraction</name></member>
+      <member refid="class_interaction_b_d_d_1af4c781d9f5a7432787ed684f6172df36" prot="public" virt="non-virtual"><scope>InteractionBDD</scope><name>bddRechercheInteractionCont</name></member>
+      <member refid="class_interaction_b_d_d_1a64b203fa6787ee7bfd2414156fdcc7f7" prot="private" virt="non-virtual"><scope>InteractionBDD</scope><name>closeDb</name></member>
+      <member refid="class_interaction_b_d_d_1ad13b14e7eaae94a2886a42fccb1ef943" prot="private" virt="non-virtual"><scope>InteractionBDD</scope><name>connexion</name></member>
+      <member refid="class_interaction_b_d_d_1a402677a5969ea7957b96a303408f662c" prot="private" virt="non-virtual"><scope>InteractionBDD</scope><name>db</name></member>
+      <member refid="class_interaction_b_d_d_1a69843a5b51a75c92efc34fea62af6afe" prot="private" virt="non-virtual"><scope>InteractionBDD</scope><name>dbOuvert</name></member>
+      <member refid="class_interaction_b_d_d_1aa8857fc22387bd10c0c56c834469833e" prot="public" virt="non-virtual"><scope>InteractionBDD</scope><name>InteractionBDD</name></member>
+      <member refid="class_interaction_b_d_d_1aa062c90c41501eaef72fa351b6ee1bb7" prot="private" virt="non-virtual"><scope>InteractionBDD</scope><name>isDBopen</name></member>
+      <member refid="class_interaction_b_d_d_1af1ff5f013d461ddb1095191e672c821d" prot="public" virt="non-virtual"><scope>InteractionBDD</scope><name>isOpen</name></member>
+      <member refid="class_interaction_b_d_d_1a57ead9ad7c558da79427fc7b9facb216" prot="private" virt="non-virtual"><scope>InteractionBDD</scope><name>ListeInteraction</name></member>
+      <member refid="class_interaction_b_d_d_1a224f06c30653cfa17c94136c8579c6f7" prot="public" virt="non-virtual"><scope>InteractionBDD</scope><name>ListeInteractionALL</name></member>
+      <member refid="class_interaction_b_d_d_1ae0dc4f28eff6f2e47b3cc43bffecefc5" prot="public" virt="non-virtual"><scope>InteractionBDD</scope><name>RechercheInteraction</name></member>
+      <member refid="class_interaction_b_d_d_1ab22d580cf329ca70d6a148bf07fd89ad" prot="public" virt="non-virtual"><scope>InteractionBDD</scope><name>RechercheInteractionCont</name></member>
+      <member refid="class_interaction_b_d_d_1aa1e7b5ec142aa21d7692479c0d9795ab" prot="public" virt="non-virtual"><scope>InteractionBDD</scope><name>~InteractionBDD</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

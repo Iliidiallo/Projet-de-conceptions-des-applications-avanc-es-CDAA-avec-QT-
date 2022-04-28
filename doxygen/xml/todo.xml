@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Liste des choses à faire</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Membre <ref refid="class_fenetre_principale_1a2efe98d02c2dc4e06d88c1fdc6270a7f" kindref="member">FenetrePrincipale::ListeTodos</ref>  ()</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000001"/> </para>
+<para><anchor id="todo_1_todo000004"/> </para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,364 @@
+.TH "Date" 3 "Jeudi 16 Décembre 2021" "DoxygenFinal" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Date \- la classe reprensentant la \fBDate\fP La classe date nous permet de definir la date courante et les differentes utilisations que nous auront a faire\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Date\&.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBDate\fP ()"
+.br
+.RI "Constructeur Constructeur de la classe \fBDate\fP\&. "
+.ti -1c
+.RI "\fBDate\fP (const int &, const int &, const int &)"
+.br
+.RI "constructeur "
+.ti -1c
+.RI "int \fBgetJourtm\fP () const"
+.br
+.RI "Accesseurs\&. "
+.ti -1c
+.RI "int \fBgetMoistm\fP () const"
+.br
+.RI "Recupère le mois dans la structure tm\&. "
+.ti -1c
+.RI "int \fBgetAnneetm\fP () const"
+.br
+.RI "Recupère l'année dans la structure tm\&. "
+.ti -1c
+.RI "int \fBgetJour\fP () const"
+.br
+.RI "Recupère le jour pour la date;\&. "
+.ti -1c
+.RI "int \fBgetMois\fP () const"
+.br
+.RI "Recupère le mois pour la date ;\&. "
+.ti -1c
+.RI "int \fBgetAnnee\fP () const"
+.br
+.RI "Recupère l'année pour la date ;\&. "
+.ti -1c
+.RI "void \fBsetJour\fP (const int &)"
+.br
+.RI "modifier le jour de la date "
+.ti -1c
+.RI "void \fBsetMois\fP (const int &)"
+.br
+.RI "modifier le mois de la date "
+.ti -1c
+.RI "void \fBsetAnnee\fP (const int &)"
+.br
+.RI "modifier l'année de la date "
+.ti -1c
+.RI "void \fBfromDate\fP (const int &, const int &, const int &)"
+.br
+.RI "methode pour remplir la date La méthode fromDate qui recoit en parametre le jour ,mois,annee afin definir une date en se referant de la date du jour avec la stucture date et enfin on affectera aux attributs respectivement \fBgetJourtm()\fP,\fBgetMoistm()\fP,getAnneetm\&. "
+.ti -1c
+.RI "std::string \fBfromDateString\fP () const"
+.br
+.RI "Conversion La méthode convertie la date en string \&. "
+.ti -1c
+.RI "\fBDate\fP \fBtoDateString\fP (const std::string &) const"
+.br
+.RI "Conversion La méthode convertie le string en type date \&. "
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBDate\fP &) const"
+.br
+.RI "comparaison de date La Methode pour comparer une date courante et une date entré en parametre "
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "struct tm * \fBdate\fP"
+.br
+.ti -1c
+.RI "int \fBjour\fP"
+.br
+.ti -1c
+.RI "int \fBmois\fP"
+.br
+.ti -1c
+.RI "int \fBannee\fP"
+.br
+.in -1c
+.SS "Amis"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &, const \fBDate\fP &)"
+.br
+.RI "L'affichage d'une date Afficher une date a cette forme par exemple le 01/01/2021 \&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+la classe reprensentant la \fBDate\fP La classe date nous permet de definir la date courante et les differentes utilisations que nous auront a faire\&. 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Date::Date ()"
+
+.PP
+Constructeur Constructeur de la classe \fBDate\fP\&. implémentation du constructeur par défaut \&. 
+.SS "Date::Date (const int & a, const int & m, const int & j)"
+
+.PP
+constructeur implémentation du constructeur avec paramètre en faisant appel à la methode \fBfromDate()\fP\&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int & : initialise le jour d'une date \&. 
+.br
+\fIconst\fP int & : initialise le mois d'une date \&. 
+.br
+\fIconst\fP int & : initialis l'année d'une date \&.
+.br
+\fIconst\fP int &a: elle remplacera l'année courante \&. 
+.br
+\fIconst\fP int &m : elle remplacera le mois courant \&. 
+.br
+\fIconst\fP int &j : elle remplacera le jour courant \&. 
+.RE
+.PP
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void Date::fromDate (const int & J, const int & M, const int & A)"
+
+.PP
+methode pour remplir la date La méthode fromDate qui recoit en parametre le jour ,mois,annee afin definir une date en se referant de la date du jour avec la stucture date et enfin on affectera aux attributs respectivement \fBgetJourtm()\fP,\fBgetMoistm()\fP,getAnneetm\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int &: pour gérer le jour \&. 
+.br
+\fIconst\fP int&: pour gérer le mois \&. 
+.br
+\fIconst\fP int&: pour gérer l'année\&.
+.br
+\fIconst\fP int &J: pour gérer le jour \&. 
+.br
+\fIconst\fP int &M: pour gérer le mois \&. 
+.br
+\fIconst\fP int &A: pour gérer l'année\&. 
+.RE
+.PP
+
+.SS "std::string Date::fromDateString () const"
+
+.PP
+Conversion La méthode convertie la date en string \&. Conversion La méthode qui convertie la date en string \&. pas de paramètre, fonction const\&.
+.PP
+\fBRenvoie\fP
+.RS 4
+std::to_string(getAnnee())+'-'+momois+'-'+mojour : après avoir converti en string la date on l'a retourne sous ce format ( jj-mm-aaaa ) ; 
+.RE
+.PP
+
+.SS "int Date::getAnnee () const"
+
+.PP
+Recupère l'année pour la date ;\&. accesseur 'Année' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+l'année de la date
+.PP
+l'année \&. 
+.RE
+.PP
+
+.SS "int Date::getAnneetm () const"
+
+.PP
+Recupère l'année dans la structure tm\&. accesseur de la structure 'Année' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+l'année de la structure tm ;
+.PP
+l'année en utilisant la structure \&. 
+.RE
+.PP
+
+.SS "int Date::getJour () const"
+
+.PP
+Recupère le jour pour la date;\&. accesseur 'Jour' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+le jour de la date
+.PP
+le jour \&. 
+.RE
+.PP
+
+.SS "int Date::getJourtm () const"
+
+.PP
+Accesseurs\&. accesseur de la structure 'Jour' pas de paramètre, fonction const
+.PP
+methode pour recuperer le jour de la structure tm ;
+.PP
+Recupère le jour dans la structure tm 
+.PP
+\fBRenvoie\fP
+.RS 4
+le jour de la structure tm ;
+.PP
+le jour en utilisant la structure \&. 
+.RE
+.PP
+
+.SS "int Date::getMois () const"
+
+.PP
+Recupère le mois pour la date ;\&. accesseur 'Mois' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+le mois de la date
+.PP
+le Mois \&. 
+.RE
+.PP
+
+.SS "int Date::getMoistm () const"
+
+.PP
+Recupère le mois dans la structure tm\&. accesseur de la structure 'Mois' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+le mois de la structure tm ;
+.PP
+le mois en utilisant la structure \&. 
+.RE
+.PP
+
+.SS "bool Date::operator< (const \fBDate\fP & da) const"
+
+.PP
+comparaison de date La Methode pour comparer une date courante et une date entré en parametre test de comparaison entre 2 dates
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP \fBDate\fP& une date en parametre pour qu'on puisse la comparer à la date courante
+.br
+\fIconst\fP \fBDate\fP &da: la date à comparer avec la date courante 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+un booléen VRAI si égalité 
+.PP
+un booléen FAUX si non égalité 
+.RE
+.PP
+
+.SS "void Date::setAnnee (const int & a)"
+
+.PP
+modifier l'année de la date implémentation du mutateur 'Année' en faisant appel à \fBfromDate()\fP \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int & :l'année à modifier
+.br
+\fIconst\fP int &a : il remplacera l'année courante \&. 
+.RE
+.PP
+
+.SS "void Date::setJour (const int & j)"
+
+.PP
+modifier le jour de la date implémentation du mutateur 'Jour' en faisant appel à \fBfromDate()\fP \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int & :le jour à modifier
+.br
+\fIconst\fP int &j : il remplacera le jour courant \&. 
+.RE
+.PP
+
+.SS "void Date::setMois (const int & m)"
+
+.PP
+modifier le mois de la date implémentation du mutateur 'Mois' en faisant appel à \fBfromDate()\fP \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int & :la date à modifier
+.br
+\fIconst\fP int &m : il remplacera le Mois courant \&. 
+.RE
+.PP
+
+.SS "\fBDate\fP Date::toDateString (const std::string & dat) const"
+
+.PP
+Conversion La méthode convertie le string en type date \&. Conversion La méthode qui convertie le String en type date en utilisant la fonction substr pour découper les chaines et aussion a utilisé stoi pour convertir la date en int\&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP std::string & : pour gérer la chaine de caractère \&.
+.br
+\fIconst\fP std::string &dat : la date à convertir \&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+d : on retourne la date convertie pour pouvoir l'insérer dans la base normalement \&. 
+.RE
+.PP
+
+.SH "Documentation des fonctions amies et associées"
+.PP 
+.SS "std::ostream& operator<< (std::ostream & os, const \fBDate\fP & temp)\fC [friend]\fP"
+
+.PP
+L'affichage d'une date Afficher une date a cette forme par exemple le 01/01/2021 \&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::ostream\fP &: il nous permetra de faire un affichage \&. 
+.br
+\fIconst\fP \fBDate\fP &: il nous permet d'afficher une date càd jour mois année \&.
+.br
+\fIstd,:\fP ostream &os :la bibliothèque ostream 
+.br
+\fIconst\fP \fBDate\fP &temp :la date à afficher sous ce format jj-mm-aaaa \&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+os : pour l'affichage d'une date \&. 
+.RE
+.PP
+
+.SH "Documentation des données membres"
+.PP 
+.SS "int Date::annee\fC [private]\fP"
+un attribut de type int qui permet de gerer l'annee \&. 
+.SS "struct tm* Date::date\fC [private]\fP"
+une structure tm qui nous permet de gerer la date 
+.br
+ 
+.SS "int Date::jour\fC [private]\fP"
+un attribut de type int qui nous permet de gerer le jour 
+.br
+ 
+.SS "int Date::mois\fC [private]\fP"
+un attribut de type int qui permet de gerer le mois \&. 
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour DoxygenFinal à partir du code source\&.

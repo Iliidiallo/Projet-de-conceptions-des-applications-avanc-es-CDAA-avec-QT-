@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_q_object" kind="class" language="C++" prot="public">
+    <compoundname>QObject</compoundname>
+    <derivedcompoundref refid="class_contact_b_d_d" prot="public" virt="non-virtual">ContactBDD</derivedcompoundref>
+    <derivedcompoundref refid="class_interaction_b_d_d" prot="public" virt="non-virtual">InteractionBDD</derivedcompoundref>
+    <derivedcompoundref refid="class_todo_b_d_d" prot="public" virt="non-virtual">TodoBDD</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>InteractionBDD</label>
+        <link refid="class_interaction_b_d_d"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>QObject</label>
+        <link refid="class_q_object"/>
+      </node>
+      <node id="4">
+        <label>TodoBDD</label>
+        <link refid="class_todo_b_d_d"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ContactBDD</label>
+        <link refid="class_contact_b_d_d"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>QObject</label>
+        <link refid="class_q_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/todobdd.h" line="29" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

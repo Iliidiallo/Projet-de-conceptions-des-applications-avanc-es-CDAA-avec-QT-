@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="interactionbdd_8h" kind="file" language="C++">
+    <compoundname>interactionbdd.h</compoundname>
+    <includes refid="_interaction_8h" local="yes">Interaction.h</includes>
+    <includes local="no">QObject</includes>
+    <includes local="no">QDate</includes>
+    <includes local="no">QtSql/QSqlDatabase</includes>
+    <includes local="no">QDebug</includes>
+    <includes local="no">QtSql/QSqlQuery</includes>
+    <includes local="no">list</includes>
+    <includes local="no">QString</includes>
+    <includes local="no">string</includes>
+    <includes local="no">QVariant</includes>
+    <includedby refid="fenetreprincipale_8h" local="no">/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.h</includedby>
+    <includedby refid="interactionbdd_8cpp" local="yes">/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp</includedby>
+    <includedby refid="main_8cpp" local="no">/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>list</label>
+      </node>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h</label>
+        <link refid="interactionbdd_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>QObject</label>
+      </node>
+      <node id="9">
+        <label>QtSql/QSqlDatabase</label>
+      </node>
+      <node id="11">
+        <label>QtSql/QSqlQuery</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>Interaction.h</label>
+        <link refid="_interaction_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ostream</label>
+      </node>
+      <node id="5">
+        <label>Date.h</label>
+        <link refid="_date_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ctime</label>
+      </node>
+      <node id="10">
+        <label>QDebug</label>
+      </node>
+      <node id="8">
+        <label>QDate</label>
+      </node>
+      <node id="13">
+        <label>QString</label>
+      </node>
+      <node id="14">
+        <label>QVariant</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h</label>
+        <link refid="interactionbdd_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.cpp</label>
+        <link refid="fenetreprincipale_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.cpp.autosave.h</label>
+        <link refid="fenetreprincipale_8cpp_8autosave_8h"/>
+      </node>
+      <node id="2">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.h</label>
+        <link refid="fenetreprincipale_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.cpp</label>
+        <link refid="interactionbdd_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_interaction_b_d_d" prot="public">InteractionBDD</innerclass>
+    <briefdescription>
+<para>Application Qt. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>BARRY Thierno &amp; DIALLO Iliassou </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>INTERACTIONBDD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERACTIONBDD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_interaction_8h" kindref="compound">Interaction.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QObject&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDate&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtSql/QSqlDatabase&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDebug&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtSql/QSqlQuery&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QVariant&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_interaction_b_d_d" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_interaction_b_d_d" kindref="compound">InteractionBDD</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_q_object" kindref="compound">QObject</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="class_interaction_b_d_d_1a402677a5969ea7957b96a303408f662c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QSqlDatabase<sp/><ref refid="class_interaction_b_d_d_1a402677a5969ea7957b96a303408f662c" kindref="member">db</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_interaction_b_d_d_1a69843a5b51a75c92efc34fea62af6afe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1a69843a5b51a75c92efc34fea62af6afe" kindref="member">dbOuvert</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1a64b203fa6787ee7bfd2414156fdcc7f7" kindref="member">closeDb</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1ad13b14e7eaae94a2886a42fccb1ef943" kindref="member">connexion</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1aa062c90c41501eaef72fa351b6ee1bb7" kindref="member">isDBopen</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1a76e7837e9f68dee0307dce730fae1715" kindref="member">AjoutInteraction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,<ref refid="class_interaction" kindref="compound">Interaction</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1a57ead9ad7c558da79427fc7b9facb216" kindref="member">ListeInteraction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,std::list&lt;Interaction&gt;<sp/>&amp;)</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="75"><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1a224f06c30653cfa17c94136c8579c6f7" kindref="member">ListeInteractionALL</ref>(std::list&lt;Interaction&gt;<sp/>&amp;)</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1ae0dc4f28eff6f2e47b3cc43bffecefc5" kindref="member">RechercheInteraction</ref>(QString<sp/>&amp;,QString<sp/>&amp;,std::list&lt;Interaction&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1ab22d580cf329ca70d6a148bf07fd89ad" kindref="member">RechercheInteractionCont</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,QString<sp/>&amp;,QString<sp/>&amp;,std::list&lt;Interaction&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1aa8857fc22387bd10c0c56c834469833e" kindref="member">InteractionBDD</ref>(<ref refid="class_q_object" kindref="compound">QObject</ref><sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_interaction_b_d_d_1aa1e7b5ec142aa21d7692479c0d9795ab" kindref="member">~InteractionBDD</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1acec24a8b0b2ae6c4054b600a09f5c4b1" kindref="member">bddAjoutInteraction</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,<ref refid="class_interaction" kindref="compound">Interaction</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1a751ad1176044e26c0aa9a52570b77324" kindref="member">bddListeInteraction</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,std::list&lt;Interaction&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1ac854ce90d6b76ac533773da677312db0" kindref="member">bddListeInteractionALL</ref>(std::list&lt;Interaction&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1a684ae19751f57b0f38ae1f5c76ba4e36" kindref="member">bddRechercheInteraction</ref>(QString<sp/>&amp;,QString<sp/>&amp;,std::list&lt;Interaction&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1af4c781d9f5a7432787ed684f6172df36" kindref="member">bddRechercheInteractionCont</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Interaction&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_interaction_b_d_d_1af1ff5f013d461ddb1095191e672c821d" kindref="member">isOpen</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>INTERACTIONBDD_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/interactionbdd.h"/>
+  </compounddef>
+</doxygen>

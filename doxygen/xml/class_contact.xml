@@ -1,0 +1,920 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_contact" kind="class" language="C++" prot="public">
+    <compoundname>Contact</compoundname>
+    <includes refid="contact_8h" local="no">contact.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_contact_1ae9b9fe5ccc55e19ca7087f94a30f38ce" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Contact::id_contact</definition>
+        <argsstring></argsstring>
+        <name>id_contact</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut pour l&apos;identifiant d&apos;un contact </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="24" column="9" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_contact_1a837ec32c95f8815511ba1fb88d6e6870" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Contact::nom</definition>
+        <argsstring></argsstring>
+        <name>nom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut pour le nom d&apos;un contact </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="25" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_contact_1a6d85467851d61def44445912b58d52a4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Contact::prenom</definition>
+        <argsstring></argsstring>
+        <name>prenom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut pour le prenom d&apos;un contact </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="26" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_contact_1a786cf3e7f36e558af773e64a3302fbf8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Contact::entreprise</definition>
+        <argsstring></argsstring>
+        <name>entreprise</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut pour l&apos;entreprise d&apos;un contact </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="27" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_contact_1a10aaa8c3a6c26e02497ffb19fb37c52a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Contact::mail</definition>
+        <argsstring></argsstring>
+        <name>mail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut pour le mail d&apos;un contact </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="28" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_contact_1a045666ea797063981360d3c926c4d58f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Contact::telephone</definition>
+        <argsstring></argsstring>
+        <name>telephone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut pour le telephone d&apos;un contact </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="29" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_contact_1aff78eb5c73608f1bc7b300b9427a878e" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Contact::URIphoto</definition>
+        <argsstring></argsstring>
+        <name>URIphoto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut pour la photo d&apos;un contact </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="30" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_contact_1a040e29ce0ae67c16d810f0e49c669056" prot="private" static="no" mutable="no">
+        <type><ref refid="class_date" kindref="compound">Date</ref></type>
+        <definition>Date Contact::dateDecreation</definition>
+        <argsstring></argsstring>
+        <name>dateDecreation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut pour la date de création d&apos;un contact </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="31" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_contact_1ae39444f378e6de7fd6c3e60981949af5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Contact::Contact</definition>
+        <argsstring>()</argsstring>
+        <name>Contact</name>
+        <briefdescription>
+<para>Constructeur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du constructeur par défaut .</para>
+<para>Contructeur de la classe <ref refid="class_contact" kindref="compound">Contact</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="40" column="3" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="13" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a793d8e392aacfcd6556b31341a1233d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Contact::Contact</definition>
+        <argsstring>(const std::string &amp;, const std::string &amp;, const std::string &amp;, const std::string &amp;, const std::string &amp;, const std::string &amp;)</argsstring>
+        <name>Contact</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>n</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>p</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>e</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>em</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>photo</defname>
+        </param>
+        <briefdescription>
+<para>Constructeur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du constructeur avec paramètre .</para>
+<para>Constructeur avec paramètre de la classe contact</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;: initialise le nom d&apos;un contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;: initialise le Prenom d&apos;un contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;: initialise l&apos;entreprise d&apos;un contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::Email &amp;: initalise de l&apos;email d&apos;un contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;: initialise le numero de telephone d&apos;un contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;: initialise la photo sous forme de chaine de caractere</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;n : elle remplacera le nom courant . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;p : elle remplacera le prenom courant . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;e : elle remplacera l&apos;entreprise courante . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;em : elle remplacera l&apos;email courant . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;t : elle remplacera le telephone courant . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;photo : elle remplacera la photo courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="54" column="3" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a0068f3b8c12c82a2f5f10968d36639c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Contact::getId_contact</definition>
+        <argsstring>() const</argsstring>
+        <name>getId_contact</name>
+        <briefdescription>
+<para>Getteurs et setteurs \Les fonctions getteurs et setteurs . </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;id_contact&quot; pas de paramètre, fonction const</para>
+<para>Recupère l&apos;identifiant d&apos;un contact <simplesect kind="return"><para>l&apos;identifiant d&apos;un contact</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond à l&apos;identifiant d&apos;un contact . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="68" column="9" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1ac4ca062bf61f7adbbddc7878c0957e82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Contact::getNom</definition>
+        <argsstring>() const</argsstring>
+        <name>getNom</name>
+        <briefdescription>
+<para>Recupère le nom d&apos;un contact. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;Nom&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>le nom d&apos;un contact</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond au nom d&apos;un contact . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="74" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a1825fa5b28052b477fb16176bb4df21e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Contact::getPrenom</definition>
+        <argsstring>() const</argsstring>
+        <name>getPrenom</name>
+        <briefdescription>
+<para>Recupère le prenom d&apos;un contact. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;Prenom&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>le prenom d&apos;un contact</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond au Prenom d&apos;un contact . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="79" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a0126ff51496fe7f69db34de82ce28398" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Contact::getEntreprise</definition>
+        <argsstring>() const</argsstring>
+        <name>getEntreprise</name>
+        <briefdescription>
+<para>Recupère l&apos;Entreprise d&apos;un contact. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;Entreprise&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>l&apos;Entreprise d&apos;un contact</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond à l&apos;Entreprise d&apos;un contact . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="84" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a53ebe193a5284e27b468ababdf7577e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Contact::getTelephone</definition>
+        <argsstring>() const</argsstring>
+        <name>getTelephone</name>
+        <briefdescription>
+<para>Recupère le telephone d&apos;un contact. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;Telephone&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>le Telephone d&apos;un contact</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond au Telephone d&apos;un contact . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="89" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="119" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1af5a2baad0e523501c7270323140d329f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Contact::getURIPhoto</definition>
+        <argsstring>() const</argsstring>
+        <name>getURIPhoto</name>
+        <briefdescription>
+<para>Recupère la photo d&apos;un contact. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;URIPhoto&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>la photo d&apos;un contact</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond à l&apos;URIPhoto d&apos;un contact . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="94" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="140" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1ae2fb4df883959c1f36a9168d7e6f23d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Contact::getMail</definition>
+        <argsstring>() const</argsstring>
+        <name>getMail</name>
+        <briefdescription>
+<para>Recupère l&apos;email d&apos;un contact. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;Mail&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>le Mail d&apos;un contact</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond au Mail d&apos;un contact . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="99" column="17" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="163" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1ac95a35bd3f45283d24521ff0b87687ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_date" kindref="compound">Date</ref></type>
+        <definition>Date Contact::getDateDecreation</definition>
+        <argsstring>() const</argsstring>
+        <name>getDateDecreation</name>
+        <briefdescription>
+<para>Recupère la date de création d&apos;un contact. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;DateDecreation&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>la <ref refid="class_date" kindref="compound">Date</ref> de creation</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond a la DateDecreation d&apos;un contact . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="104" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="185" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a0837af372d75a5d85ab296c6104a3232" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Contact::setNom</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>setNom</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+<para>modifier le nom d&apos;un contact </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;Nom&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;: le nom à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(const): il remplacera le nom courant . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="110" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1ac31195d758df58ee327cc05b6276aace" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Contact::setPrenom</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>setPrenom</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>modifier le prenom d&apos;un contact </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;prenom&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;: le prenom à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;p : il remplacera le prenom courant . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="115" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a1237b826b80e3ead402d0c26cc3c2ace" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Contact::setEntreprise</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>setEntreprise</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>e</defname>
+        </param>
+        <briefdescription>
+<para>modifier l&apos;entreprise d&apos;un contact </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;Entreprise&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;: l&apos;entreprise à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;e : il remplacera l&apos;Entreprise courant . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="120" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="107" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1ab1d6d7d9ce1e62b1d7c52a2a927a8692" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Contact::setURIPhoto</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>setURIPhoto</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+<para>modifier la photo d&apos;un contact </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;URIPhoto&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;: la photo à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;p : il remplacera la photo courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="125" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="151" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a54c863b3045a9255d75f1ad876ecb7de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Contact::setTelephone</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>setTelephone</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+<para>modifier le telephone d&apos;un contact </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;Telephone&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;: le telephone à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;t : il remplacera le telephone courant . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="130" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a513b0a2da8a697076f4616ce7b6c445f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Contact::setMail</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>setMail</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>m</defname>
+        </param>
+        <briefdescription>
+<para>modifier le mail d&apos;un contact </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;Mail&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;: le mail à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;m : il remplacera le Mail courant . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="135" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="174" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a219a2644e2b4414b2d3c2570a9a1572f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Contact::setDateDecreation</definition>
+        <argsstring>(const Date &amp;)</argsstring>
+        <name>setDateDecreation</name>
+        <param>
+          <type>const <ref refid="class_date" kindref="compound">Date</ref> &amp;</type>
+          <defname>de</defname>
+        </param>
+        <briefdescription>
+<para>modifier la date de création d&apos;un contact </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;DateDecreation&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref> &amp;: la date à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref> &amp;de : il remplacera la DateDecreation courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="140" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="196" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a535b5af3f963a1201c1611468bbd4693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Contact::setId_contact</definition>
+        <argsstring>(const int &amp;)</argsstring>
+        <name>setId_contact</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+<para>modifier l&apos;identifiant d&apos;un contact </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;id_contact&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;: l&apos;identifiant à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>l&apos;entier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>const int &amp; value, il remplacera l&apos;identifian courant . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="145" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1a22bdaf53942f1ce96de5ada1d6d7a4c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Contact::operator==</definition>
+        <argsstring>(const Contact &amp;) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="class_contact" kindref="compound">Contact</ref> &amp;</type>
+          <defname>c1</defname>
+        </param>
+        <briefdescription>
+<para>Operateur egal Permet de comparer deux contacts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>test d&apos;égalité entre 2 contacts</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_contact" kindref="compound">Contact</ref> &amp; :le contact à comparer</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_contact" kindref="compound">Contact</ref> &amp;c1 : le contact à égaliser . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>un booléen VRAI si égalité </para>
+</simplesect>
+<simplesect kind="return"><para>un booléen FAUX si non égalité </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="153" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="207" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_contact_1abf1edc65bbfd0b8b9b81d81e878762bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Contact::operator&lt;</definition>
+        <argsstring>(const Contact &amp;) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="class_contact" kindref="compound">Contact</ref> &amp;</type>
+          <defname>da</defname>
+        </param>
+        <briefdescription>
+<para>operateur inferieur . Permet de comparer deux dates . </para>
+        </briefdescription>
+        <detaileddescription>
+<para>test de comparaison entre 2 dates</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_contact" kindref="compound">Contact</ref> &amp; :la date du contact à comparer avec la date du contact courant .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_contact" kindref="compound">Contact</ref> &amp;da: le contact à comparer entre la date courante </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>un booléen VRAI si égalité </para>
+</simplesect>
+<simplesect kind="return"><para>un booléen FAUX si non égalité </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="160" column="5" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="224" bodyend="230"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_contact_1a24f9fcd32bd68e5d5af1a6f2a61a1948" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const Contact &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>const <ref refid="class_contact" kindref="compound">Contact</ref> &amp;</type>
+          <defname>c</defname>
+        </param>
+        <briefdescription>
+<para>pour l&apos;affichage des propriete d&apos;un contact </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_contact" kindref="compound">Contact</ref> &amp; :le contact à afficher param std:: ostream&amp; : permet de faire l&apos;affichage</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream &amp;o :la bibliothèque ostream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_contact" kindref="compound">Contact</ref> &amp;c :le contact à afficher </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>o pour l&apos;affichage d&apos;un contact </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="168" column="12" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="238" bodyend="250"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>classe répresentant un contact </para>
+    </briefdescription>
+    <detaileddescription>
+<para>La classe permet de créer un contact ,de modifier un contact,de supprimer un contact . </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Contact</label>
+        <link refid="class_contact"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-dateDecreation</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Date</label>
+        <link refid="class_date"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" line="21" column="1" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.h" bodystart="20" bodyend="170"/>
+    <listofallmembers>
+      <member refid="class_contact_1ae39444f378e6de7fd6c3e60981949af5" prot="public" virt="non-virtual"><scope>Contact</scope><name>Contact</name></member>
+      <member refid="class_contact_1a793d8e392aacfcd6556b31341a1233d9" prot="public" virt="non-virtual"><scope>Contact</scope><name>Contact</name></member>
+      <member refid="class_contact_1a040e29ce0ae67c16d810f0e49c669056" prot="private" virt="non-virtual"><scope>Contact</scope><name>dateDecreation</name></member>
+      <member refid="class_contact_1a786cf3e7f36e558af773e64a3302fbf8" prot="private" virt="non-virtual"><scope>Contact</scope><name>entreprise</name></member>
+      <member refid="class_contact_1ac95a35bd3f45283d24521ff0b87687ef" prot="public" virt="non-virtual"><scope>Contact</scope><name>getDateDecreation</name></member>
+      <member refid="class_contact_1a0126ff51496fe7f69db34de82ce28398" prot="public" virt="non-virtual"><scope>Contact</scope><name>getEntreprise</name></member>
+      <member refid="class_contact_1a0068f3b8c12c82a2f5f10968d36639c3" prot="public" virt="non-virtual"><scope>Contact</scope><name>getId_contact</name></member>
+      <member refid="class_contact_1ae2fb4df883959c1f36a9168d7e6f23d1" prot="public" virt="non-virtual"><scope>Contact</scope><name>getMail</name></member>
+      <member refid="class_contact_1ac4ca062bf61f7adbbddc7878c0957e82" prot="public" virt="non-virtual"><scope>Contact</scope><name>getNom</name></member>
+      <member refid="class_contact_1a1825fa5b28052b477fb16176bb4df21e" prot="public" virt="non-virtual"><scope>Contact</scope><name>getPrenom</name></member>
+      <member refid="class_contact_1a53ebe193a5284e27b468ababdf7577e3" prot="public" virt="non-virtual"><scope>Contact</scope><name>getTelephone</name></member>
+      <member refid="class_contact_1af5a2baad0e523501c7270323140d329f" prot="public" virt="non-virtual"><scope>Contact</scope><name>getURIPhoto</name></member>
+      <member refid="class_contact_1ae9b9fe5ccc55e19ca7087f94a30f38ce" prot="private" virt="non-virtual"><scope>Contact</scope><name>id_contact</name></member>
+      <member refid="class_contact_1a10aaa8c3a6c26e02497ffb19fb37c52a" prot="private" virt="non-virtual"><scope>Contact</scope><name>mail</name></member>
+      <member refid="class_contact_1a837ec32c95f8815511ba1fb88d6e6870" prot="private" virt="non-virtual"><scope>Contact</scope><name>nom</name></member>
+      <member refid="class_contact_1abf1edc65bbfd0b8b9b81d81e878762bc" prot="public" virt="non-virtual"><scope>Contact</scope><name>operator&lt;</name></member>
+      <member refid="class_contact_1a24f9fcd32bd68e5d5af1a6f2a61a1948" prot="public" virt="non-virtual"><scope>Contact</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_contact_1a22bdaf53942f1ce96de5ada1d6d7a4c1" prot="public" virt="non-virtual"><scope>Contact</scope><name>operator==</name></member>
+      <member refid="class_contact_1a6d85467851d61def44445912b58d52a4" prot="private" virt="non-virtual"><scope>Contact</scope><name>prenom</name></member>
+      <member refid="class_contact_1a219a2644e2b4414b2d3c2570a9a1572f" prot="public" virt="non-virtual"><scope>Contact</scope><name>setDateDecreation</name></member>
+      <member refid="class_contact_1a1237b826b80e3ead402d0c26cc3c2ace" prot="public" virt="non-virtual"><scope>Contact</scope><name>setEntreprise</name></member>
+      <member refid="class_contact_1a535b5af3f963a1201c1611468bbd4693" prot="public" virt="non-virtual"><scope>Contact</scope><name>setId_contact</name></member>
+      <member refid="class_contact_1a513b0a2da8a697076f4616ce7b6c445f" prot="public" virt="non-virtual"><scope>Contact</scope><name>setMail</name></member>
+      <member refid="class_contact_1a0837af372d75a5d85ab296c6104a3232" prot="public" virt="non-virtual"><scope>Contact</scope><name>setNom</name></member>
+      <member refid="class_contact_1ac31195d758df58ee327cc05b6276aace" prot="public" virt="non-virtual"><scope>Contact</scope><name>setPrenom</name></member>
+      <member refid="class_contact_1a54c863b3045a9255d75f1ad876ecb7de" prot="public" virt="non-virtual"><scope>Contact</scope><name>setTelephone</name></member>
+      <member refid="class_contact_1ab1d6d7d9ce1e62b1d7c52a2a927a8692" prot="public" virt="non-virtual"><scope>Contact</scope><name>setURIPhoto</name></member>
+      <member refid="class_contact_1a045666ea797063981360d3c926c4d58f" prot="private" virt="non-virtual"><scope>Contact</scope><name>telephone</name></member>
+      <member refid="class_contact_1aff78eb5c73608f1bc7b300b9427a878e" prot="private" virt="non-virtual"><scope>Contact</scope><name>URIphoto</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

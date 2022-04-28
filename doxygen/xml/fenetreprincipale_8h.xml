@@ -1,0 +1,621 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="fenetreprincipale_8h" kind="file" language="C++">
+    <compoundname>fenetreprincipale.h</compoundname>
+    <includes local="no">QMainWindow</includes>
+    <includes refid="contact_8h" local="yes">contact.h</includes>
+    <includes refid="contactbdd_8h" local="no">contactbdd.h</includes>
+    <includes refid="interactionbdd_8h" local="no">interactionbdd.h</includes>
+    <includes refid="_interaction_8h" local="yes">Interaction.h</includes>
+    <includes refid="_todo_8h" local="yes">Todo.h</includes>
+    <includes local="no">QLabel</includes>
+    <includes local="no">QPushButton</includes>
+    <includes local="no">QHBoxLayout</includes>
+    <includes local="no">QVBoxLayout</includes>
+    <includes local="no">QTextEdit</includes>
+    <includes local="no">QLineEdit</includes>
+    <includes local="no">QTimeEdit</includes>
+    <includes local="no">QTimer</includes>
+    <includes local="no">QDateEdit</includes>
+    <includes local="no">QFormLayout</includes>
+    <includes local="no">QObject</includes>
+    <includes local="no">QDialog</includes>
+    <includes local="no">QComboBox</includes>
+    <includes local="no">QMessageBox</includes>
+    <includes local="no">list</includes>
+    <includes local="no">QDebug</includes>
+    <includes local="no">QString</includes>
+    <includes local="no">QDate</includes>
+    <includes local="no">string</includes>
+    <includes local="no">QTextDocument</includes>
+    <includes local="no">QRegularExpression</includes>
+    <includes local="no">QStringList</includes>
+    <includes local="no">QTextBlock</includes>
+    <includes local="no">QJsonDocument</includes>
+    <includes local="no">QIODevice</includes>
+    <includes local="no">QFile</includes>
+    <includes local="no">QJsonObject</includes>
+    <includes local="no">QJsonArray</includes>
+    <includedby refid="fenetreprincipale_8cpp" local="yes">/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.cpp</includedby>
+    <includedby refid="fenetreprincipale_8cpp_8autosave_8h" local="yes">/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.cpp.autosave.h</includedby>
+    <includedby refid="main_8cpp" local="yes">/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp</includedby>
+    <incdepgraph>
+      <node id="14">
+        <label>list</label>
+      </node>
+      <node id="3">
+        <label>contact.h</label>
+        <link refid="contact_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>QTextEdit</label>
+      </node>
+      <node id="33">
+        <label>QMessageBox</label>
+      </node>
+      <node id="18">
+        <label>interactionbdd.h</label>
+        <link refid="interactionbdd_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>QObject</label>
+      </node>
+      <node id="11">
+        <label>QtSql/QSqlDatabase</label>
+      </node>
+      <node id="13">
+        <label>QtSql/QSqlQuery</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>QMainWindow</label>
+      </node>
+      <node id="19">
+        <label>Interaction.h</label>
+        <link refid="_interaction_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>QFormLayout</label>
+      </node>
+      <node id="6">
+        <label>ostream</label>
+      </node>
+      <node id="29">
+        <label>QDateEdit</label>
+      </node>
+      <node id="42">
+        <label>QJsonArray</label>
+      </node>
+      <node id="41">
+        <label>QJsonObject</label>
+      </node>
+      <node id="4">
+        <label>Date.h</label>
+        <link refid="_date_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>QHBoxLayout</label>
+      </node>
+      <node id="39">
+        <label>QIODevice</label>
+      </node>
+      <node id="27">
+        <label>QTimeEdit</label>
+      </node>
+      <node id="5">
+        <label>ctime</label>
+      </node>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.h</label>
+        <link refid="fenetreprincipale_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>QDialog</label>
+      </node>
+      <node id="12">
+        <label>QDebug</label>
+      </node>
+      <node id="24">
+        <label>QVBoxLayout</label>
+      </node>
+      <node id="28">
+        <label>QTimer</label>
+      </node>
+      <node id="20">
+        <label>Todo.h</label>
+        <link refid="_todo_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>QLineEdit</label>
+      </node>
+      <node id="35">
+        <label>QRegularExpression</label>
+      </node>
+      <node id="10">
+        <label>QDate</label>
+      </node>
+      <node id="15">
+        <label>QString</label>
+      </node>
+      <node id="40">
+        <label>QFile</label>
+      </node>
+      <node id="22">
+        <label>QPushButton</label>
+      </node>
+      <node id="21">
+        <label>QLabel</label>
+      </node>
+      <node id="38">
+        <label>QJsonDocument</label>
+      </node>
+      <node id="32">
+        <label>QComboBox</label>
+      </node>
+      <node id="17">
+        <label>QSql</label>
+      </node>
+      <node id="8">
+        <label>contactbdd.h</label>
+        <link refid="contactbdd_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>QTextBlock</label>
+      </node>
+      <node id="34">
+        <label>QTextDocument</label>
+      </node>
+      <node id="16">
+        <label>QVariant</label>
+      </node>
+      <node id="36">
+        <label>QStringList</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.cpp</label>
+        <link refid="fenetreprincipale_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.cpp.autosave.h</label>
+        <link refid="fenetreprincipale_8cpp_8autosave_8h"/>
+      </node>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.h</label>
+        <link refid="fenetreprincipale_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_fenetre_principale" prot="public">FenetrePrincipale</innerclass>
+    <innernamespace refid="namespace_ui">Ui</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>BARRY Thierno Oumar &amp; DIALLO Iliassou </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>FENETREPRINCIPALE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FENETREPRINCIPALE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&lt;QMainWindow&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="contact_8h" kindref="compound">contact.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="contactbdd_8h" kindref="compound">contactbdd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="interactionbdd_8h" kindref="compound">interactionbdd.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_interaction_8h" kindref="compound">Interaction.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_todo_8h" kindref="compound">Todo.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QLabel&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QPushButton&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QHBoxLayout&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QVBoxLayout&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QTextEdit&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QLineEdit&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QTimeEdit&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QTimer&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDateEdit&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QFormLayout&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QObject&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDialog&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QComboBox&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QMessageBox&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDebug&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDate&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QTextDocument&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QRegularExpression&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QStringList&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QTextBlock&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QJsonDocument&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QIODevice&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QFile&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QJsonObject&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QJsonArray&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">QT_BEGIN_NAMESPACE</highlight></codeline>
+<codeline lineno="49" refid="namespace_ui" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_ui" kindref="compound">Ui</ref><sp/>{<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fenetre_principale" kindref="compound">FenetrePrincipale</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">QT_END_NAMESPACE</highlight></codeline>
+<codeline lineno="61" refid="class_fenetre_principale" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fenetre_principale" kindref="compound">FenetrePrincipale</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_q_main_window" kindref="compound">QMainWindow</ref></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66" refid="class_fenetre_principale_1a91d039c4c64aa17e522791b8dd263914" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Ui::FenetrePrincipale<sp/>*<ref refid="class_fenetre_principale_1a91d039c4c64aa17e522791b8dd263914" kindref="member">ui</ref>;</highlight></codeline>
+<codeline lineno="71" refid="class_fenetre_principale_1aa1413b592db56493d4096a845545e0b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog<sp/>*<ref refid="class_fenetre_principale_1aa1413b592db56493d4096a845545e0b0" kindref="member">dialog</ref>;</highlight></codeline>
+<codeline lineno="72" refid="class_fenetre_principale_1a6243394161df4d2415484753ec77818f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog<sp/>*<ref refid="class_fenetre_principale_1a6243394161df4d2415484753ec77818f" kindref="member">dialog1</ref>;</highlight></codeline>
+<codeline lineno="73" refid="class_fenetre_principale_1af4b1c245661044e3e2f905d842a71649" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog<sp/>*<ref refid="class_fenetre_principale_1af4b1c245661044e3e2f905d842a71649" kindref="member">dialog2</ref>;</highlight></codeline>
+<codeline lineno="74" refid="class_fenetre_principale_1a0c695923c179e65372c17b2dc515f536" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog<sp/>*<ref refid="class_fenetre_principale_1a0c695923c179e65372c17b2dc515f536" kindref="member">dialog3</ref>;</highlight></codeline>
+<codeline lineno="75" refid="class_fenetre_principale_1af000021c78c969f593e54cb4821e5f1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog<sp/>*<ref refid="class_fenetre_principale_1af000021c78c969f593e54cb4821e5f1b" kindref="member">dialogInteraction</ref>;</highlight></codeline>
+<codeline lineno="76" refid="class_fenetre_principale_1a722a536432d2e0b2d65840df424511f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog<sp/>*<ref refid="class_fenetre_principale_1a722a536432d2e0b2d65840df424511f8" kindref="member">dialogList</ref>;</highlight></codeline>
+<codeline lineno="77" refid="class_fenetre_principale_1af53daa74f5d587b8e76682915c12b3f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog<sp/>*<ref refid="class_fenetre_principale_1af53daa74f5d587b8e76682915c12b3f1" kindref="member">dialogIdeuxDates</ref>;</highlight></codeline>
+<codeline lineno="78" refid="class_fenetre_principale_1a0fdfc2c0cab30cbfc33aaea2e9e7cc8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog<sp/>*<ref refid="class_fenetre_principale_1a0fdfc2c0cab30cbfc33aaea2e9e7cc8c" kindref="member">dialogRC</ref>;</highlight></codeline>
+<codeline lineno="79" refid="class_fenetre_principale_1a0b199f318a0f6384f95a698b15c91471" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog<sp/>*<ref refid="class_fenetre_principale_1a0b199f318a0f6384f95a698b15c91471" kindref="member">dialogTaches</ref>;</highlight></codeline>
+<codeline lineno="80" refid="class_fenetre_principale_1a43dc07587ebfd4f47cee24a2429d48f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog<sp/>*<ref refid="class_fenetre_principale_1a43dc07587ebfd4f47cee24a2429d48f6" kindref="member">dialogRechercheT</ref>;</highlight></codeline>
+<codeline lineno="81" refid="class_fenetre_principale_1ae19247208f8be7a1c77cf23cb8b661c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDialog<sp/>*<ref refid="class_fenetre_principale_1ae19247208f8be7a1c77cf23cb8b661c5" kindref="member">dialogALL</ref>;</highlight></codeline>
+<codeline lineno="86" refid="class_fenetre_principale_1a8559d8633f5557e1806e96b0cc6cbd8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1a8559d8633f5557e1806e96b0cc6cbd8c" kindref="member">Nom</ref>;<sp/></highlight></codeline>
+<codeline lineno="87" refid="class_fenetre_principale_1adb00ea641c24c01ec96285fef7166066" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1adb00ea641c24c01ec96285fef7166066" kindref="member">Prenom</ref>;<sp/></highlight></codeline>
+<codeline lineno="88" refid="class_fenetre_principale_1acc29f527cc0c0adfb21c32419452b0c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1acc29f527cc0c0adfb21c32419452b0c8" kindref="member">Photo</ref>;<sp/></highlight></codeline>
+<codeline lineno="89" refid="class_fenetre_principale_1ad9cede009e105a8538cb21ba643d8116" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1ad9cede009e105a8538cb21ba643d8116" kindref="member">Entreprise</ref>;<sp/></highlight></codeline>
+<codeline lineno="90" refid="class_fenetre_principale_1a3840b2c8e006a493ef90cd6e0aa7ec8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1a3840b2c8e006a493ef90cd6e0aa7ec8c" kindref="member">Email</ref>;<sp/></highlight></codeline>
+<codeline lineno="91" refid="class_fenetre_principale_1aeac0ddd68a089a5971706a6cdd2bdeb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1aeac0ddd68a089a5971706a6cdd2bdeb7" kindref="member">Telephone</ref>;<sp/></highlight></codeline>
+<codeline lineno="92" refid="class_fenetre_principale_1af90918e3eb8f52ed67f1dab8ab44734f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1af90918e3eb8f52ed67f1dab8ab44734f" kindref="member">NomR</ref>;;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1a3ea71513569bd1325f37a4ee2f871703" kindref="member">debut</ref>;</highlight></codeline>
+<codeline lineno="94" refid="class_fenetre_principale_1a2c5ecca8fe2e3c88ae708944361afd99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1a2c5ecca8fe2e3c88ae708944361afd99" kindref="member">fin</ref>;</highlight></codeline>
+<codeline lineno="95" refid="class_fenetre_principale_1a74ab760c07d328eeaf153b83695c0b5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1a74ab760c07d328eeaf153b83695c0b5e" kindref="member">Nom1</ref>;</highlight></codeline>
+<codeline lineno="96" refid="class_fenetre_principale_1a2dcbbc2b534af1c6f2274183b4324f0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1a2dcbbc2b534af1c6f2274183b4324f0f" kindref="member">Prenom1</ref>;</highlight></codeline>
+<codeline lineno="97" refid="class_fenetre_principale_1a971e88e0560fdcf308b3d26a3c6fb37e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1a971e88e0560fdcf308b3d26a3c6fb37e" kindref="member">Photo1</ref>;</highlight></codeline>
+<codeline lineno="98" refid="class_fenetre_principale_1acf6fbe3379bc6b81f543602fddd0ff1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1acf6fbe3379bc6b81f543602fddd0ff1a" kindref="member">Entreprise1</ref>;</highlight></codeline>
+<codeline lineno="99" refid="class_fenetre_principale_1a87983612a5b16636c79c33018b99f986" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1a87983612a5b16636c79c33018b99f986" kindref="member">Email1</ref>;</highlight></codeline>
+<codeline lineno="100" refid="class_fenetre_principale_1aeb1c787905b40a3ca5e1de17de4a8385" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1aeb1c787905b40a3ca5e1de17de4a8385" kindref="member">Telephone1</ref>;</highlight></codeline>
+<codeline lineno="101" refid="class_fenetre_principale_1a1bbe45eeb25f5763b040db8cafbdf821" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1a1bbe45eeb25f5763b040db8cafbdf821" kindref="member">Nomcombo</ref>;</highlight></codeline>
+<codeline lineno="102" refid="class_fenetre_principale_1aa738e4519fa2c96e52c3dd23860760a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1aa738e4519fa2c96e52c3dd23860760a2" kindref="member">ImageInsere</ref>;</highlight></codeline>
+<codeline lineno="103" refid="class_fenetre_principale_1aa4df7053c1c652bd7bd27ca79f1bbb66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1aa4df7053c1c652bd7bd27ca79f1bbb66" kindref="member">ImageInsere2</ref>;</highlight></codeline>
+<codeline lineno="104" refid="class_fenetre_principale_1aad3d05b36b57edc0c212e3262475887d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1aad3d05b36b57edc0c212e3262475887d" kindref="member">commentaire</ref>;<sp/></highlight></codeline>
+<codeline lineno="105" refid="class_fenetre_principale_1aaf89e97c0ddc563a66c7f53ac6fc7da8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1aaf89e97c0ddc563a66c7f53ac6fc7da8" kindref="member">NomcomboList</ref>;</highlight></codeline>
+<codeline lineno="106" refid="class_fenetre_principale_1ab46e5e1483ce93a5912b7de5d6f8f85e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel<sp/>*<ref refid="class_fenetre_principale_1ab46e5e1483ce93a5912b7de5d6f8f85e" kindref="member">lheure</ref>;</highlight></codeline>
+<codeline lineno="110" refid="class_fenetre_principale_1a0b55a7da5fef73c875c9431921ab93fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1a0b55a7da5fef73c875c9431921ab93fc" kindref="member">n</ref>;<sp/></highlight></codeline>
+<codeline lineno="111" refid="class_fenetre_principale_1a333a48afdfd82aa5bd5499828f1bd27f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1a333a48afdfd82aa5bd5499828f1bd27f" kindref="member">p</ref>;<sp/></highlight></codeline>
+<codeline lineno="112" refid="class_fenetre_principale_1a067ae9cef15149e5bd9ae2d80553b276" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1a067ae9cef15149e5bd9ae2d80553b276" kindref="member">en</ref>;</highlight></codeline>
+<codeline lineno="113" refid="class_fenetre_principale_1ae4b23fa9d80ae4dc648692a072883fe4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1ae4b23fa9d80ae4dc648692a072883fe4" kindref="member">em</ref>;</highlight></codeline>
+<codeline lineno="114" refid="class_fenetre_principale_1a52d51914a5835daa7ccab98c86a6ce46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1a52d51914a5835daa7ccab98c86a6ce46" kindref="member">tel</ref>;</highlight></codeline>
+<codeline lineno="115" refid="class_fenetre_principale_1aefd36a779f0cadddac27088115f1faad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1aefd36a779f0cadddac27088115f1faad" kindref="member">ph</ref>;</highlight></codeline>
+<codeline lineno="116" refid="class_fenetre_principale_1a2cb871e46abe93193608787e80685fb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1a2cb871e46abe93193608787e80685fb7" kindref="member">n1</ref>;</highlight></codeline>
+<codeline lineno="117" refid="class_fenetre_principale_1a64fc7ac5fc5f6b8d138dac52a3579a5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1a64fc7ac5fc5f6b8d138dac52a3579a5e" kindref="member">p1</ref>;</highlight></codeline>
+<codeline lineno="118" refid="class_fenetre_principale_1a0608fc29aca2e9fc1f882535c8638c9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1a0608fc29aca2e9fc1f882535c8638c9a" kindref="member">en1</ref>;</highlight></codeline>
+<codeline lineno="119" refid="class_fenetre_principale_1aa2dc67f80f4173eefe8856ac7ff15e54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1aa2dc67f80f4173eefe8856ac7ff15e54" kindref="member">em1</ref>;</highlight></codeline>
+<codeline lineno="120" refid="class_fenetre_principale_1adc5909f7f241415c8b22c75d00193bb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1adc5909f7f241415c8b22c75d00193bb8" kindref="member">tel1</ref>;</highlight></codeline>
+<codeline lineno="121" refid="class_fenetre_principale_1aab14f9a11d962efa96aaf182585a00a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1aab14f9a11d962efa96aaf182585a00a0" kindref="member">ph1</ref>;</highlight></codeline>
+<codeline lineno="122" refid="class_fenetre_principale_1aaf78cf9c9e6abbc702d4d6068cc57bf4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1aaf78cf9c9e6abbc702d4d6068cc57bf4" kindref="member">nR</ref>;</highlight></codeline>
+<codeline lineno="123" refid="class_fenetre_principale_1a28b750a859a4f6b94080e2f293821999" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateEdit<sp/>*<ref refid="class_fenetre_principale_1a28b750a859a4f6b94080e2f293821999" kindref="member">date1</ref>;</highlight></codeline>
+<codeline lineno="124" refid="class_fenetre_principale_1ac7c8199326ace923b8f052d1d975a711" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateEdit<sp/>*<ref refid="class_fenetre_principale_1ac7c8199326ace923b8f052d1d975a711" kindref="member">date2</ref>;</highlight></codeline>
+<codeline lineno="125" refid="class_fenetre_principale_1a150349d21c7168d1dd9ce300c2d3d336" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QLineEdit<sp/>*<ref refid="class_fenetre_principale_1a150349d21c7168d1dd9ce300c2d3d336" kindref="member">cInteraction</ref>;<sp/></highlight></codeline>
+<codeline lineno="126" refid="class_fenetre_principale_1abbf19aec9faa44d783ab3b14c32e7339" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateEdit<sp/>*<ref refid="class_fenetre_principale_1abbf19aec9faa44d783ab3b14c32e7339" kindref="member">dateAjout</ref>;</highlight></codeline>
+<codeline lineno="127" refid="class_fenetre_principale_1af2dbf6307339e54458ea6834ad17a09e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateEdit<sp/>*<ref refid="class_fenetre_principale_1af2dbf6307339e54458ea6834ad17a09e" kindref="member">dateDebutI</ref>;</highlight></codeline>
+<codeline lineno="128" refid="class_fenetre_principale_1a846db6d947fd6b935f90d72739fab87d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateEdit<sp/>*<ref refid="class_fenetre_principale_1a846db6d947fd6b935f90d72739fab87d" kindref="member">dateFinI</ref>;</highlight></codeline>
+<codeline lineno="129" refid="class_fenetre_principale_1ad2b175d07dae2e2d6f74a33365c7d7bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateEdit<sp/>*<ref refid="class_fenetre_principale_1ad2b175d07dae2e2d6f74a33365c7d7bc" kindref="member">date1RC</ref>;</highlight></codeline>
+<codeline lineno="130" refid="class_fenetre_principale_1afc3d545d3ce6da74e3de821ac4683d3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateEdit<sp/>*<ref refid="class_fenetre_principale_1afc3d545d3ce6da74e3de821ac4683d3d" kindref="member">date2RC</ref>;</highlight></codeline>
+<codeline lineno="131" refid="class_fenetre_principale_1a4ea9f110ea501234e21356194c7682ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QTimer<sp/>*<ref refid="class_fenetre_principale_1a4ea9f110ea501234e21356194c7682ab" kindref="member">ltime</ref>;</highlight></codeline>
+<codeline lineno="132" refid="class_fenetre_principale_1a54599bbfb8ae247ef8a7e14d0b698f0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateEdit<sp/>*<ref refid="class_fenetre_principale_1a54599bbfb8ae247ef8a7e14d0b698f0c" kindref="member">dateDebutTaches</ref>;</highlight></codeline>
+<codeline lineno="133" refid="class_fenetre_principale_1abc6c464a79f574318b43dc22ce6404c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateEdit<sp/>*<ref refid="class_fenetre_principale_1abc6c464a79f574318b43dc22ce6404c4" kindref="member">dateFinTaches</ref>;</highlight></codeline>
+<codeline lineno="134" refid="class_fenetre_principale_1a6bebf9ddf0804a57fd83d677bfe327c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateEdit<sp/>*<ref refid="class_fenetre_principale_1a6bebf9ddf0804a57fd83d677bfe327c2" kindref="member">dateDebutALL</ref>;</highlight></codeline>
+<codeline lineno="135" refid="class_fenetre_principale_1a28a521feaf8e3c865d0dd308b2a7854c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QDateEdit<sp/>*<ref refid="class_fenetre_principale_1a28a521feaf8e3c865d0dd308b2a7854c" kindref="member">dateFinALL</ref>;</highlight></codeline>
+<codeline lineno="136" refid="class_fenetre_principale_1a218386aa6679baff7a6b96c7e5eb24dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QTextEdit<sp/>*<ref refid="class_fenetre_principale_1a218386aa6679baff7a6b96c7e5eb24dc" kindref="member">editTaches</ref>;</highlight></codeline>
+<codeline lineno="142" refid="class_fenetre_principale_1a13a4e774c8de5d80b16ad76aa3ed7656" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QComboBox<sp/>*<ref refid="class_fenetre_principale_1a13a4e774c8de5d80b16ad76aa3ed7656" kindref="member">comboBox</ref>;<sp/></highlight></codeline>
+<codeline lineno="143" refid="class_fenetre_principale_1abcf270ec77ed614011317c047d3ae7d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QComboBox<sp/>*<ref refid="class_fenetre_principale_1abcf270ec77ed614011317c047d3ae7d1" kindref="member">comboInteraction</ref>;</highlight></codeline>
+<codeline lineno="144" refid="class_fenetre_principale_1a4d6a75bc8f460d871d93b53ebcee8e28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QComboBox<sp/>*<ref refid="class_fenetre_principale_1a4d6a75bc8f460d871d93b53ebcee8e28" kindref="member">comboList</ref>;<sp/></highlight></codeline>
+<codeline lineno="145" refid="class_fenetre_principale_1aa47b696d5e7afb95d1c36add24401e1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QComboBox<sp/>*<ref refid="class_fenetre_principale_1aa47b696d5e7afb95d1c36add24401e1d" kindref="member">combo</ref>;</highlight></codeline>
+<codeline lineno="146" refid="class_fenetre_principale_1a1e9a1d537a87c8951cb8646744c8e30e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QComboBox<sp/>*<ref refid="class_fenetre_principale_1a1e9a1d537a87c8951cb8646744c8e30e" kindref="member">comboRecherche</ref>;</highlight></codeline>
+<codeline lineno="147" refid="class_fenetre_principale_1a40a28113423ec036860c060a2621ebd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QComboBox<sp/>*<ref refid="class_fenetre_principale_1a40a28113423ec036860c060a2621ebd3" kindref="member">comboTache</ref>;</highlight></codeline>
+<codeline lineno="148" refid="class_fenetre_principale_1aa758fd6656472a40c445458b9c8f59c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QComboBox<sp/>*<ref refid="class_fenetre_principale_1aa758fd6656472a40c445458b9c8f59c4" kindref="member">comboTachesRecherche</ref>;</highlight></codeline>
+<codeline lineno="156" refid="class_fenetre_principale_1a4fa7324885b30d49bc8d487c02319c61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a4fa7324885b30d49bc8d487c02319c61" kindref="member">vAligne1</ref>;</highlight></codeline>
+<codeline lineno="157" refid="class_fenetre_principale_1a0bf5a392a8f66ea389ed98ec3b37f035" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a0bf5a392a8f66ea389ed98ec3b37f035" kindref="member">vAligne2</ref>;</highlight></codeline>
+<codeline lineno="158" refid="class_fenetre_principale_1af6639c5df5aff481ce40af2564347b54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1af6639c5df5aff481ce40af2564347b54" kindref="member">vAligne3</ref>;</highlight></codeline>
+<codeline lineno="159" refid="class_fenetre_principale_1a590d9a7b84ac999e7566cef6a5dace4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a590d9a7b84ac999e7566cef6a5dace4b" kindref="member">aligneH</ref>;</highlight></codeline>
+<codeline lineno="160" refid="class_fenetre_principale_1a5fa7d509668a32592eeacbe8571e8671" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a5fa7d509668a32592eeacbe8571e8671" kindref="member">vAligne11</ref>;</highlight></codeline>
+<codeline lineno="161" refid="class_fenetre_principale_1a71fd258a880bba016e8aa1aa4892f4dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a71fd258a880bba016e8aa1aa4892f4dc" kindref="member">vAligne22</ref>;</highlight></codeline>
+<codeline lineno="162" refid="class_fenetre_principale_1a419766e206ac6929158811c95476fa95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a419766e206ac6929158811c95476fa95" kindref="member">vAligne33</ref>;</highlight></codeline>
+<codeline lineno="163" refid="class_fenetre_principale_1a1b5cf247e4abb03b6cd5821807fbb93e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a1b5cf247e4abb03b6cd5821807fbb93e" kindref="member">aligneHH</ref>;</highlight></codeline>
+<codeline lineno="164" refid="class_fenetre_principale_1a6d30fa2ee204195a808a6096c415e968" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a6d30fa2ee204195a808a6096c415e968" kindref="member">vAligneR</ref>;</highlight></codeline>
+<codeline lineno="165" refid="class_fenetre_principale_1a79ffe78f871c5e24c1c25641db1f3cac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a79ffe78f871c5e24c1c25641db1f3cac" kindref="member">vAligneR2</ref>;</highlight></codeline>
+<codeline lineno="166" refid="class_fenetre_principale_1a5dc14bd6468570cc4e05ed68905903ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a5dc14bd6468570cc4e05ed68905903ad" kindref="member">hAlignH</ref>;</highlight></codeline>
+<codeline lineno="167" refid="class_fenetre_principale_1a00045d002c0280635e1a7fddf76cf106" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a00045d002c0280635e1a7fddf76cf106" kindref="member">vAligne1I</ref>;</highlight></codeline>
+<codeline lineno="168" refid="class_fenetre_principale_1a9f70d204e24ee2f4d99e71f3cef85782" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a9f70d204e24ee2f4d99e71f3cef85782" kindref="member">vAligne2I</ref>;</highlight></codeline>
+<codeline lineno="169" refid="class_fenetre_principale_1ac47d786d020fde6462e579e14746dd0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1ac47d786d020fde6462e579e14746dd0f" kindref="member">vAligne3I</ref>;</highlight></codeline>
+<codeline lineno="170" refid="class_fenetre_principale_1a4d405a7133eaa458cffc2fdfc1c31b1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a4d405a7133eaa458cffc2fdfc1c31b1e" kindref="member">hAligneI</ref>;</highlight></codeline>
+<codeline lineno="171" refid="class_fenetre_principale_1abb5c23829b57d5d462ba373fad08d84d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1abb5c23829b57d5d462ba373fad08d84d" kindref="member">vAligneList1</ref>;</highlight></codeline>
+<codeline lineno="172" refid="class_fenetre_principale_1a7b5b588e5eba8b0fafdd21c0cf2e0703" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a7b5b588e5eba8b0fafdd21c0cf2e0703" kindref="member">vAligneList2</ref><sp/>;</highlight></codeline>
+<codeline lineno="173" refid="class_fenetre_principale_1a3e5c07fb40c06c6dbdc79f693436b805" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a3e5c07fb40c06c6dbdc79f693436b805" kindref="member">hAligneList</ref>;</highlight></codeline>
+<codeline lineno="174" refid="class_fenetre_principale_1a7b6192d19b88e109d7f8160fd91cfe77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a7b6192d19b88e109d7f8160fd91cfe77" kindref="member">vAligne1Id</ref>;</highlight></codeline>
+<codeline lineno="175" refid="class_fenetre_principale_1ac97b96c82b8b6a3508f98406bc640ec2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1ac97b96c82b8b6a3508f98406bc640ec2" kindref="member">vAligne2Id</ref>;</highlight></codeline>
+<codeline lineno="176" refid="class_fenetre_principale_1a051439b73c6b91c54ccdfb32acc15dd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a051439b73c6b91c54ccdfb32acc15dd3" kindref="member">hAligneId</ref><sp/>;</highlight></codeline>
+<codeline lineno="177" refid="class_fenetre_principale_1a4ccfcf4e9978da095a5a3acdf28f36a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a4ccfcf4e9978da095a5a3acdf28f36a6" kindref="member">vAligneRRC</ref>;</highlight></codeline>
+<codeline lineno="178" refid="class_fenetre_principale_1a6c8573f0539268dc2c51e13f6be536ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a6c8573f0539268dc2c51e13f6be536ee" kindref="member">vAligneR2RC</ref>;</highlight></codeline>
+<codeline lineno="179" refid="class_fenetre_principale_1a1c720a59d1cbf12b52d5a5642401a1a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a1c720a59d1cbf12b52d5a5642401a1a3" kindref="member">hAlignHRC</ref>;</highlight></codeline>
+<codeline lineno="180" refid="class_fenetre_principale_1af9c43f165c5fed104538ed4a20f0c7bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1af9c43f165c5fed104538ed4a20f0c7bb" kindref="member">vAligneTaches</ref>;</highlight></codeline>
+<codeline lineno="181" refid="class_fenetre_principale_1ae79e4222806d3f47a32e56ce829cb8ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1ae79e4222806d3f47a32e56ce829cb8ab" kindref="member">hAligne1Taches</ref>;</highlight></codeline>
+<codeline lineno="182" refid="class_fenetre_principale_1aebb3cee05512e8a8313de587222bdd3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1aebb3cee05512e8a8313de587222bdd3b" kindref="member">hAligne2Taches</ref>;</highlight></codeline>
+<codeline lineno="183" refid="class_fenetre_principale_1abbee316bd872d663b9d2b7e7af20f6d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1abbee316bd872d663b9d2b7e7af20f6d7" kindref="member">hAligne3Taches</ref>;</highlight></codeline>
+<codeline lineno="184" refid="class_fenetre_principale_1a3bd8898546df4e5937607762e64cb405" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a3bd8898546df4e5937607762e64cb405" kindref="member">vAligne1TachesR</ref>;</highlight></codeline>
+<codeline lineno="185" refid="class_fenetre_principale_1aa9c5898eebbe49f3e06ced9eae696a66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1aa9c5898eebbe49f3e06ced9eae696a66" kindref="member">vAligne2TachesR</ref>;</highlight></codeline>
+<codeline lineno="186" refid="class_fenetre_principale_1a87db1b6abf5ff505196b67397d9f0064" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a87db1b6abf5ff505196b67397d9f0064" kindref="member">hAligneTachesR</ref>;</highlight></codeline>
+<codeline lineno="187" refid="class_fenetre_principale_1a2defcb307f28752bd2e3130d3befbfdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a2defcb307f28752bd2e3130d3befbfdc" kindref="member">vAligne1ALL</ref>;</highlight></codeline>
+<codeline lineno="188" refid="class_fenetre_principale_1aa85b0bbe638316b96278c8a9f17dae87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1aa85b0bbe638316b96278c8a9f17dae87" kindref="member">vAligne2ALL</ref>;</highlight></codeline>
+<codeline lineno="189" refid="class_fenetre_principale_1a155a155d4f584d7881d1748d4cd9aa92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a155a155d4f584d7881d1748d4cd9aa92" kindref="member">hAligneALL</ref>;</highlight></codeline>
+<codeline lineno="190" refid="class_fenetre_principale_1ae371b5ade3737e719da0dd88e8133e94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1ae371b5ade3737e719da0dd88e8133e94" kindref="member">hAligne1I</ref>;</highlight></codeline>
+<codeline lineno="191" refid="class_fenetre_principale_1acbeac30c6a29c707e4c48d5abd9474af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1acbeac30c6a29c707e4c48d5abd9474af" kindref="member">hAligne2I</ref>;</highlight></codeline>
+<codeline lineno="192" refid="class_fenetre_principale_1a979330575c883059ef312e759f652b1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QHBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a979330575c883059ef312e759f652b1b" kindref="member">hAligne4I</ref>;</highlight></codeline>
+<codeline lineno="193" refid="class_fenetre_principale_1a33f7f91ce6118174ed9ebe24819a6d3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QVBoxLayout<sp/>*<ref refid="class_fenetre_principale_1a33f7f91ce6118174ed9ebe24819a6d3e" kindref="member">vAligneI</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="class_fenetre_principale_1a77b0ca6629704c489e079041cd796884" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a77b0ca6629704c489e079041cd796884" kindref="member">Bvalider</ref>;<sp/></highlight></codeline>
+<codeline lineno="199" refid="class_fenetre_principale_1abef0cf0571fce44eb4ffb83fa750aa7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1abef0cf0571fce44eb4ffb83fa750aa7d" kindref="member">Bannuler</ref>;<sp/></highlight></codeline>
+<codeline lineno="200" refid="class_fenetre_principale_1a1bf6b54ab2a9e531959ccc809c50dc27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a1bf6b54ab2a9e531959ccc809c50dc27" kindref="member">Bvalider1</ref>;</highlight></codeline>
+<codeline lineno="201" refid="class_fenetre_principale_1acbb1e850fdb21cfbe92fc39ce06922ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1acbb1e850fdb21cfbe92fc39ce06922ca" kindref="member">Bannuler1</ref>;</highlight></codeline>
+<codeline lineno="202" refid="class_fenetre_principale_1a35ac429d16300685a9f539be17fdf4bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a35ac429d16300685a9f539be17fdf4bf" kindref="member">BRechercher</ref>;<sp/></highlight></codeline>
+<codeline lineno="203" refid="class_fenetre_principale_1a16053dcda7dc6eaf419a10dfb3a85b08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a16053dcda7dc6eaf419a10dfb3a85b08" kindref="member">BannulerR</ref>;</highlight></codeline>
+<codeline lineno="204" refid="class_fenetre_principale_1a38d2efe902dfb3164f26f91c076ca37e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a38d2efe902dfb3164f26f91c076ca37e" kindref="member">Bsupprimer</ref>;</highlight></codeline>
+<codeline lineno="205" refid="class_fenetre_principale_1abfa08646b0782e6291547c83d667b0ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1abfa08646b0782e6291547c83d667b0ca" kindref="member">BPhotoContact</ref>;</highlight></codeline>
+<codeline lineno="206" refid="class_fenetre_principale_1a72d0cb0844e6b9404ef2a9d21f213aa9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a72d0cb0844e6b9404ef2a9d21f213aa9" kindref="member">BPhotoModifContact</ref>;</highlight></codeline>
+<codeline lineno="207" refid="class_fenetre_principale_1a6f75e0433e07f49056383716b3f17720" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a6f75e0433e07f49056383716b3f17720" kindref="member">BajoutInteraction</ref>;</highlight></codeline>
+<codeline lineno="208" refid="class_fenetre_principale_1a4e6035560712190ef16464d3444e7870" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a4e6035560712190ef16464d3444e7870" kindref="member">BannulerInteraction</ref>;</highlight></codeline>
+<codeline lineno="209" refid="class_fenetre_principale_1ab11ce5604371a3847827e6d7c89befc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1ab11ce5604371a3847827e6d7c89befc0" kindref="member">BvaliderListI</ref>;</highlight></codeline>
+<codeline lineno="210" refid="class_fenetre_principale_1ac5267820dfba3ef349ebd86dbb5bcc0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1ac5267820dfba3ef349ebd86dbb5bcc0f" kindref="member">BannulerListI</ref>;</highlight></codeline>
+<codeline lineno="211" refid="class_fenetre_principale_1a693f042408786e15c04776c6d351ba0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a693f042408786e15c04776c6d351ba0e" kindref="member">BrechercheIdate</ref>;</highlight></codeline>
+<codeline lineno="212" refid="class_fenetre_principale_1a454ed73304323ecf6675e53aeb2c9cb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a454ed73304323ecf6675e53aeb2c9cb3" kindref="member">BannulerIdate</ref>;</highlight></codeline>
+<codeline lineno="213" refid="class_fenetre_principale_1a01f3cd3ef0899cb1b507d914fd58e1db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a01f3cd3ef0899cb1b507d914fd58e1db" kindref="member">BRechercherRC</ref>;</highlight></codeline>
+<codeline lineno="214" refid="class_fenetre_principale_1a6cbca402e9daff16a1efa1aed5187a91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a6cbca402e9daff16a1efa1aed5187a91" kindref="member">BannulerRC</ref>;</highlight></codeline>
+<codeline lineno="215" refid="class_fenetre_principale_1aab8a224893cffd13b1fff1c4d6df094b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1aab8a224893cffd13b1fff1c4d6df094b" kindref="member">BajoutTaches</ref>;</highlight></codeline>
+<codeline lineno="216" refid="class_fenetre_principale_1a1de264524afedbefe7e7f9712301749e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a1de264524afedbefe7e7f9712301749e" kindref="member">BannulerTaches</ref>;</highlight></codeline>
+<codeline lineno="217" refid="class_fenetre_principale_1a72ee7e252ecb5a8865b03827f4ae5473" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a72ee7e252ecb5a8865b03827f4ae5473" kindref="member">BrechercherTaches</ref>;</highlight></codeline>
+<codeline lineno="218" refid="class_fenetre_principale_1a4e9228d4cb9216075ba1e8c5e49bf5be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a4e9228d4cb9216075ba1e8c5e49bf5be" kindref="member">BannulerTachesR</ref>;</highlight></codeline>
+<codeline lineno="219" refid="class_fenetre_principale_1aedd735f1332a202f949c4b20a4dcb8d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1aedd735f1332a202f949c4b20a4dcb8d1" kindref="member">BrechercherALL</ref>;</highlight></codeline>
+<codeline lineno="220" refid="class_fenetre_principale_1a563bd0d4b34cc2f6990cfbd9d82255a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QPushButton<sp/>*<ref refid="class_fenetre_principale_1a563bd0d4b34cc2f6990cfbd9d82255a7" kindref="member">BannulerALL</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="223" refid="class_fenetre_principale_1a4d0dbda6c3000945b79976a58d2c0603" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_contact_b_d_d" kindref="compound">ContactBDD</ref><sp/><ref refid="class_fenetre_principale_1a4d0dbda6c3000945b79976a58d2c0603" kindref="member">bd</ref>;</highlight></codeline>
+<codeline lineno="224" refid="class_fenetre_principale_1a93a2a49dc222b423daf971ff975ee7ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_interaction_b_d_d" kindref="compound">InteractionBDD</ref><sp/><ref refid="class_fenetre_principale_1a93a2a49dc222b423daf971ff975ee7ad" kindref="member">inBDD</ref>;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fenetre_principale_1aa7946cb7167a6a9db6c280ab89cbd568" kindref="member">FenetrePrincipale</ref>(QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_fenetre_principale_1afb035ceb7a4f1ddd23ab6213b582efa1" kindref="member">~FenetrePrincipale</ref>();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a2689805640950b8e7cd96c65644f25c0" kindref="member">CreerUnContact</ref>();</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a6b96a85abd2a4cd9a6e8ffef2cd805a1" kindref="member">SupprimerContact</ref>();</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a3e20818bc0668381798488253cf7352f" kindref="member">ModifierContact</ref>();</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1ab0e4d3d7189ce6143f127428610669c4" kindref="member">chercherContact</ref>();</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a0b66f1a514d67af47b4cb37f85bebd1a" kindref="member">AjoutInteraction</ref>();</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>AjoutTaches();</highlight></codeline>
+<codeline lineno="278"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a87bee89561133b726928d7fbf9e741bf" kindref="member">ListeInteraction</ref>();</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a22275faf0ecdff21cd5b1af44a4a0954" kindref="member">InteractionsEntre2Date</ref>();</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1ab49a749587805776b0b00b42a564a5cd" kindref="member">RechercheInteractionContact</ref>();</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a74e30ec4ec6d8e356879ae8a841497b5" kindref="member">AfficheTachesIntervalle</ref>();</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a7e38d5c250c91b24924b82485ec762e2" kindref="member">AfficheTachesContact</ref>();</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>on_jsontest_clicked();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1ae906a147c7165ba41bac4212f420ef81" kindref="member">Affichage</ref>();</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a3a49ce699001e31deb6d0a7d6dc2a14b" kindref="member">Apropos</ref>();</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a380f1fefb3ff9a5b9d8db99ec843d05e" kindref="member">demarrerHeure</ref>();</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1abc3bb6f9776a14adbfc18f200d4a247f" kindref="member">CreationContact</ref>();</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a72584bfdc822ef786a93b1147c94d71f" kindref="member">BoutonAnnulerContact</ref>();</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1af2c321642e3eef81db5a16347a907db9" kindref="member">afficherPhoto</ref>();</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a49c0bfed78c4c90fb89718178053ad09" kindref="member">AfficheModContact</ref>();</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a6e500c37f943169e9bbdeff8d4b437ca" kindref="member">BoutonAnnulerModification</ref>();</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="class_fenetre_principale_1a9b5ac3fe1f98494685363533e4de0fee" kindref="member">afficherPhoto1</ref>();</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1ad5680c5cce771d7964f1afe061bbcc77" kindref="member">RechercheUnContact</ref>();</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1acda723d1e58115c39d03907cfad4c4b9" kindref="member">BoutonAnnulerRechercher</ref>();</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a0eaafaf80ee5a54a13b3e93fc3a62536" kindref="member">suppressionContact</ref>();</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1ab96c8d09b81cdeab7f2c230cf4eb5337" kindref="member">BoutonAnnulerSupprimer</ref>();</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a1d0d27120adc567c848a0b6503179844" kindref="member">TotalContact</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a0171ae0296ef5bb5bc0d76a5880fdb51" kindref="member">AjoutUneInteraction</ref>();</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a3cbea982217767dc6e23121a7aa9a6ab" kindref="member">AnnulerInteraction</ref>();</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1ad04d49ee65aded3e3055facdd80be150" kindref="member">ListeInteractionContact</ref>();</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1abdfcb8951fe59f3137a4843659154354" kindref="member">AnnulerListeInteraction</ref>();</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a6e1ca45b80193688f3d100d8215577c4" kindref="member">AfficheToutesLesInteractions</ref>();</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a219d2d909596d2e713e60b7f2acf26cf" kindref="member">RechercherInteractionEntreDeuxDates</ref>();</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a095e891fd6f037ee670935cdc174f778" kindref="member">AnnulerInteractionEntreDeuxDates</ref>();</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a7e62e520f8dd0ae8678703b4d2337a14" kindref="member">FindContact</ref>();</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1ab43fc2a39ba7e56a17fd7126dcc141bc" kindref="member">CancelContact</ref>();</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>void<sp/><sp/>AjoutTodoContact();</highlight></codeline>
+<codeline lineno="454"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>AnnulerTodoContact();</highlight></codeline>
+<codeline lineno="459"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a2efe98d02c2dc4e06d88c1fdc6270a7f" kindref="member">ListeTodos</ref>();</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1ac328a3e6b0547739271a04ebb5636407" kindref="member">RechercheTodoCont</ref>();</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1ab058a6533dd73938d91c530fb986dbed" kindref="member">BoutonAnnulerRechercherT</ref>();</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a3f6d93414fdc859a3e96468154125c46" kindref="member">RechercheALLTodoCont</ref>(<sp/>);</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1ac40174c126f1228ecf762d613ae48367" kindref="member">AnnulerALL</ref>();</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1aa59f8c553f08f2eb296167fd1a1cd337" kindref="member">JsonContact</ref>();</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a32c74dbdfd7c814b33150b1c5ddc7a40" kindref="member">JsonInteraction</ref>();</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight></codeline>
+<codeline lineno="492"><highlight class="normal"></highlight></codeline>
+<codeline lineno="493"><highlight class="normal">signals:</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a2d1203f891c4f30f9b1136cf5d9c6c68" kindref="member">sigGetContactList</ref>(std::list&lt;Contact&gt;&amp;);</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a9aaf8fb4ff431b96c43ace07b6fb481b" kindref="member">sigInsert</ref>(<sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a9a0fb4d277f1190bcd9a6c33e50403e0" kindref="member">sigSupprimer</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>&amp;);</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a2d033b2bcebfe841e87e4116319adb33" kindref="member">sigModifier</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,<sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a98f0241201411af3dbb2a8e2758a2cbf" kindref="member">sigRechercheUnContact</ref>(QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,QString<sp/>&amp;<sp/>,std::list&lt;Contact&gt;<sp/>&amp;<sp/>);</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a7f749d5bc632bc23a783dff9a98145c7" kindref="member">sigAjoutInteraction</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,<ref refid="class_interaction" kindref="compound">Interaction</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1acc911fea4aa068b0c3dff2bbf660744c" kindref="member">sigListeInteraction</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,std::list&lt;Interaction&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1aa8f941620268adc8d78f459274c9db7a" kindref="member">sigListeInteractionALL</ref>(std::list&lt;Interaction&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a4d9fc9ebab982ed05540417674eee372" kindref="member">sigRechercheInteraction</ref>(QString<sp/>&amp;,QString<sp/>&amp;,std::list&lt;Interaction&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a9718a30e3e17064ffbc42bca38fe4f01" kindref="member">sigRechercheInteractionCont</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Interaction&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="class_fenetre_principale_1aabe9af62182185520011ef022b026b61" kindref="member">sigAjoutTodo</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,<ref refid="class_todo" kindref="compound">Todo</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="602"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a19409a5356242f96107b892dbf7f7d96" kindref="member">sigListeTodoContact</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,std::list&lt;Todo&gt;&amp;);</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a6ad1d143d6156726f9796787c8afafef" kindref="member">sigListeALLContact</ref>(std::list&lt;Todo&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="617"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1afb7bc17549a4466bd5dc6e78c44a8155" kindref="member">sigRechercheTodoCont</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Todo&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fenetre_principale_1a186a9b9355faea526049228a4613eb1e" kindref="member">sigRechercheALLTodoCont</ref>(<sp/>QString<sp/>&amp;<sp/>,<sp/>QString<sp/>&amp;<sp/>,<sp/>std::list&lt;Todo&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"></highlight></codeline>
+<codeline lineno="627"><highlight class="normal"></highlight></codeline>
+<codeline lineno="628"><highlight class="normal"></highlight></codeline>
+<codeline lineno="629"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>FENETREPRINCIPALE_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.h"/>
+  </compounddef>
+</doxygen>

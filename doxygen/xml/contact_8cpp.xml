@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="contact_8cpp" kind="file" language="C++">
+    <compoundname>contact.cpp</compoundname>
+    <includes refid="contact_8h" local="yes">contact.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>contact.h</label>
+        <link refid="contact_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>ostream</label>
+      </node>
+      <node id="3">
+        <label>Date.h</label>
+        <link refid="_date_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ctime</label>
+      </node>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp</label>
+        <link refid="contact_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="contact_8cpp_1a63eafbeffda3a65e77fdb90d32f0c3ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;o, const Contact &amp;c)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_contact" kindref="compound">Contact</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Affichage d&apos;une date. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>pour l&apos;affichage des propriete d&apos;un contact</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream &amp;o :la bibliothèque ostream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_contact" kindref="compound">Contact</ref> &amp;c :le contact à afficher </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>o pour l&apos;affichage d&apos;un contact </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" line="238" column="1" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp" bodystart="238" bodyend="250"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>BARRY Thierno Oumar &amp; DIALLO Iliassou </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="contact_8h" kindref="compound">contact.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="contact_8h" kindref="compound">contact.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="class_contact_1ae39444f378e6de7fd6c3e60981949af5" kindref="member">Contact::Contact</ref>():nom(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),prenom(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),entreprise(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),mail(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),telephone(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),URIphoto(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">),dateDecreation()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="class_contact_1ae39444f378e6de7fd6c3e60981949af5" kindref="member">Contact::Contact</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;n,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;p,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;e,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>em,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;t,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;photo):nom(n),prenom(p),entreprise(e),mail(em),telephone(t),URIphoto(photo)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a0068f3b8c12c82a2f5f10968d36639c3" kindref="member">Contact::getId_contact</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="40"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_contact_1ae9b9fe5ccc55e19ca7087f94a30f38ce" kindref="member">id_contact</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a535b5af3f963a1201c1611468bbd4693" kindref="member">Contact::setId_contact</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>value)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_contact_1ae9b9fe5ccc55e19ca7087f94a30f38ce" kindref="member">id_contact</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">std::string<sp/><ref refid="class_contact_1ac4ca062bf61f7adbbddc7878c0957e82" kindref="member">Contact::getNom</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="59"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a837ec32c95f8815511ba1fb88d6e6870" kindref="member">nom</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a0837af372d75a5d85ab296c6104a3232" kindref="member">Contact::setNom</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;n)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_contact_1a837ec32c95f8815511ba1fb88d6e6870" kindref="member">nom</ref>=n;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">std::string<sp/><ref refid="class_contact_1a1825fa5b28052b477fb16176bb4df21e" kindref="member">Contact::getPrenom</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="80"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a6d85467851d61def44445912b58d52a4" kindref="member">prenom</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_1ac31195d758df58ee327cc05b6276aace" kindref="member">Contact::setPrenom</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;p)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_contact_1a6d85467851d61def44445912b58d52a4" kindref="member">prenom</ref>=p;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">std::string<sp/><ref refid="class_contact_1a0126ff51496fe7f69db34de82ce28398" kindref="member">Contact::getEntreprise</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="99"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a786cf3e7f36e558af773e64a3302fbf8" kindref="member">entreprise</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a1237b826b80e3ead402d0c26cc3c2ace" kindref="member">Contact::setEntreprise</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;e)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_contact_1a786cf3e7f36e558af773e64a3302fbf8" kindref="member">entreprise</ref>=e;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">std::string<sp/><ref refid="class_contact_1a53ebe193a5284e27b468ababdf7577e3" kindref="member">Contact::getTelephone</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="120"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a045666ea797063981360d3c926c4d58f" kindref="member">telephone</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a54c863b3045a9255d75f1ad876ecb7de" kindref="member">Contact::setTelephone</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;t)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_contact_1a045666ea797063981360d3c926c4d58f" kindref="member">telephone</ref>=t;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">std::string<sp/><ref refid="class_contact_1af5a2baad0e523501c7270323140d329f" kindref="member">Contact::getURIPhoto</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="141"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_contact_1aff78eb5c73608f1bc7b300b9427a878e" kindref="member">URIphoto</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_1ab1d6d7d9ce1e62b1d7c52a2a927a8692" kindref="member">Contact::setURIPhoto</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;p)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_contact_1aff78eb5c73608f1bc7b300b9427a878e" kindref="member">URIphoto</ref>=p;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">std::string<sp/><ref refid="class_contact_1ae2fb4df883959c1f36a9168d7e6f23d1" kindref="member">Contact::getMail</ref>()</highlight><highlight class="keyword"><sp/><sp/>const</highlight></codeline>
+<codeline lineno="164"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a10aaa8c3a6c26e02497ffb19fb37c52a" kindref="member">mail</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a513b0a2da8a697076f4616ce7b6c445f" kindref="member">Contact::setMail</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;m)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_contact_1a10aaa8c3a6c26e02497ffb19fb37c52a" kindref="member">mail</ref>=m;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><ref refid="class_date" kindref="compound">Date</ref><sp/><ref refid="class_contact_1ac95a35bd3f45283d24521ff0b87687ef" kindref="member">Contact::getDateDecreation</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="186"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a040e29ce0ae67c16d810f0e49c669056" kindref="member">dateDecreation</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_1a219a2644e2b4414b2d3c2570a9a1572f" kindref="member">Contact::setDateDecreation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_date" kindref="compound">Date</ref><sp/>&amp;de)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_contact_1a040e29ce0ae67c16d810f0e49c669056" kindref="member">dateDecreation</ref>=de;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><ref refid="class_contact_1a22bdaf53942f1ce96de5ada1d6d7a4c1" kindref="member">Contact::operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;c1)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="208"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_contact_1ac4ca062bf61f7adbbddc7878c0957e82" kindref="member">getNom</ref>()==c1.<ref refid="class_contact_1ac4ca062bf61f7adbbddc7878c0957e82" kindref="member">getNom</ref>())</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_contact_1a1825fa5b28052b477fb16176bb4df21e" kindref="member">getPrenom</ref>()==c1.<ref refid="class_contact_1a1825fa5b28052b477fb16176bb4df21e" kindref="member">getPrenom</ref>())</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_contact_1a0126ff51496fe7f69db34de82ce28398" kindref="member">getEntreprise</ref>()==c1.<ref refid="class_contact_1a0126ff51496fe7f69db34de82ce28398" kindref="member">getEntreprise</ref>())</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_contact_1a53ebe193a5284e27b468ababdf7577e3" kindref="member">getTelephone</ref>()==c1.<ref refid="class_contact_1a53ebe193a5284e27b468ababdf7577e3" kindref="member">getTelephone</ref>())</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_contact_1af5a2baad0e523501c7270323140d329f" kindref="member">getURIPhoto</ref>()==c1.<ref refid="class_contact_1af5a2baad0e523501c7270323140d329f" kindref="member">getURIPhoto</ref>())</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_contact_1abf1edc65bbfd0b8b9b81d81e878762bc" kindref="member">Contact::operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;da)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="225"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;<ref refid="class_contact_1ac95a35bd3f45283d24521ff0b87687ef" kindref="member">getDateDecreation</ref>()&lt;da.<ref refid="class_contact_1ac95a35bd3f45283d24521ff0b87687ef" kindref="member">getDateDecreation</ref>())</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal">std::ostream&amp;<sp/><ref refid="contact_8cpp_1a63eafbeffda3a65e77fdb90d32f0c3ec" kindref="member">operator &lt;&lt;</ref>(std::<sp/>ostream<sp/>&amp;o,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;c)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/>o&lt;&lt;c.<ref refid="class_contact_1ac4ca062bf61f7adbbddc7878c0957e82" kindref="member">getNom</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/>o&lt;&lt;c.<ref refid="class_contact_1a1825fa5b28052b477fb16176bb4df21e" kindref="member">getPrenom</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>o&lt;&lt;c.<ref refid="class_contact_1a0126ff51496fe7f69db34de82ce28398" kindref="member">getEntreprise</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>o&lt;&lt;c.<ref refid="class_contact_1ae2fb4df883959c1f36a9168d7e6f23d1" kindref="member">getMail</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>o&lt;&lt;c.<ref refid="class_contact_1a53ebe193a5284e27b468ababdf7577e3" kindref="member">getTelephone</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/>o&lt;&lt;c.<ref refid="class_contact_1af5a2baad0e523501c7270323140d329f" kindref="member">getURIPhoto</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/>o&lt;&lt;c.<ref refid="class_contact_1ac95a35bd3f45283d24521ff0b87687ef" kindref="member">getDateDecreation</ref>().<ref refid="class_date_1aad30c999adf882cee6369f627c0353c0" kindref="member">fromDateString</ref>()&lt;&lt;</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>o;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contact.cpp"/>
+  </compounddef>
+</doxygen>

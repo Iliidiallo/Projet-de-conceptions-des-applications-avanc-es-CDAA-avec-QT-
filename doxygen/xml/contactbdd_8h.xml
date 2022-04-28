@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="contactbdd_8h" kind="file" language="C++">
+    <compoundname>contactbdd.h</compoundname>
+    <includes local="no">QObject</includes>
+    <includes refid="contact_8h" local="no">contact.h</includes>
+    <includes local="no">QDate</includes>
+    <includes local="no">QtSql/QSqlDatabase</includes>
+    <includes local="no">QDebug</includes>
+    <includes local="no">QtSql/QSqlQuery</includes>
+    <includes local="no">list</includes>
+    <includes local="no">QString</includes>
+    <includes local="no">string</includes>
+    <includes local="no">QVariant</includes>
+    <includes local="no">QSql</includes>
+    <includedby refid="contactbdd_8cpp" local="yes">/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp</includedby>
+    <includedby refid="fenetreprincipale_8h" local="no">/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.h</includedby>
+    <includedby refid="main_8cpp" local="no">/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>list</label>
+      </node>
+      <node id="3">
+        <label>contact.h</label>
+        <link refid="contact_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+      <node id="9">
+        <label>QtSql/QSqlDatabase</label>
+      </node>
+      <node id="11">
+        <label>QtSql/QSqlQuery</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>ostream</label>
+      </node>
+      <node id="4">
+        <label>Date.h</label>
+        <link refid="_date_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ctime</label>
+      </node>
+      <node id="10">
+        <label>QDebug</label>
+      </node>
+      <node id="8">
+        <label>QDate</label>
+      </node>
+      <node id="13">
+        <label>QString</label>
+      </node>
+      <node id="15">
+        <label>QSql</label>
+      </node>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h</label>
+        <link refid="contactbdd_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>QVariant</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.cpp</label>
+        <link refid="fenetreprincipale_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.cpp.autosave.h</label>
+        <link refid="fenetreprincipale_8cpp_8autosave_8h"/>
+      </node>
+      <node id="2">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.cpp</label>
+        <link refid="contactbdd_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/fenetreprincipale.h</label>
+        <link refid="fenetreprincipale_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h</label>
+        <link refid="contactbdd_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_contact_b_d_d" prot="public">ContactBDD</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>BARRY Thierno Oumar &amp; DIALLO Iliassou la connexion Qt à un base sqlite qui stocke les informations relatives à un contact </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CONTACTBDD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONTACTBDD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#include<sp/>&lt;QObject&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="contact_8h" kindref="compound">contact.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDate&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtSql/QSqlDatabase&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QDebug&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QtSql/QSqlQuery&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QVariant&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QSql&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_contact_b_d_d" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_contact_b_d_d" kindref="compound">ContactBDD</ref><sp/>:</highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_q_object" kindref="compound">QObject</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="class_contact_b_d_d_1af4198cc56143e7ee244374b05809d301" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>QSqlDatabase<sp/><ref refid="class_contact_b_d_d_1af4198cc56143e7ee244374b05809d301" kindref="member">db</ref>;</highlight></codeline>
+<codeline lineno="38" refid="class_contact_b_d_d_1a0b8b10a1e971d7e2120a291527e3ae74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1a0b8b10a1e971d7e2120a291527e3ae74" kindref="member">dbOuvert</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1a151335438386a4b19d9c26102717e377" kindref="member">closeDb</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1a5e5e3c2ae8d4ec5d0092af497c703d8b" kindref="member">connexionDB</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1aa82eb548f99ae20a9aa2d9d581242fbf" kindref="member">isDBopen</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="72"><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1aa81b5ba902e1db7f9933fe4d8f32882e" kindref="member">ListeContact</ref>(std::list&lt;Contact&gt;<sp/>&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1a951bc86a61e65b2ad1fe54b45ab00278" kindref="member">NouveauContact</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1a5dee51527412d5b8119d00c0f49cfbef" kindref="member">ModifContact</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1a7ccb1e9fa160d6026a3854a027bfd601" kindref="member">SupprimeContact</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="class_contact_b_d_d_1ada052c3f0a553eabedf254bb054f5387" kindref="member">RechercherContact</ref>(QString&amp;<sp/>,QString<sp/>&amp;<sp/>,QString<sp/>&amp;<sp/>,std::list&lt;Contact&gt;<sp/>&amp;<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="class_contact_b_d_d_1a6764c4ed28c6c001c407dc65902c27c6" kindref="member">NombreContact</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1a28dc8793dd96f35c85fdceb269800579" kindref="member">ContactBDD</ref>(<ref refid="class_q_object" kindref="compound">QObject</ref><sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_contact_b_d_d_1a1cd8be9e04f80c4061457ddde1f04f9f" kindref="member">~ContactBDD</ref>();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1ae9e97816b1d250fc5bdbf44ccdb3e474" kindref="member">bddListeContact</ref>(std::list&lt;Contact&gt;<sp/>&amp;);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1adef37fb1183502a46db3e07fd97a3a63" kindref="member">bbdNouveauContact</ref>(<ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1acc532eeaa500698961bd1cd3de973854" kindref="member">bddModifContact</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;,<sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>&amp;);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1ad28602fec70582f934af0654188a7fca" kindref="member">bddSupprimeContact</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1ae1a0d3ecda82c9191d267cc5bcc1a2a3" kindref="member">bddRechercherContact</ref>(<sp/><sp/>QString<sp/>&amp;,QString<sp/>&amp;<sp/><sp/>,<sp/><sp/>QString<sp/>&amp;<sp/><sp/>,std::list&lt;Contact&gt;<sp/>&amp;<sp/><sp/>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>convertToJson();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal">signals:</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_contact_b_d_d_1a30a73c86def34e413988dfcd4591f713" kindref="member">nombreTotalContact</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//json</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>fichierConverti(QJsonDocument<sp/>&amp;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CONTACTBDD_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/contactbdd.h"/>
+  </compounddef>
+</doxygen>

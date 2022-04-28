@@ -1,0 +1,6 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$class_q_object.html" title=" " alt="" coords="5,56,76,83"/>
+<area shape="rect" id="node2" href="$class_contact_b_d_d.html" title="Classe qui gère la base de donnée La classe herite d&#39;un QObject, permet de créer des fonctions et des..." alt="" coords="131,5,229,32"/>
+<area shape="rect" id="node3" href="$class_interaction_b_d_d.html" title="Classe interaction de la base de donnée La classe herite d&#39;un QObject, permet d&#39;ajouter des interacti..." alt="" coords="124,56,236,83"/>
+<area shape="rect" id="node4" href="$class_todo_b_d_d.html" title="Classe TodoBDD de la base de donnée La classe herite d&#39;un QObject, permet d&#39;ajouter des TodoBDD pour ..." alt="" coords="141,107,219,133"/>
+</map>

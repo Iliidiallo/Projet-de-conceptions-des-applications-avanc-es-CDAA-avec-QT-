@@ -1,0 +1,2034 @@
+\doxysection{Référence de la classe Fenetre\+Principale}
+\label{class_fenetre_principale}\index{FenetrePrincipale@{FenetrePrincipale}}
+
+
+Classe qui gère la fenetre principale . La classe herite d\textquotesingle{}une \doxyref{Q\+Main\+Window}{p.}{class_q_main_window},elle est l\textquotesingle{}une des plus importante pour notre projet car elle permet de faire la déclaration des boites de dialogues ,des slots,des signaux pour bien gérer l\textquotesingle{}interconnections entre les classes et les bases de données .  
+
+
+
+
+{\ttfamily \#include $<$fenetreprincipale.\+h$>$}
+
+
+
+Graphe de collaboration de Fenetre\+Principale\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_fenetre_principale__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Connecteurs publics}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Affichage} ()
+\begin{DoxyCompactList}\small\item\em Les slot pour tout ce qui concerne le C\+O\+N\+T\+A\+CT Les slots qu\textquotesingle{}on liera aux boites de dialogues concernant un \doxyref{Contact}{p.}{class_contact}. \end{DoxyCompactList}\item 
+void \textbf{ Apropos} ()
+\begin{DoxyCompactList}\small\item\em Slot Apropos . slot lié à l\textquotesingle{}affichage de about. \end{DoxyCompactList}\item 
+void \textbf{ demarrer\+Heure} ()
+\begin{DoxyCompactList}\small\item\em Slot demarrer\+Heure . slot lié à l\textquotesingle{}affichage de l\textquotesingle{}heure. \end{DoxyCompactList}\item 
+void \textbf{ Creation\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Slot pour la Creation d\textquotesingle{}un \doxyref{Contact}{p.}{class_contact} . Slot lié à la création d\textquotesingle{}un contact . \end{DoxyCompactList}\item 
+void \textbf{ Bouton\+Annuler\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Slot Bouton pour Annuler le \doxyref{Contact}{p.}{class_contact} . Slot lié à la fermeture de la boite de dialogue lors de la création d\textquotesingle{}un contact . \end{DoxyCompactList}\item 
+void \textbf{ afficher\+Photo} ()
+\begin{DoxyCompactList}\small\item\em Slot afficher une Photo . Slot lié à l\textquotesingle{}affichage de la photo lors dé la création d\textquotesingle{}un contact . \end{DoxyCompactList}\item 
+void \textbf{ Affiche\+Mod\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Slot Affiche\+Mod\+Contact . slot lié à l\textquotesingle{}affichage lié à la Modification d\textquotesingle{}un contact. \end{DoxyCompactList}\item 
+void \textbf{ Bouton\+Annuler\+Modification} ()
+\begin{DoxyCompactList}\small\item\em Slot Bouton pour Bouton\+Annuler\+Modification. Slot lié à la fermeture de la boite de dialogue lors de la modification d\textquotesingle{}un contact . \end{DoxyCompactList}\item 
+void \textbf{ afficher\+Photo1} ()
+\begin{DoxyCompactList}\small\item\em Slot afficher une Photo . Slot lié à l\textquotesingle{}affichage de la photo lors dé la création d\textquotesingle{}un contact . \end{DoxyCompactList}\item 
+void \textbf{ Recherche\+Un\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Slot Recherche\+Un\+Contact . Slot lié à slot lié pour la recherche d\textquotesingle{}un contact. \end{DoxyCompactList}\item 
+void \textbf{ Bouton\+Annuler\+Rechercher} ()
+\begin{DoxyCompactList}\small\item\em Slot Bouton pour Bouton\+Annuler\+Rechercher . Slot lié à la fermeture de la boite de dialogue lors de la recherche d\textquotesingle{}un contact . \end{DoxyCompactList}\item 
+void \textbf{ suppression\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Slot suppression\+Contact . slot lié pour la suppression d\textquotesingle{}un contact . \end{DoxyCompactList}\item 
+void \textbf{ Bouton\+Annuler\+Supprimer} ()
+\begin{DoxyCompactList}\small\item\em Slot Bouton pour Bouton\+Annuler\+Supprimer . Slot lié à la fermeture de la boite de dialogue lors de la suppression d\textquotesingle{}un contact . \end{DoxyCompactList}\item 
+void \textbf{ Total\+Contact} (int \&)
+\begin{DoxyCompactList}\small\item\em Slot Total\+Contact . le slot qu\textquotesingle{}on appellera pour retourner le nombre total des contacts . \end{DoxyCompactList}\item 
+void \textbf{ Ajout\+Une\+Interaction} ()
+\begin{DoxyCompactList}\small\item\em Les slots pour tout ce qui concerne l\textquotesingle{}I\+N\+TÉ\+R\+A\+C\+T\+I\+ON Les slots qu\textquotesingle{}on liera aux boites de dialogues concernant une intéraction. \end{DoxyCompactList}\item 
+void \textbf{ Annuler\+Interaction} ()
+\begin{DoxyCompactList}\small\item\em Slot Bouton pour Annuler\+Interaction . Slot lié à la fermeture de la boite de dialogue lors de l\textquotesingle{}ajout d\textquotesingle{}une intéraction . \end{DoxyCompactList}\item 
+void \textbf{ Liste\+Interaction\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Slot Liste\+Interaction\+Contact . Slot lié à l\textquotesingle{}affichage des interactions pour un contact choisi. \end{DoxyCompactList}\item 
+void \textbf{ Annuler\+Liste\+Interaction} ()
+\begin{DoxyCompactList}\small\item\em Slot Bouton pour Annuler\+Liste\+Interaction . Slot lié au Bouton annuler pour fermer la boite de dialogue. \end{DoxyCompactList}\item 
+void \textbf{ Affiche\+Toutes\+Les\+Interactions} ()
+\begin{DoxyCompactList}\small\item\em Slot Affiche\+Toutes\+Les\+Interactions . Slot lié pour afiicher les intéractions. \end{DoxyCompactList}\item 
+void \textbf{ Rechercher\+Interaction\+Entre\+Deux\+Dates} ()
+\begin{DoxyCompactList}\small\item\em Slot Rechercher\+Interaction\+Entre\+Deux\+Dates . Slot lié pour réchercher une interaction entre deux dates. \end{DoxyCompactList}\item 
+void \textbf{ Annuler\+Interaction\+Entre\+Deux\+Dates} ()
+\begin{DoxyCompactList}\small\item\em Slot Bouton pour Annuler\+Interaction\+Entre\+Deux\+Dates . Slot lié au Bouton annuler pour fermer la boite de dialogue. \end{DoxyCompactList}\item 
+void \textbf{ Find\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Slot Find\+Contact . slot lié pour Rechercher les interactions d\textquotesingle{}un contact entre deux dates. \end{DoxyCompactList}\item 
+void \textbf{ Cancel\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Slot Bouton pour Cancel\+Contact . Slot lié au Bouton annuler pour fermer la boite de dialogue. \end{DoxyCompactList}\item 
+void \textbf{ Liste\+Todos} ()
+\begin{DoxyCompactList}\small\item\em Les slots pour tout ce qui concerne les T\+O\+DO Les slots qu\textquotesingle{}on liera aux boites de dialogues concernant les Taches. \end{DoxyCompactList}\item 
+void \textbf{ Recherche\+Todo\+Cont} ()
+\begin{DoxyCompactList}\small\item\em Slot Recherche\+Todo\+Cont . Slot lié à la collecte des taches pour un contact . \end{DoxyCompactList}\item 
+void \textbf{ Bouton\+Annuler\+RechercherT} ()
+\begin{DoxyCompactList}\small\item\em Slot Bouton pour Bouton\+Annuler\+RechercherT . Slot lié à la fermeture de la boite de dialogue lors de la recherche d\textquotesingle{}une Tache . \end{DoxyCompactList}\item 
+void \textbf{ Recherche\+A\+L\+L\+Todo\+Cont} ()
+\begin{DoxyCompactList}\small\item\em Slot Recherche\+Todo\+Cont . Slot lié à la recherche des taches pour tous les contact entre deux dates. \end{DoxyCompactList}\item 
+void \textbf{ Annuler\+A\+LL} ()
+\begin{DoxyCompactList}\small\item\em Slot Bouton pour Annuler\+A\+LL . Slot lié à la fermeture de la boite de dialogue lors de la recherche des taches pour les contacts entre deux dates . \end{DoxyCompactList}\item 
+void \textbf{ Json\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Slot lié au Json pour un contact . c\textquotesingle{}est cette fonction qui nous permettra d\textquotesingle{}exporter les fichiers json d\textquotesingle{}un contact . \end{DoxyCompactList}\item 
+void \textbf{ Json\+Interaction} ()
+\begin{DoxyCompactList}\small\item\em Slot lié au Json pour une intéraction . c\textquotesingle{}est cette fonction qui nous permettra d\textquotesingle{}exporter les fichiers json d\textquotesingle{}une intéraction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signaux}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ sig\+Get\+Contact\+List} (std\+::list$<$ \textbf{ Contact} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Les signaux pour tout ce qui concerne le contact Les signaux qu\textquotesingle{}on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée. \end{DoxyCompactList}\item 
+void \textbf{ sig\+Insert} (\textbf{ Contact} \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Insert . Le signal qui nous permet d\textquotesingle{}emetre un signal en inserant un contact . \end{DoxyCompactList}\item 
+void \textbf{ sig\+Supprimer} (int \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Supprimer . Le signal qui nous permet d\textquotesingle{}emetre un signal en faisant la suppression de l\textquotesingle{}id du contact . \end{DoxyCompactList}\item 
+void \textbf{ sig\+Modifier} (int \&, \textbf{ Contact} \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Modifier . Le signal qui nous permet d\textquotesingle{}emetre un signal en faisant la modification d\textquotesingle{}un contact en selectionnant son idcontact . \end{DoxyCompactList}\item 
+void \textbf{ sig\+Recherche\+Un\+Contact} (Q\+String \&, Q\+String \&, Q\+String \&, std\+::list$<$ \textbf{ Contact} $>$ \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Recherche\+Un\+Contact . Le signal qui nous permet d\textquotesingle{}emetre un signal en faisant la recherche en rentrant le nom du contact entre deux dates . \end{DoxyCompactList}\item 
+void \textbf{ sig\+Ajout\+Interaction} (int \&, \textbf{ Interaction} \&)
+\begin{DoxyCompactList}\small\item\em Les signaux pour tout ce qui concerne l\textquotesingle{}intéraction Les signaux qu\textquotesingle{}on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée. \end{DoxyCompactList}\item 
+void \textbf{ sig\+Liste\+Interaction} (int \&, std\+::list$<$ \textbf{ Interaction} $>$ \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Liste\+Interaction . Ce signal nous permet d\textquotesingle{}afficher pour un contact sa liste d\textquotesingle{}intéraction . \end{DoxyCompactList}\item 
+void \textbf{ sig\+Liste\+Interaction\+A\+LL} (std\+::list$<$ \textbf{ Interaction} $>$ \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Liste\+Interaction\+A\+LL . Ce signal nous permet d\textquotesingle{}afficher toutes les intéractions de tous les contacts . \end{DoxyCompactList}\item 
+void \textbf{ sig\+Recherche\+Interaction} (Q\+String \&, Q\+String \&, std\+::list$<$ \textbf{ Interaction} $>$ \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Recherche\+Interaction . Ce signal nous permet de rechercher dans un intervalle de deux dates toutes les intéractions . \end{DoxyCompactList}\item 
+void \textbf{ sig\+Recherche\+Interaction\+Cont} (int \&, Q\+String \&, Q\+String \&, std\+::list$<$ \textbf{ Interaction} $>$ \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Recherche\+Interaction\+Cont . Ce signal nous permet de rechercher pour un contact sa liste d\textquotesingle{}intéraction . \end{DoxyCompactList}\item 
+void \textbf{ sig\+Ajout\+Todo} (int \&, \textbf{ Todo} \&)
+\begin{DoxyCompactList}\small\item\em Les signaux pour tout ce qui concerne le \doxyref{Todo}{p.}{class_todo} Les signaux qu\textquotesingle{}on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée. \end{DoxyCompactList}\item 
+void \textbf{ sig\+Liste\+Todo\+Contact} (int \&, std\+::list$<$ \textbf{ Todo} $>$ \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Liste\+Todo\+Contact . Ce signal nous permet d\textquotesingle{}afficher la liste des taches pour un contact . \end{DoxyCompactList}\item 
+void \textbf{ sig\+Liste\+A\+L\+L\+Contact} (std\+::list$<$ \textbf{ Todo} $>$ \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Liste\+A\+L\+L\+Contact . Ce signal nous permet d\textquotesingle{}afficher la liste des taches pour tous les contact . \end{DoxyCompactList}\item 
+void \textbf{ sig\+Recherche\+Todo\+Cont} (int \&, Q\+String \&, Q\+String \&, std\+::list$<$ \textbf{ Todo} $>$ \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Recherche\+Todo\+Cont . Ce signal nous permet de rechercher des taches pour un contact entre deux dates . \end{DoxyCompactList}\item 
+void \textbf{ sig\+Recherche\+A\+L\+L\+Todo\+Cont} (Q\+String \&, Q\+String \&, std\+::list$<$ \textbf{ Todo} $>$ \&)
+\begin{DoxyCompactList}\small\item\em signal sig\+Recherche\+A\+L\+L\+Todo\+Cont . Ce signal nous permet de rechercher les taches de tous les contacts entre deux dates . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Fenetre\+Principale} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructeur Constructeur de la classe \doxyref{Fenetre\+Principale}{p.}{class_fenetre_principale}. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Fenetre\+Principale} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Le Destructeur de la classe \doxyref{Fenetre\+Principale}{p.}{class_fenetre_principale} càd la fonction qui libère la memoire utilisé . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Contact\+B\+DD} \textbf{ bd}
+\item 
+\textbf{ Interaction\+B\+DD} \textbf{ in\+B\+DD}
+\end{DoxyCompactItemize}
+\doxysubsection*{Connecteurs privés}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Creer\+Un\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Les fonctions slot pour créer les boites de dialogues . \end{DoxyCompactList}\item 
+void \textbf{ Supprimer\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Supprimer\+Contact . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour supprimer un contact . \end{DoxyCompactList}\item 
+void \textbf{ Modifier\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Modifier\+Contact . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour modifier un contact . \end{DoxyCompactList}\item 
+void \textbf{ chercher\+Contact} ()
+\begin{DoxyCompactList}\small\item\em chercher\+Contact . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour rechercher un contact . \end{DoxyCompactList}\item 
+void \textbf{ Ajout\+Interaction} ()
+\begin{DoxyCompactList}\small\item\em Ajout\+Interaction . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour ajouter une intéraction . \end{DoxyCompactList}\item 
+void \textbf{ Liste\+Interaction} ()
+\begin{DoxyCompactList}\small\item\em Ajout\+Taches . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour ajouter une taches(\+Todo) . \end{DoxyCompactList}\item 
+void \textbf{ Interactions\+Entre2\+Date} ()
+\begin{DoxyCompactList}\small\item\em Interactions\+Entre2\+Date . la fonction qui nous permettra de créer de la boite dialogue afin de rechercher des interactions entre deux dates . \end{DoxyCompactList}\item 
+void \textbf{ Recherche\+Interaction\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Recherche\+Interaction\+Contact . la fonction qui nous permettra de créer de la boite dialogue pour afficher une intéraction pour un contact selectionné . \end{DoxyCompactList}\item 
+void \textbf{ Affiche\+Taches\+Intervalle} ()
+\begin{DoxyCompactList}\small\item\em Affiche\+Taches\+Intervalle . la fonction qui nous permettra de créer de la boite dialogue pour afficher les taches entre deux dates . \end{DoxyCompactList}\item 
+void \textbf{ Affiche\+Taches\+Contact} ()
+\begin{DoxyCompactList}\small\item\em Affiche\+Taches\+Contact . la fonction qui nous permettra de créer de la boite dialogue pour afficher les \doxyref{Todo}{p.}{class_todo} de tous les contacts . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Fenetre\+Principale $\ast$ \textbf{ ui}
+\item 
+Q\+Dialog $\ast$ \textbf{ dialog}
+\begin{DoxyCompactList}\small\item\em Déclaration des boites de Dialogues . \end{DoxyCompactList}\item 
+Q\+Dialog $\ast$ \textbf{ dialog1}
+\item 
+Q\+Dialog $\ast$ \textbf{ dialog2}
+\item 
+Q\+Dialog $\ast$ \textbf{ dialog3}
+\item 
+Q\+Dialog $\ast$ \textbf{ dialog\+Interaction}
+\item 
+Q\+Dialog $\ast$ \textbf{ dialog\+List}
+\item 
+Q\+Dialog $\ast$ \textbf{ dialog\+Ideux\+Dates}
+\item 
+Q\+Dialog $\ast$ \textbf{ dialog\+RC}
+\item 
+Q\+Dialog $\ast$ \textbf{ dialog\+Taches}
+\item 
+Q\+Dialog $\ast$ \textbf{ dialog\+RechercheT}
+\item 
+Q\+Dialog $\ast$ \textbf{ dialog\+A\+LL}
+\item 
+Q\+Label $\ast$ \textbf{ Nom}
+\begin{DoxyCompactList}\small\item\em Déclaration des labels pour la boite de dialogue créer un contact . \end{DoxyCompactList}\item 
+Q\+Label $\ast$ \textbf{ Prenom}
+\item 
+Q\+Label $\ast$ \textbf{ Photo}
+\item 
+Q\+Label $\ast$ \textbf{ Entreprise}
+\item 
+Q\+Label $\ast$ \textbf{ Email}
+\item 
+Q\+Label $\ast$ \textbf{ Telephone}
+\item 
+Q\+Label $\ast$ \textbf{ NomR}
+\item 
+Q\+Label $\ast$ \textbf{ debut}
+\item 
+Q\+Label $\ast$ \textbf{ fin}
+\item 
+Q\+Label $\ast$ \textbf{ Nom1}
+\item 
+Q\+Label $\ast$ \textbf{ Prenom1}
+\item 
+Q\+Label $\ast$ \textbf{ Photo1}
+\item 
+Q\+Label $\ast$ \textbf{ Entreprise1}
+\item 
+Q\+Label $\ast$ \textbf{ Email1}
+\item 
+Q\+Label $\ast$ \textbf{ Telephone1}
+\item 
+Q\+Label $\ast$ \textbf{ Nomcombo}
+\item 
+Q\+Label $\ast$ \textbf{ Image\+Insere}
+\item 
+Q\+Label $\ast$ \textbf{ Image\+Insere2}
+\item 
+Q\+Label $\ast$ \textbf{ commentaire}
+\item 
+Q\+Label $\ast$ \textbf{ Nomcombo\+List}
+\item 
+Q\+Label $\ast$ \textbf{ lheure}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ n}
+\begin{DoxyCompactList}\small\item\em Déclaration des champs et les dates . \end{DoxyCompactList}\item 
+Q\+Line\+Edit $\ast$ \textbf{ p}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ en}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ em}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ tel}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ ph}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ n1}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ p1}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ en1}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ em1}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ tel1}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ ph1}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ nR}
+\item 
+Q\+Date\+Edit $\ast$ \textbf{ date1}
+\item 
+Q\+Date\+Edit $\ast$ \textbf{ date2}
+\item 
+Q\+Line\+Edit $\ast$ \textbf{ c\+Interaction}
+\item 
+Q\+Date\+Edit $\ast$ \textbf{ date\+Ajout}
+\item 
+Q\+Date\+Edit $\ast$ \textbf{ date\+DebutI}
+\item 
+Q\+Date\+Edit $\ast$ \textbf{ date\+FinI}
+\item 
+Q\+Date\+Edit $\ast$ \textbf{ date1\+RC}
+\item 
+Q\+Date\+Edit $\ast$ \textbf{ date2\+RC}
+\item 
+Q\+Timer $\ast$ \textbf{ ltime}
+\item 
+Q\+Date\+Edit $\ast$ \textbf{ date\+Debut\+Taches}
+\item 
+Q\+Date\+Edit $\ast$ \textbf{ date\+Fin\+Taches}
+\item 
+Q\+Date\+Edit $\ast$ \textbf{ date\+Debut\+A\+LL}
+\item 
+Q\+Date\+Edit $\ast$ \textbf{ date\+Fin\+A\+LL}
+\item 
+Q\+Text\+Edit $\ast$ \textbf{ edit\+Taches}
+\item 
+Q\+Combo\+Box $\ast$ \textbf{ combo\+Box}
+\begin{DoxyCompactList}\small\item\em Déclaration de la Combo\+Box ou la liste déroulante . \end{DoxyCompactList}\item 
+Q\+Combo\+Box $\ast$ \textbf{ combo\+Interaction}
+\item 
+Q\+Combo\+Box $\ast$ \textbf{ combo\+List}
+\item 
+Q\+Combo\+Box $\ast$ \textbf{ combo}
+\item 
+Q\+Combo\+Box $\ast$ \textbf{ combo\+Recherche}
+\item 
+Q\+Combo\+Box $\ast$ \textbf{ combo\+Tache}
+\item 
+Q\+Combo\+Box $\ast$ \textbf{ combo\+Taches\+Recherche}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne1}
+\begin{DoxyCompactList}\small\item\em Declaration des dimensions . \end{DoxyCompactList}\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne2}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne3}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ aligneH}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne11}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne22}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne33}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ aligne\+HH}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+AligneR}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne\+R2}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+AlignH}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne1I}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne2I}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne3I}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+AligneI}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne\+List1}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne\+List2}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+Aligne\+List}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne1\+Id}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne2\+Id}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+Aligne\+Id}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne\+R\+RC}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne\+R2\+RC}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+Align\+H\+RC}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne\+Taches}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+Aligne1\+Taches}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+Aligne2\+Taches}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+Aligne3\+Taches}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne1\+TachesR}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne2\+TachesR}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+Aligne\+TachesR}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne1\+A\+LL}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+Aligne2\+A\+LL}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+Aligne\+A\+LL}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+Aligne1I}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+Aligne2I}
+\item 
+Q\+H\+Box\+Layout $\ast$ \textbf{ h\+Aligne4I}
+\item 
+Q\+V\+Box\+Layout $\ast$ \textbf{ v\+AligneI}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bvalider}
+\begin{DoxyCompactList}\small\item\em Déclaration des boutons . \end{DoxyCompactList}\item 
+Q\+Push\+Button $\ast$ \textbf{ Bannuler}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bvalider1}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bannuler1}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ B\+Rechercher}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ BannulerR}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bsupprimer}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ B\+Photo\+Contact}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ B\+Photo\+Modif\+Contact}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bajout\+Interaction}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bannuler\+Interaction}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bvalider\+ListI}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bannuler\+ListI}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Brecherche\+Idate}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bannuler\+Idate}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ B\+Rechercher\+RC}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bannuler\+RC}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bajout\+Taches}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bannuler\+Taches}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Brechercher\+Taches}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bannuler\+TachesR}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Brechercher\+A\+LL}
+\item 
+Q\+Push\+Button $\ast$ \textbf{ Bannuler\+A\+LL}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe qui gère la fenetre principale . La classe herite d\textquotesingle{}une \doxyref{Q\+Main\+Window}{p.}{class_q_main_window},elle est l\textquotesingle{}une des plus importante pour notre projet car elle permet de faire la déclaration des boites de dialogues ,des slots,des signaux pour bien gérer l\textquotesingle{}interconnections entre les classes et les bases de données . 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\label{class_fenetre_principale_aa7946cb7167a6a9db6c280ab89cbd568}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!FenetrePrincipale@{FenetrePrincipale}}
+\index{FenetrePrincipale@{FenetrePrincipale}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{FenetrePrincipale()}
+{\footnotesize\ttfamily Fenetre\+Principale\+::\+Fenetre\+Principale (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Constructeur Constructeur de la classe \doxyref{Fenetre\+Principale}{p.}{class_fenetre_principale}. 
+
+implémentation du constructeur avec paramètre . Ce constructeur hérite d\textquotesingle{}une Q\+Main\+Windox et un interface user ui .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$parent} & = nullptr\+: par defaut \\
+\hline
+\end{DoxyParams}
+$<$ Combo\+Box pour la liste déroulante pour la création d\textquotesingle{}un contact
+
+$<$ combo\+Box qu\textquotesingle{}on utillise pour la modification d\textquotesingle{}un contact
+
+$<$ combo\+Box qu\textquotesingle{}on utillise pour la liste des interactions
+
+$<$ combo\+Box qu\textquotesingle{}on utillise pour la liste des interactions
+
+$<$ combo\+Box qu\textquotesingle{}on utillise pour la recherche des interactions
+
+$<$ combo\+Box qu\textquotesingle{}on utillise pour la recherche des interactions
+
+$<$ la combo\+Box pour la recherches des taches d\textquotesingle{}un contact .
+
+Connection liée à la création de la boite de dialogue pour pouvoir Inserer ou créer un contact . on a connecté l\textquotesingle{}action du sous menu du U\+I(interface user) appelé \char`\"{}action\+Creer\+Contact\char`\"{} avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à la création d\textquotesingle{}un contact .
+
+Connection liée à la création de la boite de dialogue pour pouvoir supprimer un contact . on a connecté l\textquotesingle{}action du sous menu du U\+I(interface user) appelé \char`\"{}action\+Supprimer\+\_\+un\+\_\+contact\char`\"{} avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à la suppression d\textquotesingle{}un contact .
+
+Connection liée à la création de la boite de dialogue pour pouvoir Modifier un contact . on a connecté l\textquotesingle{}action du sous menu du U\+I(interface user) appelé \char`\"{}action\+Modifier\+\_\+un\+\_\+contact\char`\"{} avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à la modification d\textquotesingle{}un contact .
+
+Connection liée à la création de la boite de dialogue pour pouvoir chercher un Contactn. on a connecté l\textquotesingle{}action du sous menu du U\+I(interface user) appelé \char`\"{}actionchercher\+\_\+un\+\_\+contact\char`\"{} avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à la recherche d\textquotesingle{}un contact .
+
+Connection liée à la création de la boite de dialogue pour pouvoir Ajouter une interaction. on a connecté l\textquotesingle{}action du sous menu du U\+I(interface user) appelé \char`\"{}action\+Ajouter\+\_\+une\+\_\+int\+\_\+raction\char`\"{} avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à l\textquotesingle{}ajout d\textquotesingle{}une intéraction .
+
+Connection liée à la création de la boite de dialogue pour pouvoir afficher une interaction. on a connecté l\textquotesingle{}action du sous menu du U\+I(interface user) appelé \char`\"{}action\+Listes\+\_\+d\+\_\+int\+\_\+raction\char`\"{} avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à l\textquotesingle{}affichage d\textquotesingle{}une intéraction .
+
+Connection liée à la création de la boite de dialogue pour pouvoir ajouter une tache. on a connecté l\textquotesingle{}action du sous menu du U\+I(interface user) appelé \char`\"{}action\+Ajouter\+\_\+des\+\_\+taches\char`\"{} avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond ajouter une tache .
+
+Connection liée à la création de la boite de dialogue pour pouvoir recherche une interaction entre deux dates. on a connecté l\textquotesingle{}action du sous menu du U\+I(interface user) appelé \char`\"{}action\+Interaction\+\_\+entre\+\_\+deux\+\_\+dates\char`\"{} avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond rechercher l\textquotesingle{}intéraction entre deux dates .
+
+Connection liée à la création de la boite de dialogue pour pouvoir afficher les taches entre deux dates pour un contact on a connecté l\textquotesingle{}action du sous menu du U\+I(interface user) appelé \char`\"{}action\+Collecte\+Des\+Taches\char`\"{} avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à l\textquotesingle{}affichage des taches entre les deux dates entrée.
+
+Connection liée à la création de la boite de dialogue pour pouvoir rechercher des intéractions entre deux dates pour un contact on a connecté l\textquotesingle{}action du sous menu du U\+I(interface user) appelé \char`\"{}action\+Interaction\+\_\+d\+\_\+un\+\_\+contact\+\_\+entre\+\_\+deux\+\_\+dates\char`\"{} avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à l\textquotesingle{}affichage des intéractions trouvés entre les deux dates entrée pour un contact .
+
+Connection liée à la création de la boite de dialogue pour pouvoir afficher la liste de toutes les taches de tous les contacts entre deux dates on a connecté l\textquotesingle{}action du sous menu du U\+I(interface user) appelé \char`\"{}action\+Collecte\+Des\+Taches\char`\"{} avec le signal triggered() au slot pour nous afficher la boite de dialogue qui correspond à l\textquotesingle{}affichage des taches de tous les contacts entre les deux dates entrée.
+
+Affichage d\textquotesingle{}un contact Lors du clic sur le bouton affichage\+Liste\+Contact sur la fenetre principale ce bouton nous affiche tous les contacts présent dans la base de donnée . on a pris le bouton ui-\/$>$B\+Afficher on lui a mis un signal clicked() et on lui à lié à la fonction \doxyref{Affichage()}{p.}{class_fenetre_principale_ae906a147c7165ba41bac4212f420ef81} qui nous permet d\textquotesingle{}afficher tous les contacts présent dans la base sur la partie dedié à l\textquotesingle{}affichage des contacts .
+
+Affichage d\textquotesingle{}une intéractiodn Lors du clic sur le bouton affichage\+Liste\+Intéraction sur la fenetre principale ce bouton nous affiche toutes les intéractions présentes dans la base de donnée . on a pris le bouton ui-\/$>$B\+Affichetous\+Interaction on lui a mis un signal clicked() et on lui à lié à la fonction \doxyref{Affiche\+Toutes\+Les\+Interactions()}{p.}{class_fenetre_principale_a6e1ca45b80193688f3d100d8215577c4} qui nous permettra d\textquotesingle{}afficher toutes les intéractions présentes dans la base sur la partie dedié à l\textquotesingle{}affichage des intéractions .
+
+Affichage d\textquotesingle{}une Tache \char`\"{}\+Todo\char`\"{} Lors du clic sur le bouton affichage\+Liste\+Todo sur la fenetre principale ce bouton nous affiche toutes les taches présentes dans la base de donnée . on a pris le bouton ui-\/$>$boutontodo on lui a mis un signal clicked() et on lui à lié à la fonction \doxyref{Liste\+Todos()}{p.}{class_fenetre_principale_a2efe98d02c2dc4e06d88c1fdc6270a7f} qui nous permettra d\textquotesingle{}afficher toutes les intéractions présentes dans la base sur la partie dedié à l\textquotesingle{}affichage des taches .
+
+Affichage du sous menu à propos Dans cette partie on a essayé de dire de façon breve ce qu\textquotesingle{}on a fait et réussi
+
+Affichage de l\textquotesingle{}heure dès l\textquotesingle{}éxecution du programme Dans cette partie on a essayé d\textquotesingle{}afficher l\textquotesingle{}heur courante en bas à gauche pour donner un peu la vivacité à notre application .
+
+convertir json pour un contact . connection lié à la conversion json d\textquotesingle{}un contact
+
+convertir json pour une intéraction . connection lié à la conversion json d\textquotesingle{}un contact\mbox{\label{class_fenetre_principale_afb035ceb7a4f1ddd23ab6213b582efa1}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!````~FenetrePrincipale@{$\sim$FenetrePrincipale}}
+\index{````~FenetrePrincipale@{$\sim$FenetrePrincipale}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{$\sim$FenetrePrincipale()}
+{\footnotesize\ttfamily Fenetre\+Principale\+::$\sim$\+Fenetre\+Principale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur Le Destructeur de la classe \doxyref{Fenetre\+Principale}{p.}{class_fenetre_principale} càd la fonction qui libère la memoire utilisé . 
+
+implémentation du destructeur . A la fin de l\textquotesingle{}éxecution on à libéré la mémoire.
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\label{class_fenetre_principale_ae906a147c7165ba41bac4212f420ef81}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Affichage@{Affichage}}
+\index{Affichage@{Affichage}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Affichage}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Affichage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Les slot pour tout ce qui concerne le C\+O\+N\+T\+A\+CT Les slots qu\textquotesingle{}on liera aux boites de dialogues concernant un \doxyref{Contact}{p.}{class_contact}. 
+
+Affichage \doxyref{Contact}{p.}{class_contact} Lors du clic sur le bouton afficher listes contact c\textquotesingle{}est grace à ce slot qu\textquotesingle{}on voit l\textquotesingle{}affichage des contact en se réactualisant à chaque ajout,suppression ou modification sur tout ce qui concerne le contact .
+
+Slot Affichage . Slot lié à l\textquotesingle{}affichage des contacts \mbox{\label{class_fenetre_principale_a49c0bfed78c4c90fb89718178053ad09}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!AfficheModContact@{AfficheModContact}}
+\index{AfficheModContact@{AfficheModContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{AfficheModContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Affiche\+Mod\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Affiche\+Mod\+Contact . slot lié à l\textquotesingle{}affichage lié à la Modification d\textquotesingle{}un contact. 
+
+Slot pour la modification d\textquotesingle{}un contact on créer un contact c2 on test si tous les champs sont pas remplis sinon on affiche le message d\textquotesingle{}erreur Si Oui on selectionne le contact à modifier et ensuite on récupère les textes saisies sur les champs avec la photo récupéré on l\textquotesingle{}envoie par le signal pour qu\textquotesingle{}enfin qu\textquotesingle{}il soit connecté avec la base de donnée . On aura au final un contact modifié dans la base de donnée. \mbox{\label{class_fenetre_principale_af2c321642e3eef81db5a16347a907db9}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!afficherPhoto@{afficherPhoto}}
+\index{afficherPhoto@{afficherPhoto}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{afficherPhoto}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::afficher\+Photo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot afficher une Photo . Slot lié à l\textquotesingle{}affichage de la photo lors dé la création d\textquotesingle{}un contact . 
+
+\mbox{\label{class_fenetre_principale_a9b5ac3fe1f98494685363533e4de0fee}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!afficherPhoto1@{afficherPhoto1}}
+\index{afficherPhoto1@{afficherPhoto1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{afficherPhoto1}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::afficher\+Photo1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot afficher une Photo . Slot lié à l\textquotesingle{}affichage de la photo lors dé la création d\textquotesingle{}un contact . 
+
+\mbox{\label{class_fenetre_principale_a7e38d5c250c91b24924b82485ec762e2}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!AfficheTachesContact@{AfficheTachesContact}}
+\index{AfficheTachesContact@{AfficheTachesContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{AfficheTachesContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Affiche\+Taches\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Affiche\+Taches\+Contact . la fonction qui nous permettra de créer de la boite dialogue pour afficher les \doxyref{Todo}{p.}{class_todo} de tous les contacts . 
+
+Création d\textquotesingle{}une Boite de dialogue c\textquotesingle{}est dans cette fonction on a créé la boite de dialogue qui nous sert à afficher toutes les taches de toutes les intéractions entre deux dates . La boite de dialogue est constituée de la déclaration d\textquotesingle{}une boite de dialogue, les dates debut et fin d\textquotesingle{}intervalle ,du bouton Brechercher\+Taches et annuler. $<$ connection du bouton Brechercher\+A\+LL de l\textquotesingle{}application au slot Recherche\+A\+L\+L\+Todo\+Cont
+
+$<$ la connection pour le bouton annuler pour fermet la fenetre\mbox{\label{class_fenetre_principale_a74e30ec4ec6d8e356879ae8a841497b5}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!AfficheTachesIntervalle@{AfficheTachesIntervalle}}
+\index{AfficheTachesIntervalle@{AfficheTachesIntervalle}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{AfficheTachesIntervalle}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Affiche\+Taches\+Intervalle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Affiche\+Taches\+Intervalle . la fonction qui nous permettra de créer de la boite dialogue pour afficher les taches entre deux dates . 
+
+Création d\textquotesingle{}une Boite de dialogue c\textquotesingle{}est dans cette fonction on a créé la boite de dialogue qui nous sert à afficher les taches des intéractions entre deux dates . La boite de dialogue est constituée de la déclaration d\textquotesingle{}une boite de dialogue,d\textquotesingle{}une combo\+Box pour voir toute la liste des intéractions ,et les dates debut et fin d\textquotesingle{}intervalle ,du bouton Brechercher\+Taches et annuler. $<$ connection du bouton Brechercher\+Taches de l\textquotesingle{}application au slot Recherche\+Todo\+Cont
+
+$<$ la connection pour le bouton annuler pour fermet la fenetre\mbox{\label{class_fenetre_principale_a6e1ca45b80193688f3d100d8215577c4}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!AfficheToutesLesInteractions@{AfficheToutesLesInteractions}}
+\index{AfficheToutesLesInteractions@{AfficheToutesLesInteractions}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{AfficheToutesLesInteractions}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Affiche\+Toutes\+Les\+Interactions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Affiche\+Toutes\+Les\+Interactions . Slot lié pour afiicher les intéractions. 
+
+Affichage des interactions Lors du clic sur le bouton afficher listes interactions c\textquotesingle{}est grace à ce slot qu\textquotesingle{}on voit l\textquotesingle{}affichage des intéraction en se réactualisant à chaque ajout,suppression ou modification sur tout ce qui concerne les intéractions . \mbox{\label{class_fenetre_principale_a0b66f1a514d67af47b4cb37f85bebd1a}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!AjoutInteraction@{AjoutInteraction}}
+\index{AjoutInteraction@{AjoutInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{AjoutInteraction}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Ajout\+Interaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Ajout\+Interaction . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour ajouter une intéraction . 
+
+Création d\textquotesingle{}une Boite de dialogue c\textquotesingle{}est dans cette fonction on a crée la boite de dialogue qui nous à servit à ajouter une intéraction \+: Elle est constituée de la declaration d\textquotesingle{}une boite de dialogue ,tout ce qui concerne une interaction (\doxyref{Date}{p.}{class_date} et contenu),le champs de texte pour le contenu,les boutons necessaires et les dispositions qu\textquotesingle{}on a utilisés afin de bien positionner les labels,le champ,les boutons . $<$ connection du bouton Bajout\+Interaction de l\textquotesingle{}application au slot Ajout\+Une\+Interaction
+
+$<$ la connection pour le bouton annuler pour fermet la fenetre\mbox{\label{class_fenetre_principale_a0171ae0296ef5bb5bc0d76a5880fdb51}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!AjoutUneInteraction@{AjoutUneInteraction}}
+\index{AjoutUneInteraction@{AjoutUneInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{AjoutUneInteraction}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Ajout\+Une\+Interaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Les slots pour tout ce qui concerne l\textquotesingle{}I\+N\+TÉ\+R\+A\+C\+T\+I\+ON Les slots qu\textquotesingle{}on liera aux boites de dialogues concernant une intéraction. 
+
+Slot pour l\textquotesingle{}ajout d\textquotesingle{}une intéraction on test si la combo\+Box est null on envoir un message d\textquotesingle{}erreur . si elle contient la liste des contacts \+: on entre la date et le contenu pour l\textquotesingle{}intéraction du contact qu\textquotesingle{}on a choisi et on récupère la date et le contenu saisis on l\textquotesingle{}envoie par le signal \char`\"{}emit\char`\"{} pour qu\textquotesingle{}enfin qu\textquotesingle{}il soit connecté avec la base de donnée . On aura au final une intéraction ajouté avec sa date et contenu.
+
+Slot Ajout\+Une\+Interaction . Slot lié à l\textquotesingle{}ajout d\textquotesingle{}une interaction pour un contact \mbox{\label{class_fenetre_principale_ac40174c126f1228ecf762d613ae48367}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!AnnulerALL@{AnnulerALL}}
+\index{AnnulerALL@{AnnulerALL}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{AnnulerALL}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Annuler\+A\+LL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Bouton pour Annuler\+A\+LL . Slot lié à la fermeture de la boite de dialogue lors de la recherche des taches pour les contacts entre deux dates . 
+
+Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert . \mbox{\label{class_fenetre_principale_a3cbea982217767dc6e23121a7aa9a6ab}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!AnnulerInteraction@{AnnulerInteraction}}
+\index{AnnulerInteraction@{AnnulerInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{AnnulerInteraction}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Annuler\+Interaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Bouton pour Annuler\+Interaction . Slot lié à la fermeture de la boite de dialogue lors de l\textquotesingle{}ajout d\textquotesingle{}une intéraction . 
+
+\mbox{\label{class_fenetre_principale_a095e891fd6f037ee670935cdc174f778}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!AnnulerInteractionEntreDeuxDates@{AnnulerInteractionEntreDeuxDates}}
+\index{AnnulerInteractionEntreDeuxDates@{AnnulerInteractionEntreDeuxDates}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{AnnulerInteractionEntreDeuxDates}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Annuler\+Interaction\+Entre\+Deux\+Dates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Bouton pour Annuler\+Interaction\+Entre\+Deux\+Dates . Slot lié au Bouton annuler pour fermer la boite de dialogue. 
+
+Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert . \mbox{\label{class_fenetre_principale_abdfcb8951fe59f3137a4843659154354}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!AnnulerListeInteraction@{AnnulerListeInteraction}}
+\index{AnnulerListeInteraction@{AnnulerListeInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{AnnulerListeInteraction}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Annuler\+Liste\+Interaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Bouton pour Annuler\+Liste\+Interaction . Slot lié au Bouton annuler pour fermer la boite de dialogue. 
+
+\mbox{\label{class_fenetre_principale_a3a49ce699001e31deb6d0a7d6dc2a14b}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Apropos@{Apropos}}
+\index{Apropos@{Apropos}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Apropos}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Apropos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Apropos . slot lié à l\textquotesingle{}affichage de about. 
+
+About C\textquotesingle{}est dans ce slots on a dit de manière brève ce que notre application fait et qui l\textquotesingle{}a fait et c\textquotesingle{}est qui le professeur . \mbox{\label{class_fenetre_principale_a72584bfdc822ef786a93b1147c94d71f}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BoutonAnnulerContact@{BoutonAnnulerContact}}
+\index{BoutonAnnulerContact@{BoutonAnnulerContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BoutonAnnulerContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Bouton\+Annuler\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Bouton pour Annuler le \doxyref{Contact}{p.}{class_contact} . Slot lié à la fermeture de la boite de dialogue lors de la création d\textquotesingle{}un contact . 
+
+Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert . \mbox{\label{class_fenetre_principale_a6e500c37f943169e9bbdeff8d4b437ca}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BoutonAnnulerModification@{BoutonAnnulerModification}}
+\index{BoutonAnnulerModification@{BoutonAnnulerModification}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BoutonAnnulerModification}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Bouton\+Annuler\+Modification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Bouton pour Bouton\+Annuler\+Modification. Slot lié à la fermeture de la boite de dialogue lors de la modification d\textquotesingle{}un contact . 
+
+Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert . \mbox{\label{class_fenetre_principale_acda723d1e58115c39d03907cfad4c4b9}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BoutonAnnulerRechercher@{BoutonAnnulerRechercher}}
+\index{BoutonAnnulerRechercher@{BoutonAnnulerRechercher}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BoutonAnnulerRechercher}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Bouton\+Annuler\+Rechercher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Bouton pour Bouton\+Annuler\+Rechercher . Slot lié à la fermeture de la boite de dialogue lors de la recherche d\textquotesingle{}un contact . 
+
+Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert . \mbox{\label{class_fenetre_principale_ab058a6533dd73938d91c530fb986dbed}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BoutonAnnulerRechercherT@{BoutonAnnulerRechercherT}}
+\index{BoutonAnnulerRechercherT@{BoutonAnnulerRechercherT}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BoutonAnnulerRechercherT}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Bouton\+Annuler\+RechercherT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Bouton pour Bouton\+Annuler\+RechercherT . Slot lié à la fermeture de la boite de dialogue lors de la recherche d\textquotesingle{}une Tache . 
+
+Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert . \mbox{\label{class_fenetre_principale_ab96c8d09b81cdeab7f2c230cf4eb5337}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BoutonAnnulerSupprimer@{BoutonAnnulerSupprimer}}
+\index{BoutonAnnulerSupprimer@{BoutonAnnulerSupprimer}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BoutonAnnulerSupprimer}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Bouton\+Annuler\+Supprimer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Bouton pour Bouton\+Annuler\+Supprimer . Slot lié à la fermeture de la boite de dialogue lors de la suppression d\textquotesingle{}un contact . 
+
+Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert . \mbox{\label{class_fenetre_principale_ab43fc2a39ba7e56a17fd7126dcc141bc}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!CancelContact@{CancelContact}}
+\index{CancelContact@{CancelContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{CancelContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Cancel\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Bouton pour Cancel\+Contact . Slot lié au Bouton annuler pour fermer la boite de dialogue. 
+
+Annuler Ce slot qui nous permet de faire la fermeture de la boite de dialogue lors du clic sur le bouton annuler quand il est ouvert . \mbox{\label{class_fenetre_principale_ab0e4d3d7189ce6143f127428610669c4}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!chercherContact@{chercherContact}}
+\index{chercherContact@{chercherContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{chercherContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::chercher\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+chercher\+Contact . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour rechercher un contact . 
+
+Création d\textquotesingle{}une Boite de dialogue c\textquotesingle{}est dans cette fonction on a crée la boite de dialogue qui nous à servit à chercher un contact par son nom \+: Elle est constituée de la declaration d\textquotesingle{}une boite de dialogue ,tout ce qui concerne un contact (nom,prenom,tel etc..),les champs de textes ,les boutons necessaires et les dispositions qu\textquotesingle{}on a utilisés afin de bien positionner les labels,champs,boutons . $<$ connection du bouton B\+Rechercher de l\textquotesingle{}application au slot Recherche\+Un\+Contact
+
+$<$ la connection pour le bouton annuler pour fermet la fenetre\mbox{\label{class_fenetre_principale_abc3bb6f9776a14adbfc18f200d4a247f}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!CreationContact@{CreationContact}}
+\index{CreationContact@{CreationContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{CreationContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Creation\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot pour la Creation d\textquotesingle{}un \doxyref{Contact}{p.}{class_contact} . Slot lié à la création d\textquotesingle{}un contact . 
+
+Slot pour la Creation d\textquotesingle{}un contact on créer un contact c on test si tous les champs sont pas remplis sinon on affiche le messange d\textquotesingle{}erreur Si Oui on récupère les textes saisies sur les champs avec la photo récupéré on l\textquotesingle{}envoie par le signal pour qu\textquotesingle{}enfin qu\textquotesingle{}il soit connecté avec la base de donnée . On aura au final un contact inséré dans la base de donnée. $<$ signal qu\textquotesingle{}on envoie vers le main qu\textquotesingle{}on recupera afin de faire les connections avec la BD
+
+$<$ signal qu\textquotesingle{}on envoie vers le main qu\textquotesingle{}on recupera afin de faire les connections avec la BD\mbox{\label{class_fenetre_principale_a2689805640950b8e7cd96c65644f25c0}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!CreerUnContact@{CreerUnContact}}
+\index{CreerUnContact@{CreerUnContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{CreerUnContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Creer\+Un\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Les fonctions slot pour créer les boites de dialogues . 
+
+Création d\textquotesingle{}une Boite de dialogue c\textquotesingle{}est dans cette fonction on a crée la boite de dialogue qui nous à servit à créer un contact c\textquotesingle{}est à dire \+: Elle est constituée de la declaration d\textquotesingle{}une boite de dialogue ,tout ce qui concerne un contact (nom,prenom,tel etc..),les champs de textes ,les boutons necessaires et les dispositions qu\textquotesingle{}on a utilisés afin de bien positionner les labels,champs,boutons .
+
+Creer\+Un\+Contact . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour créer un contact $<$ connection du bouton valider de l\textquotesingle{}application au slot Creation\+Contact
+
+$<$ connection du bouton B\+Photo\+Contact de l\textquotesingle{}application pour parcourir la photo à ajouter
+
+$<$ la connection pour le bouton annuler pour fermet la fenetre\mbox{\label{class_fenetre_principale_a380f1fefb3ff9a5b9d8db99ec843d05e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!demarrerHeure@{demarrerHeure}}
+\index{demarrerHeure@{demarrerHeure}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{demarrerHeure}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::demarrer\+Heure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot demarrer\+Heure . slot lié à l\textquotesingle{}affichage de l\textquotesingle{}heure. 
+
+Affichage de l\textquotesingle{}heure lors de l\textquotesingle{}éxécution de notre programme Slot pour afficher l\textquotesingle{}heure courrante dès qu\textquotesingle{}on lance notre application. \mbox{\label{class_fenetre_principale_a7e62e520f8dd0ae8678703b4d2337a14}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!FindContact@{FindContact}}
+\index{FindContact@{FindContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{FindContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Find\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Find\+Contact . slot lié pour Rechercher les interactions d\textquotesingle{}un contact entre deux dates. 
+
+Création d\textquotesingle{}une Boite de dialogue c\textquotesingle{}est dans cette fonction on a créé la boite de dialogue qui nous sert à Rechercher des intéractions entre deux dates pour un contact . La boite de dialogue est constituée de la déclaration d\textquotesingle{}une boite de dialogue,d\textquotesingle{}une combo\+Box pour voir toute la liste des contacts,et les dates debut et fin d\textquotesingle{}intervalle ,du bouton rechercher et annuler. \mbox{\label{class_fenetre_principale_a22275faf0ecdff21cd5b1af44a4a0954}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!InteractionsEntre2Date@{InteractionsEntre2Date}}
+\index{InteractionsEntre2Date@{InteractionsEntre2Date}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{InteractionsEntre2Date}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Interactions\+Entre2\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Interactions\+Entre2\+Date . la fonction qui nous permettra de créer de la boite dialogue afin de rechercher des interactions entre deux dates . 
+
+Création d\textquotesingle{}une Boite de dialogue c\textquotesingle{}est dans cette fonction on a créé la boite de dialogue qui nous sert à Rechercher des intéractions entre deux dates. La boite de dialogue est constituée de la déclaration d\textquotesingle{}une boite de dialogue,d\textquotesingle{}une combo\+Box pour voir toute la liste des contacts,et les dates debut et fin d\textquotesingle{}intervalle ,du bouton rechercher et annuler. $<$ connection du bouton Brecherche\+Idate de l\textquotesingle{}application au slot Rechercher\+Interaction\+Entre\+Deux\+Dates
+
+$<$ la connection pour le bouton annuler pour fermet la fenetre\mbox{\label{class_fenetre_principale_aa59f8c553f08f2eb296167fd1a1cd337}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!JsonContact@{JsonContact}}
+\index{JsonContact@{JsonContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{JsonContact}
+{\footnotesize\ttfamily Fenetre\+Principale\+::\+Json\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot lié au Json pour un contact . c\textquotesingle{}est cette fonction qui nous permettra d\textquotesingle{}exporter les fichiers json d\textquotesingle{}un contact . 
+
+Json export la fonction qui nous permet d\textquotesingle{}exporter tous les contacts sur un fichier J\+Son. \mbox{\label{class_fenetre_principale_a32c74dbdfd7c814b33150b1c5ddc7a40}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!JsonInteraction@{JsonInteraction}}
+\index{JsonInteraction@{JsonInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{JsonInteraction}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Json\+Interaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot lié au Json pour une intéraction . c\textquotesingle{}est cette fonction qui nous permettra d\textquotesingle{}exporter les fichiers json d\textquotesingle{}une intéraction. 
+
+\mbox{\label{class_fenetre_principale_a87bee89561133b726928d7fbf9e741bf}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!ListeInteraction@{ListeInteraction}}
+\index{ListeInteraction@{ListeInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{ListeInteraction}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Liste\+Interaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Ajout\+Taches . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour ajouter une taches(\+Todo) . 
+
+Création d\textquotesingle{}une Boite de dialogue c\textquotesingle{}est dans cette fonction on a crée la boite de dialogue qui nous à servi à lister les intéractions d\textquotesingle{}un contact Elle est constituée de la declaration d\textquotesingle{}une boite de dialogue ,un combobox pour la liste des contacts à lister , le bouton annuler et valider .
+
+Liste\+Interaction . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour lister les intéractions . $<$ connection du bouton Bvalider\+ListI de l\textquotesingle{}application au slot Liste\+Interaction\+Contact
+
+$<$ la connection pour le bouton annuler pour fermet la fenetre\mbox{\label{class_fenetre_principale_ad04d49ee65aded3e3055facdd80be150}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!ListeInteractionContact@{ListeInteractionContact}}
+\index{ListeInteractionContact@{ListeInteractionContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{ListeInteractionContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Liste\+Interaction\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Liste\+Interaction\+Contact . Slot lié à l\textquotesingle{}affichage des interactions pour un contact choisi. 
+
+Slot pour l\textquotesingle{}affichage des intéractions d\textquotesingle{}un contact Dans cette partie on testera si la combobox est null on affiche un message d\textquotesingle{}erreur sinon on choisi le contact et on affiche toutes ses intéractions. $<$ insertion de l\textquotesingle{}affichage sur le text\+Edit dedié .\mbox{\label{class_fenetre_principale_a2efe98d02c2dc4e06d88c1fdc6270a7f}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!ListeTodos@{ListeTodos}}
+\index{ListeTodos@{ListeTodos}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{ListeTodos}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Liste\+Todos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Les slots pour tout ce qui concerne les T\+O\+DO Les slots qu\textquotesingle{}on liera aux boites de dialogues concernant les Taches. 
+
+Affichage des taches Lors du clic sur le bouton afficher listes todo c\textquotesingle{}est grace à ce slot qu\textquotesingle{}on voit l\textquotesingle{}affichage des taches en se réactualisant à chaque ajout,suppression ou modification sur tout ce qui concerne le T\+O\+DO .
+
+Slot Ajout\+Todo\+Contact . Slot lié à l\textquotesingle{}ajout d\textquotesingle{}une tache pour une intéraction d\textquotesingle{}un contact
+
+Slot Bouton pour Annuler\+Todo\+Contact . Slot lié à la fermeture de la boite de dialogue lors de l\textquotesingle{}ajout d\textquotesingle{}une Tache .
+
+Slot Ajout\+Todo\+Contact . Slot lié à l\textquotesingle{}affichage de toutes les taches des contacts lors du clic sur le bouton afficher toutes les taches . $<$ verifier si la tache est urgente ou pas avec la fonction find
+
+$<$ pour pouvoir faire le tag avec \begin{DoxyRefDesc}{A faire}
+\item[\textbf{ A faire}]\end{DoxyRefDesc}
+
+
+$<$ Inversion de la date de jj/mm/aaaa vers aaaa-\/mm-\/jj afin de pouvoir l\textquotesingle{}insérer dans la base
+
+$<$ pour pouvoir faire le tag avec \begin{DoxyDate}{Date}
+
+\end{DoxyDate}
+$<$ insertion de l\textquotesingle{}affichage sur le text\+Edit dedié .\mbox{\label{class_fenetre_principale_a3e20818bc0668381798488253cf7352f}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!ModifierContact@{ModifierContact}}
+\index{ModifierContact@{ModifierContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{ModifierContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Modifier\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Modifier\+Contact . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour modifier un contact . 
+
+Création d\textquotesingle{}une Boite de dialogue c\textquotesingle{}est dans cette fonction on a crée la boite de dialogue qui nous à servit à Modifier un contact c\textquotesingle{}est à dire \+: Elle est constituée de la declaration d\textquotesingle{}une boite de dialogue ,tout ce qui concerne un contact (nom,prenom,tel etc..),une combo\+Box pour choisier le contact à modifier les champs de textes ,les boutons necessaires et les dispositions qu\textquotesingle{}on a utilisé afin de bien positionner les labels,champs,boutons normalement. $<$ connection du bouton valider1 de l\textquotesingle{}application au slot Affiche\+Mod\+Contact
+
+$<$ connection du bouton B\+Photo\+Modif\+Contact de l\textquotesingle{}application pour parcourir la photo à Modifier
+
+$<$ la connection pour le bouton annuler pour fermet la fenetre\mbox{\label{class_fenetre_principale_a3f6d93414fdc859a3e96468154125c46}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!RechercheALLTodoCont@{RechercheALLTodoCont}}
+\index{RechercheALLTodoCont@{RechercheALLTodoCont}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{RechercheALLTodoCont}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Recherche\+A\+L\+L\+Todo\+Cont (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Recherche\+Todo\+Cont . Slot lié à la recherche des taches pour tous les contact entre deux dates. 
+
+Slot pour la Rechercher des taches de tous les contacts entre deux dates . On converti et on decoupe les deux dates dans ce slot pour l\textquotesingle{}adapter à la BD tout en recuperant les dates saisies par l\textquotesingle{}utilisateur, On aura au final des taches de la BD pour tous les contacts se trouvant dans cet intervalle des deux dates saisies . $<$ insertion de l\textquotesingle{}affichage sur le text\+Edit dedié .
+
+$<$ insertion de l\textquotesingle{}affichage sur le text\+Edit dedié .\mbox{\label{class_fenetre_principale_ab49a749587805776b0b00b42a564a5cd}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!RechercheInteractionContact@{RechercheInteractionContact}}
+\index{RechercheInteractionContact@{RechercheInteractionContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{RechercheInteractionContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Recherche\+Interaction\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Recherche\+Interaction\+Contact . la fonction qui nous permettra de créer de la boite dialogue pour afficher une intéraction pour un contact selectionné . 
+
+Création d\textquotesingle{}une Boite de dialogue c\textquotesingle{}est dans cette fonction on a créé la boite de dialogue qui nous sert à Rechercher des intéractions entre deux dates pour un contact . La boite de dialogue est constituée de la déclaration d\textquotesingle{}une boite de dialogue,d\textquotesingle{}une combo\+Box pour voir toute la liste des contacts,et les dates debut et fin d\textquotesingle{}intervalle ,du bouton rechercher et annuler. $<$ connection du bouton B\+Rechercher\+RC de l\textquotesingle{}application au slot Find\+Contact
+
+$<$ la connection pour le bouton annuler pour fermet la fenetre\mbox{\label{class_fenetre_principale_a219d2d909596d2e713e60b7f2acf26cf}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!RechercherInteractionEntreDeuxDates@{RechercherInteractionEntreDeuxDates}}
+\index{RechercherInteractionEntreDeuxDates@{RechercherInteractionEntreDeuxDates}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{RechercherInteractionEntreDeuxDates}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Rechercher\+Interaction\+Entre\+Deux\+Dates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Rechercher\+Interaction\+Entre\+Deux\+Dates . Slot lié pour réchercher une interaction entre deux dates. 
+
+Slot pour la Rechercher des intéraction entre deux dates . On converti et on decoupe les deux dates dans ce slot pour l\textquotesingle{}adapter à la BD tout en recuperant les dates saisies par l\textquotesingle{}utilisateur, On aura au final des intéractions de la table qui se trouve dans cet intervalle des deux dates saisies . $<$ insertion de l\textquotesingle{}affichage sur le text\+Edit dedié .\mbox{\label{class_fenetre_principale_ac328a3e6b0547739271a04ebb5636407}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!RechercheTodoCont@{RechercheTodoCont}}
+\index{RechercheTodoCont@{RechercheTodoCont}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{RechercheTodoCont}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Recherche\+Todo\+Cont (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Recherche\+Todo\+Cont . Slot lié à la collecte des taches pour un contact . 
+
+Slot pour la Rechercher des taches d\textquotesingle{}un contact entre deux dates . on test si la combobox est nulle on affiche un message d\textquotesingle{}erreur Sinon\+: On converti et on decoupe les deux dates dans ce slot pour l\textquotesingle{}adapter à la BD tout en recuperant les dates saisies par l\textquotesingle{}utilisateur, On aura au final des taches de la BD pour les contacts se trouvant dans cet intervalle des deux dates saisies . $<$ insertion de l\textquotesingle{}affichage sur le text\+Edit dedié .\mbox{\label{class_fenetre_principale_ad5680c5cce771d7964f1afe061bbcc77}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!RechercheUnContact@{RechercheUnContact}}
+\index{RechercheUnContact@{RechercheUnContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{RechercheUnContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Recherche\+Un\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Recherche\+Un\+Contact . Slot lié à slot lié pour la recherche d\textquotesingle{}un contact. 
+
+Slot pour la Recherche d\textquotesingle{}un contact on déclare une liste de contact,on test si le nom saisie existes entre les deux dates entrés par l\textquotesingle{}utilisateur\+: Sinon on affiche un message d\textquotesingle{}erreur Si Oui on récupère les texte saisie et les deux dates on envoie avec le signal vers la base de donnée pour rechercher pour qu\textquotesingle{}enfin qu\textquotesingle{}il soit connecté avec la base de donnée . On aura au final recherché un nom entre deux dates s\textquotesingle{}il existe dans la base de donnée . \mbox{\label{class_fenetre_principale_a7f749d5bc632bc23a783dff9a98145c7}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigAjoutInteraction@{sigAjoutInteraction}}
+\index{sigAjoutInteraction@{sigAjoutInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigAjoutInteraction}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Ajout\+Interaction (\begin{DoxyParamCaption}\item[{int \&}]{,  }\item[{\textbf{ Interaction} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Les signaux pour tout ce qui concerne l\textquotesingle{}intéraction Les signaux qu\textquotesingle{}on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée. 
+
+signal sig\+Ajout\+Interaction . Ce signal nous permet d\textquotesingle{}ajouter une intéraction pour un contact . 
+\begin{DoxyParams}{Paramètres}
+{\em \doxyref{Interaction}{p.}{class_interaction}} & \& \+:l\textquotesingle{}intéraction ajouté \\
+\hline
+{\em int} & \& \+:l\textquotesingle{}identifiant du contact qui doit recevoir l\textquotesingle{}intéraction ajouté . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_aabe9af62182185520011ef022b026b61}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigAjoutTodo@{sigAjoutTodo}}
+\index{sigAjoutTodo@{sigAjoutTodo}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigAjoutTodo}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Ajout\+Todo (\begin{DoxyParamCaption}\item[{int \&}]{,  }\item[{\textbf{ Todo} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Les signaux pour tout ce qui concerne le \doxyref{Todo}{p.}{class_todo} Les signaux qu\textquotesingle{}on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée. 
+
+signal sig\+Ajout\+Interaction . Ce signal nous permet d\textquotesingle{}ajouter une tache pour une intéraction . 
+\begin{DoxyParams}{Paramètres}
+{\em \doxyref{Todo}{p.}{class_todo}} & \& \+:la tache ajouté \\
+\hline
+{\em int} & \& \+:l\textquotesingle{}identifiant de l\textquotesingle{}intéraction qui doit recevoir la tache ajoutée . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_a2d1203f891c4f30f9b1136cf5d9c6c68}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigGetContactList@{sigGetContactList}}
+\index{sigGetContactList@{sigGetContactList}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigGetContactList}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Get\+Contact\+List (\begin{DoxyParamCaption}\item[{std\+::list$<$ \textbf{ Contact} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Les signaux pour tout ce qui concerne le contact Les signaux qu\textquotesingle{}on appelera dans les slots pour pouvoir les lier dans le main avec les fonctions correspondantes dans la base de donnée. 
+
+signal sig\+Get\+Contact\+List . Le signal nous permet d\textquotesingle{}emetre un signal en envoyant une liste de contact. 
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Contact$>$\&} & \+:liste de contact . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_a9aaf8fb4ff431b96c43ace07b6fb481b}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigInsert@{sigInsert}}
+\index{sigInsert@{sigInsert}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigInsert}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Insert (\begin{DoxyParamCaption}\item[{\textbf{ Contact} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Insert . Le signal qui nous permet d\textquotesingle{}emetre un signal en inserant un contact . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \doxyref{Contact}{p.}{class_contact}} & \& \+:le contact à envoyer par le signal . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_a6ad1d143d6156726f9796787c8afafef}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigListeALLContact@{sigListeALLContact}}
+\index{sigListeALLContact@{sigListeALLContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigListeALLContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Liste\+A\+L\+L\+Contact (\begin{DoxyParamCaption}\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Liste\+A\+L\+L\+Contact . Ce signal nous permet d\textquotesingle{}afficher la liste des taches pour tous les contact . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Todo$>$\&\+:listes} & de tache . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_acc911fea4aa068b0c3dff2bbf660744c}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigListeInteraction@{sigListeInteraction}}
+\index{sigListeInteraction@{sigListeInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigListeInteraction}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Liste\+Interaction (\begin{DoxyParamCaption}\item[{int \&}]{,  }\item[{std\+::list$<$ \textbf{ Interaction} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Liste\+Interaction . Ce signal nous permet d\textquotesingle{}afficher pour un contact sa liste d\textquotesingle{}intéraction . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Interaction$>$} & \& \+:listes d\textquotesingle{}intéractions \\
+\hline
+{\em int} & \& \+:l\textquotesingle{}identifiant du contact pour afficher ses intéractions . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_aa8f941620268adc8d78f459274c9db7a}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigListeInteractionALL@{sigListeInteractionALL}}
+\index{sigListeInteractionALL@{sigListeInteractionALL}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigListeInteractionALL}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Liste\+Interaction\+A\+LL (\begin{DoxyParamCaption}\item[{std\+::list$<$ \textbf{ Interaction} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Liste\+Interaction\+A\+LL . Ce signal nous permet d\textquotesingle{}afficher toutes les intéractions de tous les contacts . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Interaction$>$} & \& \+:listes d\textquotesingle{}intéractions . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_a19409a5356242f96107b892dbf7f7d96}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigListeTodoContact@{sigListeTodoContact}}
+\index{sigListeTodoContact@{sigListeTodoContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigListeTodoContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Liste\+Todo\+Contact (\begin{DoxyParamCaption}\item[{int \&}]{,  }\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Liste\+Todo\+Contact . Ce signal nous permet d\textquotesingle{}afficher la liste des taches pour un contact . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \& \+:l\textquotesingle{}identifiant du contact . \\
+\hline
+{\em std\+::list$<$\+Todo$>$\&\+:listes} & de tache . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_a2d033b2bcebfe841e87e4116319adb33}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigModifier@{sigModifier}}
+\index{sigModifier@{sigModifier}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigModifier}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Modifier (\begin{DoxyParamCaption}\item[{int \&}]{,  }\item[{\textbf{ Contact} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Modifier . Le signal qui nous permet d\textquotesingle{}emetre un signal en faisant la modification d\textquotesingle{}un contact en selectionnant son idcontact . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \& \+:l\textquotesingle{}identifiant à envoyer par le signal . \\
+\hline
+{\em \doxyref{Contact}{p.}{class_contact}} & \& \+: le contact à envoyer par le signal . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_a186a9b9355faea526049228a4613eb1e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigRechercheALLTodoCont@{sigRechercheALLTodoCont}}
+\index{sigRechercheALLTodoCont@{sigRechercheALLTodoCont}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigRechercheALLTodoCont}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Recherche\+A\+L\+L\+Todo\+Cont (\begin{DoxyParamCaption}\item[{Q\+String \&}]{,  }\item[{Q\+String \&}]{,  }\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Recherche\+A\+L\+L\+Todo\+Cont . Ce signal nous permet de rechercher les taches de tous les contacts entre deux dates . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Todo$>$} & \& \+:listes des taches . \\
+\hline
+{\em Q\+String} & \&\+:la premiere date ou debut de l\textquotesingle{}intervalle à rechercher . \\
+\hline
+{\em Q\+String} & \&\+:la deuxieme date ou fin de l\textquotesingle{}intervalle à rechercher . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_a4d9fc9ebab982ed05540417674eee372}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigRechercheInteraction@{sigRechercheInteraction}}
+\index{sigRechercheInteraction@{sigRechercheInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigRechercheInteraction}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Recherche\+Interaction (\begin{DoxyParamCaption}\item[{Q\+String \&}]{,  }\item[{Q\+String \&}]{,  }\item[{std\+::list$<$ \textbf{ Interaction} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Recherche\+Interaction . Ce signal nous permet de rechercher dans un intervalle de deux dates toutes les intéractions . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::list$<$\+Interaction$>$} & \& \+:listes d\textquotesingle{}intéractions \\
+\hline
+{\em Q\+String} & \&\+:la premiere date ou debut de l\textquotesingle{}intervalle à rechercher . \\
+\hline
+{\em Q\+String} & \&\+:la deuxieme date ou fin de l\textquotesingle{}intervalle à rechercher . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_a9718a30e3e17064ffbc42bca38fe4f01}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigRechercheInteractionCont@{sigRechercheInteractionCont}}
+\index{sigRechercheInteractionCont@{sigRechercheInteractionCont}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigRechercheInteractionCont}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Recherche\+Interaction\+Cont (\begin{DoxyParamCaption}\item[{int \&}]{,  }\item[{Q\+String \&}]{,  }\item[{Q\+String \&}]{,  }\item[{std\+::list$<$ \textbf{ Interaction} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Recherche\+Interaction\+Cont . Ce signal nous permet de rechercher pour un contact sa liste d\textquotesingle{}intéraction . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \& \+:l\textquotesingle{}identifiant du contact à rechercher . \\
+\hline
+{\em std\+::list$<$\+Interaction$>$} & \& \+:listes d\textquotesingle{}intéractions . \\
+\hline
+{\em Q\+String} & \&\+:la premiere date ou debut de l\textquotesingle{}intervalle à rechercher . \\
+\hline
+{\em Q\+String} & \&\+:la deuxieme date ou fin de l\textquotesingle{}intervalle à rechercher . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_afb7bc17549a4466bd5dc6e78c44a8155}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigRechercheTodoCont@{sigRechercheTodoCont}}
+\index{sigRechercheTodoCont@{sigRechercheTodoCont}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigRechercheTodoCont}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Recherche\+Todo\+Cont (\begin{DoxyParamCaption}\item[{int \&}]{,  }\item[{Q\+String \&}]{,  }\item[{Q\+String \&}]{,  }\item[{std\+::list$<$ \textbf{ Todo} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Recherche\+Todo\+Cont . Ce signal nous permet de rechercher des taches pour un contact entre deux dates . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \& \+:l\textquotesingle{}identifiant du contact à rechercher . \\
+\hline
+{\em std\+::list$<$\+Todo$>$} & \& \+:listes des taches . \\
+\hline
+{\em Q\+String} & \&\+:la premiere date ou debut de l\textquotesingle{}intervalle à rechercher . \\
+\hline
+{\em Q\+String} & \&\+:la deuxieme date ou fin de l\textquotesingle{}intervalle à rechercher . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_a98f0241201411af3dbb2a8e2758a2cbf}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigRechercheUnContact@{sigRechercheUnContact}}
+\index{sigRechercheUnContact@{sigRechercheUnContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigRechercheUnContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Recherche\+Un\+Contact (\begin{DoxyParamCaption}\item[{Q\+String \&}]{,  }\item[{Q\+String \&}]{,  }\item[{Q\+String \&}]{,  }\item[{std\+::list$<$ \textbf{ Contact} $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Recherche\+Un\+Contact . Le signal qui nous permet d\textquotesingle{}emetre un signal en faisant la recherche en rentrant le nom du contact entre deux dates . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Q\+String} & \& \+:le nom a saisir pour la recherche . \\
+\hline
+{\em Q\+String} & \& \+:le premiere date à saisir pour la recherche. \\
+\hline
+{\em Q\+String} & \& \+:la deuxieme date à saisir pour la recherche. \\
+\hline
+{\em std\+::list$<$\+Contact$>$} & \&\+: la liste de contact pour la recherche. Tous ces paramètres seront envoyés par le signal . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_a9a0fb4d277f1190bcd9a6c33e50403e0}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!sigSupprimer@{sigSupprimer}}
+\index{sigSupprimer@{sigSupprimer}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{sigSupprimer}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::sig\+Supprimer (\begin{DoxyParamCaption}\item[{int \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+signal sig\+Supprimer . Le signal qui nous permet d\textquotesingle{}emetre un signal en faisant la suppression de l\textquotesingle{}id du contact . 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \& \+:l\textquotesingle{}identifiant à envoyer par le signal . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_fenetre_principale_a0eaafaf80ee5a54a13b3e93fc3a62536}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!suppressionContact@{suppressionContact}}
+\index{suppressionContact@{suppressionContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{suppressionContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::suppression\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot suppression\+Contact . slot lié pour la suppression d\textquotesingle{}un contact . 
+
+$<$ appel de la fonction pour actualiser l\textquotesingle{}affichage de toutes les intéractions aprés suppression .
+
+$<$ appel de la fonction pour actualiser l\textquotesingle{}affichage des listes de taches à faire aprés suppression\mbox{\label{class_fenetre_principale_a6b96a85abd2a4cd9a6e8ffef2cd805a1}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!SupprimerContact@{SupprimerContact}}
+\index{SupprimerContact@{SupprimerContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{SupprimerContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Supprimer\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Supprimer\+Contact . la fonction qu\textquotesingle{}on appellera pour la création de la boite dialogue pour supprimer un contact . 
+
+Création d\textquotesingle{}une Boite de dialogue elle comportera juste une combo\+Box pour avoir la liste des contacts pour enfin choisir le quel on veut supprimer et le bouton supprimer et annuler . \mbox{\label{class_fenetre_principale_a1d0d27120adc567c848a0b6503179844}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!TotalContact@{TotalContact}}
+\index{TotalContact@{TotalContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{TotalContact}
+{\footnotesize\ttfamily void Fenetre\+Principale\+::\+Total\+Contact (\begin{DoxyParamCaption}\item[{int \&}]{tot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot Total\+Contact . le slot qu\textquotesingle{}on appellera pour retourner le nombre total des contacts . 
+
+Nombre de contacts Ce slot qui nous permet de nous afficher sur la fenetre principale le nombre total de contact dans la base sur un label .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & \&\+: retourne le nombre total des contacts \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\label{class_fenetre_principale_a590d9a7b84ac999e7566cef6a5dace4b}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!aligneH@{aligneH}}
+\index{aligneH@{aligneH}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{aligneH}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::aligneH\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a1b5cf247e4abb03b6cd5821807fbb93e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!aligneHH@{aligneHH}}
+\index{aligneHH@{aligneHH}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{aligneHH}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::aligne\+HH\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a6f75e0433e07f49056383716b3f17720}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BajoutInteraction@{BajoutInteraction}}
+\index{BajoutInteraction@{BajoutInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BajoutInteraction}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bajout\+Interaction\hspace{0.3cm}{\ttfamily [private]}}
+
+bouton ajouter pour une interaction \mbox{\label{class_fenetre_principale_aab8a224893cffd13b1fff1c4d6df094b}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BajoutTaches@{BajoutTaches}}
+\index{BajoutTaches@{BajoutTaches}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BajoutTaches}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bajout\+Taches\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton pour ajouter une taches . \mbox{\label{class_fenetre_principale_abef0cf0571fce44eb4ffb83fa750aa7d}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Bannuler@{Bannuler}}
+\index{Bannuler@{Bannuler}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Bannuler}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bannuler\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton annuler qui permet de fermer la boite de dialogue \mbox{\label{class_fenetre_principale_acbb1e850fdb21cfbe92fc39ce06922ca}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Bannuler1@{Bannuler1}}
+\index{Bannuler1@{Bannuler1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Bannuler1}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bannuler1\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton annuler qui permet de fermer la boite de dialogue \mbox{\label{class_fenetre_principale_a563bd0d4b34cc2f6990cfbd9d82255a7}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BannulerALL@{BannulerALL}}
+\index{BannulerALL@{BannulerALL}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BannulerALL}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bannuler\+A\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton annuler qui permet de fermer la boite de dialogue . \mbox{\label{class_fenetre_principale_a454ed73304323ecf6675e53aeb2c9cb3}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BannulerIdate@{BannulerIdate}}
+\index{BannulerIdate@{BannulerIdate}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BannulerIdate}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bannuler\+Idate\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton annuler qui permet de fermer la boite de dialogue \mbox{\label{class_fenetre_principale_a4e6035560712190ef16464d3444e7870}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BannulerInteraction@{BannulerInteraction}}
+\index{BannulerInteraction@{BannulerInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BannulerInteraction}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bannuler\+Interaction\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton annuler qui permet de fermer la boite de dialogue \mbox{\label{class_fenetre_principale_ac5267820dfba3ef349ebd86dbb5bcc0f}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BannulerListI@{BannulerListI}}
+\index{BannulerListI@{BannulerListI}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BannulerListI}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bannuler\+ListI\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton annuler qui permet de fermer la boite de dialogue \mbox{\label{class_fenetre_principale_a16053dcda7dc6eaf419a10dfb3a85b08}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BannulerR@{BannulerR}}
+\index{BannulerR@{BannulerR}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BannulerR}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+BannulerR\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton annuler qui permet de fermer la boite de dialogue \mbox{\label{class_fenetre_principale_a6cbca402e9daff16a1efa1aed5187a91}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BannulerRC@{BannulerRC}}
+\index{BannulerRC@{BannulerRC}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BannulerRC}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bannuler\+RC\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton annuler qui permet de fermer la boite de dialogue . \mbox{\label{class_fenetre_principale_a1de264524afedbefe7e7f9712301749e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BannulerTaches@{BannulerTaches}}
+\index{BannulerTaches@{BannulerTaches}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BannulerTaches}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bannuler\+Taches\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton annuler qui permet de fermer la boite de dialogue . \mbox{\label{class_fenetre_principale_a4e9228d4cb9216075ba1e8c5e49bf5be}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BannulerTachesR@{BannulerTachesR}}
+\index{BannulerTachesR@{BannulerTachesR}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BannulerTachesR}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bannuler\+TachesR\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton annuler qui permet de fermer la boite de dialogue . \mbox{\label{class_fenetre_principale_a4d0dbda6c3000945b79976a58d2c0603}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!bd@{bd}}
+\index{bd@{bd}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{bd}
+{\footnotesize\ttfamily \textbf{ Contact\+B\+DD} Fenetre\+Principale\+::bd}
+
+\mbox{\label{class_fenetre_principale_abfa08646b0782e6291547c83d667b0ca}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BPhotoContact@{BPhotoContact}}
+\index{BPhotoContact@{BPhotoContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BPhotoContact}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+B\+Photo\+Contact\hspace{0.3cm}{\ttfamily [private]}}
+
+bouton pour ajouter la photo lors de la création d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a72d0cb0844e6b9404ef2a9d21f213aa9}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BPhotoModifContact@{BPhotoModifContact}}
+\index{BPhotoModifContact@{BPhotoModifContact}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BPhotoModifContact}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+B\+Photo\+Modif\+Contact\hspace{0.3cm}{\ttfamily [private]}}
+
+bouton pour ajouter la photo lors de la modification d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a693f042408786e15c04776c6d351ba0e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BrechercheIdate@{BrechercheIdate}}
+\index{BrechercheIdate@{BrechercheIdate}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BrechercheIdate}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Brecherche\+Idate\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton pour rechercher des interactions entre deux dates \mbox{\label{class_fenetre_principale_a35ac429d16300685a9f539be17fdf4bf}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BRechercher@{BRechercher}}
+\index{BRechercher@{BRechercher}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BRechercher}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+B\+Rechercher\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton Rechercher \mbox{\label{class_fenetre_principale_aedd735f1332a202f949c4b20a4dcb8d1}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BrechercherALL@{BrechercherALL}}
+\index{BrechercherALL@{BrechercherALL}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BrechercherALL}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Brechercher\+A\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton rechercher des taches pour tous les contacts entre deux dates . \mbox{\label{class_fenetre_principale_a01f3cd3ef0899cb1b507d914fd58e1db}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BRechercherRC@{BRechercherRC}}
+\index{BRechercherRC@{BRechercherRC}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BRechercherRC}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+B\+Rechercher\+RC\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton pour rechercher des interactions entre deux dates pour un contact \mbox{\label{class_fenetre_principale_a72ee7e252ecb5a8865b03827f4ae5473}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BrechercherTaches@{BrechercherTaches}}
+\index{BrechercherTaches@{BrechercherTaches}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BrechercherTaches}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Brechercher\+Taches\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton rechercher les taches d\textquotesingle{}un contact . \mbox{\label{class_fenetre_principale_a38d2efe902dfb3164f26f91c076ca37e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Bsupprimer@{Bsupprimer}}
+\index{Bsupprimer@{Bsupprimer}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Bsupprimer}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bsupprimer\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton Supprimer . \mbox{\label{class_fenetre_principale_a77b0ca6629704c489e079041cd796884}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Bvalider@{Bvalider}}
+\index{Bvalider@{Bvalider}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Bvalider}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bvalider\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Déclaration des boutons . 
+
+Bouton valider \mbox{\label{class_fenetre_principale_a1bf6b54ab2a9e531959ccc809c50dc27}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Bvalider1@{Bvalider1}}
+\index{Bvalider1@{Bvalider1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Bvalider1}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bvalider1\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton valider pour la liste d\textquotesingle{}intéraction \mbox{\label{class_fenetre_principale_ab11ce5604371a3847827e6d7c89befc0}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!BvaliderListI@{BvaliderListI}}
+\index{BvaliderListI@{BvaliderListI}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{BvaliderListI}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Fenetre\+Principale\+::\+Bvalider\+ListI\hspace{0.3cm}{\ttfamily [private]}}
+
+Bouton valider pour la liste d\textquotesingle{}intéraction \mbox{\label{class_fenetre_principale_a150349d21c7168d1dd9ce300c2d3d336}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!cInteraction@{cInteraction}}
+\index{cInteraction@{cInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{cInteraction}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::c\+Interaction\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur c\+Interaction de type Qline\+Edit pour l\textquotesingle{}insertion d\textquotesingle{}un contenu \mbox{\label{class_fenetre_principale_aa47b696d5e7afb95d1c36add24401e1d}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!combo@{combo}}
+\index{combo@{combo}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{combo}
+{\footnotesize\ttfamily Q\+Combo\+Box$\ast$ Fenetre\+Principale\+::combo\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la combo pour gérer la liste déroulante \mbox{\label{class_fenetre_principale_a13a4e774c8de5d80b16ad76aa3ed7656}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!comboBox@{comboBox}}
+\index{comboBox@{comboBox}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{comboBox}
+{\footnotesize\ttfamily Q\+Combo\+Box$\ast$ Fenetre\+Principale\+::combo\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Déclaration de la Combo\+Box ou la liste déroulante . 
+
+déclaration de la combo\+Box pour gérer la liste déroulante \mbox{\label{class_fenetre_principale_abcf270ec77ed614011317c047d3ae7d1}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!comboInteraction@{comboInteraction}}
+\index{comboInteraction@{comboInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{comboInteraction}
+{\footnotesize\ttfamily Q\+Combo\+Box$\ast$ Fenetre\+Principale\+::combo\+Interaction\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la combo\+Interaction pour gérer la liste déroulante \mbox{\label{class_fenetre_principale_a4d6a75bc8f460d871d93b53ebcee8e28}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!comboList@{comboList}}
+\index{comboList@{comboList}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{comboList}
+{\footnotesize\ttfamily Q\+Combo\+Box$\ast$ Fenetre\+Principale\+::combo\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la combo\+List pour gérer la liste déroulante \mbox{\label{class_fenetre_principale_a1e9a1d537a87c8951cb8646744c8e30e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!comboRecherche@{comboRecherche}}
+\index{comboRecherche@{comboRecherche}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{comboRecherche}
+{\footnotesize\ttfamily Q\+Combo\+Box$\ast$ Fenetre\+Principale\+::combo\+Recherche\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la combo\+Recherche pour gérer la liste déroulante \mbox{\label{class_fenetre_principale_a40a28113423ec036860c060a2621ebd3}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!comboTache@{comboTache}}
+\index{comboTache@{comboTache}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{comboTache}
+{\footnotesize\ttfamily Q\+Combo\+Box$\ast$ Fenetre\+Principale\+::combo\+Tache\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la combo\+Tache pour gérer la liste déroulante \mbox{\label{class_fenetre_principale_aa758fd6656472a40c445458b9c8f59c4}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!comboTachesRecherche@{comboTachesRecherche}}
+\index{comboTachesRecherche@{comboTachesRecherche}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{comboTachesRecherche}
+{\footnotesize\ttfamily Q\+Combo\+Box$\ast$ Fenetre\+Principale\+::combo\+Taches\+Recherche\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la combo\+Taches\+Recherche pour gérer la liste déroulante \mbox{\label{class_fenetre_principale_aad3d05b36b57edc0c212e3262475887d}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!commentaire@{commentaire}}
+\index{commentaire@{commentaire}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{commentaire}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::commentaire\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur commentaire de type Qlabel lors l\textquotesingle{}ajout d\textquotesingle{}une intéraction \mbox{\label{class_fenetre_principale_a28b750a859a4f6b94080e2f293821999}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!date1@{date1}}
+\index{date1@{date1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{date1}
+{\footnotesize\ttfamily Q\+Date\+Edit$\ast$ Fenetre\+Principale\+::date1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur date1 de type Q\+Date\+Edit pour l\textquotesingle{}insertion de la date 1 \mbox{\label{class_fenetre_principale_ad2b175d07dae2e2d6f74a33365c7d7bc}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!date1RC@{date1RC}}
+\index{date1RC@{date1RC}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{date1RC}
+{\footnotesize\ttfamily Q\+Date\+Edit$\ast$ Fenetre\+Principale\+::date1\+RC\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur date1\+RC de type Q\+Date\+Edit pour l\textquotesingle{}insertion d\textquotesingle{}une date \mbox{\label{class_fenetre_principale_ac7c8199326ace923b8f052d1d975a711}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!date2@{date2}}
+\index{date2@{date2}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{date2}
+{\footnotesize\ttfamily Q\+Date\+Edit$\ast$ Fenetre\+Principale\+::date2\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur date2 de type Q\+Date\+Edit pour l\textquotesingle{}insertion de la date 2 \mbox{\label{class_fenetre_principale_afc3d545d3ce6da74e3de821ac4683d3d}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!date2RC@{date2RC}}
+\index{date2RC@{date2RC}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{date2RC}
+{\footnotesize\ttfamily Q\+Date\+Edit$\ast$ Fenetre\+Principale\+::date2\+RC\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur date2\+RC de type Q\+Date\+Edit pour l\textquotesingle{}insertion d\textquotesingle{}une date \mbox{\label{class_fenetre_principale_abbf19aec9faa44d783ab3b14c32e7339}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dateAjout@{dateAjout}}
+\index{dateAjout@{dateAjout}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dateAjout}
+{\footnotesize\ttfamily Q\+Date\+Edit$\ast$ Fenetre\+Principale\+::date\+Ajout\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur date\+Ajout de type Q\+Date\+Edit pour l\textquotesingle{}insertion d\textquotesingle{}une date \mbox{\label{class_fenetre_principale_a6bebf9ddf0804a57fd83d677bfe327c2}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dateDebutALL@{dateDebutALL}}
+\index{dateDebutALL@{dateDebutALL}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dateDebutALL}
+{\footnotesize\ttfamily Q\+Date\+Edit$\ast$ Fenetre\+Principale\+::date\+Debut\+A\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur date\+Debut\+A\+LL de type Q\+Date\+Edit pour l\textquotesingle{}insertion d\textquotesingle{}une date \mbox{\label{class_fenetre_principale_af2dbf6307339e54458ea6834ad17a09e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dateDebutI@{dateDebutI}}
+\index{dateDebutI@{dateDebutI}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dateDebutI}
+{\footnotesize\ttfamily Q\+Date\+Edit$\ast$ Fenetre\+Principale\+::date\+DebutI\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur date\+DebutI de type Q\+Date\+Edit pour l\textquotesingle{}insertion d\textquotesingle{}une date \mbox{\label{class_fenetre_principale_a54599bbfb8ae247ef8a7e14d0b698f0c}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dateDebutTaches@{dateDebutTaches}}
+\index{dateDebutTaches@{dateDebutTaches}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dateDebutTaches}
+{\footnotesize\ttfamily Q\+Date\+Edit$\ast$ Fenetre\+Principale\+::date\+Debut\+Taches\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur date\+Debut\+Taches de type Q\+Date\+Edit pour l\textquotesingle{}insertion d\textquotesingle{}une date \mbox{\label{class_fenetre_principale_a28a521feaf8e3c865d0dd308b2a7854c}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dateFinALL@{dateFinALL}}
+\index{dateFinALL@{dateFinALL}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dateFinALL}
+{\footnotesize\ttfamily Q\+Date\+Edit$\ast$ Fenetre\+Principale\+::date\+Fin\+A\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur date\+Fin\+A\+LL de type Q\+Date\+Edit pour l\textquotesingle{}insertion d\textquotesingle{}une date \mbox{\label{class_fenetre_principale_a846db6d947fd6b935f90d72739fab87d}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dateFinI@{dateFinI}}
+\index{dateFinI@{dateFinI}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dateFinI}
+{\footnotesize\ttfamily Q\+Date\+Edit$\ast$ Fenetre\+Principale\+::date\+FinI\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur date\+FinI de type Q\+Date\+Edit pour l\textquotesingle{}insertion d\textquotesingle{}une date \mbox{\label{class_fenetre_principale_abc6c464a79f574318b43dc22ce6404c4}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dateFinTaches@{dateFinTaches}}
+\index{dateFinTaches@{dateFinTaches}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dateFinTaches}
+{\footnotesize\ttfamily Q\+Date\+Edit$\ast$ Fenetre\+Principale\+::date\+Fin\+Taches\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur date\+Fin\+Taches de type Q\+Date\+Edit pour l\textquotesingle{}insertion d\textquotesingle{}une date \mbox{\label{class_fenetre_principale_a3ea71513569bd1325f37a4ee2f871703}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!debut@{debut}}
+\index{debut@{debut}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{debut}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::debut\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un Q\+Label déclaration d\textquotesingle{}un Q\+Label \mbox{\label{class_fenetre_principale_aa1413b592db56493d4096a845545e0b0}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dialog@{dialog}}
+\index{dialog@{dialog}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dialog}
+{\footnotesize\ttfamily Q\+Dialog$\ast$ Fenetre\+Principale\+::dialog\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Déclaration des boites de Dialogues . 
+
+déclaration de la boite de dialogue pour la partie créer un contact \mbox{\label{class_fenetre_principale_a6243394161df4d2415484753ec77818f}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dialog1@{dialog1}}
+\index{dialog1@{dialog1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dialog1}
+{\footnotesize\ttfamily Q\+Dialog$\ast$ Fenetre\+Principale\+::dialog1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la boite de dialogue pour la partie Modification d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_af4b1c245661044e3e2f905d842a71649}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dialog2@{dialog2}}
+\index{dialog2@{dialog2}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dialog2}
+{\footnotesize\ttfamily Q\+Dialog$\ast$ Fenetre\+Principale\+::dialog2\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la boite de dialogue pour la partie supprimer un contact ~\newline
+ \mbox{\label{class_fenetre_principale_a0c695923c179e65372c17b2dc515f536}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dialog3@{dialog3}}
+\index{dialog3@{dialog3}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dialog3}
+{\footnotesize\ttfamily Q\+Dialog$\ast$ Fenetre\+Principale\+::dialog3\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la boite de dialogue pour la partie rechercher un contact \mbox{\label{class_fenetre_principale_ae19247208f8be7a1c77cf23cb8b661c5}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dialogALL@{dialogALL}}
+\index{dialogALL@{dialogALL}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dialogALL}
+{\footnotesize\ttfamily Q\+Dialog$\ast$ Fenetre\+Principale\+::dialog\+A\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la boite de dialogue pour faire la recherche des taches de tous les contacts entre deux dates \mbox{\label{class_fenetre_principale_af53daa74f5d587b8e76682915c12b3f1}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dialogIdeuxDates@{dialogIdeuxDates}}
+\index{dialogIdeuxDates@{dialogIdeuxDates}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dialogIdeuxDates}
+{\footnotesize\ttfamily Q\+Dialog$\ast$ Fenetre\+Principale\+::dialog\+Ideux\+Dates\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la boite de dialogue pour afficher des intéractions entre 2 dates . \mbox{\label{class_fenetre_principale_af000021c78c969f593e54cb4821e5f1b}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dialogInteraction@{dialogInteraction}}
+\index{dialogInteraction@{dialogInteraction}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dialogInteraction}
+{\footnotesize\ttfamily Q\+Dialog$\ast$ Fenetre\+Principale\+::dialog\+Interaction\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la boite de dialogue pour la partie ajouter une interaction \mbox{\label{class_fenetre_principale_a722a536432d2e0b2d65840df424511f8}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dialogList@{dialogList}}
+\index{dialogList@{dialogList}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dialogList}
+{\footnotesize\ttfamily Q\+Dialog$\ast$ Fenetre\+Principale\+::dialog\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la boite de dialogue pour la partie afficher la liste des interactions d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a0fdfc2c0cab30cbfc33aaea2e9e7cc8c}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dialogRC@{dialogRC}}
+\index{dialogRC@{dialogRC}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dialogRC}
+{\footnotesize\ttfamily Q\+Dialog$\ast$ Fenetre\+Principale\+::dialog\+RC\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la boite de dialogue pour afficher les intéractions d\textquotesingle{}un contact entre 2 dates . \mbox{\label{class_fenetre_principale_a43dc07587ebfd4f47cee24a2429d48f6}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dialogRechercheT@{dialogRechercheT}}
+\index{dialogRechercheT@{dialogRechercheT}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dialogRechercheT}
+{\footnotesize\ttfamily Q\+Dialog$\ast$ Fenetre\+Principale\+::dialog\+RechercheT\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la boite de dialogue pour faire la recherche des taches d\textquotesingle{}un contact . \mbox{\label{class_fenetre_principale_a0b199f318a0f6384f95a698b15c91471}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!dialogTaches@{dialogTaches}}
+\index{dialogTaches@{dialogTaches}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{dialogTaches}
+{\footnotesize\ttfamily Q\+Dialog$\ast$ Fenetre\+Principale\+::dialog\+Taches\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de la boite de dialogue pour afficher l\textquotesingle{}ajaout d\textquotesingle{}une taches. \mbox{\label{class_fenetre_principale_a218386aa6679baff7a6b96c7e5eb24dc}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!editTaches@{editTaches}}
+\index{editTaches@{editTaches}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{editTaches}
+{\footnotesize\ttfamily Q\+Text\+Edit$\ast$ Fenetre\+Principale\+::edit\+Taches\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur edit\+Taches de type Q\+Text\+Edit pour une insertion \mbox{\label{class_fenetre_principale_ae4b23fa9d80ae4dc648692a072883fe4}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!em@{em}}
+\index{em@{em}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{em}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::em\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur em de type Qline\+Edit pour la saisie de texte pour l\textquotesingle{}email \mbox{\label{class_fenetre_principale_aa2dc67f80f4173eefe8856ac7ff15e54}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!em1@{em1}}
+\index{em1@{em1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{em1}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::em1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur em1 de type Qline\+Edit pour la saisie de texte pour l\textquotesingle{}email \mbox{\label{class_fenetre_principale_a3840b2c8e006a493ef90cd6e0aa7ec8c}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Email@{Email}}
+\index{Email@{Email}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Email}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Email\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur Email de type Qlabel pour la création d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a87983612a5b16636c79c33018b99f986}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Email1@{Email1}}
+\index{Email1@{Email1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Email1}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Email1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur Email de type Qlabel pour la Modification d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a067ae9cef15149e5bd9ae2d80553b276}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!en@{en}}
+\index{en@{en}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{en}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::en\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur en de type Qline\+Edit pour la saisie de texte pour l\textquotesingle{}entreprise \mbox{\label{class_fenetre_principale_a0608fc29aca2e9fc1f882535c8638c9a}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!en1@{en1}}
+\index{en1@{en1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{en1}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::en1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur en1 de type Qline\+Edit pour la saisie de texte pour l\textquotesingle{}Entreprise \mbox{\label{class_fenetre_principale_ad9cede009e105a8538cb21ba643d8116}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Entreprise@{Entreprise}}
+\index{Entreprise@{Entreprise}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Entreprise}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Entreprise\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur Entreprise de type Qlabel pour la création d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_acf6fbe3379bc6b81f543602fddd0ff1a}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Entreprise1@{Entreprise1}}
+\index{Entreprise1@{Entreprise1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Entreprise1}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Entreprise1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur Entreprise de type Qlabel pour la Modification d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a2c5ecca8fe2e3c88ae708944361afd99}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!fin@{fin}}
+\index{fin@{fin}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{fin}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::fin\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un Q\+Label \mbox{\label{class_fenetre_principale_ae371b5ade3737e719da0dd88e8133e94}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAligne1I@{hAligne1I}}
+\index{hAligne1I@{hAligne1I}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAligne1I}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+Aligne1I\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_ae79e4222806d3f47a32e56ce829cb8ab}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAligne1Taches@{hAligne1Taches}}
+\index{hAligne1Taches@{hAligne1Taches}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAligne1Taches}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+Aligne1\+Taches\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_acbeac30c6a29c707e4c48d5abd9474af}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAligne2I@{hAligne2I}}
+\index{hAligne2I@{hAligne2I}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAligne2I}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+Aligne2I\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_aebb3cee05512e8a8313de587222bdd3b}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAligne2Taches@{hAligne2Taches}}
+\index{hAligne2Taches@{hAligne2Taches}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAligne2Taches}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+Aligne2\+Taches\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_abbee316bd872d663b9d2b7e7af20f6d7}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAligne3Taches@{hAligne3Taches}}
+\index{hAligne3Taches@{hAligne3Taches}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAligne3Taches}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+Aligne3\+Taches\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a979330575c883059ef312e759f652b1b}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAligne4I@{hAligne4I}}
+\index{hAligne4I@{hAligne4I}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAligne4I}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+Aligne4I\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a155a155d4f584d7881d1748d4cd9aa92}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAligneALL@{hAligneALL}}
+\index{hAligneALL@{hAligneALL}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAligneALL}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+Aligne\+A\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a4d405a7133eaa458cffc2fdfc1c31b1e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAligneI@{hAligneI}}
+\index{hAligneI@{hAligneI}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAligneI}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+AligneI\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a051439b73c6b91c54ccdfb32acc15dd3}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAligneId@{hAligneId}}
+\index{hAligneId@{hAligneId}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAligneId}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+Aligne\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a3e5c07fb40c06c6dbdc79f693436b805}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAligneList@{hAligneList}}
+\index{hAligneList@{hAligneList}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAligneList}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+Aligne\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a87db1b6abf5ff505196b67397d9f0064}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAligneTachesR@{hAligneTachesR}}
+\index{hAligneTachesR@{hAligneTachesR}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAligneTachesR}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+Aligne\+TachesR\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a5dc14bd6468570cc4e05ed68905903ad}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAlignH@{hAlignH}}
+\index{hAlignH@{hAlignH}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAlignH}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+AlignH\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a1c720a59d1cbf12b52d5a5642401a1a3}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!hAlignHRC@{hAlignHRC}}
+\index{hAlignHRC@{hAlignHRC}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{hAlignHRC}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Fenetre\+Principale\+::h\+Align\+H\+RC\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_aa738e4519fa2c96e52c3dd23860760a2}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!ImageInsere@{ImageInsere}}
+\index{ImageInsere@{ImageInsere}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{ImageInsere}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Image\+Insere\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur nom de l\textquotesingle{}image de type Qlabel lors la création d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_aa4df7053c1c652bd7bd27ca79f1bbb66}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!ImageInsere2@{ImageInsere2}}
+\index{ImageInsere2@{ImageInsere2}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{ImageInsere2}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Image\+Insere2\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur nom de l\textquotesingle{}image de type Qlabel lors la modification d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a93a2a49dc222b423daf971ff975ee7ad}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!inBDD@{inBDD}}
+\index{inBDD@{inBDD}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{inBDD}
+{\footnotesize\ttfamily \textbf{ Interaction\+B\+DD} Fenetre\+Principale\+::in\+B\+DD}
+
+\mbox{\label{class_fenetre_principale_ab46e5e1483ce93a5912b7de5d6f8f85e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!lheure@{lheure}}
+\index{lheure@{lheure}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{lheure}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::lheure\hspace{0.3cm}{\ttfamily [private]}}
+
+décalration du Q\+Label pour la combo\+Box \mbox{\label{class_fenetre_principale_a4ea9f110ea501234e21356194c7682ab}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!ltime@{ltime}}
+\index{ltime@{ltime}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{ltime}
+{\footnotesize\ttfamily Q\+Timer$\ast$ Fenetre\+Principale\+::ltime\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur ltime de type Q\+Timer qui va gerer une heure /mois/date ~\newline
+ \mbox{\label{class_fenetre_principale_a0b55a7da5fef73c875c9431921ab93fc}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!n@{n}}
+\index{n@{n}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{n}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::n\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Déclaration des champs et les dates . 
+
+déclaration d\textquotesingle{}un pointeur n de type Qline\+Edit pour la saisie de texte pour le nom \mbox{\label{class_fenetre_principale_a2cb871e46abe93193608787e80685fb7}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!n1@{n1}}
+\index{n1@{n1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{n1}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::n1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur n1 de type Qline\+Edit pour la saisie de texte pour le nom \mbox{\label{class_fenetre_principale_a8559d8633f5557e1806e96b0cc6cbd8c}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Nom@{Nom}}
+\index{Nom@{Nom}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Nom}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Nom\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Déclaration des labels pour la boite de dialogue créer un contact . 
+
+déclaration d\textquotesingle{}un pointeur Nom de type Qlabel pour la création d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a74ab760c07d328eeaf153b83695c0b5e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Nom1@{Nom1}}
+\index{Nom1@{Nom1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Nom1}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Nom1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur Nom de type Qlabel pour la Modification d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a1bbe45eeb25f5763b040db8cafbdf821}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Nomcombo@{Nomcombo}}
+\index{Nomcombo@{Nomcombo}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Nomcombo}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Nomcombo\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur nom de la combo\+Box de type Qlabel pour la Modification d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_aaf89e97c0ddc563a66c7f53ac6fc7da8}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!NomcomboList@{NomcomboList}}
+\index{NomcomboList@{NomcomboList}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{NomcomboList}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Nomcombo\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+décalration du Q\+Label pour la combo\+Box \mbox{\label{class_fenetre_principale_af90918e3eb8f52ed67f1dab8ab44734f}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!NomR@{NomR}}
+\index{NomR@{NomR}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{NomR}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+NomR\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_aaf78cf9c9e6abbc702d4d6068cc57bf4}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!nR@{nR}}
+\index{nR@{nR}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{nR}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::nR\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur nR de type Qline\+Edit pour l\textquotesingle{}insertion du texte \mbox{\label{class_fenetre_principale_a333a48afdfd82aa5bd5499828f1bd27f}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!p@{p}}
+\index{p@{p}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{p}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::p\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur p de type Qline\+Edit pour la saisie de texte pour le prenom \mbox{\label{class_fenetre_principale_a64fc7ac5fc5f6b8d138dac52a3579a5e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!p1@{p1}}
+\index{p1@{p1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{p1}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::p1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur p1 de type Qline\+Edit pour la saisie de texte pour le prenom \mbox{\label{class_fenetre_principale_aefd36a779f0cadddac27088115f1faad}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!ph@{ph}}
+\index{ph@{ph}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{ph}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::ph\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur ph de type Qline\+Edit pour l\textquotesingle{}insertion du chemin pour la photo \mbox{\label{class_fenetre_principale_aab14f9a11d962efa96aaf182585a00a0}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!ph1@{ph1}}
+\index{ph1@{ph1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{ph1}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::ph1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur ph1 de type Qline\+Edit pour l\textquotesingle{}insertion du chemin pour la photo \mbox{\label{class_fenetre_principale_acc29f527cc0c0adfb21c32419452b0c8}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Photo@{Photo}}
+\index{Photo@{Photo}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Photo}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Photo\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur Photo de type Qlabel pour la création d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a971e88e0560fdcf308b3d26a3c6fb37e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Photo1@{Photo1}}
+\index{Photo1@{Photo1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Photo1}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Photo1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur photo de type Qlabel pour la Modification d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_adb00ea641c24c01ec96285fef7166066}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Prenom@{Prenom}}
+\index{Prenom@{Prenom}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Prenom}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Prenom\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur Prenom de type Qlabel pour la création d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a2dcbbc2b534af1c6f2274183b4324f0f}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Prenom1@{Prenom1}}
+\index{Prenom1@{Prenom1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Prenom1}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Prenom1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur Prenom de type Qlabel pour la Modification d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a52d51914a5835daa7ccab98c86a6ce46}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!tel@{tel}}
+\index{tel@{tel}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{tel}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::tel\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur tel de type Qline\+Edit pour la saisie de texte pour telephone \mbox{\label{class_fenetre_principale_adc5909f7f241415c8b22c75d00193bb8}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!tel1@{tel1}}
+\index{tel1@{tel1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{tel1}
+{\footnotesize\ttfamily Q\+Line\+Edit$\ast$ Fenetre\+Principale\+::tel1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur tel1 de type Qline\+Edit pour la saisie de texte pour telephone \mbox{\label{class_fenetre_principale_aeac0ddd68a089a5971706a6cdd2bdeb7}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Telephone@{Telephone}}
+\index{Telephone@{Telephone}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Telephone}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Telephone\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur Telephone de type Qlabel pour la création d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_aeb1c787905b40a3ca5e1de17de4a8385}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!Telephone1@{Telephone1}}
+\index{Telephone1@{Telephone1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{Telephone1}
+{\footnotesize\ttfamily Q\+Label$\ast$ Fenetre\+Principale\+::\+Telephone1\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration d\textquotesingle{}un pointeur Telephone de type Qlabel pour la Modification d\textquotesingle{}un contact \mbox{\label{class_fenetre_principale_a91d039c4c64aa17e522791b8dd263914}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!ui@{ui}}
+\index{ui@{ui}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{ui}
+{\footnotesize\ttfamily Ui\+::\+Fenetre\+Principale$\ast$ Fenetre\+Principale\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+déclaration de l\textquotesingle{}interface utilisateur \mbox{\label{class_fenetre_principale_a4fa7324885b30d49bc8d487c02319c61}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne1@{vAligne1}}
+\index{vAligne1@{vAligne1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne1}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Declaration des dimensions . 
+
+La déclaration des dimension Horizontale et Verticale pour les Qdialoque afin de bien aligner nos widgets . \mbox{\label{class_fenetre_principale_a5fa7d509668a32592eeacbe8571e8671}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne11@{vAligne11}}
+\index{vAligne11@{vAligne11}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne11}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne11\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a2defcb307f28752bd2e3130d3befbfdc}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne1ALL@{vAligne1ALL}}
+\index{vAligne1ALL@{vAligne1ALL}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne1ALL}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne1\+A\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a00045d002c0280635e1a7fddf76cf106}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne1I@{vAligne1I}}
+\index{vAligne1I@{vAligne1I}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne1I}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne1I\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a7b6192d19b88e109d7f8160fd91cfe77}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne1Id@{vAligne1Id}}
+\index{vAligne1Id@{vAligne1Id}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne1Id}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne1\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a3bd8898546df4e5937607762e64cb405}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne1TachesR@{vAligne1TachesR}}
+\index{vAligne1TachesR@{vAligne1TachesR}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne1TachesR}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne1\+TachesR\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a0bf5a392a8f66ea389ed98ec3b37f035}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne2@{vAligne2}}
+\index{vAligne2@{vAligne2}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne2}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a71fd258a880bba016e8aa1aa4892f4dc}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne22@{vAligne22}}
+\index{vAligne22@{vAligne22}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne22}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne22\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_aa85b0bbe638316b96278c8a9f17dae87}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne2ALL@{vAligne2ALL}}
+\index{vAligne2ALL@{vAligne2ALL}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne2ALL}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne2\+A\+LL\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a9f70d204e24ee2f4d99e71f3cef85782}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne2I@{vAligne2I}}
+\index{vAligne2I@{vAligne2I}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne2I}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne2I\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_ac97b96c82b8b6a3508f98406bc640ec2}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne2Id@{vAligne2Id}}
+\index{vAligne2Id@{vAligne2Id}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne2Id}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne2\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_aa9c5898eebbe49f3e06ced9eae696a66}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne2TachesR@{vAligne2TachesR}}
+\index{vAligne2TachesR@{vAligne2TachesR}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne2TachesR}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne2\+TachesR\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_af6639c5df5aff481ce40af2564347b54}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne3@{vAligne3}}
+\index{vAligne3@{vAligne3}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne3}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne3\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a419766e206ac6929158811c95476fa95}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne33@{vAligne33}}
+\index{vAligne33@{vAligne33}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne33}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne33\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_ac47d786d020fde6462e579e14746dd0f}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligne3I@{vAligne3I}}
+\index{vAligne3I@{vAligne3I}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligne3I}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne3I\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a33f7f91ce6118174ed9ebe24819a6d3e}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligneI@{vAligneI}}
+\index{vAligneI@{vAligneI}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligneI}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+AligneI\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_abb5c23829b57d5d462ba373fad08d84d}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligneList1@{vAligneList1}}
+\index{vAligneList1@{vAligneList1}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligneList1}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne\+List1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a7b5b588e5eba8b0fafdd21c0cf2e0703}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligneList2@{vAligneList2}}
+\index{vAligneList2@{vAligneList2}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligneList2}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne\+List2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a6d30fa2ee204195a808a6096c415e968}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligneR@{vAligneR}}
+\index{vAligneR@{vAligneR}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligneR}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+AligneR\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a79ffe78f871c5e24c1c25641db1f3cac}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligneR2@{vAligneR2}}
+\index{vAligneR2@{vAligneR2}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligneR2}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne\+R2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a6c8573f0539268dc2c51e13f6be536ee}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligneR2RC@{vAligneR2RC}}
+\index{vAligneR2RC@{vAligneR2RC}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligneR2RC}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne\+R2\+RC\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_a4ccfcf4e9978da095a5a3acdf28f36a6}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligneRRC@{vAligneRRC}}
+\index{vAligneRRC@{vAligneRRC}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligneRRC}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne\+R\+RC\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\label{class_fenetre_principale_af9c43f165c5fed104538ed4a20f0c7bb}} 
+\index{FenetrePrincipale@{FenetrePrincipale}!vAligneTaches@{vAligneTaches}}
+\index{vAligneTaches@{vAligneTaches}!FenetrePrincipale@{FenetrePrincipale}}
+\doxysubsubsection{vAligneTaches}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Fenetre\+Principale\+::v\+Aligne\+Taches\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ fenetreprincipale.\+h}\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ fenetreprincipale.\+cpp}\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ fenetreprincipale.\+cpp.\+autosave.\+h}\end{DoxyCompactItemize}

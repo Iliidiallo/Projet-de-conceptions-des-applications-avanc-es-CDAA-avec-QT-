@@ -1,0 +1,289 @@
+.TH "Interaction" 3 "Jeudi 16 Décembre 2021" "DoxygenFinal" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Interaction \- La classe permet de gerer une interaction suivant son contenu et sa date de creation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Interaction\&.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBInteraction\fP ()"
+.br
+.RI "Constructeur\&. "
+.ti -1c
+.RI "\fBInteraction\fP (const \fBDate\fP &, const std::string &)"
+.br
+.RI "constructeur avec 2 parametres "
+.ti -1c
+.RI "std::string \fBgetContenu\fP () const"
+.br
+.RI "Les getteurs et mutateurs Les fonction getteurs et mutateurs\&. "
+.ti -1c
+.RI "int \fBgetIdContact\fP () const"
+.br
+.RI "Recupère l'identifiant d'un \fBContact\fP\&. "
+.ti -1c
+.RI "int \fBgetIdInteraction\fP () const"
+.br
+.RI "Recupère l'identifiant d'une \fBInteraction\fP\&. "
+.ti -1c
+.RI "\fBDate\fP \fBgetRDV\fP () const"
+.br
+.RI "Recupère la date d'une intéraction\&. "
+.ti -1c
+.RI "void \fBsetRDV\fP (const \fBDate\fP &)"
+.br
+.RI "modifier la \fBDate\fP d'une interaction "
+.ti -1c
+.RI "void \fBsetIdContact\fP (const int &)"
+.br
+.RI "modifier l'id d'un \fBContact\fP "
+.ti -1c
+.RI "void \fBsetIdInteraction\fP (const int &)"
+.br
+.RI "modifier l'id d'une interaction "
+.ti -1c
+.RI "void \fBsetContenu\fP (const std::string &)"
+.br
+.RI "modifier le contenu d'une interaction "
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBInteraction\fP &) const"
+.br
+.RI "comparaison La comparaison de l'\fBInteraction\fP courant à l'intéraction en paramètre "
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "\fBDate\fP \fBrdv\fP"
+.br
+.RI "permet d'indiquer une date de rendez-vous "
+.ti -1c
+.RI "std::string \fBcontenu\fP"
+.br
+.ti -1c
+.RI "int \fBidContact\fP =0"
+.br
+.ti -1c
+.RI "int \fBidInteraction\fP =0"
+.br
+.in -1c
+.SS "Amis"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &, const \fBInteraction\fP &)"
+.br
+.RI "L'affichage d'une Intéraction\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+La classe permet de gerer une interaction suivant son contenu et sa date de creation\&. 
+
+file \fBInteraction\&.h\fP 
+.PP
+\fBAuteur\fP
+.RS 4
+BARRY Thierno & DIALLO Iliassou 
+.RE
+.PP
+
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Interaction::Interaction ()"
+
+.PP
+Constructeur\&. implémentation du constructeur par défaut \&.
+.PP
+Contructeur de la classe \fBInteraction\fP 
+.SS "Interaction::Interaction (const \fBDate\fP & date, const std::string & visite)"
+
+.PP
+constructeur avec 2 parametres implémentation du constructeur avec paramètre \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fI\fBDate\fP\fP definition d'une date de rendez-vous 
+.br
+\fIstring\fP commentaire du rendez-vous
+.br
+\fIconst\fP \fBDate\fP &date : elle remplacera la date courante \&. 
+.br
+\fIconst\fP std::string &visite: elle remplacera le contenu courant \&. 
+.RE
+.PP
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "std::string Interaction::getContenu () const"
+
+.PP
+Les getteurs et mutateurs Les fonction getteurs et mutateurs\&. accesseur 'Contenu' pas de paramètre, fonction const
+.PP
+Recupère le contenu d'une intéraction 
+.PP
+\fBRenvoie\fP
+.RS 4
+le contenu d'une interaction
+.PP
+le std::string qui correspond au contenu d'une intéraction \&. 
+.RE
+.PP
+
+.SS "int Interaction::getIdContact () const"
+
+.PP
+Recupère l'identifiant d'un \fBContact\fP\&. accesseur 'id_contact' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+l'identifiant d'un \fBContact\fP
+.PP
+le std::string qui correspond à l'identifiant d'un contact \&. 
+.RE
+.PP
+
+.SS "int Interaction::getIdInteraction () const"
+
+.PP
+Recupère l'identifiant d'une \fBInteraction\fP\&. accesseur 'id_interaction' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+l'identifiant d'une intéraction \&.
+.PP
+le std::string qui correspond à l'identifiant d'une intéraction \&. 
+.RE
+.PP
+
+.SS "\fBDate\fP Interaction::getRDV () const"
+
+.PP
+Recupère la date d'une intéraction\&. accesseur ' rdv ' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+la date d'une interaction
+.PP
+le std::string qui correspond à la date d'une intéraction \&. 
+.RE
+.PP
+
+.SS "bool Interaction::operator< (const \fBInteraction\fP & i1) const"
+
+.PP
+comparaison La comparaison de l'\fBInteraction\fP courant à l'intéraction en paramètre test de comparaison entre 2 dates
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP \fBInteraction\fP & : l'interaction passé en paramètre pour la comparaison \&.
+.br
+\fIconst\fP \fBInteraction\fP &i1 : la date à comparer avec la date courante 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+un booléen VRAI si égalité 
+.PP
+un booléen FAUX si non égalité 
+.RE
+.PP
+
+.SS "void Interaction::setContenu (const std::string & cont)"
+
+.PP
+modifier le contenu d'une interaction implémentation du mutateur 'Contenu'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP std:: string &: le string qu'on utilisera pour faire la modification \&.
+.br
+\fIl'entier\fP const int & value, il remplacera le Contenu de l'intéraction courante \&. 
+.RE
+.PP
+
+.SS "void Interaction::setIdContact (const int & value)"
+
+.PP
+modifier l'id d'un \fBContact\fP implémentation du mutateur 'id_contact'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int & : le string qu'on utilisera pour faire la modification de l'id du contact \&.
+.br
+\fIl'entier\fP const int & value, il remplacera l'identifiant du contact courant \&. 
+.RE
+.PP
+
+.SS "void Interaction::setIdInteraction (const int & value)"
+
+.PP
+modifier l'id d'une interaction implémentation du mutateur 'id_interaction'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int & : le string qu'on utilisera pour faire la modification de l'id de l'intéraction \&.
+.br
+\fIl'entier\fP const int & value, il remplacera l'identifiant de l'intéraction courante \&. 
+.RE
+.PP
+
+.SS "void Interaction::setRDV (const \fBDate\fP & date)"
+
+.PP
+modifier la \fBDate\fP d'une interaction implémentation du mutateur 'Contenu'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP \fBDate\fP &: la date qu'on utilisera pour faire la modification \&.
+.br
+\fIconst\fP \fBDate\fP & date: elle remplacera la date de l'intéraction courante \&. 
+.RE
+.PP
+
+.SH "Documentation des fonctions amies et associées"
+.PP 
+.SS "std:: ostream& operator<< (std::ostream & o, const \fBInteraction\fP & action)\fC [friend]\fP"
+
+.PP
+L'affichage d'une Intéraction\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::ostream\fP &: il nous permetra de faire l'affichage \&. 
+.br
+\fIconst\fP Intéraction &: il nous permet d'afficher une interaction càd le rdv et contenu \&.
+.br
+\fIstd,:\fP ostream &o :la bibliothèque ostream qui permet l'affichage 
+.br
+\fIconst\fP \fBInteraction\fP& action:l'intéraction à afficher\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+o : pour l'affichage de l'intéraction càd sa date et son contenu \&. 
+.RE
+.PP
+
+.SH "Documentation des données membres"
+.PP 
+.SS "std::string Interaction::contenu\fC [private]\fP"
+attribut de type string qui gère le contenu dans l'intéraction 
+.SS "int Interaction::idContact =0\fC [private]\fP"
+attribut de type int qui gère l'identififiant d'un contact 
+.SS "int Interaction::idInteraction =0\fC [private]\fP"
+attribut de type int qui gère l'identififiant d'une intéraction 
+.SS "\fBDate\fP Interaction::rdv\fC [private]\fP"
+
+.PP
+permet d'indiquer une date de rendez-vous Le commentaire attribut de type date qui gère la date 
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour DoxygenFinal à partir du code source\&.

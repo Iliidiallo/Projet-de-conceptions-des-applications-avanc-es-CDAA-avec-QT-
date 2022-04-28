@@ -1,0 +1,513 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_interaction" kind="class" language="C++" prot="public">
+    <compoundname>Interaction</compoundname>
+    <includes refid="_interaction_8h" local="no">Interaction.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_interaction_1acc786ad835023533ce98c4d81ac18a31" prot="private" static="no" mutable="no">
+        <type><ref refid="class_date" kindref="compound">Date</ref></type>
+        <definition>Date Interaction::rdv</definition>
+        <argsstring></argsstring>
+        <name>rdv</name>
+        <briefdescription>
+<para>permet d&apos;indiquer une date de rendez-vous </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Le commentaire attribut de type date qui gère la date </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="28" column="9" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_interaction_1a7e16a252239dbdf2a67a6cfedfe642a1" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Interaction::contenu</definition>
+        <argsstring></argsstring>
+        <name>contenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut de type string qui gère le contenu dans l&apos;intéraction </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="29" column="15" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_interaction_1adf882b1ba0043e71359a4c8b85fb9e37" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Interaction::idContact</definition>
+        <argsstring></argsstring>
+        <name>idContact</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut de type int qui gère l&apos;identififiant d&apos;un contact </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="30" column="7" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_interaction_1a12b2980386244fbfd7dec0968e7fc40d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Interaction::idInteraction</definition>
+        <argsstring></argsstring>
+        <name>idInteraction</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attribut de type int qui gère l&apos;identififiant d&apos;une intéraction </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="31" column="7" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_interaction_1aadfd0e254296043c26508d47090ace76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interaction::Interaction</definition>
+        <argsstring>()</argsstring>
+        <name>Interaction</name>
+        <briefdescription>
+<para>Constructeur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du constructeur par défaut .</para>
+<para>Contructeur de la classe <ref refid="class_interaction" kindref="compound">Interaction</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="38" column="3" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_1a2c9aa6cf32e6bf0cb13ca0ec0f807c98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Interaction::Interaction</definition>
+        <argsstring>(const Date &amp;, const std::string &amp;)</argsstring>
+        <name>Interaction</name>
+        <param>
+          <type>const <ref refid="class_date" kindref="compound">Date</ref> &amp;</type>
+          <defname>date</defname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>visite</defname>
+        </param>
+        <briefdescription>
+<para>constructeur avec 2 parametres </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du constructeur avec paramètre .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_date" kindref="compound">Date</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>definition d&apos;une date de rendez-vous </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>commentaire du rendez-vous</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref> &amp;date : elle remplacera la date courante . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;visite: elle remplacera le contenu courant . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="44" column="3" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_1a0e194616267d53075169f189f6d71c60" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Interaction::getContenu</definition>
+        <argsstring>() const</argsstring>
+        <name>getContenu</name>
+        <briefdescription>
+<para>Les getteurs et mutateurs Les fonction getteurs et mutateurs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;Contenu&quot; pas de paramètre, fonction const</para>
+<para>Recupère le contenu d&apos;une intéraction <simplesect kind="return"><para>le contenu d&apos;une interaction</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond au contenu d&apos;une intéraction . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="56" column="15" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_1a2d01370ad0625cbd9504512d1bbd736e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Interaction::getIdContact</definition>
+        <argsstring>() const</argsstring>
+        <name>getIdContact</name>
+        <briefdescription>
+<para>Recupère l&apos;identifiant d&apos;un <ref refid="class_contact" kindref="compound">Contact</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;id_contact&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>l&apos;identifiant d&apos;un <ref refid="class_contact" kindref="compound">Contact</ref></para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond à l&apos;identifiant d&apos;un contact . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="61" column="9" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_1a23f4a6dabd1cfc2c8978bf4935fae585" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Interaction::getIdInteraction</definition>
+        <argsstring>() const</argsstring>
+        <name>getIdInteraction</name>
+        <briefdescription>
+<para>Recupère l&apos;identifiant d&apos;une <ref refid="class_interaction" kindref="compound">Interaction</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;id_interaction&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>l&apos;identifiant d&apos;une intéraction .</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond à l&apos;identifiant d&apos;une intéraction . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="66" column="11" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_1a4669085928094b75b56632710eceeb6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_date" kindref="compound">Date</ref></type>
+        <definition>Date Interaction::getRDV</definition>
+        <argsstring>() const</argsstring>
+        <name>getRDV</name>
+        <briefdescription>
+<para>Recupère la date d&apos;une intéraction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot; rdv &quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>la date d&apos;une interaction</para>
+</simplesect>
+<simplesect kind="return"><para>le std::string qui correspond à la date d&apos;une intéraction . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="71" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_1a9fa2d2e51b3361672bd08c62437d573f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interaction::setRDV</definition>
+        <argsstring>(const Date &amp;)</argsstring>
+        <name>setRDV</name>
+        <param>
+          <type>const <ref refid="class_date" kindref="compound">Date</ref> &amp;</type>
+          <defname>date</defname>
+        </param>
+        <briefdescription>
+<para>modifier la <ref refid="class_date" kindref="compound">Date</ref> d&apos;une interaction </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;Contenu&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref> &amp;: la date qu&apos;on utilisera pour faire la modification .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref> &amp; date: elle remplacera la date de l&apos;intéraction courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="76" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_1a9a79e0efe37c8e7a44899c2b37dc098a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interaction::setIdContact</definition>
+        <argsstring>(const int &amp;)</argsstring>
+        <name>setIdContact</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+<para>modifier l&apos;id d&apos;un <ref refid="class_contact" kindref="compound">Contact</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;id_contact&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; : le string qu&apos;on utilisera pour faire la modification de l&apos;id du contact .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>l&apos;entier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>const int &amp; value, il remplacera l&apos;identifiant du contact courant . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="81" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_1a0b377cdae09b2277c876715e349b49da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interaction::setIdInteraction</definition>
+        <argsstring>(const int &amp;)</argsstring>
+        <name>setIdInteraction</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+<para>modifier l&apos;id d&apos;une interaction </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;id_interaction&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; : le string qu&apos;on utilisera pour faire la modification de l&apos;id de l&apos;intéraction .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>l&apos;entier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>const int &amp; value, il remplacera l&apos;identifiant de l&apos;intéraction courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="87" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_1a5ca60953b855d3e31f27a05e118f81d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Interaction::setContenu</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>setContenu</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>cont</defname>
+        </param>
+        <briefdescription>
+<para>modifier le contenu d&apos;une interaction </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;Contenu&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std:: string &amp;: le string qu&apos;on utilisera pour faire la modification .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>l&apos;entier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>const int &amp; value, il remplacera le Contenu de l&apos;intéraction courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="92" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_interaction_1a8f8edf4a657bf3e3a9f41ea791ea24f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Interaction::operator&lt;</definition>
+        <argsstring>(const Interaction &amp;) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="class_interaction" kindref="compound">Interaction</ref> &amp;</type>
+          <defname>i1</defname>
+        </param>
+        <briefdescription>
+<para>comparaison La comparaison de l&apos;<ref refid="class_interaction" kindref="compound">Interaction</ref> courant à l&apos;intéraction en paramètre </para>
+        </briefdescription>
+        <detaileddescription>
+<para>test de comparaison entre 2 dates</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_interaction" kindref="compound">Interaction</ref> &amp; : l&apos;interaction passé en paramètre pour la comparaison .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_interaction" kindref="compound">Interaction</ref> &amp;i1 : la date à comparer avec la date courante </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>un booléen VRAI si égalité </para>
+</simplesect>
+<simplesect kind="return"><para>un booléen FAUX si non égalité </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="98" column="3" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="111" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_interaction_1ae82c573c617de8eff15364b57888922c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std:: ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const Interaction &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>o</defname>
+        </param>
+        <param>
+          <type>const <ref refid="class_interaction" kindref="compound">Interaction</ref> &amp;</type>
+          <defname>action</defname>
+        </param>
+        <briefdescription>
+<para>L&apos;affichage d&apos;une Intéraction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::ostream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: il nous permetra de faire l&apos;affichage . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Intéraction &amp;: il nous permet d&apos;afficher une interaction càd le rdv et contenu .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream &amp;o :la bibliothèque ostream qui permet l&apos;affichage </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_interaction" kindref="compound">Interaction</ref>&amp; action:l&apos;intéraction à afficher. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>o : pour l&apos;affichage de l&apos;intéraction càd sa date et son contenu . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="104" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.cpp" bodystart="127" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>La classe permet de gerer une interaction suivant son contenu et sa date de creation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>file <ref refid="_interaction_8h" kindref="compound">Interaction.h</ref> <simplesect kind="author"><para>BARRY Thierno &amp; DIALLO Iliassou </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Interaction</label>
+        <link refid="class_interaction"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-rdv</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Date</label>
+        <link refid="class_date"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" line="19" column="1" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Interaction.h" bodystart="18" bodyend="109"/>
+    <listofallmembers>
+      <member refid="class_interaction_1a7e16a252239dbdf2a67a6cfedfe642a1" prot="private" virt="non-virtual"><scope>Interaction</scope><name>contenu</name></member>
+      <member refid="class_interaction_1a0e194616267d53075169f189f6d71c60" prot="public" virt="non-virtual"><scope>Interaction</scope><name>getContenu</name></member>
+      <member refid="class_interaction_1a2d01370ad0625cbd9504512d1bbd736e" prot="public" virt="non-virtual"><scope>Interaction</scope><name>getIdContact</name></member>
+      <member refid="class_interaction_1a23f4a6dabd1cfc2c8978bf4935fae585" prot="public" virt="non-virtual"><scope>Interaction</scope><name>getIdInteraction</name></member>
+      <member refid="class_interaction_1a4669085928094b75b56632710eceeb6d" prot="public" virt="non-virtual"><scope>Interaction</scope><name>getRDV</name></member>
+      <member refid="class_interaction_1adf882b1ba0043e71359a4c8b85fb9e37" prot="private" virt="non-virtual"><scope>Interaction</scope><name>idContact</name></member>
+      <member refid="class_interaction_1a12b2980386244fbfd7dec0968e7fc40d" prot="private" virt="non-virtual"><scope>Interaction</scope><name>idInteraction</name></member>
+      <member refid="class_interaction_1aadfd0e254296043c26508d47090ace76" prot="public" virt="non-virtual"><scope>Interaction</scope><name>Interaction</name></member>
+      <member refid="class_interaction_1a2c9aa6cf32e6bf0cb13ca0ec0f807c98" prot="public" virt="non-virtual"><scope>Interaction</scope><name>Interaction</name></member>
+      <member refid="class_interaction_1a8f8edf4a657bf3e3a9f41ea791ea24f8" prot="public" virt="non-virtual"><scope>Interaction</scope><name>operator&lt;</name></member>
+      <member refid="class_interaction_1ae82c573c617de8eff15364b57888922c" prot="public" virt="non-virtual"><scope>Interaction</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_interaction_1acc786ad835023533ce98c4d81ac18a31" prot="private" virt="non-virtual"><scope>Interaction</scope><name>rdv</name></member>
+      <member refid="class_interaction_1a5ca60953b855d3e31f27a05e118f81d3" prot="public" virt="non-virtual"><scope>Interaction</scope><name>setContenu</name></member>
+      <member refid="class_interaction_1a9a79e0efe37c8e7a44899c2b37dc098a" prot="public" virt="non-virtual"><scope>Interaction</scope><name>setIdContact</name></member>
+      <member refid="class_interaction_1a0b377cdae09b2277c876715e349b49da" prot="public" virt="non-virtual"><scope>Interaction</scope><name>setIdInteraction</name></member>
+      <member refid="class_interaction_1a9fa2d2e51b3361672bd08c62437d573f" prot="public" virt="non-virtual"><scope>Interaction</scope><name>setRDV</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

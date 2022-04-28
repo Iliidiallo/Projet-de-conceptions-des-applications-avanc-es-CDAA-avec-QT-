@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_eeaa8b6f755de179d8d47de1ad4216fb" kind="dir">
+    <compoundname>/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA</compoundname>
+    <innerfile refid="contact_8cpp">contact.cpp</innerfile>
+    <innerfile refid="contact_8h">contact.h</innerfile>
+    <innerfile refid="contactbdd_8cpp">contactbdd.cpp</innerfile>
+    <innerfile refid="contactbdd_8h">contactbdd.h</innerfile>
+    <innerfile refid="_date_8cpp">Date.cpp</innerfile>
+    <innerfile refid="_date_8h">Date.h</innerfile>
+    <innerfile refid="fenetreprincipale_8cpp">fenetreprincipale.cpp</innerfile>
+    <innerfile refid="fenetreprincipale_8cpp_8autosave_8h">fenetreprincipale.cpp.autosave.h</innerfile>
+    <innerfile refid="fenetreprincipale_8h">fenetreprincipale.h</innerfile>
+    <innerfile refid="_interaction_8cpp">Interaction.cpp</innerfile>
+    <innerfile refid="_interaction_8h">Interaction.h</innerfile>
+    <innerfile refid="interactionbdd_8cpp">interactionbdd.cpp</innerfile>
+    <innerfile refid="interactionbdd_8h">interactionbdd.h</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="_todo_8cpp">Todo.cpp</innerfile>
+    <innerfile refid="_todo_8h">Todo.h</innerfile>
+    <innerfile refid="todobdd_8cpp">todobdd.cpp</innerfile>
+    <innerfile refid="todobdd_8h">todobdd.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/"/>
+  </compounddef>
+</doxygen>

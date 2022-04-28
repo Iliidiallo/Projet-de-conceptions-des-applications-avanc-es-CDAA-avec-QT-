@@ -1,0 +1,343 @@
+\doxysection{Référence de la classe Interaction}
+\label{class_interaction}\index{Interaction@{Interaction}}
+
+
+La classe permet de gerer une interaction suivant son contenu et sa date de creation.  
+
+
+
+
+{\ttfamily \#include $<$Interaction.\+h$>$}
+
+
+
+Graphe de collaboration de Interaction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_interaction__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Interaction} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\textbf{ Interaction} (const \textbf{ Date} \&, const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em constructeur avec 2 parametres \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Contenu} () const
+\begin{DoxyCompactList}\small\item\em Les getteurs et mutateurs Les fonction getteurs et mutateurs. \end{DoxyCompactList}\item 
+int \textbf{ get\+Id\+Contact} () const
+\begin{DoxyCompactList}\small\item\em Recupère l\textquotesingle{}identifiant d\textquotesingle{}un \doxyref{Contact}{p.}{class_contact}. \end{DoxyCompactList}\item 
+int \textbf{ get\+Id\+Interaction} () const
+\begin{DoxyCompactList}\small\item\em Recupère l\textquotesingle{}identifiant d\textquotesingle{}une \doxyref{Interaction}{p.}{class_interaction}. \end{DoxyCompactList}\item 
+\textbf{ Date} \textbf{ get\+R\+DV} () const
+\begin{DoxyCompactList}\small\item\em Recupère la date d\textquotesingle{}une intéraction. \end{DoxyCompactList}\item 
+void \textbf{ set\+R\+DV} (const \textbf{ Date} \&)
+\begin{DoxyCompactList}\small\item\em modifier la \doxyref{Date}{p.}{class_date} d\textquotesingle{}une interaction \end{DoxyCompactList}\item 
+void \textbf{ set\+Id\+Contact} (const int \&)
+\begin{DoxyCompactList}\small\item\em modifier l\textquotesingle{}id d\textquotesingle{}un \doxyref{Contact}{p.}{class_contact} \end{DoxyCompactList}\item 
+void \textbf{ set\+Id\+Interaction} (const int \&)
+\begin{DoxyCompactList}\small\item\em modifier l\textquotesingle{}id d\textquotesingle{}une interaction \end{DoxyCompactList}\item 
+void \textbf{ set\+Contenu} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em modifier le contenu d\textquotesingle{}une interaction \end{DoxyCompactList}\item 
+bool \textbf{ operator$<$} (const \textbf{ Interaction} \&) const
+\begin{DoxyCompactList}\small\item\em comparaison La comparaison de l\textquotesingle{}\doxyref{Interaction}{p.}{class_interaction} courant à l\textquotesingle{}intéraction en paramètre \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Date} \textbf{ rdv}
+\begin{DoxyCompactList}\small\item\em permet d\textquotesingle{}indiquer une date de rendez-\/vous \end{DoxyCompactList}\item 
+std\+::string \textbf{ contenu}
+\item 
+int \textbf{ id\+Contact} =0
+\item 
+int \textbf{ id\+Interaction} =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&, const \textbf{ Interaction} \&)
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}affichage d\textquotesingle{}une Intéraction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+La classe permet de gerer une interaction suivant son contenu et sa date de creation. 
+
+file \doxyref{Interaction.\+h}{p.}{_interaction_8h} \begin{DoxyAuthor}{Auteur}
+B\+A\+R\+RY Thierno \& D\+I\+A\+L\+LO Iliassou 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\label{class_interaction_aadfd0e254296043c26508d47090ace76}} 
+\index{Interaction@{Interaction}!Interaction@{Interaction}}
+\index{Interaction@{Interaction}!Interaction@{Interaction}}
+\doxysubsubsection{Interaction()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Interaction\+::\+Interaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+implémentation du constructeur par défaut .
+
+Contructeur de la classe \doxyref{Interaction}{p.}{class_interaction} \mbox{\label{class_interaction_a2c9aa6cf32e6bf0cb13ca0ec0f807c98}} 
+\index{Interaction@{Interaction}!Interaction@{Interaction}}
+\index{Interaction@{Interaction}!Interaction@{Interaction}}
+\doxysubsubsection{Interaction()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Interaction\+::\+Interaction (\begin{DoxyParamCaption}\item[{const \textbf{ Date} \&}]{date,  }\item[{const std\+::string \&}]{visite }\end{DoxyParamCaption})}
+
+
+
+constructeur avec 2 parametres 
+
+implémentation du constructeur avec paramètre .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \doxyref{Date}{p.}{class_date}} & definition d\textquotesingle{}une date de rendez-\/vous \\
+\hline
+{\em string} & commentaire du rendez-\/vous\\
+\hline
+{\em const} & \doxyref{Date}{p.}{class_date} \&date \+: elle remplacera la date courante . \\
+\hline
+{\em const} & std\+::string \&visite\+: elle remplacera le contenu courant . \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\label{class_interaction_a0e194616267d53075169f189f6d71c60}} 
+\index{Interaction@{Interaction}!getContenu@{getContenu}}
+\index{getContenu@{getContenu}!Interaction@{Interaction}}
+\doxysubsubsection{getContenu()}
+{\footnotesize\ttfamily std\+::string Interaction\+::get\+Contenu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Les getteurs et mutateurs Les fonction getteurs et mutateurs. 
+
+accesseur \char`\"{}\+Contenu\char`\"{} pas de paramètre, fonction const
+
+Recupère le contenu d\textquotesingle{}une intéraction \begin{DoxyReturn}{Renvoie}
+le contenu d\textquotesingle{}une interaction
+
+le std\+::string qui correspond au contenu d\textquotesingle{}une intéraction . 
+\end{DoxyReturn}
+\mbox{\label{class_interaction_a2d01370ad0625cbd9504512d1bbd736e}} 
+\index{Interaction@{Interaction}!getIdContact@{getIdContact}}
+\index{getIdContact@{getIdContact}!Interaction@{Interaction}}
+\doxysubsubsection{getIdContact()}
+{\footnotesize\ttfamily int Interaction\+::get\+Id\+Contact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère l\textquotesingle{}identifiant d\textquotesingle{}un \doxyref{Contact}{p.}{class_contact}. 
+
+accesseur \char`\"{}id\+\_\+contact\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}identifiant d\textquotesingle{}un \doxyref{Contact}{p.}{class_contact}
+
+le std\+::string qui correspond à l\textquotesingle{}identifiant d\textquotesingle{}un contact . 
+\end{DoxyReturn}
+\mbox{\label{class_interaction_a23f4a6dabd1cfc2c8978bf4935fae585}} 
+\index{Interaction@{Interaction}!getIdInteraction@{getIdInteraction}}
+\index{getIdInteraction@{getIdInteraction}!Interaction@{Interaction}}
+\doxysubsubsection{getIdInteraction()}
+{\footnotesize\ttfamily int Interaction\+::get\+Id\+Interaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère l\textquotesingle{}identifiant d\textquotesingle{}une \doxyref{Interaction}{p.}{class_interaction}. 
+
+accesseur \char`\"{}id\+\_\+interaction\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}identifiant d\textquotesingle{}une intéraction .
+
+le std\+::string qui correspond à l\textquotesingle{}identifiant d\textquotesingle{}une intéraction . 
+\end{DoxyReturn}
+\mbox{\label{class_interaction_a4669085928094b75b56632710eceeb6d}} 
+\index{Interaction@{Interaction}!getRDV@{getRDV}}
+\index{getRDV@{getRDV}!Interaction@{Interaction}}
+\doxysubsubsection{getRDV()}
+{\footnotesize\ttfamily \textbf{ Date} Interaction\+::get\+R\+DV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère la date d\textquotesingle{}une intéraction. 
+
+accesseur \char`\"{} rdv \char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+la date d\textquotesingle{}une interaction
+
+le std\+::string qui correspond à la date d\textquotesingle{}une intéraction . 
+\end{DoxyReturn}
+\mbox{\label{class_interaction_a8f8edf4a657bf3e3a9f41ea791ea24f8}} 
+\index{Interaction@{Interaction}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Interaction@{Interaction}}
+\doxysubsubsection{operator$<$()}
+{\footnotesize\ttfamily bool Interaction\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \textbf{ Interaction} \&}]{i1 }\end{DoxyParamCaption}) const}
+
+
+
+comparaison La comparaison de l\textquotesingle{}\doxyref{Interaction}{p.}{class_interaction} courant à l\textquotesingle{}intéraction en paramètre 
+
+test de comparaison entre 2 dates
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & \doxyref{Interaction}{p.}{class_interaction} \& \+: l\textquotesingle{}interaction passé en paramètre pour la comparaison .\\
+\hline
+{\em const} & \doxyref{Interaction}{p.}{class_interaction} \&i1 \+: la date à comparer avec la date courante \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un booléen V\+R\+AI si égalité 
+
+un booléen F\+A\+UX si non égalité 
+\end{DoxyReturn}
+\mbox{\label{class_interaction_a5ca60953b855d3e31f27a05e118f81d3}} 
+\index{Interaction@{Interaction}!setContenu@{setContenu}}
+\index{setContenu@{setContenu}!Interaction@{Interaction}}
+\doxysubsubsection{setContenu()}
+{\footnotesize\ttfamily void Interaction\+::set\+Contenu (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cont }\end{DoxyParamCaption})}
+
+
+
+modifier le contenu d\textquotesingle{}une interaction 
+
+implémentation du mutateur \char`\"{}\+Contenu\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & std\+:\+: string \&\+: le string qu\textquotesingle{}on utilisera pour faire la modification .\\
+\hline
+{\em l\textquotesingle{}entier} & const int \& value, il remplacera le Contenu de l\textquotesingle{}intéraction courante . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_interaction_a9a79e0efe37c8e7a44899c2b37dc098a}} 
+\index{Interaction@{Interaction}!setIdContact@{setIdContact}}
+\index{setIdContact@{setIdContact}!Interaction@{Interaction}}
+\doxysubsubsection{setIdContact()}
+{\footnotesize\ttfamily void Interaction\+::set\+Id\+Contact (\begin{DoxyParamCaption}\item[{const int \&}]{value }\end{DoxyParamCaption})}
+
+
+
+modifier l\textquotesingle{}id d\textquotesingle{}un \doxyref{Contact}{p.}{class_contact} 
+
+implémentation du mutateur \char`\"{}id\+\_\+contact\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \& \+: le string qu\textquotesingle{}on utilisera pour faire la modification de l\textquotesingle{}id du contact .\\
+\hline
+{\em l\textquotesingle{}entier} & const int \& value, il remplacera l\textquotesingle{}identifiant du contact courant . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_interaction_a0b377cdae09b2277c876715e349b49da}} 
+\index{Interaction@{Interaction}!setIdInteraction@{setIdInteraction}}
+\index{setIdInteraction@{setIdInteraction}!Interaction@{Interaction}}
+\doxysubsubsection{setIdInteraction()}
+{\footnotesize\ttfamily void Interaction\+::set\+Id\+Interaction (\begin{DoxyParamCaption}\item[{const int \&}]{value }\end{DoxyParamCaption})}
+
+
+
+modifier l\textquotesingle{}id d\textquotesingle{}une interaction 
+
+implémentation du mutateur \char`\"{}id\+\_\+interaction\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \& \+: le string qu\textquotesingle{}on utilisera pour faire la modification de l\textquotesingle{}id de l\textquotesingle{}intéraction .\\
+\hline
+{\em l\textquotesingle{}entier} & const int \& value, il remplacera l\textquotesingle{}identifiant de l\textquotesingle{}intéraction courante . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_interaction_a9fa2d2e51b3361672bd08c62437d573f}} 
+\index{Interaction@{Interaction}!setRDV@{setRDV}}
+\index{setRDV@{setRDV}!Interaction@{Interaction}}
+\doxysubsubsection{setRDV()}
+{\footnotesize\ttfamily void Interaction\+::set\+R\+DV (\begin{DoxyParamCaption}\item[{const \textbf{ Date} \&}]{date }\end{DoxyParamCaption})}
+
+
+
+modifier la \doxyref{Date}{p.}{class_date} d\textquotesingle{}une interaction 
+
+implémentation du mutateur \char`\"{}\+Contenu\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & \doxyref{Date}{p.}{class_date} \&\+: la date qu\textquotesingle{}on utilisera pour faire la modification .\\
+\hline
+{\em const} & \doxyref{Date}{p.}{class_date} \& date\+: elle remplacera la date de l\textquotesingle{}intéraction courante . \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions amies et associées}
+\mbox{\label{class_interaction_ae82c573c617de8eff15364b57888922c}} 
+\index{Interaction@{Interaction}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Interaction@{Interaction}}
+\doxysubsubsection{operator$<$$<$}
+{\footnotesize\ttfamily std\+:: ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o,  }\item[{const \textbf{ Interaction} \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+L\textquotesingle{}affichage d\textquotesingle{}une Intéraction. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::ostream} & \&\+: il nous permetra de faire l\textquotesingle{}affichage . \\
+\hline
+{\em const} & Intéraction \&\+: il nous permet d\textquotesingle{}afficher une interaction càd le rdv et contenu .\\
+\hline
+{\em std,\+:} & ostream \&o \+:la bibliothèque ostream qui permet l\textquotesingle{}affichage \\
+\hline
+{\em const} & \doxyref{Interaction}{p.}{class_interaction}\& action\+:l\textquotesingle{}intéraction à afficher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+o \+: pour l\textquotesingle{}affichage de l\textquotesingle{}intéraction càd sa date et son contenu . 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\label{class_interaction_a7e16a252239dbdf2a67a6cfedfe642a1}} 
+\index{Interaction@{Interaction}!contenu@{contenu}}
+\index{contenu@{contenu}!Interaction@{Interaction}}
+\doxysubsubsection{contenu}
+{\footnotesize\ttfamily std\+::string Interaction\+::contenu\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut de type string qui gère le contenu dans l\textquotesingle{}intéraction \mbox{\label{class_interaction_adf882b1ba0043e71359a4c8b85fb9e37}} 
+\index{Interaction@{Interaction}!idContact@{idContact}}
+\index{idContact@{idContact}!Interaction@{Interaction}}
+\doxysubsubsection{idContact}
+{\footnotesize\ttfamily int Interaction\+::id\+Contact =0\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut de type int qui gère l\textquotesingle{}identififiant d\textquotesingle{}un contact \mbox{\label{class_interaction_a12b2980386244fbfd7dec0968e7fc40d}} 
+\index{Interaction@{Interaction}!idInteraction@{idInteraction}}
+\index{idInteraction@{idInteraction}!Interaction@{Interaction}}
+\doxysubsubsection{idInteraction}
+{\footnotesize\ttfamily int Interaction\+::id\+Interaction =0\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut de type int qui gère l\textquotesingle{}identififiant d\textquotesingle{}une intéraction \mbox{\label{class_interaction_acc786ad835023533ce98c4d81ac18a31}} 
+\index{Interaction@{Interaction}!rdv@{rdv}}
+\index{rdv@{rdv}!Interaction@{Interaction}}
+\doxysubsubsection{rdv}
+{\footnotesize\ttfamily \textbf{ Date} Interaction\+::rdv\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+permet d\textquotesingle{}indiquer une date de rendez-\/vous 
+
+Le commentaire attribut de type date qui gère la date 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ Interaction.\+h}\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ Interaction.\+cpp}\end{DoxyCompactItemize}

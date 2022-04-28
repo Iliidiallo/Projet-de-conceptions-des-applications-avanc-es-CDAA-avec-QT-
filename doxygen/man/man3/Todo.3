@@ -1,0 +1,277 @@
+.TH "Todo" 3 "Jeudi 16 Décembre 2021" "DoxygenFinal" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Todo \- cette classe permet de gerer une tache suivant son contenu et sa date de creation  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Todo\&.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBTodo\fP ()"
+.br
+.RI "Constructeur\&. "
+.ti -1c
+.RI "\fBTodo\fP (const \fBDate\fP &, const std::string &)"
+.br
+.RI "constructeur 2 parametre "
+.ti -1c
+.RI "\fBDate\fP \fBgetDateTodo\fP () const"
+.br
+.RI "Getteurs et setteurs \\Les fonctions getteurs et setteurs \&. "
+.ti -1c
+.RI "std::string \fBgetContenuTodo\fP () const"
+.br
+.RI "recupère le contenu de la tache "
+.ti -1c
+.RI "int \fBgetId_interaction\fP () const"
+.br
+.RI "Recupère l'identifiant d'une \fBInteraction\fP\&. "
+.ti -1c
+.RI "int \fBgetIdtodo\fP () const"
+.br
+.RI "recupère le contenu de la tache "
+.ti -1c
+.RI "void \fBsetDateTodo\fP (const \fBDate\fP &)"
+.br
+.RI "modifier la date de tache "
+.ti -1c
+.RI "void \fBsetIdtodo\fP (const int &)"
+.br
+.RI "modifier l'id du todo "
+.ti -1c
+.RI "void \fBsetId_interaction\fP (const int &)"
+.br
+.RI "modifier l'id d'une interaction "
+.ti -1c
+.RI "void \fBsetContenuTodo\fP (const std::string &)"
+.br
+.RI "modifier le contenu de tache "
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBTodo\fP &) const"
+.br
+.RI "comparaison de la tache courante suivant "
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "\fBDate\fP \fBdate\fP"
+.br
+.ti -1c
+.RI "std::string \fBcontenuTodo\fP"
+.br
+.ti -1c
+.RI "int \fBid_interaction\fP =0"
+.br
+.ti -1c
+.RI "int \fBidtodo\fP =0"
+.br
+.in -1c
+.SS "Amis"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &, const \fBTodo\fP &)"
+.br
+.RI "L'affichage d'un \fBTodo\fP\&. "
+.in -1c
+.SH "Description détaillée"
+.PP 
+cette classe permet de gerer une tache suivant son contenu et sa date de creation 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Todo::Todo ()"
+
+.PP
+Constructeur\&. implémentation du constructeur par défaut \&.
+.PP
+Contructeur de la classe \fBTodo\fP 
+.SS "Todo::Todo (const \fBDate\fP & dater, const std::string & contenu)"
+
+.PP
+constructeur 2 parametre implémentation du constructeur avec paramètre \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP \fBDate\fP& : definition d'une date de tache a faire 
+.br
+\fIconst\fP std::string&:commentaire d'un contenu de la tache
+.br
+\fIconst\fP \fBDate\fP &date : elle remplacera la date courante du todo\&. 
+.br
+\fIconst\fP std::string &contenu: elle remplacera la tache courante \&. 
+.RE
+.PP
+
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "std::string Todo::getContenuTodo () const"
+
+.PP
+recupère le contenu de la tache accesseur 'ContenuTodo' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+le contenu du todo
+.PP
+le std::string qui correspond au contenuTodo d'une Tache \&. 
+.RE
+.PP
+
+.SS "\fBDate\fP Todo::getDateTodo () const"
+
+.PP
+Getteurs et setteurs \\Les fonctions getteurs et setteurs \&. accesseur ' date ' pas de paramètre, fonction const
+.PP
+Recupère la date du \fBTodo\fP 
+.PP
+\fBRenvoie\fP
+.RS 4
+la date de la tache
+.PP
+le std::string qui correspond à la date d'une tache \&. 
+.RE
+.PP
+
+.SS "int Todo::getId_interaction () const"
+
+.PP
+Recupère l'identifiant d'une \fBInteraction\fP\&. accesseur 'id_interaction' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+l'identifiant d'une intéraction \&.
+.PP
+le std::string qui correspond à l'identifiant d'une intéraction \&. 
+.RE
+.PP
+
+.SS "int Todo::getIdtodo () const"
+
+.PP
+recupère le contenu de la tache accesseur 'idTodo' pas de paramètre, fonction const
+.PP
+\fBRenvoie\fP
+.RS 4
+le contenu du todo
+.PP
+le std::string qui correspond à l'identifiant d'une tache \&. 
+.RE
+.PP
+
+.SS "bool Todo::operator< (const \fBTodo\fP & to) const"
+
+.PP
+comparaison de la tache courante suivant test de comparaison entre 2 dates
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP \fBTodo\fP &: le parametre à affiher les Todos
+.br
+\fIconst\fP \fBTodo\fP &to : la date à comparer avec la date courante \&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+un booléen VRAI si égalité 
+.PP
+un booléen FAUX si non égalité 
+.RE
+.PP
+
+.SS "void Todo::setContenuTodo (const std::string & contient)"
+
+.PP
+modifier le contenu de tache implémentation du mutateur 'ContenuTodo'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP std::string&: le contenu à modifier
+.br
+\fIl'entier\fP const int & value, il remplacera le Contenu de la tache courante \&. 
+.RE
+.PP
+
+.SS "void Todo::setDateTodo (const \fBDate\fP & dater)"
+
+.PP
+modifier la date de tache implémentation du mutateur 'date'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP \fBDate\fP&: la date à modifier
+.br
+\fIconst\fP \fBDate\fP & date: elle remplacera la date de la tache courante \&. 
+.RE
+.PP
+
+.SS "void Todo::setId_interaction (const int & value)"
+
+.PP
+modifier l'id d'une interaction implémentation du mutateur 'id_interaction'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int & : l'entier qu'on utilisera pour faire la modification de l'id de l'interaction \&.
+.br
+\fIl'entier\fP const int & value, il remplacera l'identifiant de l'intéraction courante \&. 
+.RE
+.PP
+
+.SS "void Todo::setIdtodo (const int & value)"
+
+.PP
+modifier l'id du todo implémentation du mutateur 'idTodo'
+.PP
+\fBParamètres\fP
+.RS 4
+\fIconst\fP int & : l'entier qu'on utilisera pour faire la modification de l'id du todo \&.
+.br
+\fIl'entier\fP const int & value, il remplacera l'identifiant de la tache courante \&. 
+.RE
+.PP
+
+.SH "Documentation des fonctions amies et associées"
+.PP 
+.SS "std::ostream& operator<< (std::ostream & os, const \fBTodo\fP & todo)\fC [friend]\fP"
+
+.PP
+L'affichage d'un \fBTodo\fP\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::ostream\fP &: il nous permetra de faire l'affichage \&. 
+.br
+\fIconst\fP \fBTodo\fP&: il nous permet d'afficher une tache\&.
+.br
+\fIstd,:\fP ostream &os :la bibliothèque ostream qui permet l'affichage \&. 
+.br
+\fIconst\fP \fBTodo\fP &todo:la tache à afficher\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+os : pour l'affichage de la tache càd sa date et son contenu \&. 
+.RE
+.PP
+
+.SH "Documentation des données membres"
+.PP 
+.SS "std::string Todo::contenuTodo\fC [private]\fP"
+attribut de type string pour gérer le contenu de la tache 
+.SS "\fBDate\fP Todo::date\fC [private]\fP"
+attribut de type \fBDate\fP pour gérer la date 
+.SS "int Todo::id_interaction =0\fC [private]\fP"
+attribut pour gérer l'id de l'intéraction 
+.SS "int Todo::idtodo =0\fC [private]\fP"
+attribut pour gérer l'id de tache 
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour DoxygenFinal à partir du code source\&.

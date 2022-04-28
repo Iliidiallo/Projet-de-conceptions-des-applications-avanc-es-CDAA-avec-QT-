@@ -1,0 +1,662 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_date" kind="class" language="C++" prot="public">
+    <compoundname>Date</compoundname>
+    <includes refid="_date_8h" local="no">Date.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_date_1a2ebb3466d38e54ac334bef67a14289d7" prot="private" static="no" mutable="no">
+        <type>struct tm *</type>
+        <definition>struct tm* Date::date</definition>
+        <argsstring></argsstring>
+        <name>date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>une structure tm qui nous permet de gerer la date <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="23" column="11" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_date_1aa46f17e2418a7a21573b1210f30b4e72" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Date::jour</definition>
+        <argsstring></argsstring>
+        <name>jour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>un attribut de type int qui nous permet de gerer le jour <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="24" column="6" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_date_1a9ce0f4d74252d7d1bf097ed047fbf880" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Date::mois</definition>
+        <argsstring></argsstring>
+        <name>mois</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>un attribut de type int qui permet de gerer le mois . </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="25" column="6" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_date_1a350753866b672814ff1c44c55b2d20ca" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Date::annee</definition>
+        <argsstring></argsstring>
+        <name>annee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>un attribut de type int qui permet de gerer l&apos;annee . </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="26" column="6" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_date_1a4e59ed4ba66eec61c27460c5d09fa1bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Date::Date</definition>
+        <argsstring>()</argsstring>
+        <name>Date</name>
+        <briefdescription>
+<para>Constructeur Constructeur de la classe <ref refid="class_date" kindref="compound">Date</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du constructeur par défaut . </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="32" column="2" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="11" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a7968f963b76fed8b861dcd24000e6e79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Date::Date</definition>
+        <argsstring>(const int &amp;, const int &amp;, const int &amp;)</argsstring>
+        <name>Date</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>a</defname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <defname>m</defname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <defname>j</defname>
+        </param>
+        <briefdescription>
+<para>constructeur </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du constructeur avec paramètre en faisant appel à la methode <ref refid="class_date_1a8718dd1d16b0f43b7cda9a9c7822c7be" kindref="member">fromDate()</ref>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; : initialise le jour d&apos;une date . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; : initialise le mois d&apos;une date . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; : initialis l&apos;année d&apos;une date .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;a: elle remplacera l&apos;année courante . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;m : elle remplacera le mois courant . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;j : elle remplacera le jour courant . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="40" column="5" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a575966fef11b34dea9a2e5be6f3a4e58" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Date::getJourtm</definition>
+        <argsstring>() const</argsstring>
+        <name>getJourtm</name>
+        <briefdescription>
+<para>Accesseurs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur de la structure &quot;Jour&quot; pas de paramètre, fonction const</para>
+<para>methode pour recuperer le jour de la structure tm ;</para>
+<para>Recupère le jour dans la structure tm <simplesect kind="return"><para>le jour de la structure tm ;</para>
+</simplesect>
+<simplesect kind="return"><para>le jour en utilisant la structure . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="51" column="9" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a6a769d53bbc30fb114be119f118b8742" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Date::getMoistm</definition>
+        <argsstring>() const</argsstring>
+        <name>getMoistm</name>
+        <briefdescription>
+<para>Recupère le mois dans la structure tm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur de la structure &quot;Mois&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>le mois de la structure tm ;</para>
+</simplesect>
+<simplesect kind="return"><para>le mois en utilisant la structure . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="56" column="9" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a2866d736981c3981a479911bfae0e777" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Date::getAnneetm</definition>
+        <argsstring>() const</argsstring>
+        <name>getAnneetm</name>
+        <briefdescription>
+<para>Recupère l&apos;année dans la structure tm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur de la structure &quot;Année&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>l&apos;année de la structure tm ;</para>
+</simplesect>
+<simplesect kind="return"><para>l&apos;année en utilisant la structure . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="61" column="9" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a1b38f44aaa8c9035149b188be5650af4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Date::getJour</definition>
+        <argsstring>() const</argsstring>
+        <name>getJour</name>
+        <briefdescription>
+<para>Recupère le jour pour la date;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;Jour&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>le jour de la date</para>
+</simplesect>
+<simplesect kind="return"><para>le jour . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="66" column="9" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a72aade20bcf0954935efea32bee0b244" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Date::getMois</definition>
+        <argsstring>() const</argsstring>
+        <name>getMois</name>
+        <briefdescription>
+<para>Recupère le mois pour la date ;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;Mois&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>le mois de la date</para>
+</simplesect>
+<simplesect kind="return"><para>le Mois . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="71" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a8ab72441def94864f14a6c7d37fc7880" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Date::getAnnee</definition>
+        <argsstring>() const</argsstring>
+        <name>getAnnee</name>
+        <briefdescription>
+<para>Recupère l&apos;année pour la date ;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>accesseur &quot;Année&quot; pas de paramètre, fonction const</para>
+<para><simplesect kind="return"><para>l&apos;année de la date</para>
+</simplesect>
+<simplesect kind="return"><para>l&apos;année . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="76" column="9" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a9320ed0e8f5ae4e5bf3e96b653cc9dec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Date::setJour</definition>
+        <argsstring>(const int &amp;)</argsstring>
+        <name>setJour</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>j</defname>
+        </param>
+        <briefdescription>
+<para>modifier le jour de la date </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;Jour&quot; en faisant appel à <ref refid="class_date_1a8718dd1d16b0f43b7cda9a9c7822c7be" kindref="member">fromDate()</ref> .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; :le jour à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;j : il remplacera le jour courant . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="82" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="101" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a305ffc577325d91db7f6651623eb4333" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Date::setMois</definition>
+        <argsstring>(const int &amp;)</argsstring>
+        <name>setMois</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>m</defname>
+        </param>
+        <briefdescription>
+<para>modifier le mois de la date </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;Mois&quot; en faisant appel à <ref refid="class_date_1a8718dd1d16b0f43b7cda9a9c7822c7be" kindref="member">fromDate()</ref> .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; :la date à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;m : il remplacera le Mois courant . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="87" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="112" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a010d6ca12bbf8f2afb6260fd1af65c79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Date::setAnnee</definition>
+        <argsstring>(const int &amp;)</argsstring>
+        <name>setAnnee</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>a</defname>
+        </param>
+        <briefdescription>
+<para>modifier l&apos;année de la date </para>
+        </briefdescription>
+        <detaileddescription>
+<para>implémentation du mutateur &quot;Année&quot; en faisant appel à <ref refid="class_date_1a8718dd1d16b0f43b7cda9a9c7822c7be" kindref="member">fromDate()</ref> .</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp; :l&apos;année à modifier</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;a : il remplacera l&apos;année courante . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="92" column="10" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="121" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a8718dd1d16b0f43b7cda9a9c7822c7be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Date::fromDate</definition>
+        <argsstring>(const int &amp;, const int &amp;, const int &amp;)</argsstring>
+        <name>fromDate</name>
+        <param>
+          <type>const int &amp;</type>
+          <defname>J</defname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <defname>M</defname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <defname>A</defname>
+        </param>
+        <briefdescription>
+<para>methode pour remplir la date La méthode fromDate qui recoit en parametre le jour ,mois,annee afin definir une date en se referant de la date du jour avec la stucture date et enfin on affectera aux attributs respectivement <ref refid="class_date_1a575966fef11b34dea9a2e5be6f3a4e58" kindref="member">getJourtm()</ref>,<ref refid="class_date_1a6a769d53bbc30fb114be119f118b8742" kindref="member">getMoistm()</ref>,getAnneetm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;: pour gérer le jour . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int&amp;: pour gérer le mois . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int&amp;: pour gérer l&apos;année.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;J: pour gérer le jour . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;M: pour gérer le mois . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int &amp;A: pour gérer l&apos;année. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="104" column="6" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="137" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1aad30c999adf882cee6369f627c0353c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Date::fromDateString</definition>
+        <argsstring>() const</argsstring>
+        <name>fromDateString</name>
+        <briefdescription>
+<para>Conversion La méthode convertie la date en string . </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Conversion La méthode qui convertie la date en string . pas de paramètre, fonction const.</para>
+<para><simplesect kind="return"><para>std::to_string(getAnnee())+&quot;-&quot;+momois+&quot;-&quot;+mojour : après avoir converti en string la date on l&apos;a retourne sous ce format ( jj-mm-aaaa ) ; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="109" column="14" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="161" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1acdbf4b116c6d112d5974ea9ef5d0ad05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_date" kindref="compound">Date</ref></type>
+        <definition>Date Date::toDateString</definition>
+        <argsstring>(const std::string &amp;) const</argsstring>
+        <name>toDateString</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <defname>dat</defname>
+        </param>
+        <briefdescription>
+<para>Conversion La méthode convertie le string en type date . </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Conversion La méthode qui convertie le String en type date en utilisant la fonction substr pour découper les chaines et aussion a utilisé stoi pour convertir la date en int.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp; : pour gérer la chaine de caractère .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::string &amp;dat : la date à convertir . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>d : on retourne la date convertie pour pouvoir l&apos;insérer dans la base normalement . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="116" column="6" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="185" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_date_1a08c0538091d061550b90787d9313ca61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Date::operator&lt;</definition>
+        <argsstring>(const Date &amp;) const</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="class_date" kindref="compound">Date</ref> &amp;</type>
+          <defname>da</defname>
+        </param>
+        <briefdescription>
+<para>comparaison de date La Methode pour comparer une date courante et une date entré en parametre </para>
+        </briefdescription>
+        <detaileddescription>
+<para>test de comparaison entre 2 dates</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref>&amp; une date en parametre pour qu&apos;on puisse la comparer à la date courante</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref> &amp;da: la date à comparer avec la date courante </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>un booléen VRAI si égalité </para>
+</simplesect>
+<simplesect kind="return"><para>un booléen FAUX si non égalité </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="125" column="1" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="205" bodyend="215"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_date_1a191ee8989894d19ac4c9a71e359210a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;, const Date &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>os</defname>
+        </param>
+        <param>
+          <type>const <ref refid="class_date" kindref="compound">Date</ref> &amp;</type>
+          <defname>temp</defname>
+        </param>
+        <briefdescription>
+<para>L&apos;affichage d&apos;une date Afficher une date a cette forme par exemple le 01/01/2021 . </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::ostream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&amp;: il nous permetra de faire un affichage . </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref> &amp;: il nous permet d&apos;afficher une date càd jour mois année .</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream &amp;os :la bibliothèque ostream </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_date" kindref="compound">Date</ref> &amp;temp :la date à afficher sous ce format jj-mm-aaaa . </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>os : pour l&apos;affichage d&apos;une date . </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="134" column="8" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.cpp" bodystart="223" bodyend="227"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>la classe reprensentant la <ref refid="class_date" kindref="compound">Date</ref> La classe date nous permet de definir la date courante et les differentes utilisations que nous auront a faire. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Date</label>
+        <link refid="class_date"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" line="20" column="1" bodyfile="/home/diallo/Bureau/CDAA/Projet/ProjetQt/ProjetFinalCDAA/Date.h" bodystart="19" bodyend="135"/>
+    <listofallmembers>
+      <member refid="class_date_1a350753866b672814ff1c44c55b2d20ca" prot="private" virt="non-virtual"><scope>Date</scope><name>annee</name></member>
+      <member refid="class_date_1a2ebb3466d38e54ac334bef67a14289d7" prot="private" virt="non-virtual"><scope>Date</scope><name>date</name></member>
+      <member refid="class_date_1a4e59ed4ba66eec61c27460c5d09fa1bd" prot="public" virt="non-virtual"><scope>Date</scope><name>Date</name></member>
+      <member refid="class_date_1a7968f963b76fed8b861dcd24000e6e79" prot="public" virt="non-virtual"><scope>Date</scope><name>Date</name></member>
+      <member refid="class_date_1a8718dd1d16b0f43b7cda9a9c7822c7be" prot="public" virt="non-virtual"><scope>Date</scope><name>fromDate</name></member>
+      <member refid="class_date_1aad30c999adf882cee6369f627c0353c0" prot="public" virt="non-virtual"><scope>Date</scope><name>fromDateString</name></member>
+      <member refid="class_date_1a8ab72441def94864f14a6c7d37fc7880" prot="public" virt="non-virtual"><scope>Date</scope><name>getAnnee</name></member>
+      <member refid="class_date_1a2866d736981c3981a479911bfae0e777" prot="public" virt="non-virtual"><scope>Date</scope><name>getAnneetm</name></member>
+      <member refid="class_date_1a1b38f44aaa8c9035149b188be5650af4" prot="public" virt="non-virtual"><scope>Date</scope><name>getJour</name></member>
+      <member refid="class_date_1a575966fef11b34dea9a2e5be6f3a4e58" prot="public" virt="non-virtual"><scope>Date</scope><name>getJourtm</name></member>
+      <member refid="class_date_1a72aade20bcf0954935efea32bee0b244" prot="public" virt="non-virtual"><scope>Date</scope><name>getMois</name></member>
+      <member refid="class_date_1a6a769d53bbc30fb114be119f118b8742" prot="public" virt="non-virtual"><scope>Date</scope><name>getMoistm</name></member>
+      <member refid="class_date_1aa46f17e2418a7a21573b1210f30b4e72" prot="private" virt="non-virtual"><scope>Date</scope><name>jour</name></member>
+      <member refid="class_date_1a9ce0f4d74252d7d1bf097ed047fbf880" prot="private" virt="non-virtual"><scope>Date</scope><name>mois</name></member>
+      <member refid="class_date_1a08c0538091d061550b90787d9313ca61" prot="public" virt="non-virtual"><scope>Date</scope><name>operator&lt;</name></member>
+      <member refid="class_date_1a191ee8989894d19ac4c9a71e359210a1" prot="public" virt="non-virtual"><scope>Date</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_date_1a010d6ca12bbf8f2afb6260fd1af65c79" prot="public" virt="non-virtual"><scope>Date</scope><name>setAnnee</name></member>
+      <member refid="class_date_1a9320ed0e8f5ae4e5bf3e96b653cc9dec" prot="public" virt="non-virtual"><scope>Date</scope><name>setJour</name></member>
+      <member refid="class_date_1a305ffc577325d91db7f6651623eb4333" prot="public" virt="non-virtual"><scope>Date</scope><name>setMois</name></member>
+      <member refid="class_date_1acdbf4b116c6d112d5974ea9ef5d0ad05" prot="public" virt="non-virtual"><scope>Date</scope><name>toDateString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

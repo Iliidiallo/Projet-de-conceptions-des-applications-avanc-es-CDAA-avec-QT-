@@ -1,0 +1,7 @@
+<map id="FenetrePrincipale" name="FenetrePrincipale">
+<area shape="rect" id="node1" title="Classe qui gère la fenetre principale . La classe herite d&#39;une QMainWindow,elle est l&#39;une des plus im..." alt="" coords="120,507,328,1053"/>
+<area shape="rect" id="node2" href="$class_q_main_window.html" title=" " alt="" coords="5,249,112,327"/>
+<area shape="rect" id="node3" href="$class_contact_b_d_d.html" title="Classe qui gère la base de donnée La classe herite d&#39;un QObject, permet de créer des fonctions et des..." alt="" coords="136,132,312,444"/>
+<area shape="rect" id="node4" href="$class_q_object.html" title=" " alt="" coords="298,5,369,83"/>
+<area shape="rect" id="node5" href="$class_interaction_b_d_d.html" title="Classe interaction de la base de donnée La classe herite d&#39;un QObject, permet d&#39;ajouter des interacti..." alt="" coords="337,132,551,444"/>
+</map>

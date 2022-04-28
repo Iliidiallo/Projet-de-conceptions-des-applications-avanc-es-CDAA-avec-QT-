@@ -1,0 +1,370 @@
+.TH "InteractionBDD" 3 "Jeudi 16 Décembre 2021" "DoxygenFinal" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InteractionBDD \- Classe interaction de la base de donnée La classe herite d'un \fBQObject\fP, permet d'ajouter des interactions pour un contact donné en la stockant dans la base de donnée \&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <interactionbdd\&.h>\fP
+.SS "Connecteurs publics"
+
+.in +1c
+.ti -1c
+.RI "void \fBbddAjoutInteraction\fP (int &, \fBInteraction\fP &)"
+.br
+.RI "Slot Ajout interaction \&. slot qui permet d'ajouter une intéraction\&. "
+.ti -1c
+.RI "void \fBbddListeInteraction\fP (int &, std::list< \fBInteraction\fP > &)"
+.br
+.RI "Slot liste \fBInteraction\fP \&. slot qui permet d'afficher la liste d'intéraction pour un contact selectionné "
+.ti -1c
+.RI "void \fBbddListeInteractionALL\fP (std::list< \fBInteraction\fP > &)"
+.br
+.RI "Slot liste de toutes les Interactions \&. slot qui permet d'afficher toutes les intéractions de tous les contacts \&. "
+.ti -1c
+.RI "void \fBbddRechercheInteraction\fP (QString &, QString &, std::list< \fBInteraction\fP > &)"
+.br
+.RI "Slot Recherche \fBInteraction\fP \&. Slot qui permet de rechercher les intéractions pour tous les contacts entre deux dates\&. "
+.ti -1c
+.RI "void \fBbddRechercheInteractionCont\fP (int &, QString &, QString &, std::list< \fBInteraction\fP > &)"
+.br
+.RI "Slot Recherche \fBInteraction\fP d'un contact \&. Slot qui permet de rechercher les intéractions d'un contact entre deux dates\&. "
+.ti -1c
+.RI "void \fBisOpen\fP (bool &)"
+.br
+.RI "Etat de la base\&. "
+.in -1c
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "void \fBListeInteractionALL\fP (std::list< \fBInteraction\fP > &) const"
+.br
+.RI "Liste des Intéractions \&. Methode qui permet de recuperer la liste des interactions de tous les contacts\&. "
+.ti -1c
+.RI "void \fBRechercheInteraction\fP (QString &, QString &, std::list< \fBInteraction\fP > &)"
+.br
+.RI "Rechercher des Intéractions entre deux dates \&. La Méthode qui permet de rechercher entre deux dates les interactions de tous les contacts\&. "
+.ti -1c
+.RI "void \fBRechercheInteractionCont\fP (int &, QString &, QString &, std::list< \fBInteraction\fP > &)"
+.br
+.RI "Rechercher des Intéractions entre deux dates pour un contact \&. La Méthode qui permet de rechercher entre deux dates les interactions d'un contact\&. "
+.ti -1c
+.RI "\fBInteractionBDD\fP (\fBQObject\fP *parent=nullptr)"
+.br
+.RI "Constructeur Constructeur de la classe \fBInteractionBDD\fP\&. "
+.ti -1c
+.RI "\fB~InteractionBDD\fP ()"
+.br
+.RI "Destructeur Le Destructeur de la classe \fBInteractionBDD\fP càd la fonction qui libère la memoire utilisé \&. "
+.in -1c
+.SS "Fonctions membres privées"
+
+.in +1c
+.ti -1c
+.RI "void \fBcloseDb\fP ()"
+.br
+.RI "Fermeture de la base Methode qui ferme la base si elle est ouverte\&. "
+.ti -1c
+.RI "bool \fBconnexion\fP ()"
+.br
+.RI "Creer la connexion Methode qui permet d'etablir une connexion avec la base et elle crée une table INTERACTION dans la base si elle n'existe pas\&. "
+.ti -1c
+.RI "void \fBisDBopen\fP (bool &)"
+.br
+.RI "Etat de la base Methode qui change l'etat de la base\&. "
+.ti -1c
+.RI "bool \fBAjoutInteraction\fP (const int &, \fBInteraction\fP &)"
+.br
+.RI "Ajout d'une \fBInteraction\fP Methode qui permet d'ajouter une interaction pour un contact\&. "
+.ti -1c
+.RI "void \fBListeInteraction\fP (const int &, std::list< \fBInteraction\fP > &) const"
+.br
+.RI "Liste des Intéractions \&. Methode qui permet de recuperer la liste des interactions d'un contact selectionné "
+.in -1c
+.SS "Attributs privés"
+
+.in +1c
+.ti -1c
+.RI "QSqlDatabase \fBdb\fP"
+.br
+.ti -1c
+.RI "bool \fBdbOuvert\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Classe interaction de la base de donnée La classe herite d'un \fBQObject\fP, permet d'ajouter des interactions pour un contact donné en la stockant dans la base de donnée \&. 
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "InteractionBDD::InteractionBDD (\fBQObject\fP * parent = \fCnullptr\fP)\fC [explicit]\fP"
+
+.PP
+Constructeur Constructeur de la classe \fBInteractionBDD\fP\&. implémentation du constructeur avec paramètre \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fI*parent\fP = nullptr: par defaut
+.br
+\fI\fBQObject\fP\fP *parent et hérite d'un QObjet initialisation du test de la base de donnée à false \&. Appel de la fonction \fBconnexion()\fP pour connecter la base de donnée \&. 
+.RE
+.PP
+
+.SS "InteractionBDD::~InteractionBDD ()"
+
+.PP
+Destructeur Le Destructeur de la classe \fBInteractionBDD\fP càd la fonction qui libère la memoire utilisé \&. implémentation du destructeur \&. A la fermeture de la base on libère la memoire en faisant appel à la fonction closeDB()\&.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "bool InteractionBDD::AjoutInteraction (const int & id, \fBInteraction\fP & inter)\fC [private]\fP"
+
+.PP
+Ajout d'une \fBInteraction\fP Methode qui permet d'ajouter une interaction pour un contact\&. Création d'une intéraction La fonction qui nous permet de créer ou inserer une intéraction en tenant compte des contraintes concernant les clés étrangères ou primaires\&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fI\fBInteraction\fP\fP &:l'interaction à inserer 
+.br
+\fIconst\fP int &: l'id du contact courant 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+true s'il est inserer dans la base 
+.PP
+false sinon
+.RE
+.PP
+\fBParamètres\fP
+.RS 4
+\fI\fBInteraction\fP\fP & inter: representera l'intéraction qui sera ajouté \&. 
+.br
+\fIconst\fP int & id : representera l'identifiant du contact pour lui ajouter l'intéraction \&. 
+.RE
+.PP
+
+.SS "void InteractionBDD::bddAjoutInteraction (int & i, \fBInteraction\fP & inter)\fC [slot]\fP"
+
+.PP
+Slot Ajout interaction \&. slot qui permet d'ajouter une intéraction\&. Ajout de l'intéraction Slot pour ajouter une intéraction pour un contact , c'est ce slot qu'on appelera dans le main pour le lier avec la fonction correspondante à la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP & : l'identifiant du contact 
+.br
+\fI\fBInteraction\fP\fP & : l'interaction
+.br
+\fI\fBInteraction\fP\fP & inter: representera l'intéraction qui sera ajouté \&. 
+.br
+\fIconst\fP int & id : representera l'identifiant du contact pour lui ajouter l'intéraction \&. 
+.RE
+.PP
+
+.SS "void InteractionBDD::bddListeInteraction (int & id, std::list< \fBInteraction\fP > & li)\fC [slot]\fP"
+
+.PP
+Slot liste \fBInteraction\fP \&. slot qui permet d'afficher la liste d'intéraction pour un contact selectionné Slot afficher la liste des intéractions Slot pour afficher les intéractions pour un contact , c'est ce slot qu'on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP &: l'identifiant d'un contact 
+.br
+\fIstd::list<Interaction>\fP & : liste des Intéractions
+.br
+\fIstd::list<Interaction>\fP & li: represente une liste d'intéraction 
+.br
+\fIconst\fP int & id : represente l'identifiant du contact pour lui afficher ses intéractions \&. 
+.RE
+.PP
+
+.SS "void InteractionBDD::bddListeInteractionALL (std::list< \fBInteraction\fP > & li)\fC [slot]\fP"
+
+.PP
+Slot liste de toutes les Interactions \&. slot qui permet d'afficher toutes les intéractions de tous les contacts \&. Slot afficher toutes les intéractions Slot pour afficher toutes les intéractions de tous les contacts , c'est ce slot qu'on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Interaction>\fP & : liste des Intéractions
+.br
+\fIstd::list<Interaction>\fP & li: c'est la liste qu'on met dans le paramètre de la fonction ListeInteractionALL pour nous afficher toutes ses d'intéractions 
+.RE
+.PP
+
+.SS "void InteractionBDD::bddRechercheInteraction (QString & date1, QString & date2, std::list< \fBInteraction\fP > & li)\fC [slot]\fP"
+
+.PP
+Slot Recherche \fBInteraction\fP \&. Slot qui permet de rechercher les intéractions pour tous les contacts entre deux dates\&. Slot afficher les intéractions entre deux dates \&. Slot qui nous permet d'afficher entre deux dates les intéractions ,c'est ce slot qu'on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIQString\fP la première date 
+.br
+\fIQString\fP la deuxième date 
+.br
+\fIstd::list<Interaction>\fP & : liste des Intéractions
+.br
+\fIQString\fP & date1 : la date qui represente le premier intervalle \&. 
+.br
+\fIQString\fP & date2 : la date qui represente le premier intervalle \&. 
+.br
+\fIstd::list<Contact>\fP & li :liste de contacts ces paramètre qu'on utilisera dans la fonction recherche intéraction lors de son appel dans le slot \&. 
+.RE
+.PP
+
+.SS "void InteractionBDD::bddRechercheInteractionCont (int & id, QString & date1, QString & date2, std::list< \fBInteraction\fP > & li)\fC [slot]\fP"
+
+.PP
+Slot Recherche \fBInteraction\fP d'un contact \&. Slot qui permet de rechercher les intéractions d'un contact entre deux dates\&. Slot afficher les intéractions entre deux dates pour un contact \&. Slot qui nous permet d'afficher entre deux dates les intéractions pour un contact ,c'est ce slot qu'on appelera dans le main pour le lier à sa fonction correspondante dans la fenetre principale \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP & :identifiant du contact 
+.br
+\fIQString\fP la première date 
+.br
+\fIQString\fP la deuxième date 
+.br
+\fIstd::list<Interaction>\fP & : liste des Intéractions
+.br
+\fIint\fP & id: l'identifiant du contact pour le quel on fera la recherche \&. 
+.br
+\fIQString\fP & date1 : la date qui represente le premier intervalle \&. 
+.br
+\fIQString\fP & date2 : la date qui represente le premier intervalle \&. 
+.br
+\fIstd::list<Contact>\fP & li :liste de contacts ces paramètres qu'on utilisera dans la fonction recherche intéraction lors de son appel dans le slot \&. 
+.RE
+.PP
+
+.SS "void InteractionBDD::closeDb ()\fC [private]\fP"
+
+.PP
+Fermeture de la base Methode qui ferme la base si elle est ouverte\&. 
+.SS "bool InteractionBDD::connexion ()\fC [private]\fP"
+
+.PP
+Creer la connexion Methode qui permet d'etablir une connexion avec la base et elle crée une table INTERACTION dans la base si elle n'existe pas\&. Connexion à la base de donnée On le nom de la base avec l'extension sqlite dans le tmp On teste si la base est ouverte : si non on retourne false si Oui on crée une table si elle n'existe pas et on affiche si la table est bien crée 'création de la table réussi ' \&.
+.PP
+\fBRenvoie\fP
+.RS 4
+true si la connexion à reussie, 
+.PP
+false sinon
+.PP
+dbOuvert : le booleén à retourner 
+.RE
+.PP
+
+.SS "InteractionBDD::isDBopen (bool & b)\fC [private]\fP"
+
+.PP
+Etat de la base Methode qui change l'etat de la base\&. Teste on affectera b à b\&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIbool&\fP : l'etat de la base à changer
+.br
+\fIbool\fP & b : le booléan en paramètre \&. 
+.RE
+.PP
+
+.SS "InteractionBDD::isOpen (bool & b)\fC [slot]\fP"
+
+.PP
+Etat de la base\&. Teste on affectera b à b\&.
+.PP
+Methode qui change l'etat de la base
+.PP
+\fBParamètres\fP
+.RS 4
+\fIbool&\fP : l'etat de la base à changer
+.br
+\fIbool\fP & b : le booléan en paramètre \&. 
+.RE
+.PP
+
+.SS "void InteractionBDD::ListeInteraction (const int & id, std::list< \fBInteraction\fP > & li) const\fC [private]\fP"
+
+.PP
+Liste des Intéractions \&. Methode qui permet de recuperer la liste des interactions d'un contact selectionné 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Interaction>\fP &:Liste des Interactions 
+.br
+\fIconst\fP int &: l'identifiant du contact 
+.RE
+.PP
+
+.SS "void InteractionBDD::ListeInteractionALL (std::list< \fBInteraction\fP > & li) const"
+
+.PP
+Liste des Intéractions \&. Methode qui permet de recuperer la liste des interactions de tous les contacts\&. Affichage toutes les interactions de tous les contacts \&. On affiche toutes les intéractions en selectionnant toute la table INTERACTION et on l'affiche \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Interaction>\fP &:Liste des Interactions
+.br
+\fIstd::list<Interaction>\fP & li : la liste des intéractions en paramètre\&. 
+.RE
+.PP
+
+.SS "void InteractionBDD::RechercheInteraction (QString & date1, QString & date2, std::list< \fBInteraction\fP > & li)"
+
+.PP
+Rechercher des Intéractions entre deux dates \&. La Méthode qui permet de rechercher entre deux dates les interactions de tous les contacts\&. Rechercher les intéractions entre deux dates c'est cette fonction qui nous permet de rechercher des intéractions entre deux dates \&. On rentrera l'intervalle à rechercher en Selectionnant la table: on n'affiche rien si les intérations n'existent pas entre ces dates si oui on affiche toutes les intéractions entre ces dates en triant les dates avec sort() par date de création \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIstd::list<Interaction>\fP &:Liste des Interactions 
+.br
+\fIQString\fP &: la premiere date de type Qstring \&. 
+.br
+\fIQString\fP &: la deuxieme date de type Qstring\&.
+.br
+\fIQString\fP & date1 : la date qui represente le premier intervalle \&. 
+.br
+\fIQString\fP & date2 : la date qui represente le premier intervalle \&. 
+.br
+\fIstd::list<Contact>\fP & li :liste de contacts 
+.RE
+.PP
+
+.SS "void InteractionBDD::RechercheInteractionCont (int & id, QString & date1, QString & date2, std::list< \fBInteraction\fP > & li)"
+
+.PP
+Rechercher des Intéractions entre deux dates pour un contact \&. La Méthode qui permet de rechercher entre deux dates les interactions d'un contact\&. Rechercher les intéractions entre deux dates pour un contact c'est cette fonction qui nous permet de rechercher des intéractions entre deux dates pour un contact selectionné \&. On rentrera l'intervalle à rechercher on selectionnera dans la comboBox le contact on appuyera sur le bouton rechercher \&. Cette requete nous permet de selectionner pour une interaction son identifiant et l'identifiant de son concat en faisant le test quand l'identifiant du contact de l'intéraction est égale à l'identifiant du contact \&. on n'affiche rien si les intérations n'existent pas entre ces dates pour le contatc si oui on affiche toutes les intéractions entre ces dates en triant les dates avec sort() par date de création \&.
+.PP
+\fBParamètres\fP
+.RS 4
+\fIint\fP &: l'identifiant d'un contact 
+.br
+\fIstd::list<Interaction>\fP &:Liste des Interactions 
+.br
+\fIQString\fP &: la premiere date de type Qstring \&. 
+.br
+\fIQString\fP &: la deuxieme date de type Qstring\&.
+.br
+\fIint\fP & id: l'identifiant du contact pour le quel on fera la recherche \&. 
+.br
+\fIQString\fP & date1 : la date qui represente le premier intervalle \&. 
+.br
+\fIQString\fP & date2 : la date qui represente le premier intervalle \&. 
+.br
+\fIstd::list<Contact>\fP & li :liste de contacts 
+.RE
+.PP
+
+.SH "Documentation des données membres"
+.PP 
+.SS "QSqlDatabase InteractionBDD::db\fC [private]\fP"
+connexion a la base de donnee 
+.SS "bool InteractionBDD::dbOuvert\fC [private]\fP"
+Savoir si la base est ouverte ou non 
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour DoxygenFinal à partir du code source\&.

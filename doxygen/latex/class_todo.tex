@@ -1,0 +1,334 @@
+\doxysection{Référence de la classe Todo}
+\label{class_todo}\index{Todo@{Todo}}
+
+
+cette classe permet de gerer une tache suivant son contenu et sa date de creation  
+
+
+
+
+{\ttfamily \#include $<$Todo.\+h$>$}
+
+
+
+Graphe de collaboration de Todo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_todo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Todo} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\textbf{ Todo} (const \textbf{ Date} \&, const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em constructeur 2 parametre \end{DoxyCompactList}\item 
+\textbf{ Date} \textbf{ get\+Date\+Todo} () const
+\begin{DoxyCompactList}\small\item\em Getteurs et setteurs \textbackslash{}\+Les fonctions getteurs et setteurs . \end{DoxyCompactList}\item 
+std\+::string \textbf{ get\+Contenu\+Todo} () const
+\begin{DoxyCompactList}\small\item\em recupère le contenu de la tache \end{DoxyCompactList}\item 
+int \textbf{ get\+Id\+\_\+interaction} () const
+\begin{DoxyCompactList}\small\item\em Recupère l\textquotesingle{}identifiant d\textquotesingle{}une \doxyref{Interaction}{p.}{class_interaction}. \end{DoxyCompactList}\item 
+int \textbf{ get\+Idtodo} () const
+\begin{DoxyCompactList}\small\item\em recupère le contenu de la tache \end{DoxyCompactList}\item 
+void \textbf{ set\+Date\+Todo} (const \textbf{ Date} \&)
+\begin{DoxyCompactList}\small\item\em modifier la date de tache \end{DoxyCompactList}\item 
+void \textbf{ set\+Idtodo} (const int \&)
+\begin{DoxyCompactList}\small\item\em modifier l\textquotesingle{}id du todo \end{DoxyCompactList}\item 
+void \textbf{ set\+Id\+\_\+interaction} (const int \&)
+\begin{DoxyCompactList}\small\item\em modifier l\textquotesingle{}id d\textquotesingle{}une interaction \end{DoxyCompactList}\item 
+void \textbf{ set\+Contenu\+Todo} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em modifier le contenu de tache \end{DoxyCompactList}\item 
+bool \textbf{ operator$<$} (const \textbf{ Todo} \&) const
+\begin{DoxyCompactList}\small\item\em comparaison de la tache courante suivant \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Date} \textbf{ date}
+\item 
+std\+::string \textbf{ contenu\+Todo}
+\item 
+int \textbf{ id\+\_\+interaction} =0
+\item 
+int \textbf{ idtodo} =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \textbf{ operator$<$$<$} (std\+::ostream \&, const \textbf{ Todo} \&)
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}affichage d\textquotesingle{}un \doxyref{Todo}{p.}{class_todo}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+cette classe permet de gerer une tache suivant son contenu et sa date de creation 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\label{class_todo_a5fbb1de89a8e2e99941f6a175cc6da91}} 
+\index{Todo@{Todo}!Todo@{Todo}}
+\index{Todo@{Todo}!Todo@{Todo}}
+\doxysubsubsection{Todo()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Todo\+::\+Todo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+implémentation du constructeur par défaut .
+
+Contructeur de la classe \doxyref{Todo}{p.}{class_todo} \mbox{\label{class_todo_a1cc5d083fa330e1db2478d0d27510ec4}} 
+\index{Todo@{Todo}!Todo@{Todo}}
+\index{Todo@{Todo}!Todo@{Todo}}
+\doxysubsubsection{Todo()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Todo\+::\+Todo (\begin{DoxyParamCaption}\item[{const \textbf{ Date} \&}]{dater,  }\item[{const std\+::string \&}]{contenu }\end{DoxyParamCaption})}
+
+
+
+constructeur 2 parametre 
+
+implémentation du constructeur avec paramètre .
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & \doxyref{Date}{p.}{class_date}\& \+: definition d\textquotesingle{}une date de tache a faire \\
+\hline
+{\em const} & std\+::string\&\+:commentaire d\textquotesingle{}un contenu de la tache\\
+\hline
+{\em const} & \doxyref{Date}{p.}{class_date} \&date \+: elle remplacera la date courante du todo. \\
+\hline
+{\em const} & std\+::string \&contenu\+: elle remplacera la tache courante . \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\label{class_todo_a364f8010a094c47ebc16455456b01a92}} 
+\index{Todo@{Todo}!getContenuTodo@{getContenuTodo}}
+\index{getContenuTodo@{getContenuTodo}!Todo@{Todo}}
+\doxysubsubsection{getContenuTodo()}
+{\footnotesize\ttfamily std\+::string Todo\+::get\+Contenu\+Todo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+recupère le contenu de la tache 
+
+accesseur \char`\"{}\+Contenu\+Todo\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+le contenu du todo
+
+le std\+::string qui correspond au contenu\+Todo d\textquotesingle{}une Tache . 
+\end{DoxyReturn}
+\mbox{\label{class_todo_a1d5b3c2482af0ca22e5ccd5c3ec53fab}} 
+\index{Todo@{Todo}!getDateTodo@{getDateTodo}}
+\index{getDateTodo@{getDateTodo}!Todo@{Todo}}
+\doxysubsubsection{getDateTodo()}
+{\footnotesize\ttfamily \textbf{ Date} Todo\+::get\+Date\+Todo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getteurs et setteurs \textbackslash{}\+Les fonctions getteurs et setteurs . 
+
+accesseur \char`\"{} date \char`\"{} pas de paramètre, fonction const
+
+Recupère la date du \doxyref{Todo}{p.}{class_todo} \begin{DoxyReturn}{Renvoie}
+la date de la tache
+
+le std\+::string qui correspond à la date d\textquotesingle{}une tache . 
+\end{DoxyReturn}
+\mbox{\label{class_todo_ab85bbaecb66f8d1ec645d25c2557d1bd}} 
+\index{Todo@{Todo}!getId\_interaction@{getId\_interaction}}
+\index{getId\_interaction@{getId\_interaction}!Todo@{Todo}}
+\doxysubsubsection{getId\_interaction()}
+{\footnotesize\ttfamily int Todo\+::get\+Id\+\_\+interaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recupère l\textquotesingle{}identifiant d\textquotesingle{}une \doxyref{Interaction}{p.}{class_interaction}. 
+
+accesseur \char`\"{}id\+\_\+interaction\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}identifiant d\textquotesingle{}une intéraction .
+
+le std\+::string qui correspond à l\textquotesingle{}identifiant d\textquotesingle{}une intéraction . 
+\end{DoxyReturn}
+\mbox{\label{class_todo_ab27230a8a41e956ad6bca85d97e7b3d7}} 
+\index{Todo@{Todo}!getIdtodo@{getIdtodo}}
+\index{getIdtodo@{getIdtodo}!Todo@{Todo}}
+\doxysubsubsection{getIdtodo()}
+{\footnotesize\ttfamily int Todo\+::get\+Idtodo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+recupère le contenu de la tache 
+
+accesseur \char`\"{}id\+Todo\char`\"{} pas de paramètre, fonction const
+
+\begin{DoxyReturn}{Renvoie}
+le contenu du todo
+
+le std\+::string qui correspond à l\textquotesingle{}identifiant d\textquotesingle{}une tache . 
+\end{DoxyReturn}
+\mbox{\label{class_todo_a8d9110e9a5449fae3574b99965e50283}} 
+\index{Todo@{Todo}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Todo@{Todo}}
+\doxysubsubsection{operator$<$()}
+{\footnotesize\ttfamily bool Todo\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \textbf{ Todo} \&}]{to }\end{DoxyParamCaption}) const}
+
+
+
+comparaison de la tache courante suivant 
+
+test de comparaison entre 2 dates
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & \doxyref{Todo}{p.}{class_todo} \&\+: le parametre à affiher les Todos\\
+\hline
+{\em const} & \doxyref{Todo}{p.}{class_todo} \&to \+: la date à comparer avec la date courante . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un booléen V\+R\+AI si égalité 
+
+un booléen F\+A\+UX si non égalité 
+\end{DoxyReturn}
+\mbox{\label{class_todo_aafadc230b2b8a1bfaf561573d7c949c3}} 
+\index{Todo@{Todo}!setContenuTodo@{setContenuTodo}}
+\index{setContenuTodo@{setContenuTodo}!Todo@{Todo}}
+\doxysubsubsection{setContenuTodo()}
+{\footnotesize\ttfamily void Todo\+::set\+Contenu\+Todo (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{contient }\end{DoxyParamCaption})}
+
+
+
+modifier le contenu de tache 
+
+implémentation du mutateur \char`\"{}\+Contenu\+Todo\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & std\+::string\&\+: le contenu à modifier\\
+\hline
+{\em l\textquotesingle{}entier} & const int \& value, il remplacera le Contenu de la tache courante . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_ab42418c729d182d0b940be248db87ec5}} 
+\index{Todo@{Todo}!setDateTodo@{setDateTodo}}
+\index{setDateTodo@{setDateTodo}!Todo@{Todo}}
+\doxysubsubsection{setDateTodo()}
+{\footnotesize\ttfamily void Todo\+::set\+Date\+Todo (\begin{DoxyParamCaption}\item[{const \textbf{ Date} \&}]{dater }\end{DoxyParamCaption})}
+
+
+
+modifier la date de tache 
+
+implémentation du mutateur \char`\"{}date\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & \doxyref{Date}{p.}{class_date}\&\+: la date à modifier\\
+\hline
+{\em const} & \doxyref{Date}{p.}{class_date} \& date\+: elle remplacera la date de la tache courante . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_ae274b76be8d635cbb866c0711e46f025}} 
+\index{Todo@{Todo}!setId\_interaction@{setId\_interaction}}
+\index{setId\_interaction@{setId\_interaction}!Todo@{Todo}}
+\doxysubsubsection{setId\_interaction()}
+{\footnotesize\ttfamily void Todo\+::set\+Id\+\_\+interaction (\begin{DoxyParamCaption}\item[{const int \&}]{value }\end{DoxyParamCaption})}
+
+
+
+modifier l\textquotesingle{}id d\textquotesingle{}une interaction 
+
+implémentation du mutateur \char`\"{}id\+\_\+interaction\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \& \+: l\textquotesingle{}entier qu\textquotesingle{}on utilisera pour faire la modification de l\textquotesingle{}id de l\textquotesingle{}interaction .\\
+\hline
+{\em l\textquotesingle{}entier} & const int \& value, il remplacera l\textquotesingle{}identifiant de l\textquotesingle{}intéraction courante . \\
+\hline
+\end{DoxyParams}
+\mbox{\label{class_todo_a2a7a14ca37f3981d5c8e55f9f0456ed3}} 
+\index{Todo@{Todo}!setIdtodo@{setIdtodo}}
+\index{setIdtodo@{setIdtodo}!Todo@{Todo}}
+\doxysubsubsection{setIdtodo()}
+{\footnotesize\ttfamily void Todo\+::set\+Idtodo (\begin{DoxyParamCaption}\item[{const int \&}]{value }\end{DoxyParamCaption})}
+
+
+
+modifier l\textquotesingle{}id du todo 
+
+implémentation du mutateur \char`\"{}id\+Todo\char`\"{}
+
+
+\begin{DoxyParams}{Paramètres}
+{\em const} & int \& \+: l\textquotesingle{}entier qu\textquotesingle{}on utilisera pour faire la modification de l\textquotesingle{}id du todo .\\
+\hline
+{\em l\textquotesingle{}entier} & const int \& value, il remplacera l\textquotesingle{}identifiant de la tache courante . \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions amies et associées}
+\mbox{\label{class_todo_adbad530f8aaeb15de3c96ab898a08efb}} 
+\index{Todo@{Todo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Todo@{Todo}}
+\doxysubsubsection{operator$<$$<$}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \textbf{ Todo} \&}]{todo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+L\textquotesingle{}affichage d\textquotesingle{}un \doxyref{Todo}{p.}{class_todo}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em std\+::ostream} & \&\+: il nous permetra de faire l\textquotesingle{}affichage . \\
+\hline
+{\em const} & \doxyref{Todo}{p.}{class_todo}\&\+: il nous permet d\textquotesingle{}afficher une tache.\\
+\hline
+{\em std,\+:} & ostream \&os \+:la bibliothèque ostream qui permet l\textquotesingle{}affichage . \\
+\hline
+{\em const} & \doxyref{Todo}{p.}{class_todo} \&todo\+:la tache à afficher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+os \+: pour l\textquotesingle{}affichage de la tache càd sa date et son contenu . 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\label{class_todo_a36639711c854237b60d0b0ba8c4f172f}} 
+\index{Todo@{Todo}!contenuTodo@{contenuTodo}}
+\index{contenuTodo@{contenuTodo}!Todo@{Todo}}
+\doxysubsubsection{contenuTodo}
+{\footnotesize\ttfamily std\+::string Todo\+::contenu\+Todo\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut de type string pour gérer le contenu de la tache \mbox{\label{class_todo_a534c097e18381df80b86dd1a04689618}} 
+\index{Todo@{Todo}!date@{date}}
+\index{date@{date}!Todo@{Todo}}
+\doxysubsubsection{date}
+{\footnotesize\ttfamily \textbf{ Date} Todo\+::date\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut de type \doxyref{Date}{p.}{class_date} pour gérer la date \mbox{\label{class_todo_a3b148ac45c1ad1837093cbfa31b937c6}} 
+\index{Todo@{Todo}!id\_interaction@{id\_interaction}}
+\index{id\_interaction@{id\_interaction}!Todo@{Todo}}
+\doxysubsubsection{id\_interaction}
+{\footnotesize\ttfamily int Todo\+::id\+\_\+interaction =0\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut pour gérer l\textquotesingle{}id de l\textquotesingle{}intéraction \mbox{\label{class_todo_a89723d81a77d3aa3d169a61ca69c039b}} 
+\index{Todo@{Todo}!idtodo@{idtodo}}
+\index{idtodo@{idtodo}!Todo@{Todo}}
+\doxysubsubsection{idtodo}
+{\footnotesize\ttfamily int Todo\+::idtodo =0\hspace{0.3cm}{\ttfamily [private]}}
+
+attribut pour gérer l\textquotesingle{}id de tache 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ Todo.\+h}\item 
+/home/diallo/\+Bureau/\+C\+D\+A\+A/\+Projet/\+Projet\+Qt/\+Projet\+Final\+C\+D\+A\+A/\textbf{ Todo.\+cpp}\end{DoxyCompactItemize}
